@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 04:42:30
+/* Smarty version 4.3.0, created on 2024-11-11 04:49:05
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/vendor_panel_configurator/hooks/bottom_panel/bp_modes.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731fbb6d09af0_72860541',
+  'unifunc' => 'content_6731fd41d7a384_69005630',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6731fbb6d09af0_72860541 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731fd41d7a384_69005630 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('show_bp_modes_on_backend', true ,false ,2);
 }
 }

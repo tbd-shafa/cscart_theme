@@ -1,0 +1,1185 @@
+a:2:{s:4:"data";a:2:{s:10:"javascript";s:5412:"<script src="http://localhost/cs-cart/js/tygh/exceptions.js?ver=1731329344" ></script><script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="twitter" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/twitter.js?ver=1731329344"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/twitter.js?ver=1731329344" ></script><script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="facebook" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/facebook.js?ver=1731329344"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/facebook.js?ver=1731329344" ></script><script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="pinterest" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/pinterest.js?ver=1731329344"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/pinterest.js?ver=1731329344" ></script><script>
+(function(_, $) {
+    $.ceEvent('on', 'ce.commoninit', function(context) {
+        var elm = context.find('#scroll_list_product_bundle_1');
+
+        $('.ty-float-left:contains(.ty-scroller-list),.ty-float-right:contains(.ty-scroller-list)').css('width', '100%');
+
+        var item = 3,
+            // default setting of carousel
+            itemsDesktop = 4,
+            itemsDesktopSmall = 3,
+            itemsTablet = 2,
+            itemsMobile = 1;
+
+        if (item > 3) {
+            itemsDesktop = item;
+            itemsDesktopSmall = item - 1;
+            itemsTablet = item - 2;
+        } else if (item == 1) {
+            itemsDesktop = itemsDesktopSmall = itemsTablet = 1;
+        } else {
+            itemsDesktop = item;
+            itemsDesktopSmall = itemsTablet = item - 1;
+        }
+
+        var desktop = [1199, itemsDesktop],
+            desktopSmall = [979, itemsDesktopSmall],
+            tablet = [768, itemsTablet],
+            mobile = [479, itemsMobile];
+
+                function outsideNav () {
+            if(this.options.items >= this.itemsAmount){
+                $("#owl_outside_nav_product_bundle_1").hide();
+            } else {
+                $("#owl_outside_nav_product_bundle_1").show();
+            }
+        }
+        function afterInit () {
+            outsideNav.apply(this);
+            $.ceEvent('trigger', 'ce.scroller.afterInit', [this]);
+        }
+        function afterUpdate () {
+            outsideNav.apply(this);
+            $.ceEvent('trigger', 'ce.scroller.afterUpdate', [this]);
+        }
+                function beforeInit () {
+            $.ceEvent('trigger', 'ce.scroller.beforeInit', [this]);
+        }
+        function beforeUpdate () {
+            $.ceEvent('trigger', 'ce.scroller.beforeUpdate', [this]);
+        }
+
+        if (elm.length) {
+            elm.owlCarousel({
+                direction: 'ltr',
+                items: item,
+                itemsDesktop: desktop,
+                itemsDesktopSmall: desktopSmall,
+                itemsTablet: tablet,
+                itemsMobile: mobile,
+                                                autoPlay: false,
+                                lazyLoad: true,
+                slideSpeed: 0,
+                paginationSpeed: 0,
+                rewindSpeed: 0,
+                stopOnHover: true,
+                                navigation: true,
+                navigationText: ['Prev', 'Next'],
+                                pagination: false,
+                beforeInit: beforeInit,
+                afterInit: afterInit,
+                beforeUpdate: beforeUpdate,
+                afterUpdate: afterUpdate
+            });
+            
+              $('').click(function(){
+                elm.trigger('owl.prev');
+              });
+              $('').click(function(){
+                elm.trigger('owl.next');
+              });
+            
+        }
+    });
+}(Tygh, Tygh.$));
+</script><script src="http://localhost/cs-cart/js/addons/product_reviews/fallback.js?ver=1731329344" ></script><script src="http://localhost/cs-cart/js/addons/product_reviews/index.js?ver=1731329344" ></script><script src="http://localhost/cs-cart/js/tygh/tabs.js?ver=1731329344" ></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery-3.3.1.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/bootstrap.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery.nice-select.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery-ui.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery.slicknav.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/mixitup.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/owl.carousel.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/main.js"></script><script>
+(function(_, $) {
+    $.ceEvent('on', 'ce.formpre_product_form_12', function(frm, elm) {
+        if ($('#warning_12').length) {
+            $.ceNotification('show', {
+                type: 'W',
+                title: _.tr('warning'),
+                message: _.tr('cannot_buy')
+            });
+
+            return false;
+        }
+
+        return true;
+    });
+}(Tygh, Tygh.$));
+</script>";s:7:"content";s:59139:"                    <!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+ <style>
+ 
+ 
+.custom_breadcome {
+    width: calc(100vw - 8px);
+    margin-left: calc((1170px - 100vw) / 2);
+} 
+</style>
+ <div class="custom_breadcome">
+ <section class="breadcrumb-section set-bg" data-setbg="http://localhost/cs-cart/images/detailed/8/cat-2.jpg">
+	
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <!-- Display Product Title -->
+                    <h2>100g Pants</h2>
+
+                    <!-- Dynamic Breadcrumb Navigation -->
+                    <div class="breadcrumb__option" style="color:Black !important;">
+                        <a href="http://localhost/cs-cart" style="color:Black !important;">Home</a>
+                        
+                                                    <a href="http://localhost/cs-cart/categories/224/" style="color:Black !important;"></a>
+                                                
+                        <span>100g Pants</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+ </div>
+
+   
+<!-- Inline script moved to the bottom of the page -->
+<style>
+.product__details__pic__item--large {
+    width: 555px; 
+   
+    height: 576px;
+}
+</style>
+<section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                                                    <div class="product__details__pic__item">
+                                <img class="product__details__pic__item--large"
+                                    src="http://localhost/cs-cart/images/detailed/8/cat-2.jpg" 
+                                    alt="100g Pants"
+                                    width="555" height="576">
+                            </div>
+                        
+                        <div class="product__details__pic__slider owl-carousel">
+                                                            <img data-imgbigurl="http://localhost/cs-cart/images/detailed/0/173283_0113298267324f438bac97eaf.jpg"
+                                    src="http://localhost/cs-cart/images/detailed/0/173283_0113298267324f438bac97eaf.jpg" 
+                                    alt="100g Pants">
+                                                    </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                   
+                        <div class="">
+                            <div class="clearfix">
+                                                                                                                                    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div class="">
+                                                                                <form action="http://localhost/cs-cart/" method="post" name="product_form_12" enctype="multipart/form-data" class="cm-disable-empty-files  cm-ajax cm-ajax-full-render cm-ajax-status-middle ">
+<input type="hidden" name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" />
+<input type="hidden" name="redirect_url" value="index.php?dispatch=products.view&amp;product_id=12" />
+<input type="hidden" name="product_data[12][product_id]" value="12" />
+
+                                                                                                                                    <h3 class="" ><bdi>100g Pants</bdi></h3>
+                                            
+                                                                                                                                                <div class="brand">
+                                                        
+
+    <div class="ty-features-list">
+    <a href="http://localhost/cs-cart/apparel/mens-clothing/?features_hash=10-86">Adidas</a></div>                                                    </div>
+                                                
+                                            
+                                        
+<section class="ty-product-review-product-rating-overview-short" id="product_review_product_rating_overview_short_12">
+
+    <div class="product__details__rating">
+                        <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                <span>( reviews)</span>
+         
+    
+
+
+    
+ 
+    <a href="http://localhost/cs-cart/index.php?dispatch=product_reviews.get_new_post_form&amp;product_id=12&amp;post_redirect_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D12"  class="ty-btn cm-dialog-opener cm-dialog-auto-size cm-dialog-destroy-on-close ty-product-review-write-product-review-button ty-btn__text "  rel="nofollow" data-ca-target-id="new_post_dialog_12" title="Write a review">Write a review</a>
+</div>
+
+
+   
+
+<!--product_review_product_rating_overview_short_12--></section>
+                                                                                                                                                                                                                                                 <div class="product__details__price">
+                                            <div class="prices-container price-wrap">
+                                                                                                    <div class="ty-product-prices">
+                                                                    <span class="cm-reload-12" id="old_price_update_12">
+                                                            <span class="ty-list-price ty-nowrap" id="line_list_price_12"><span class="list-price-label">List price:</span> <span class="ty-strike"><span class="ty-list-price ty-nowrap">$</span><span id="sec_list_price_12" class="ty-list-price ty-nowrap">31.00</span></span></span>
+                                        
+        <!--old_price_update_12--></span>
+                                                    
+                                                                                                                                                            <div class="ty-product-block__price-actual">
+                                                                <span class="cm-reload-12 ty-price-update" id="price_update_12">
+        <input type="hidden" name="appearance[show_price_values]" value="1" />
+        <input type="hidden" name="appearance[show_price]" value="1" />
+                                                                                                                        <span class="ty-price" id="line_discounted_price_12"><span class="ty-price-num">$</span><span id="sec_discounted_price_12" class="ty-price-num">30.00</span></span>
+                            
+                        <!--price_update_12--></span>
+
+                                                        </div>
+                                                                                                    
+
+                                                                                                            
+                                                                    <span class="cm-reload-12" id="line_discount_update_12">
+            <input type="hidden" name="appearance[show_price_values]" value="1" />
+            <input type="hidden" name="appearance[show_list_discount]" value="1" />
+                            <span class="ty-list-price ty-save-price ty-nowrap" id="line_discount_value_12"> You save: $<span id="sec_discount_value_12">1.00</span><span class="ty-save-price__percent">&nbsp;(<span id="prc_discount_value_12">3</span>%)</span></span>
+                    <!--line_discount_update_12--></span>
+    
+                                                    </div>
+                                                                                            </div>
+                                         </div>
+                                       <p>
+	When coach calls you off the bench, you need warm-up pants that come off  in three seconds or less. That’s why these men's adidas 100g basketball  pants have tear-away snaps down the sides, so you're ready for action  as fast as a superhero.
+</p>
+                                       
+                                                                               <div class="ty-product-block__field-group">
+                                                                                                <div class="cm-reload-12 stock-wrap" id="product_amount_update_12">
+        <input type="hidden" name="appearance[show_product_amount]" value="1" />
+                                                        <div class="ty-control-group product-list-field">
+                                                    <label class="ty-control-group__label">Availability:</label>
+                                                <span class="ty-qty-in-stock ty-control-group__item" id="in_stock_info_12">
+                                                            In stock
+                                                    </span>
+                    </div>
+                                        <!--product_amount_update_12--></div>
+
+
+
+                                                                                                    <div class="cm-reload-12" id="qty_update_12">
+        <input type="hidden" name="appearance[show_qty]" value="1" />
+        <input type="hidden" name="appearance[capture_options_vs_qty]" value="" />
+                            
+                    <div class="ty-qty clearfix changer" id="qty_12">
+                <label class="ty-control-group__label" for="qty_count_12">Quantity:</label>                                <div class="ty-center ty-value-changer cm-value-changer">
+                                            <a class="cm-increase ty-value-changer__increase">&#43;</a>
+                                        <input  type="text" size="5" class="ty-value-changer__input cm-amount cm-value-decimal" id="qty_count_12" name="product_data[12][amount]" value="1" data-ca-min-qty="1" />
+                                            <a class="cm-decrease ty-value-changer__decrease">&minus;</a>
+                                    </div>
+                            </div>
+                            <!--qty_update_12--></div>
+    
+
+
+                                                                                                        
+
+                                        </div>
+                                                                                
+                                                                               <div class="ty-product-block__button">
+                                            
+                                                                                        <div class="cm-reload-12 " id="add_to_cart_update_12">
+<input type="hidden" name="appearance[show_add_to_cart]" value="1" />
+<input type="hidden" name="appearance[show_list_buttons]" value="1" />
+<input type="hidden" name="appearance[but_role]" value="big" />
+<input type="hidden" name="appearance[quick_view]" value="" />
+
+
+            
+            
+     <button id="button_cart_12" class="primary-btn ty-btn__primary ty-btn__big ty-btn__add-to-cart cm-form-dialog-closer ty-btn" type="submit" name="dispatch[checkout.add..12]" >Add to cart</button>
+
+    
+
+
+
+
+<style>
+.site-btns {
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 13px 30px 12px;
+	background: blue;
+	border: none;
+}
+</style>
+    
+                                                                    
+
+    
+
+
+    <a id="opener_buy_now_with_one_click_12"
+        class="cm-dialog-opener cm-dialog-auto-size ty-btn site-btns  ty-cr-product-button cm-dialog-destroy-on-close"
+        href="http://localhost/cs-cart/index.php?dispatch=call_requests.request&amp;product_id=12&amp;obj_prefix="         data-ca-target-id="content_buy_now_with_one_click_12"
+                data-ca-dialog-title="Buy now with 1-click"        data-ca-product-id="12" data-ca-dialog-purpose="call_request"
+        rel="nofollow"
+    >
+                <span >Buy now with 1-click</span>
+            </a>
+
+
+<div class="hidden" id="content_buy_now_with_one_click_12" title="Buy now with 1-click">
+    
+</div>
+                    
+    
+    
+            
+
+    
+     <a  class="ty-btn ty-btn__tertiary ty-btn-icon ty-add-to-wish heart-icon icon_heart_alt cm-submit text-button " id="button_wishlist_12" data-ca-dispatch="dispatch[wishlist.add..12]" title="Add to wish list"></a>
+
+
+    
+                            
+                                
+        
+     <a  class="ty-btn ty-btn__tertiary ty-btn-icon ty-add-to-wish heart-icon fa fa-retweet icon_heart_alt cm-ajax cm-ajax-full-render text-button " href="http://localhost/cs-cart/index.php?dispatch=product_features.add_product&amp;product_id=12&amp;redirect_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D12" rel="nofollow" data-ca-target-id="comparison_list,account_info*" title="Add to comparison list"></a>
+
+
+
+<!--add_to_cart_update_12--></div>
+
+
+                                                                                        
+                                            
+                                        </div>
+                                        <ul>
+                                        </ul>
+                                                                                <div class="ty-product-block__option">
+                                                                                                <div class="cm-reload-12 js-product-options-12" id="product_options_update_12">
+        <input type="hidden" name="appearance[show_product_options]" value="1" />
+                                                                
+<input type="hidden" name="appearance[details_page]" value="1" />
+    <input type="hidden" name="additional_info[info_type]" value="D" />
+    <input type="hidden" name="additional_info[is_preview]" value="" />
+    <input type="hidden" name="additional_info[get_icon]" value="1" />
+    <input type="hidden" name="additional_info[get_detailed]" value="1" />
+    <input type="hidden" name="additional_info[get_additional]" value="" />
+    <input type="hidden" name="additional_info[get_options]" value="1" />
+    <input type="hidden" name="additional_info[get_discounts]" value="1" />
+    <input type="hidden" name="additional_info[get_features]" value="" />
+    <input type="hidden" name="additional_info[get_extra]" value="" />
+    <input type="hidden" name="additional_info[get_taxed_prices]" value="1" />
+    <input type="hidden" name="additional_info[get_for_one_product]" value="1" />
+    <input type="hidden" name="additional_info[detailed_params]" value="1" />
+    <input type="hidden" name="additional_info[features_display_on]" value="C" />
+    <input type="hidden" name="additional_info[get_active_options]" value="" />
+    <input type="hidden" name="additional_info[get_only_selectable_options]" value="" />
+    <input type="hidden" name="additional_info[get_variation_features_variants]" value="1" />
+    <input type="hidden" name="additional_info[get_variation_info]" value="1" />
+    <input type="hidden" name="additional_info[get_variation_name]" value="1" />
+    <input type="hidden" name="additional_info[get_product_type]" value="" />
+
+
+
+
+
+
+<div id="option_12_AOC">
+    <div class="cm-picker-product-options ty-product-options" id="opt_12">
+        
+        
+        <div class="ty-control-group ty-product-options__item product-list-field clearfix"
+             id="opt_12_9"
+        >
+                            <label id="option_description_12_9"
+                                                  for="option_12_9"
+                                              class="ty-control-group__label ty-product-options__item-label   "
+                                       >
+                    Color:
+                </label>
+                                                                                     <select name="product_data[12][product_options][9]"
+                                                            id="option_12_9"
+                                                                                        onchange="fn_change_variant_image('12', '9');"
+                                                                            >
+                                                                                                                                                                                                <option value="17"
+                                                                                                                                selected="selected"
+                                                                        >
+                                    Black/White/White
+                                                                                                                                                                
+                                                                    </option>
+                                                                                                                                                <option value="18"
+                                                                        >
+                                    Dark Navy/White/White
+                                                                                                                                                                
+                                                                    </option>
+                                                                                                                                                <option value="19"
+                                                                        >
+                                    White/Prime Green
+                                                                                                                                                                
+                                                                    </option>
+                                                                        </select>
+                            
+                            
+                                        <div class="ty-product-variant-image ty-clear-both">
+                                                                                                                                                                                                                                <img class="ty-pict  product-variant-image-selected ty-product-options__image   cm-image" alt="" title="" srcset="http://localhost/cs-cart/images/thumbnails/140/140/variant_image/0/173283_01.jpg 2x" id="det_img_variant_image_12_9_17" width="70" height="70" src="http://localhost/cs-cart/images/thumbnails/70/70/variant_image/0/173283_01.jpg" onclick="fn_set_option_value(&#039;12&#039;, &#039;9&#039;, &#039;17&#039;); void(0);" />
+
+                                                                                                                                                                                                                    <img class="ty-pict  product-variant-image-unselected ty-product-options__image   cm-image" alt="" title="" srcset="http://localhost/cs-cart/images/thumbnails/140/140/variant_image/0/242265_01.jpg 2x" id="det_img_variant_image_12_9_18" width="70" height="70" src="http://localhost/cs-cart/images/thumbnails/70/70/variant_image/0/242265_01.jpg" onclick="fn_set_option_value(&#039;12&#039;, &#039;9&#039;, &#039;18&#039;); void(0);" />
+
+                                                                                                                                                                                                                    <img class="ty-pict  product-variant-image-unselected ty-product-options__image   cm-image" alt="" title="" srcset="http://localhost/cs-cart/images/thumbnails/140/140/variant_image/0/X29580_01.jpg 2x" id="det_img_variant_image_12_9_19" width="70" height="70" src="http://localhost/cs-cart/images/thumbnails/70/70/variant_image/0/X29580_01.jpg" onclick="fn_set_option_value(&#039;12&#039;, &#039;9&#039;, &#039;19&#039;); void(0);" />
+
+                                                                        
+                </div>
+                    </div>
+        
+        
+        <div class="ty-control-group ty-product-options__item product-list-field clearfix"
+             id="opt_12_2"
+        >
+                            <label id="option_description_12_2"
+                                                  for="option_12_2"
+                                              class="ty-control-group__label ty-product-options__item-label   "
+                                       >
+                    Size:
+                </label>
+                                                                                     <select name="product_data[12][product_options][2]"
+                                                            id="option_12_2"
+                                                                                        onchange="fn_change_variant_image('12', '2');"
+                                                                            >
+                                                                                                                                                                                                <option value="6"
+                                                                                                                                selected="selected"
+                                                                        >
+                                    Small
+                                                                                                                                                                
+                                                                    </option>
+                                                                                                                                                <option value="10"
+                                                                        >
+                                    Medium
+                                                                                                                                                                
+                                                                    </option>
+                                                                                                                                                <option value="9"
+                                                                        >
+                                    Large
+                                                                                                                                                                
+                                                                    </option>
+                                                                                                                                                <option value="8"
+                                                                        >
+                                    X Large
+                                                                                                                                                                
+                                                                    </option>
+                                                                                                                                                <option value="7"
+                                                                        >
+                                    XX Large
+                                                                                                                                                                
+                                                                    </option>
+                                                                        </select>
+                            
+                            
+                                </div>
+            </div>
+</div>
+
+<!-- Inline script moved to the bottom of the page -->
+        
+    <!--product_options_update_12--></div>
+    
+                                        </div>
+                                        
+                                        <div class="ty-product-block__advanced-option clearfix">
+                                                                                                                                                <div class="cm-reload-12" id="advanced_options_update_12">
+                <div class="ty-control-group product-list-field">
+                    <label class="ty-control-group__label">Vendor:</label>
+            <span class="ty-control-group__item ty-company-name"><a href="http://localhost/cs-cart/cs-cart/">CS-Cart</a></span>
+        
+    <span class="ty-vendor-rating">
+            </span>
+    
+            
+        <a title="Ask a question" data-ca-target-id="new_thread_login_form" class="cm-dialog-opener cm-dialog-auto-size ty-vendor-communication__post-write" rel="nofollow">
+            <span class="ty-icon ty-icon-chat" ></span>
+            Ask a question
+        </a>
+
+                </div>
+                        
+<input type="hidden" name="appearance[dont_show_points]" value="" />
+        <div class="ty-reward-group">
+        <span class="ty-control-group__label product-list-field">Price in points:</span>
+        <span class="ty-control-group__item" id="price_in_points_12"><bdi>30 points</bdi></span>
+    </div>
+<div class="ty-reward-group product-list-field hidden">
+    <span class="ty-control-group__label">Reward points:</span>
+    <span class="ty-control-group__item" id="reward_points_12"><bdi> points</bdi></span>
+</div>        <!--advanced_options_update_12--></div>
+    
+                                                                                    </div>
+
+                                        <div class="ty-product-block__sku">
+                                                                                                    <div class="ty-control-group ty-sku-item cm-hidden-wrapper" id="sku_update_12">
+            <input type="hidden" name="appearance[show_sku]" value="1" />
+                            <label class="ty-control-group__label" id="sku_12">CODE:</label>
+                        <span class="ty-control-group__item cm-reload-12" id="product_code_12">U0012O5AF0<!--product_code_12--></span>
+        </div>
+    
+                                        </div>
+
+                                        
+
+                                                                                    
+
+                                        
+                                                                                                                                                                     <li><b>Shipping</b> <span><p class="product-promo-text"><span class="product-promo-header">FREE US shipping over $100!</span><span class="product-promo-body">Orders within next 2 days will be shipped on Monday</span></p></span></li>
+                                              
+                                           
+                                                                                    
+
+                                                                                                                                <input type="hidden" name="security_hash" class="cm-no-hide-input" value="4584a3ffefadb157a8912f33ec322a03" /></form>
+
+                                        
+
+                                        
+                                            
+    <div class="ty-social-buttons">
+      Share on
+                        <li class="ty-social-buttons__inline"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-size="medium" data-count="horizontal" data-url="http://localhost/cs-cart/apparel/mens-clothing/100g-pants/" >Tweet</a>
+<div hidden
+    data-ca-social-buttons="twitter"
+    data-ca-social-buttons-src="//platform.twitter.com/widgets.js"></div>
+<!-- Inline script moved to the bottom of the page -->
+
+</li>
+                                <li class="ty-social-buttons__inline">
+<div id="fb-root"></div>
+
+<div class="fb-like" data-lang="en" data-layout="button_count" data-href="http://localhost/cs-cart/apparel/mens-clothing/100g-pants/" data-send="true" data-show-faces="false" data-action="like" data-font="arial" data-colorscheme="light" data-width="450" ></div>
+<div hidden
+    data-ca-social-buttons="facebook"
+    data-ca-social-buttons-src="//connect.facebook.net/en_US/all.js#xfbml=1&appId="></div>
+<!-- Inline script moved to the bottom of the page -->
+
+</li>
+                                            <li class="ty-social-buttons__inline"><span class="pinterest__wrapper">
+    <a href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Flocalhost%2Fcs-cart%2Fapparel%2Fmens-clothing%2F100g-pants%2F&amp;media=http%3A%2F%2Flocalhost%2Fcs-cart%2Fimages%2Fdetailed%2F8%2Fcat-2.jpg&amp;description=When%20coach%20calls%20you%20off%20the%20bench%2C%20you%20need%20warm-up%20pants%20that%20come%20off%20%20in%20three%20seconds%20or%20less.%20That%E2%80%99s%20why%20these%20men%27s%20adidas%20100g%20basketball%20%20pants%20have%20tear-away%20snaps%20down%20the%20sides%2C%20so%20you%27re..." data-pin-do="buttonPin" data-pin-shape="rect" data-pin-height="20" ><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" alt="Pinterest"></a>
+</span>
+<div hidden
+    data-ca-social-buttons="pinterest"
+    data-ca-social-buttons-src="//assets.pinterest.com/js/pinit.js"></div>
+<!-- Inline script moved to the bottom of the page -->
+
+</li>
+                </div>
+
+                                                                                
+                                            
+                                                                            </div>
+                                
+                            
+    <div id="product_vendor_communication_thread_form">
+            <div id="new_thread_login_form" class="hidden ty-vendor-communication-login" title="Sign in">
+    <div class="ty-login-popup">
+        <div class="ty-login-popup__description ty-login-popup__description--bold">
+            Please sign in so that we can notify you about a reply
+        </div>
+        
+
+    <div id="new_thread_login_form_popup_login_popup_form_container">
+            <form name="new_thread_login_form_popup_form" action="http://localhost/cs-cart/" method="post" class="cm-ajax cm-ajax-full-render">
+                    <input type="hidden" name="result_ids" value="new_thread_login_form_popup_login_popup_form_container" />
+            <input type="hidden" name="login_block_id" value="new_thread_login_form_popup" />
+            <input type="hidden" name="quick_login" value="1" />
+        
+        <input type="hidden" name="return_url" value="index.php?dispatch=products.view&amp;product_id=12" />
+        <input type="hidden" name="redirect_url" value="index.php?dispatch=products.view&amp;product_id=12" />
+
+        
+        <div class="ty-control-group">
+            <label for="login_new_thread_login_form_popup" class="ty-login__filed-label ty-control-group__label cm-required cm-trim cm-email">E-mail</label>
+            <input type="text" id="login_new_thread_login_form_popup" name="user_login" size="30" value="" class="ty-login__input cm-focus" />
+        </div>
+
+        <div class="ty-control-group ty-password-forgot">
+            <label for="psw_new_thread_login_form_popup" class="ty-login__filed-label ty-control-group__label ty-password-forgot__label cm-required">Password</label><a href="http://localhost/cs-cart/index.php?dispatch=auth.recover_password" class="ty-password-forgot__a"  tabindex="5">Forgot your password?</a>
+            <input type="password" id="psw_new_thread_login_form_popup" name="password" size="30" value="" class="ty-login__input" maxlength="32" />
+        </div>
+
+                    
+            <div class="ty-login-reglink ty-center">
+                <a class="ty-login-reglink__a" href="http://localhost/cs-cart/profiles-add/" rel="nofollow">Register for a new account</a>
+            </div>
+        
+        
+        
+                    <div class="buttons-container clearfix">
+                <div class="ty-float-right">
+                        
+     <button  class="ty-btn__login ty-btn__secondary ty-btn" type="submit" name="dispatch[auth.login]" >Sign in</button>
+
+                </div>
+                <div class="ty-login__remember-me">
+                    <label for="remember_me_new_thread_login_form_popup" class="ty-login__remember-me-label"><input class="checkbox" type="checkbox" name="remember_me" id="remember_me_new_thread_login_form_popup" value="Y" />Remember me</label>
+                </div>
+            </div>
+        
+    <input type="hidden" name="security_hash" class="cm-no-hide-input" value="4584a3ffefadb157a8912f33ec322a03" /></form>
+
+    <!--new_thread_login_form_popup_login_popup_form_container--></div>
+    </div>
+</div>
+        <!--product_vendor_communication_thread_form--></div>
+                            </div>
+
+                                                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                                                    
+                    
+    <div class="ty-product-bundles-product-bundles
+        ty-product-bundles-product-bundles--padding                    ">
+                <div class="ty-product-bundles-product-bundles__body">
+                                                    
+        
+        <div class="ty-product-bundles-bundle-form"
+        style="--ty-product-lists-thumbnail-width: 112.5px;
+            --ty-product-lists-thumbnail-height: 112.5px;"
+    >
+                            <div class="ty-product-bundles-bundle-form__header ty-subheader">
+                Sports pants bundle
+            </div>
+        
+                            <div class="ty-product-bundles-bundle-form__description ty-wysiwyg-content">
+                Get 3 pairs of pants at the price of 2
+            </div>
+        
+                <form class="cm-ajax cm-ajax-full-render ty-product-bundles-bundle-form__form"
+            action="http://localhost/cs-cart/"
+            method="post"
+            name="bundle_form_1"
+            enctype="multipart/form-data"
+            id="bundle_form_1"
+        >
+            <input type="hidden" name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*,product_bundles_bundle_form_1">
+            <input type="hidden" name="redirect_url" value="index.php?dispatch=products.view&amp;product_id=12" />
+            <input type="hidden" name="bundle_id" value="1"/>
+
+                        <div class="ty-product-bundles-bundle-form__form-inner"
+                data-ca-product-bundles="formInner"
+                id="product_bundles_bundle_form_1">
+
+                                <div id="scroll_list_product_bundle_1"
+                    class="owl-carousel ty-scroller-list ty-scroller ty-product-bundles-bundle-form__products"
+                    data-ca-product-bundles="scroller"
+                    data-ca-scroller-item="3" data-ca-scroller-item-desktop="3" data-ca-scroller-item-desktop-small="2" data-ca-scroller-item-tablet="2" data-ca-scroller-item-mobile="1"
+                >
+                                                        
+    <div class="ty-product-bundles-product-item ty-scroller__item"
+        style="--ty-product-lists-thumbnail-width: 112.5px;
+            --ty-product-lists-thumbnail-height: 112.5px;"
+        id="product_bundles_product_item_1_0">
+
+        <input type="hidden" name="product_data[12_0][product_id]" value="12" />
+        <input type="hidden" name="product_data[12_0][amount]" value="1" />
+
+        <div class="ty-product-bundles-product-item__content">
+
+                        <div class="ty-product-bundles-product-item__image"
+                id="product_bundles_product_item_image_1">
+
+                <a href="http://localhost/cs-cart/apparel/mens-clothing/100g-pants/"
+                    class="ty-product-bundles-product-item__image-link"
+                >
+                                                <img class="ty-pict  ty-product-bundles-product-item__image-content   cm-image" alt="" title="" srcset="http://localhost/cs-cart/images/thumbnails/224/224/detailed/8/cat-2.jpg 2x" id="det_img_1_12" width="112" height="112" src="http://localhost/cs-cart/images/thumbnails/112/112/detailed/8/cat-2.jpg" />
+
+                </a>
+            <!--product_bundles_product_item_image_1--></div>
+
+                        <div class="ty-product-bundles-product-item__info">
+
+                                <div class="ty-product-bundles-product-item__name">
+                    <bdi>
+                        <a href="http://localhost/cs-cart/apparel/mens-clothing/100g-pants/"
+                            class="ty-product-bundles-product-item__name-link"
+                        >
+                            100g Pants
+                        </a>
+                    </bdi>
+                </div>
+
+                                
+    
+        <div class="ty-product-bundles-variation-options"
+            id="product_bundles_product_item_options_1_0">
+
+                                        <input type="hidden"
+                    value="17"
+                    name="product_data[12_0][product_options][9]"
+                />
+
+                                
+                                                                                                    <input type="hidden"
+                    value="6"
+                    name="product_data[12_0][product_options][2]"
+                />
+
+                                
+                                                                                    
+            <div class="ty-product-bundles-variation-options__content">
+                                    <span class="ty-product-bundles-variation-options__item">Black/White/White</span>
+                                    <span class="ty-product-bundles-variation-options__item">Small</span>
+                            </div>
+
+        <!--product_bundles_product_item_options_1_0--></div>
+    
+
+
+
+                                <div class="ty-product-bundles-product-item__price"
+                    id="product_bundles_product_item_price_1_0">
+
+                    
+                                                                                            <span class="ty-list-price ty-nowrap ty-strike"><span class="ty-list-price ty-nowrap">$</span><span class="ty-list-price ty-nowrap">30.00</span></span>
+                                                <span class="ty-price">
+                            <span class="ty-price-num">$</span><span class="ty-price-num">20.00</span>                        </span>
+                                                            <!--product_bundles_product_item_price_1_0--></div>
+
+                                
+                                    <div class="ty-product-bundles-product-item__control">
+                                                                                                                                                <a id="opener_product_bundle_options_1_0"
+                                class="cm-dialog-opener cm-dialog-auto-size ty-product-bundles-product-item__control-link
+                                    "
+                                href="http://localhost/cs-cart/index.php?dispatch=product_bundles.get_option_variants&amp;bundle_id=1&amp;product_id=12&amp;bundle_product_key=0&amp;selected_options%5B9%5D=17&amp;selected_options%5B2%5D=6&amp;return_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D12"
+                                data-ca-target-id="content_product_bundle_options_1_0"
+                                data-ca-dialog-title="Specify options"
+                                rel="nofollow"
+                            >
+                                Specify options
+                            </a>
+
+                                                            
+                                            
+                
+                    </div>
+                
+            </div>
+
+        </div>
+
+    <!--product_bundles_product_item_1_0--></div>
+                                                        
+    <div class="ty-product-bundles-product-item ty-scroller__item"
+        style="--ty-product-lists-thumbnail-width: 112.5px;
+            --ty-product-lists-thumbnail-height: 112.5px;"
+        id="product_bundles_product_item_1_1">
+
+        <input type="hidden" name="product_data[12_1][product_id]" value="12" />
+        <input type="hidden" name="product_data[12_1][amount]" value="1" />
+
+        <div class="ty-product-bundles-product-item__content">
+
+                        <div class="ty-product-bundles-product-item__image"
+                id="product_bundles_product_item_image_1">
+
+                <a href="http://localhost/cs-cart/apparel/mens-clothing/100g-pants/"
+                    class="ty-product-bundles-product-item__image-link"
+                >
+                                                <img class="ty-pict  ty-product-bundles-product-item__image-content   cm-image" alt="" title="" srcset="http://localhost/cs-cart/images/thumbnails/224/224/detailed/8/cat-2.jpg 2x" id="det_img_1_12" width="112" height="112" src="http://localhost/cs-cart/images/thumbnails/112/112/detailed/8/cat-2.jpg" />
+
+                </a>
+            <!--product_bundles_product_item_image_1--></div>
+
+                        <div class="ty-product-bundles-product-item__info">
+
+                                <div class="ty-product-bundles-product-item__name">
+                    <bdi>
+                        <a href="http://localhost/cs-cart/apparel/mens-clothing/100g-pants/"
+                            class="ty-product-bundles-product-item__name-link"
+                        >
+                            100g Pants
+                        </a>
+                    </bdi>
+                </div>
+
+                                
+    
+        <div class="ty-product-bundles-variation-options"
+            id="product_bundles_product_item_options_1_1">
+
+                                        <input type="hidden"
+                    value="17"
+                    name="product_data[12_1][product_options][9]"
+                />
+
+                                
+                                                                                                    <input type="hidden"
+                    value="6"
+                    name="product_data[12_1][product_options][2]"
+                />
+
+                                
+                                                                                    
+            <div class="ty-product-bundles-variation-options__content">
+                                    <span class="ty-product-bundles-variation-options__item">Black/White/White</span>
+                                    <span class="ty-product-bundles-variation-options__item">Small</span>
+                            </div>
+
+        <!--product_bundles_product_item_options_1_1--></div>
+    
+
+
+
+                                <div class="ty-product-bundles-product-item__price"
+                    id="product_bundles_product_item_price_1_1">
+
+                    
+                                                                                            <span class="ty-list-price ty-nowrap ty-strike"><span class="ty-list-price ty-nowrap">$</span><span class="ty-list-price ty-nowrap">30.00</span></span>
+                                                <span class="ty-price">
+                            <span class="ty-price-num">$</span><span class="ty-price-num">20.00</span>                        </span>
+                                                            <!--product_bundles_product_item_price_1_1--></div>
+
+                                
+                                    <div class="ty-product-bundles-product-item__control">
+                                                                                                                                                <a id="opener_product_bundle_options_1_1"
+                                class="cm-dialog-opener cm-dialog-auto-size ty-product-bundles-product-item__control-link
+                                    "
+                                href="http://localhost/cs-cart/index.php?dispatch=product_bundles.get_option_variants&amp;bundle_id=1&amp;product_id=12&amp;bundle_product_key=1&amp;selected_options%5B9%5D=17&amp;selected_options%5B2%5D=6&amp;return_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D12"
+                                data-ca-target-id="content_product_bundle_options_1_1"
+                                data-ca-dialog-title="Specify options"
+                                rel="nofollow"
+                            >
+                                Specify options
+                            </a>
+
+                                                            
+                                            
+                
+                    </div>
+                
+            </div>
+
+        </div>
+
+    <!--product_bundles_product_item_1_1--></div>
+                                                        
+    <div class="ty-product-bundles-product-item ty-scroller__item"
+        style="--ty-product-lists-thumbnail-width: 112.5px;
+            --ty-product-lists-thumbnail-height: 112.5px;"
+        id="product_bundles_product_item_1_2">
+
+        <input type="hidden" name="product_data[12_2][product_id]" value="12" />
+        <input type="hidden" name="product_data[12_2][amount]" value="1" />
+
+        <div class="ty-product-bundles-product-item__content">
+
+                        <div class="ty-product-bundles-product-item__image"
+                id="product_bundles_product_item_image_1">
+
+                <a href="http://localhost/cs-cart/apparel/mens-clothing/100g-pants/"
+                    class="ty-product-bundles-product-item__image-link"
+                >
+                                                <img class="ty-pict  ty-product-bundles-product-item__image-content   cm-image" alt="" title="" srcset="http://localhost/cs-cart/images/thumbnails/224/224/detailed/8/cat-2.jpg 2x" id="det_img_1_12" width="112" height="112" src="http://localhost/cs-cart/images/thumbnails/112/112/detailed/8/cat-2.jpg" />
+
+                </a>
+            <!--product_bundles_product_item_image_1--></div>
+
+                        <div class="ty-product-bundles-product-item__info">
+
+                                <div class="ty-product-bundles-product-item__name">
+                    <bdi>
+                        <a href="http://localhost/cs-cart/apparel/mens-clothing/100g-pants/"
+                            class="ty-product-bundles-product-item__name-link"
+                        >
+                            100g Pants
+                        </a>
+                    </bdi>
+                </div>
+
+                                
+    
+        <div class="ty-product-bundles-variation-options"
+            id="product_bundles_product_item_options_1_2">
+
+                                        <input type="hidden"
+                    value="17"
+                    name="product_data[12_2][product_options][9]"
+                />
+
+                                
+                                                                                                    <input type="hidden"
+                    value="6"
+                    name="product_data[12_2][product_options][2]"
+                />
+
+                                
+                                                                                    
+            <div class="ty-product-bundles-variation-options__content">
+                                    <span class="ty-product-bundles-variation-options__item">Black/White/White</span>
+                                    <span class="ty-product-bundles-variation-options__item">Small</span>
+                            </div>
+
+        <!--product_bundles_product_item_options_1_2--></div>
+    
+
+
+
+                                <div class="ty-product-bundles-product-item__price"
+                    id="product_bundles_product_item_price_1_2">
+
+                    
+                                                                                            <span class="ty-list-price ty-nowrap ty-strike"><span class="ty-list-price ty-nowrap">$</span><span class="ty-list-price ty-nowrap">30.00</span></span>
+                                                <span class="ty-price">
+                            <span class="ty-price-num">$</span><span class="ty-price-num">20.00</span>                        </span>
+                                                            <!--product_bundles_product_item_price_1_2--></div>
+
+                                
+                                    <div class="ty-product-bundles-product-item__control">
+                                                                                                                                                <a id="opener_product_bundle_options_1_2"
+                                class="cm-dialog-opener cm-dialog-auto-size ty-product-bundles-product-item__control-link
+                                    "
+                                href="http://localhost/cs-cart/index.php?dispatch=product_bundles.get_option_variants&amp;bundle_id=1&amp;product_id=12&amp;bundle_product_key=2&amp;selected_options%5B9%5D=17&amp;selected_options%5B2%5D=6&amp;return_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D12"
+                                data-ca-target-id="content_product_bundle_options_1_2"
+                                data-ca-dialog-title="Specify options"
+                                rel="nofollow"
+                            >
+                                Specify options
+                            </a>
+
+                                                            
+                                            
+                
+                    </div>
+                
+            </div>
+
+        </div>
+
+    <!--product_bundles_product_item_1_2--></div>
+                                    </div>
+
+                                
+
+    <div class="ty-product-bundles-bundle-form__total">
+        <div class="ty-product-bundles-bundle-form__total-inner">
+                        <strong class="ty-product-bundles-bundle-form__total-title ty-subheader">
+                Price for all
+            </strong>
+
+                        
+                                <div class="ty-product-bundles-bundle-form__price"
+                    id="product_bundles_bundle_total_price_1">
+                    
+                    <div class="ty-product-bundles-bundle-form__price-discount">
+                        <span class="ty-product-bundles-bundle-form__price-discount-title">
+                            Order discount:
+                        </span>
+                        <span class="ty-product-bundles-bundle-form__price-discount-price">
+                            $<span>30.00</span>                        </span>
+                    </div>
+                    <span class="ty-product-bundles-bundle-form__price-old ty-strike">
+                        $<span>90.00</span>                    </span>
+                    <span class="ty-product-bundles-bundle-form__price-new">
+                        $<span>60.00</span>                    </span>
+                                    <!--product_bundles_bundle_total_price_1--></div>
+
+                                                    <div class="ty-product-bundles-bundle-form__submit" id="wrap_chain_button_1">
+                                
+     <button id="bundle_button_1" class="ty-btn__secondary cm-dialog-closer ty-btn" type="submit" name="dispatch[checkout.add]" >Add all to cart</button>
+
+                    </div>
+                                    </div>
+    </div>
+
+            <!--product_bundles_bundle_form_1--></div>
+        <input type="hidden" name="security_hash" class="cm-no-hide-input" value="4584a3ffefadb157a8912f33ec322a03" /></form>
+    </div>
+
+        <!-- Inline script moved to the bottom of the page -->
+                    </div>
+    </div>
+    
+                                    
+
+                                                                                <style>
+.nav-item.ty-tabs__item.cm-js.active a {
+        color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+.nav-item.ty-tabs__item.cm-js  {
+        font-size: 16px;
+    color: #999999;
+  background: transparent;
+}
+    
+</style>
+    
+
+<!-- Inline script moved to the bottom of the page -->
+<div class="cm-j-tabs clearfix">
+ <div class="product__details__tab">
+ <ul class="nav nav-tabs" role="tablist" > 
+                                                     
+        <li  id="description" class="nav-item ty-tabs__item cm-js active"><a class="nav-link" >Description</a></li>
+                                                                                                                   
+        <li  id="product_reviews" class="nav-item ty-tabs__item cm-js"><a class="nav-link" >Reviews</a></li>
+                        </ul>
+ </div>
+   
+</div>
+
+<div class="cm-tabs-content clearfix" id="tabs_content">
+                            
+            
+                                        
+            <div id="content_description" class="ty-wysiwyg-content content-description" data-ca-accordion-is-active-scroll-to-elm=1>
+                                                        <div ><p>
+	When coach calls you off the bench, you need warm-up pants that come off  in three seconds or less. That’s why these men's adidas 100g basketball  pants have tear-away snaps down the sides, so you're ready for action  as fast as a superhero.
+</p></div>
+                            
+            </div>
+                                
+            
+            
+            <div id="content_features" class="ty-wysiwyg-content content-features">
+                                                    
+                            
+            </div>
+                                
+            
+            
+            <div id="content_files" class="ty-wysiwyg-content content-files">
+                                                                                
+            </div>
+                                
+            
+            
+            <div id="content_tags" class="ty-wysiwyg-content content-tags">
+                                                                                    
+            </div>
+                                
+            
+            
+            <div id="content_attachments" class="ty-wysiwyg-content content-attachments">
+                                                                                
+            </div>
+                                            
+            
+            
+            <div id="content_product_bundles" class="ty-wysiwyg-content content-product_bundles">
+                                                    
+                            
+            </div>
+                                
+            
+            
+            <div id="content_discussion" class="ty-wysiwyg-content content-discussion">
+                                                                                
+            </div>
+                                
+            
+                                        
+            <div id="content_product_reviews" class="ty-wysiwyg-content content-product_reviews" data-ca-accordion-is-active-scroll-to-elm=1>
+                                                    <div class="ty-product-reviews-view" id="content_product_reviews_block">
+    
+    
+    <section class="ty-product-reviews-view__main">
+        <div class="ty-product-reviews-view__main-content" id="product_reviews_list_12">
+
+            
+    <div class="ty-pagination-container cm-pagination-container" id="pagination_contents_comments_12">
+
+    
+    
+
+    
+            
+                            <p class="ty-no-items">No reviews found</p>
+            
+            
+
+
+    <!--pagination_contents_comments_12--></div>
+            <!--product_reviews_list_12--></div>
+
+        <aside class="ty-product-review-reviews-sidebar
+        ">
+
+    
+    <section class="ty-product-review-write-review">
+
+    <h4 class="ty-product-review-write-review__title">
+        Review this product
+    </h4>
+
+    <div class="ty-product-review-write-review__description">
+        <p>Share your thoughts with other customers</p>
+    </div>
+
+        
+    
+
+
+    
+ 
+    <a href="http://localhost/cs-cart/index.php?dispatch=product_reviews.get_new_post_form&amp;product_id=12&amp;post_redirect_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D12%26selected_section%3Dproduct_reviews"  class="ty-btn cm-dialog-opener cm-dialog-auto-size cm-dialog-destroy-on-close ty-product-review-write-product-review-button ty-btn__secondary "  rel="nofollow" data-ca-target-id="new_post_dialog_12" title="Write a review">Write a review</a>
+
+</section>
+
+</aside>
+    </section>
+
+                </div>
+
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+                            
+            </div>
+                                
+            
+            
+            <div id="content_required_products" class="ty-wysiwyg-content content-required_products">
+                                                                                
+            </div>
+            
+</div>
+
+
+                                                                    
+                                            </div>
+            </div>
+        </div>
+</section>
+
+
+
+<div class="product-details">
+</div>
+
+
+
+            ";}s:6:"expiry";i:0;}

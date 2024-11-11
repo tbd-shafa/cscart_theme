@@ -1,27 +1,11 @@
-a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-cart/js/tygh/exceptions.js?ver=1731328949" ></script><script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="twitter" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/twitter.js?ver=1731328949"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/twitter.js?ver=1731328949" ></script><script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="facebook" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/facebook.js?ver=1731328949"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/facebook.js?ver=1731328949" ></script><script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="pinterest" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/pinterest.js?ver=1731328949"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/pinterest.js?ver=1731328949" ></script><script src="http://localhost/cs-cart/js/addons/product_reviews/fallback.js?ver=1731328949" ></script><script src="http://localhost/cs-cart/js/addons/product_reviews/index.js?ver=1731328949" ></script><script src="http://localhost/cs-cart/js/tygh/tabs.js?ver=1731328949" ></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery-3.3.1.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/bootstrap.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery.nice-select.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery-ui.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery.slicknav.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/mixitup.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/owl.carousel.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/main.js"></script><script>
-(function(_, $) {
-    $.ceEvent('on', 'ce.formpre_product_form_227', function(frm, elm) {
-        if ($('#warning_227').length) {
-            $.ceNotification('show', {
-                type: 'W',
-                title: _.tr('warning'),
-                message: _.tr('cannot_buy')
-            });
-
-            return false;
-        }
-
-        return true;
-    });
-}(Tygh, Tygh.$));
-</script>";s:7:"content";s:31515:"                    <!-- Inline script moved to the bottom of the page -->
-<!-- Inline script moved to the bottom of the page -->
-<!-- Inline script moved to the bottom of the page -->
-<!-- Inline script moved to the bottom of the page -->
-<!-- Inline script moved to the bottom of the page -->
-<!-- Inline script moved to the bottom of the page -->
-<!-- Inline script moved to the bottom of the page -->
-<!-- Inline script moved to the bottom of the page -->
+a:2:{s:4:"data";a:1:{s:7:"content";s:33086:"                    <script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery-3.3.1.min.js"></script>
+<script src="http://localhost/cs-cart/design/themes/custom_theme/js/bootstrap.min.js"></script>
+<script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery.nice-select.min.js"></script>
+<script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery-ui.min.js"></script>
+<script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery.slicknav.js"></script>
+<script src="http://localhost/cs-cart/design/themes/custom_theme/js/mixitup.min.js"></script>
+<script src="http://localhost/cs-cart/design/themes/custom_theme/js/owl.carousel.min.js"></script>
+<script src="http://localhost/cs-cart/design/themes/custom_theme/js/main.js"></script>
  <style>
  
  
@@ -56,7 +40,7 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
  </div>
 
    
-<!-- Inline script moved to the bottom of the page -->
+<script src="http://localhost/cs-cart/js/tygh/exceptions.js?ver=1731329344" ></script>
 <style>
 .product__details__pic__item--large {
     width: 555px; 
@@ -122,7 +106,7 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
                                     <div class="">
                                                                                 <form action="http://localhost/cs-cart/" method="post" name="product_form_227" enctype="multipart/form-data" class="cm-disable-empty-files  cm-ajax cm-ajax-full-render cm-ajax-status-middle ">
 <input type="hidden" name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" />
-<input type="hidden" name="redirect_url" value="index.php?dispatch=products.view&amp;product_id=227" />
+<input type="hidden" name="redirect_url" value="products.view?product_id=227" />
 <input type="hidden" name="product_data[227][product_id]" value="227" />
 
                                                                                                                                     <h3 class="" ><bdi>Acer 3D Series HN274H bmiiid</bdi></h3>
@@ -280,7 +264,7 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
                             
                                 
         
-     <a  class="ty-btn ty-btn__tertiary ty-btn-icon ty-add-to-wish heart-icon fa fa-retweet icon_heart_alt cm-ajax cm-ajax-full-render text-button " href="http://localhost/cs-cart/index.php?dispatch=product_features.add_product&amp;product_id=227&amp;redirect_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D227" rel="nofollow" data-ca-target-id="comparison_list,account_info*" title="Add to comparison list"></a>
+     <a  class="ty-btn ty-btn__tertiary ty-btn-icon ty-add-to-wish heart-icon fa fa-retweet icon_heart_alt cm-ajax cm-ajax-full-render text-button " href="http://localhost/cs-cart/index.php?dispatch=product_features.add_product&amp;product_id=227&amp;redirect_url=products.view%3Fproduct_id%3D227" rel="nofollow" data-ca-target-id="comparison_list,account_info*" title="Add to comparison list"></a>
 
 
 
@@ -318,7 +302,23 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
     <input type="hidden" name="additional_info[get_product_type]" value="" />
 
 
-<!-- Inline script moved to the bottom of the page -->
+<script>
+(function(_, $) {
+    $.ceEvent('on', 'ce.formpre_product_form_227', function(frm, elm) {
+        if ($('#warning_227').length) {
+            $.ceNotification('show', {
+                type: 'W',
+                title: _.tr('warning'),
+                message: _.tr('cannot_buy')
+            });
+
+            return false;
+        }
+
+        return true;
+    });
+}(Tygh, Tygh.$));
+</script>
         
     <!--product_options_update_227--></div>
     
@@ -384,7 +384,7 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
 <div hidden
     data-ca-social-buttons="twitter"
     data-ca-social-buttons-src="//platform.twitter.com/widgets.js"></div>
-<!-- Inline script moved to the bottom of the page -->
+<script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="twitter" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/twitter.js?ver=1731329344"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/twitter.js?ver=1731329344" ></script>
 
 </li>
                                 <li class="ty-social-buttons__inline">
@@ -394,7 +394,7 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
 <div hidden
     data-ca-social-buttons="facebook"
     data-ca-social-buttons-src="//connect.facebook.net/en_US/all.js#xfbml=1&appId="></div>
-<!-- Inline script moved to the bottom of the page -->
+<script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="facebook" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/facebook.js?ver=1731329344"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/facebook.js?ver=1731329344" ></script>
 
 </li>
                                             <li class="ty-social-buttons__inline"><span class="pinterest__wrapper">
@@ -403,7 +403,7 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
 <div hidden
     data-ca-social-buttons="pinterest"
     data-ca-social-buttons-src="//assets.pinterest.com/js/pinit.js"></div>
-<!-- Inline script moved to the bottom of the page -->
+<script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="pinterest" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/pinterest.js?ver=1731329344"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/pinterest.js?ver=1731329344" ></script>
 
 </li>
                 </div>
@@ -428,7 +428,7 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
             <input type="hidden" name="quick_login" value="1" />
         
         <input type="hidden" name="return_url" value="index.php?dispatch=products.view&amp;product_id=227" />
-        <input type="hidden" name="redirect_url" value="index.php?dispatch=products.view&amp;product_id=227" />
+        <input type="hidden" name="redirect_url" value="products.view?product_id=227" />
 
         
         <div class="ty-control-group">
@@ -489,7 +489,7 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
 </style>
     
 
-<!-- Inline script moved to the bottom of the page -->
+<script src="http://localhost/cs-cart/js/tygh/tabs.js?ver=1731329344" ></script>
 <div class="cm-j-tabs clearfix">
  <div class="product__details__tab">
  <ul class="nav nav-tabs" role="tablist" > 
@@ -619,8 +619,8 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-
 
                 </div>
 
-<!-- Inline script moved to the bottom of the page -->
-<!-- Inline script moved to the bottom of the page -->
+<script src="http://localhost/cs-cart/js/addons/product_reviews/fallback.js?ver=1731329344" ></script>
+<script src="http://localhost/cs-cart/js/addons/product_reviews/index.js?ver=1731329344" ></script>
                             
             </div>
                                 

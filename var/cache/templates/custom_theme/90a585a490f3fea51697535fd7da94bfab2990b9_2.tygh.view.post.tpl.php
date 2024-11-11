@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 04:42:34
+/* Smarty version 4.3.0, created on 2024-11-11 04:49:20
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/gift_certificates/hooks/wishlist/view.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731fbba7e00e0_45809474',
+  'unifunc' => 'content_6731fd50d17445_64121058',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/add_to_cart.tpl' => 2,
   ),
 ),false)) {
-function content_6731fbba7e00e0_45809474 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731fd50d17445_64121058 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/function.math.php','function'=>'smarty_function_math',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('remove','remove','gift_certificate','free_products','quick_view','gift_certificate','edit','gift_certificate','gift_cert_to','gift_cert_from','amount','send_via','email','postal_mail','free_products','product','price','quantity','subtotal','price_summary','remove','remove','gift_certificate','free_products','quick_view','gift_certificate','edit','gift_certificate','gift_cert_to','gift_cert_from','amount','send_via','email','postal_mail','free_products','product','price','quantity','subtotal','price_summary'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

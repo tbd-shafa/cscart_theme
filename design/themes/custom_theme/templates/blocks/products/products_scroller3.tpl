@@ -50,12 +50,13 @@
                             <div class="featured__item__pic set-bg" data-setbg="{$all_product.image_path}" height="270px;" width="270px;">
                                 <ul class="featured__item__pic__hover">
                                    
-                                   
+ 
                                    <!-- Add to Wishlist -->
                                     <li>
                                         <a href="{"wishlist.add?product_id=`$product.product_id`"|fn_url}" class="cm-ajax cm-ajax-full-render" data-ca-target-id="wishlist_count,content_wishlist">
                                             <i class="fa fa-heart"></i>
                                         </a>
+                                        
                                         
                                     </li>
 
