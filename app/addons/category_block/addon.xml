@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<addon scheme="3.0">
+     <id>category_block</id>
+       <name>Category Block</name>
+        <description>A custom block for displaying categories.</description>
+    <version>1.0</version>
+    <priority>500</priority>
+    <settings></settings>
+</addon>
