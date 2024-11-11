@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 04:08:21
+/* Smarty version 4.3.0, created on 2024-11-11 04:15:22
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/buttons/helpers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731f3b562a9c3_14269191',
+  'unifunc' => 'content_6731f55a950428_98782139',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,19 +20,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6731f3b562a9c3_14269191 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731f55a950428_98782139 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'btn' => 
   array (
     'compiled_filepath' => '/opt/lampp/htdocs/cs-cart/var/cache/templates/backend/ca95ba52eeac72e1a0efde0d03a39a700877caaa_2.tygh.helpers.tpl.php',
     'uid' => 'ca95ba52eeac72e1a0efde0d03a39a700877caaa',
-    'call_name' => 'smarty_template_function_btn_18023137196731f3b55ea7e6_69134629',
+    'call_name' => 'smarty_template_function_btn_2209995986731f55a92a452_37601665',
   ),
   'dropdown' => 
   array (
     'compiled_filepath' => '/opt/lampp/htdocs/cs-cart/var/cache/templates/backend/ca95ba52eeac72e1a0efde0d03a39a700877caaa_2.tygh.helpers.tpl.php',
     'uid' => 'ca95ba52eeac72e1a0efde0d03a39a700877caaa',
-    'call_name' => 'smarty_template_function_dropdown_18023137196731f3b55ea7e6_69134629',
+    'call_name' => 'smarty_template_function_dropdown_2209995986731f55a92a452_37601665',
   ),
 ));
 ?>
@@ -40,9 +40,9 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
 <?php }
 \Tygh\Languages\Helper::preloadLangVars(array('delete_selected','delete','tools'));
-/* smarty_template_function_btn_18023137196731f3b55ea7e6_69134629 */
-if (!function_exists('smarty_template_function_btn_18023137196731f3b55ea7e6_69134629')) {
-function smarty_template_function_btn_18023137196731f3b55ea7e6_69134629(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_btn_2209995986731f55a92a452_37601665 */
+if (!function_exists('smarty_template_function_btn_2209995986731f55a92a452_37601665')) {
+function smarty_template_function_btn_2209995986731f55a92a452_37601665(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('text'=>'','href'=>'','title'=>'','onclick'=>'','target'=>'','class'=>'','data'=>array(),'form'=>'','method'=>'','raw'=>false), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -56,11 +56,11 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/ap
 
     <?php ob_start();
 echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['method']->value ?? null)===null||$tmp==='' ? "GET" ?? null : $tmp), ENT_QUOTES, 'UTF-8');
-$_prefixVariable1 = ob_get_clean();
+$_prefixVariable10 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['method']->value ?? null)===null||$tmp==='' ? "POST" ?? null : $tmp), ENT_QUOTES, 'UTF-8');
-$_prefixVariable2 = ob_get_clean();
-if (fn_check_view_permissions($_smarty_tpl->tpl_vars['href']->value,$_prefixVariable1) && fn_check_view_permissions($_smarty_tpl->tpl_vars['dispatch']->value,$_prefixVariable2)) {?>
+$_prefixVariable11 = ob_get_clean();
+if (fn_check_view_permissions($_smarty_tpl->tpl_vars['href']->value,$_prefixVariable10) && fn_check_view_permissions($_smarty_tpl->tpl_vars['dispatch']->value,$_prefixVariable11)) {?>
         <?php if ($_smarty_tpl->tpl_vars['type']->value === "text" || $_smarty_tpl->tpl_vars['type']->value === "button") {?>
         <?php if ($_smarty_tpl->tpl_vars['href']->value && $_smarty_tpl->tpl_vars['method']->value == "POST") {?>
             <?php $_smarty_tpl->_assignInScope('class', "cm-post ".((string)$_smarty_tpl->tpl_vars['class']->value));?>
@@ -217,10 +217,10 @@ if (!$_smarty_tpl->tpl_vars['hide_clone']->value) {?><li><?php $_smarty_tpl->sma
 
     <?php }
 }}
-/*/ smarty_template_function_btn_18023137196731f3b55ea7e6_69134629 */
-/* smarty_template_function_dropdown_18023137196731f3b55ea7e6_69134629 */
-if (!function_exists('smarty_template_function_dropdown_18023137196731f3b55ea7e6_69134629')) {
-function smarty_template_function_dropdown_18023137196731f3b55ea7e6_69134629(Smarty_Internal_Template $_smarty_tpl,$params) {
+/*/ smarty_template_function_btn_2209995986731f55a92a452_37601665 */
+/* smarty_template_function_dropdown_2209995986731f55a92a452_37601665 */
+if (!function_exists('smarty_template_function_dropdown_2209995986731f55a92a452_37601665')) {
+function smarty_template_function_dropdown_2209995986731f55a92a452_37601665(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('text'=>'','title'=>'','class'=>'','content'=>'','icon'=>'','no_caret'=>false,'placement'=>"left"), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -255,5 +255,5 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/ap
         </div>
     <?php }
 }}
-/*/ smarty_template_function_dropdown_18023137196731f3b55ea7e6_69134629 */
+/*/ smarty_template_function_dropdown_2209995986731f55a92a452_37601665 */
 }

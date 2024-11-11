@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 04:08:21
+/* Smarty version 4.3.0, created on 2024-11-11 04:15:22
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/companies/components/picker/item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731f3b5c615a8_53602793',
+  'unifunc' => 'content_6731f55aebe3b6_80214246',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6731f3b5c615a8_53602793 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731f55aebe3b6_80214246 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="object-picker__companies-main">
     <div class="object-picker__companies-name">
         <div class="object-picker__companies-name-content"><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['title_pre']->value, ENT_QUOTES, 'UTF-8');?>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 04:08:25
+/* Smarty version 4.3.0, created on 2024-11-11 04:15:27
   from '3a88f6d4070d1006108f702c2ba598fcf0d4e7b4' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731f3b90fa252_46718458',
+  'unifunc' => 'content_6731f55f8476f9_26356389',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -14,7 +14,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6731f3b90fa252_46718458 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731f55f8476f9_26356389 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <ul id="demo_store_links">
 <li class="ty-footer-menu__item"><a href="<?php echo htmlspecialchars((string) fn_url("pages.view?page_id=2"), ENT_QUOTES, 'UTF-8');?>
