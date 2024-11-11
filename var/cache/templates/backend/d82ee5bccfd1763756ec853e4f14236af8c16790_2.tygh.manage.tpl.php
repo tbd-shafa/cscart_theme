@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 03:24:04
+/* Smarty version 4.3.0, created on 2024-11-11 04:08:21
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/block_manager/manage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731e9545bc266_50378494',
+  'unifunc' => 'content_6731f3b577d7e4_11048276',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -29,7 +29,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/mainbox.tpl' => 1,
   ),
 ),false)) {
-function content_6731e9545bc266_50378494 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731f3b577d7e4_11048276 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.style.php','function'=>'smarty_function_style',),4=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),5=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.render_location.php','function'=>'smarty_function_render_location',),));
 \Tygh\Languages\Helper::preloadLangVars(array('block_already_exists_in_grid','new_layout','add_layout','add_layout','export_layout','import_layout','actions.product_tabs','edit_layout_on_site','preview','make_default','properties','delete','export_layout','import_layout','block_manager.add_layout_page','block_manager.new_layout_page','switch_layout','preview','make_default','properties','delete','layout_page','dispatch','name','layout_meta_data','block_manager.manage_layout_in_tab_unavailable_by_object_id','block_manager.dynamic_entity_','block_manager.manage_layout_in_tab_not_exist_location','block_manager.dynamic_entity_','block_manager.manage_layout_in_tab_unavailable','block_manager.dynamic_entity_','editing_layout'));
 $_smarty_tpl->_assignInScope('show_layout_controls', !$_smarty_tpl->tpl_vars['dynamic_object']->value['object_id'] && (fn_allowed_for("ULTIMATE") || !$_smarty_tpl->tpl_vars['runtime']->value['company_id']));
@@ -200,8 +200,8 @@ $_smarty_tpl->_subTemplateRender("tygh:common/popupbox.tpl", $_smarty_tpl->cache
             <li>
                 <?php ob_start();
 echo htmlspecialchars((string) fn_url("?s_layout=".((string)$_smarty_tpl->tpl_vars['layout_data']->value['layout_id'])."&storefront_id=".((string)$_smarty_tpl->tpl_vars['storefront_id']->value),"C"), ENT_QUOTES, 'UTF-8');
-$_prefixVariable1=ob_get_clean();
-$_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'btn', array('type'=>"list",'text'=>$_smarty_tpl->__("preview"),'href'=>$_prefixVariable1,'target'=>"_blank"), true);?>
+$_prefixVariable10=ob_get_clean();
+$_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'btn', array('type'=>"list",'text'=>$_smarty_tpl->__("preview"),'href'=>$_prefixVariable10,'target'=>"_blank"), true);?>
 
             </li>
             <li class="divider"></li>
@@ -272,8 +272,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <li class="cm-no-highlight">
                 <?php ob_start();
 echo $_smarty_tpl->__("block_manager.add_layout_page");
-$_prefixVariable2=ob_get_clean();
-$_smarty_tpl->_subTemplateRender("tygh:common/popupbox.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('id'=>"add_new_location",'text'=>$_smarty_tpl->__("block_manager.new_layout_page"),'link_text'=>$_prefixVariable2."…",'act'=>"link",'href'=>"block_manager.update_location?s_layout=".((string)$_smarty_tpl->tpl_vars['location']->value['layout_id']),'opener_ajax_class'=>"cm-ajax",'link_class'=>"cm-ajax-force",'icon'=>"icon-plus",'content'=>''), 0, true);
+$_prefixVariable11=ob_get_clean();
+$_smarty_tpl->_subTemplateRender("tygh:common/popupbox.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('id'=>"add_new_location",'text'=>$_smarty_tpl->__("block_manager.new_layout_page"),'link_text'=>$_prefixVariable11."…",'act'=>"link",'href'=>"block_manager.update_location?s_layout=".((string)$_smarty_tpl->tpl_vars['location']->value['layout_id']),'opener_ajax_class'=>"cm-ajax",'link_class'=>"cm-ajax-force",'icon'=>"icon-plus",'content'=>''), 0, true);
 ?></li>
         <?php }?>
     </ul>
@@ -307,8 +307,8 @@ $_smarty_tpl->tpl_vars['layout']->do_else = false;
                             <?php $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "tools_list", null, null);?>
                                 <li><?php ob_start();
 echo htmlspecialchars((string) fn_url("?s_layout=".((string)$_smarty_tpl->tpl_vars['layout']->value['layout_id'])."&storefront_id=".((string)$_smarty_tpl->tpl_vars['storefront_id']->value),"C"), ENT_QUOTES, 'UTF-8');
-$_prefixVariable3=ob_get_clean();
-$_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'btn', array('type'=>"list",'text'=>$_smarty_tpl->__("preview"),'href'=>$_prefixVariable3,'target'=>"_blank"), true);?>
+$_prefixVariable12=ob_get_clean();
+$_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'btn', array('type'=>"list",'text'=>$_smarty_tpl->__("preview"),'href'=>$_prefixVariable12,'target'=>"_blank"), true);?>
 </li>
                                 <?php if ($_smarty_tpl->tpl_vars['show_layout_controls']->value) {?>
                                     <li class="divider"></li>
@@ -382,8 +382,8 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
         <div class="sidebar-field text-right">
             <?php ob_start();
 echo htmlspecialchars((string) fn_url("block_manager.update_location?location=".((string)$_smarty_tpl->tpl_vars['location']->value['location_id'])."&s_layout=".((string)$_smarty_tpl->tpl_vars['location']->value['layout_id'])), ENT_QUOTES, 'UTF-8');
-$_prefixVariable4=ob_get_clean();
-$_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'btn', array('type'=>"dialog",'text'=>$_smarty_tpl->__("layout_meta_data"),'class'=>"cm-dialog-opener right",'href'=>$_prefixVariable4,'title'=>((string)$_smarty_tpl->tpl_vars['location']->value['name'])), true);?>
+$_prefixVariable13=ob_get_clean();
+$_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'btn', array('type'=>"dialog",'text'=>$_smarty_tpl->__("layout_meta_data"),'class'=>"cm-dialog-opener right",'href'=>$_prefixVariable13,'title'=>((string)$_smarty_tpl->tpl_vars['location']->value['name'])), true);?>
 
         </div>
     </div>

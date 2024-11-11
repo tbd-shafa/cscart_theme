@@ -1,4 +1,11 @@
 {script src="js/tygh/exceptions.js"}
+<style>
+.product__details__pic__item--large {
+    width: 555px; 
+   
+    height: 576px;
+}
+</style>
 <section class="product-details spad">
         <div class="container">
             <div class="row">
@@ -8,7 +15,8 @@
                             <div class="product__details__pic__item">
                                 <img class="product__details__pic__item--large"
                                     src="{$product.main_pair.detailed.image_path}" 
-                                    alt="{$product.product|escape}">
+                                    alt="{$product.product|escape}"
+                                    width="555" height="576">
                             </div>
                         {/if}
 
