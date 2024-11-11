@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 04:15:27
+/* Smarty version 4.3.0, created on 2024-11-11 04:42:36
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/products/products_scroller3.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731f55f3a93c8_05365639',
+  'unifunc' => 'content_6731fbbc6036d4_10523500',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '081b30d98ce2416b86f865437069ea672c504d36' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/products/products_scroller3.tpl',
-      1 => 1731306043,
+      1 => 1731328943,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6731f55f3a93c8_05365639 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731fbbc6036d4_10523500 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.number_format.php','function'=>'smarty_modifier_number_format',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><style>
@@ -117,20 +117,33 @@ $_smarty_tpl->tpl_vars['all_product']->do_else = false;
                                 <ul class="featured__item__pic__hover">
                                    
                                    
-                                    <li><a href="<?php echo htmlspecialchars((string) fn_url("wishlist.add?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
-"><i class="fa fa-heart"></i></a></li>
-                                    <!-- Add to Compare -->
-                                    <li><a href="<?php echo htmlspecialchars((string) fn_url("product_features.add_product?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
-"><i class="fa fa-retweet"></i></a></li>
-                                    <!-- Add to Cart -->
-                                    <li>
-                                        <form action="<?php echo htmlspecialchars((string) fn_url("checkout.add"), ENT_QUOTES, 'UTF-8');?>
-" method="post">
-                                            <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                   <!-- Add to Wishlist -->
+<li>
+    <a href="<?php echo htmlspecialchars((string) fn_url("wishlist.add?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
+" class="cm-ajax cm-ajax-full-render" data-ca-target-id="wishlist_count,content_wishlist">
+        <i class="fa fa-heart"></i>
+    </a>
+    
+</li>
+
+<!-- Add to Compare -->
+<li>
+    <a href="<?php echo htmlspecialchars((string) fn_url("product_features.add_product?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
+" class="cm-ajax cm-ajax-full-render" data-ca-target-id="comparison_list,content_compare">
+        <i class="fa fa-retweet"></i>
+    </a>
+</li>
+
+<!-- Add to Cart -->
+<li>
+    <form action="<?php echo htmlspecialchars((string) fn_url("checkout.add"), ENT_QUOTES, 'UTF-8');?>
+" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+        <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
-                                        </form>
-                                    </li>
+        <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+    </form>
+</li>
+
                                 </ul>
                             </div>
                            <?php }?>
@@ -255,20 +268,33 @@ $_smarty_tpl->tpl_vars['all_product']->do_else = false;
                                 <ul class="featured__item__pic__hover">
                                    
                                    
-                                    <li><a href="<?php echo htmlspecialchars((string) fn_url("wishlist.add?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
-"><i class="fa fa-heart"></i></a></li>
-                                    <!-- Add to Compare -->
-                                    <li><a href="<?php echo htmlspecialchars((string) fn_url("product_features.add_product?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
-"><i class="fa fa-retweet"></i></a></li>
-                                    <!-- Add to Cart -->
-                                    <li>
-                                        <form action="<?php echo htmlspecialchars((string) fn_url("checkout.add"), ENT_QUOTES, 'UTF-8');?>
-" method="post">
-                                            <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                   <!-- Add to Wishlist -->
+<li>
+    <a href="<?php echo htmlspecialchars((string) fn_url("wishlist.add?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
+" class="cm-ajax cm-ajax-full-render" data-ca-target-id="wishlist_count,content_wishlist">
+        <i class="fa fa-heart"></i>
+    </a>
+    
+</li>
+
+<!-- Add to Compare -->
+<li>
+    <a href="<?php echo htmlspecialchars((string) fn_url("product_features.add_product?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
+" class="cm-ajax cm-ajax-full-render" data-ca-target-id="comparison_list,content_compare">
+        <i class="fa fa-retweet"></i>
+    </a>
+</li>
+
+<!-- Add to Cart -->
+<li>
+    <form action="<?php echo htmlspecialchars((string) fn_url("checkout.add"), ENT_QUOTES, 'UTF-8');?>
+" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+        <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
-                                        </form>
-                                    </li>
+        <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+    </form>
+</li>
+
                                 </ul>
                             </div>
                            <?php }?>

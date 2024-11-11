@@ -1,0 +1,649 @@
+a:2:{s:4:"data";a:2:{s:10:"javascript";s:2504:"<script src="http://localhost/cs-cart/js/tygh/exceptions.js?ver=1731328949" ></script><script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="twitter" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/twitter.js?ver=1731328949"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/twitter.js?ver=1731328949" ></script><script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="facebook" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/facebook.js?ver=1731328949"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/facebook.js?ver=1731328949" ></script><script class="cm-ajax-skip-load cm-ajax-force" type="text/plain" data-type="application/javascript" data-name="pinterest" data-src="http://localhost/cs-cart/js/addons/social_buttons/providers/pinterest.js?ver=1731328949"  src="http://localhost/cs-cart/js/addons/social_buttons/providers/pinterest.js?ver=1731328949" ></script><script src="http://localhost/cs-cart/js/addons/product_reviews/fallback.js?ver=1731328949" ></script><script src="http://localhost/cs-cart/js/addons/product_reviews/index.js?ver=1731328949" ></script><script src="http://localhost/cs-cart/js/tygh/tabs.js?ver=1731328949" ></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery-3.3.1.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/bootstrap.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery.nice-select.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery-ui.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/jquery.slicknav.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/mixitup.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/owl.carousel.min.js"></script><script src="http://localhost/cs-cart/design/themes/custom_theme/js/main.js"></script><script>
+(function(_, $) {
+    $.ceEvent('on', 'ce.formpre_product_form_227', function(frm, elm) {
+        if ($('#warning_227').length) {
+            $.ceNotification('show', {
+                type: 'W',
+                title: _.tr('warning'),
+                message: _.tr('cannot_buy')
+            });
+
+            return false;
+        }
+
+        return true;
+    });
+}(Tygh, Tygh.$));
+</script>";s:7:"content";s:31515:"                    <!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+ <style>
+ 
+ 
+.custom_breadcome {
+    width: calc(100vw - 8px);
+    margin-left: calc((1170px - 100vw) / 2);
+} 
+</style>
+ <div class="custom_breadcome">
+ <section class="breadcrumb-section set-bg" data-setbg="http://localhost/cs-cart/images/detailed/8/feature-2.jpg">
+	
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <!-- Display Product Title -->
+                    <h2>Acer 3D Series HN274H bmiiid</h2>
+
+                    <!-- Dynamic Breadcrumb Navigation -->
+                    <div class="breadcrumb__option" style="color:Black !important;">
+                        <a href="http://localhost/cs-cart" style="color:Black !important;">Home</a>
+                        
+                                                    <a href="http://localhost/cs-cart/categories/170/" style="color:Black !important;"></a>
+                                                
+                        <span>Acer 3D Series HN274H bmiiid</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+ </div>
+
+   
+<!-- Inline script moved to the bottom of the page -->
+<style>
+.product__details__pic__item--large {
+    width: 555px; 
+   
+    height: 576px;
+}
+</style>
+<section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                                                    <div class="product__details__pic__item">
+                                <img class="product__details__pic__item--large"
+                                    src="http://localhost/cs-cart/images/detailed/8/feature-2.jpg" 
+                                    alt="Acer 3D Series HN274H bmiiid"
+                                    width="555" height="576">
+                            </div>
+                        
+                        <div class="product__details__pic__slider owl-carousel">
+                                                            <img data-imgbigurl="http://localhost/cs-cart/images/detailed/0/HN274H_350x250.jpg"
+                                    src="http://localhost/cs-cart/images/detailed/0/HN274H_350x250.jpg" 
+                                    alt="Acer 3D Series HN274H bmiiid">
+                                                    </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                   
+                        <div class="">
+                            <div class="clearfix">
+                                                                                                                                    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div class="">
+                                                                                <form action="http://localhost/cs-cart/" method="post" name="product_form_227" enctype="multipart/form-data" class="cm-disable-empty-files  cm-ajax cm-ajax-full-render cm-ajax-status-middle ">
+<input type="hidden" name="result_ids" value="cart_status*,wish_list*,checkout*,account_info*" />
+<input type="hidden" name="redirect_url" value="index.php?dispatch=products.view&amp;product_id=227" />
+<input type="hidden" name="product_data[227][product_id]" value="227" />
+
+                                                                                                                                    <h3 class="" ><bdi>Acer 3D Series HN274H bmiiid</bdi></h3>
+                                            
+                                                                                                                                                <div class="brand">
+                                                        
+
+    <div class="ty-features-list">
+    <a href="http://localhost/cs-cart/computers/monitors/?features_hash=10-92">Acer</a></div>                                                    </div>
+                                                
+                                            
+                                        
+<section class="ty-product-review-product-rating-overview-short" id="product_review_product_rating_overview_short_227">
+
+    <div class="product__details__rating">
+                        <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                <span>( reviews)</span>
+         
+    
+
+
+    
+ 
+    <a href="http://localhost/cs-cart/index.php?dispatch=product_reviews.get_new_post_form&amp;product_id=227&amp;post_redirect_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D227"  class="ty-btn cm-dialog-opener cm-dialog-auto-size cm-dialog-destroy-on-close ty-product-review-write-product-review-button ty-btn__text "  rel="nofollow" data-ca-target-id="new_post_dialog_227" title="Write a review">Write a review</a>
+</div>
+
+
+   
+
+<!--product_review_product_rating_overview_short_227--></section>
+                                                                                                                                                                                                                                                 <div class="product__details__price">
+                                            <div class="prices-container price-wrap">
+                                                                                                    <div class="ty-product-prices">
+                                                                    <span class="cm-reload-227" id="old_price_update_227">
+                                    
+        <!--old_price_update_227--></span>
+                                                    
+                                                                                                                                                            <div class="ty-product-block__price-actual">
+                                                                <span class="cm-reload-227 ty-price-update" id="price_update_227">
+        <input type="hidden" name="appearance[show_price_values]" value="1" />
+        <input type="hidden" name="appearance[show_price]" value="1" />
+                                                                                                                        <span class="ty-price" id="line_discounted_price_227"><span class="ty-price-num">$</span><span id="sec_discounted_price_227" class="ty-price-num">699.00</span></span>
+                            
+                        <!--price_update_227--></span>
+
+                                                        </div>
+                                                                                                    
+
+                                                                                                            
+                                                                    <span class="cm-reload-227" id="line_discount_update_227">
+            <input type="hidden" name="appearance[show_price_values]" value="1" />
+            <input type="hidden" name="appearance[show_list_discount]" value="1" />
+                    <!--line_discount_update_227--></span>
+    
+                                                    </div>
+                                                                                            </div>
+                                         </div>
+                                       <p><span style="font-family: Helvetica, Arial, Verdana; font-size: 12px; line-height: 20px; text-align: left; background-color: #ffffff; color: #000000;">27" Widescreen LCD display - 1920 x 1080 resolution - 100,000,000:1 contrast ratio - white LED backlight - 2ms response time - integrated speakers - HDMI® - USB - DVI - VGA - adjustable display angle - 3D ready - 3-year limited warranty</span></p>
+                                       
+                                                                               <div class="ty-product-block__field-group">
+                                                                                                <div class="cm-reload-227 stock-wrap" id="product_amount_update_227">
+        <input type="hidden" name="appearance[show_product_amount]" value="1" />
+                                                        <div class="ty-control-group product-list-field">
+                                                    <label class="ty-control-group__label">Availability:</label>
+                                                <span class="ty-qty-in-stock ty-control-group__item" id="in_stock_info_227">
+                                                            In stock
+                                                    </span>
+                    </div>
+                                        <!--product_amount_update_227--></div>
+
+
+
+                                                                                                    <div class="cm-reload-227" id="qty_update_227">
+        <input type="hidden" name="appearance[show_qty]" value="1" />
+        <input type="hidden" name="appearance[capture_options_vs_qty]" value="" />
+                            
+                    <div class="ty-qty clearfix changer" id="qty_227">
+                <label class="ty-control-group__label" for="qty_count_227">Quantity:</label>                                <div class="ty-center ty-value-changer cm-value-changer">
+                                            <a class="cm-increase ty-value-changer__increase">&#43;</a>
+                                        <input  type="text" size="5" class="ty-value-changer__input cm-amount cm-value-decimal" id="qty_count_227" name="product_data[227][amount]" value="1" data-ca-min-qty="1" />
+                                            <a class="cm-decrease ty-value-changer__decrease">&minus;</a>
+                                    </div>
+                            </div>
+                            <!--qty_update_227--></div>
+    
+
+
+                                                                                                        
+
+                                        </div>
+                                                                                
+                                                                               <div class="ty-product-block__button">
+                                            
+                                                                                        <div class="cm-reload-227 " id="add_to_cart_update_227">
+<input type="hidden" name="appearance[show_add_to_cart]" value="1" />
+<input type="hidden" name="appearance[show_list_buttons]" value="1" />
+<input type="hidden" name="appearance[but_role]" value="big" />
+<input type="hidden" name="appearance[quick_view]" value="" />
+
+
+            
+            
+     <button id="button_cart_227" class="primary-btn ty-btn__primary ty-btn__big ty-btn__add-to-cart cm-form-dialog-closer ty-btn" type="submit" name="dispatch[checkout.add..227]" >Add to cart</button>
+
+    
+
+
+
+
+<style>
+.site-btns {
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 13px 30px 12px;
+	background: blue;
+	border: none;
+}
+</style>
+    
+                                            
+
+    
+
+
+    <a id="opener_buy_now_with_one_click_227"
+        class="cm-dialog-opener cm-dialog-auto-size ty-btn site-btns  ty-cr-product-button cm-dialog-destroy-on-close"
+        href="http://localhost/cs-cart/index.php?dispatch=call_requests.request&amp;product_id=227&amp;obj_prefix="         data-ca-target-id="content_buy_now_with_one_click_227"
+                data-ca-dialog-title="Buy now with 1-click"        data-ca-product-id="227" data-ca-dialog-purpose="call_request"
+        rel="nofollow"
+    >
+                <span >Buy now with 1-click</span>
+            </a>
+
+
+<div class="hidden" id="content_buy_now_with_one_click_227" title="Buy now with 1-click">
+    
+</div>
+                    
+    
+    
+            
+
+    
+     <a  class="ty-btn ty-btn__tertiary ty-btn-icon ty-add-to-wish heart-icon icon_heart_alt cm-submit text-button " id="button_wishlist_227" data-ca-dispatch="dispatch[wishlist.add..227]" title="Add to wish list"></a>
+
+
+    
+                            
+                                
+        
+     <a  class="ty-btn ty-btn__tertiary ty-btn-icon ty-add-to-wish heart-icon fa fa-retweet icon_heart_alt cm-ajax cm-ajax-full-render text-button " href="http://localhost/cs-cart/index.php?dispatch=product_features.add_product&amp;product_id=227&amp;redirect_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D227" rel="nofollow" data-ca-target-id="comparison_list,account_info*" title="Add to comparison list"></a>
+
+
+
+<!--add_to_cart_update_227--></div>
+
+
+                                                                                        
+                                            
+                                        </div>
+                                        <ul>
+                                        </ul>
+                                                                                <div class="ty-product-block__option">
+                                                                                                <div class="cm-reload-227 js-product-options-227" id="product_options_update_227">
+        <input type="hidden" name="appearance[show_product_options]" value="1" />
+                                                                
+<input type="hidden" name="appearance[details_page]" value="1" />
+    <input type="hidden" name="additional_info[info_type]" value="D" />
+    <input type="hidden" name="additional_info[is_preview]" value="" />
+    <input type="hidden" name="additional_info[get_icon]" value="1" />
+    <input type="hidden" name="additional_info[get_detailed]" value="1" />
+    <input type="hidden" name="additional_info[get_additional]" value="" />
+    <input type="hidden" name="additional_info[get_options]" value="1" />
+    <input type="hidden" name="additional_info[get_discounts]" value="1" />
+    <input type="hidden" name="additional_info[get_features]" value="" />
+    <input type="hidden" name="additional_info[get_extra]" value="" />
+    <input type="hidden" name="additional_info[get_taxed_prices]" value="1" />
+    <input type="hidden" name="additional_info[get_for_one_product]" value="1" />
+    <input type="hidden" name="additional_info[detailed_params]" value="1" />
+    <input type="hidden" name="additional_info[features_display_on]" value="C" />
+    <input type="hidden" name="additional_info[get_active_options]" value="" />
+    <input type="hidden" name="additional_info[get_only_selectable_options]" value="" />
+    <input type="hidden" name="additional_info[get_variation_features_variants]" value="1" />
+    <input type="hidden" name="additional_info[get_variation_info]" value="1" />
+    <input type="hidden" name="additional_info[get_variation_name]" value="1" />
+    <input type="hidden" name="additional_info[get_product_type]" value="" />
+
+
+<!-- Inline script moved to the bottom of the page -->
+        
+    <!--product_options_update_227--></div>
+    
+                                        </div>
+                                        
+                                        <div class="ty-product-block__advanced-option clearfix">
+                                                                                                                                                <div class="cm-reload-227" id="advanced_options_update_227">
+                <div class="ty-control-group product-list-field">
+                    <label class="ty-control-group__label">Vendor:</label>
+            <span class="ty-control-group__item ty-company-name"><a href="http://localhost/cs-cart/cs-cart/">CS-Cart</a></span>
+        
+    <span class="ty-vendor-rating">
+            </span>
+    
+            
+        <a title="Ask a question" data-ca-target-id="new_thread_login_form" class="cm-dialog-opener cm-dialog-auto-size ty-vendor-communication__post-write" rel="nofollow">
+            <span class="ty-icon ty-icon-chat" ></span>
+            Ask a question
+        </a>
+
+                </div>
+                        
+<input type="hidden" name="appearance[dont_show_points]" value="" />
+        <div class="ty-reward-group">
+        <span class="ty-control-group__label product-list-field">Price in points:</span>
+        <span class="ty-control-group__item" id="price_in_points_227"><bdi>699 points</bdi></span>
+    </div>
+<div class="ty-reward-group product-list-field hidden">
+    <span class="ty-control-group__label">Reward points:</span>
+    <span class="ty-control-group__item" id="reward_points_227"><bdi> points</bdi></span>
+</div>        <!--advanced_options_update_227--></div>
+    
+                                                                                    </div>
+
+                                        <div class="ty-product-block__sku">
+                                                                                                    <div class="ty-control-group ty-sku-item cm-hidden-wrapper" id="sku_update_227">
+            <input type="hidden" name="appearance[show_sku]" value="1" />
+                            <label class="ty-control-group__label" id="sku_227">CODE:</label>
+                        <span class="ty-control-group__item cm-reload-227" id="product_code_227">L0227FHI2Y<!--product_code_227--></span>
+        </div>
+    
+                                        </div>
+
+                                        
+
+                                                                                    
+
+                                        
+                                                                                                                                                                     <li><b>Shipping</b> <span><p class="product-promo-text"><span class="product-promo-header">FREE US shipping over $100!</span><span class="product-promo-body">Orders within next 2 days will be shipped on Monday</span></p></span></li>
+                                              
+                                           
+                                                                                    
+
+                                                                                                                                <input type="hidden" name="security_hash" class="cm-no-hide-input" value="4584a3ffefadb157a8912f33ec322a03" /></form>
+
+                                        
+
+                                        
+                                            
+    <div class="ty-social-buttons">
+      Share on
+                        <li class="ty-social-buttons__inline"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-size="medium" data-count="horizontal" data-url="http://localhost/cs-cart/computers/monitors/acer-3d-series-hn274h-bmiiid/" >Tweet</a>
+<div hidden
+    data-ca-social-buttons="twitter"
+    data-ca-social-buttons-src="//platform.twitter.com/widgets.js"></div>
+<!-- Inline script moved to the bottom of the page -->
+
+</li>
+                                <li class="ty-social-buttons__inline">
+<div id="fb-root"></div>
+
+<div class="fb-like" data-lang="en" data-layout="button_count" data-href="http://localhost/cs-cart/computers/monitors/acer-3d-series-hn274h-bmiiid/" data-send="true" data-show-faces="false" data-action="like" data-font="arial" data-colorscheme="light" data-width="450" ></div>
+<div hidden
+    data-ca-social-buttons="facebook"
+    data-ca-social-buttons-src="//connect.facebook.net/en_US/all.js#xfbml=1&appId="></div>
+<!-- Inline script moved to the bottom of the page -->
+
+</li>
+                                            <li class="ty-social-buttons__inline"><span class="pinterest__wrapper">
+    <a href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Flocalhost%2Fcs-cart%2Fcomputers%2Fmonitors%2Facer-3d-series-hn274h-bmiiid%2F&amp;media=http%3A%2F%2Flocalhost%2Fcs-cart%2Fimages%2Fdetailed%2F8%2Ffeature-2.jpg&amp;description=27%26amp%3Bquot%3B%20Widescreen%20LCD%20display%20-%201920%20x%201080%20resolution%20-%20100%2C000%2C000%3A1%20contrast%20ratio%20-%20white%20LED%20backlight%20-%202ms%20response%20time%20-%20integrated%20speakers%20-%20HDMI%C2%AE%20-%20USB%20-%20DVI%20-%20VGA%20-%20adjustable%20display..." data-pin-do="buttonPin" data-pin-shape="rect" data-pin-height="20" ><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" alt="Pinterest"></a>
+</span>
+<div hidden
+    data-ca-social-buttons="pinterest"
+    data-ca-social-buttons-src="//assets.pinterest.com/js/pinit.js"></div>
+<!-- Inline script moved to the bottom of the page -->
+
+</li>
+                </div>
+
+                                                                                
+                                            
+                                                                            </div>
+                                
+                            
+    <div id="product_vendor_communication_thread_form">
+            <div id="new_thread_login_form" class="hidden ty-vendor-communication-login" title="Sign in">
+    <div class="ty-login-popup">
+        <div class="ty-login-popup__description ty-login-popup__description--bold">
+            Please sign in so that we can notify you about a reply
+        </div>
+        
+
+    <div id="new_thread_login_form_popup_login_popup_form_container">
+            <form name="new_thread_login_form_popup_form" action="http://localhost/cs-cart/" method="post" class="cm-ajax cm-ajax-full-render">
+                    <input type="hidden" name="result_ids" value="new_thread_login_form_popup_login_popup_form_container" />
+            <input type="hidden" name="login_block_id" value="new_thread_login_form_popup" />
+            <input type="hidden" name="quick_login" value="1" />
+        
+        <input type="hidden" name="return_url" value="index.php?dispatch=products.view&amp;product_id=227" />
+        <input type="hidden" name="redirect_url" value="index.php?dispatch=products.view&amp;product_id=227" />
+
+        
+        <div class="ty-control-group">
+            <label for="login_new_thread_login_form_popup" class="ty-login__filed-label ty-control-group__label cm-required cm-trim cm-email">E-mail</label>
+            <input type="text" id="login_new_thread_login_form_popup" name="user_login" size="30" value="" class="ty-login__input cm-focus" />
+        </div>
+
+        <div class="ty-control-group ty-password-forgot">
+            <label for="psw_new_thread_login_form_popup" class="ty-login__filed-label ty-control-group__label ty-password-forgot__label cm-required">Password</label><a href="http://localhost/cs-cart/index.php?dispatch=auth.recover_password" class="ty-password-forgot__a"  tabindex="5">Forgot your password?</a>
+            <input type="password" id="psw_new_thread_login_form_popup" name="password" size="30" value="" class="ty-login__input" maxlength="32" />
+        </div>
+
+                    
+            <div class="ty-login-reglink ty-center">
+                <a class="ty-login-reglink__a" href="http://localhost/cs-cart/profiles-add/" rel="nofollow">Register for a new account</a>
+            </div>
+        
+        
+        
+                    <div class="buttons-container clearfix">
+                <div class="ty-float-right">
+                        
+     <button  class="ty-btn__login ty-btn__secondary ty-btn" type="submit" name="dispatch[auth.login]" >Sign in</button>
+
+                </div>
+                <div class="ty-login__remember-me">
+                    <label for="remember_me_new_thread_login_form_popup" class="ty-login__remember-me-label"><input class="checkbox" type="checkbox" name="remember_me" id="remember_me_new_thread_login_form_popup" value="Y" />Remember me</label>
+                </div>
+            </div>
+        
+    <input type="hidden" name="security_hash" class="cm-no-hide-input" value="4584a3ffefadb157a8912f33ec322a03" /></form>
+
+    <!--new_thread_login_form_popup_login_popup_form_container--></div>
+    </div>
+</div>
+        <!--product_vendor_communication_thread_form--></div>
+                            </div>
+
+                                                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                                                    
+                                        
+
+                                                                                <style>
+.nav-item.ty-tabs__item.cm-js.active a {
+        color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+.nav-item.ty-tabs__item.cm-js  {
+        font-size: 16px;
+    color: #999999;
+  background: transparent;
+}
+    
+</style>
+    
+
+<!-- Inline script moved to the bottom of the page -->
+<div class="cm-j-tabs clearfix">
+ <div class="product__details__tab">
+ <ul class="nav nav-tabs" role="tablist" > 
+                                                     
+        <li  id="description" class="nav-item ty-tabs__item cm-js active"><a class="nav-link" >Description</a></li>
+                                           
+        <li  id="features" class="nav-item ty-tabs__item cm-js"><a class="nav-link" >Features</a></li>
+                                                                                                       
+        <li  id="product_reviews" class="nav-item ty-tabs__item cm-js"><a class="nav-link" >Reviews</a></li>
+                        </ul>
+ </div>
+   
+</div>
+
+<div class="cm-tabs-content clearfix" id="tabs_content">
+                            
+            
+                                        
+            <div id="content_description" class="ty-wysiwyg-content content-description" data-ca-accordion-is-active-scroll-to-elm=1>
+                                                        <div ><p><span style="font-family: Helvetica, Arial, Verdana; font-size: 12px; line-height: 20px; text-align: left; background-color: #ffffff; color: #000000;">27" Widescreen LCD display - 1920 x 1080 resolution - 100,000,000:1 contrast ratio - white LED backlight - 2ms response time - integrated speakers - HDMI® - USB - DVI - VGA - adjustable display angle - 3D ready - 3-year limited warranty</span></p></div>
+                            
+            </div>
+                                
+            
+                                        
+            <div id="content_features" class="ty-wysiwyg-content content-features" data-ca-accordion-is-active-scroll-to-elm=1>
+                                                        
+            <div class="ty-product-feature-group">
+        <h3 class="ty-subheader">
+    
+    Electronics
+
+    </h3>                    
+        <div class="ty-product-feature">
+        <div class="ty-product-feature__label">Display:</div>
+
+        
+        <div class="ty-product-feature__value">27&quot;</div>
+        </div>
+    
+            </div>
+                                
+            </div>
+                                
+            
+            
+            <div id="content_files" class="ty-wysiwyg-content content-files">
+                                                                                
+            </div>
+                                
+            
+            
+            <div id="content_tags" class="ty-wysiwyg-content content-tags">
+                                                                                    
+            </div>
+                                
+            
+            
+            <div id="content_attachments" class="ty-wysiwyg-content content-attachments">
+                                                                                
+            </div>
+                                            
+            
+            
+            <div id="content_product_bundles" class="ty-wysiwyg-content content-product_bundles">
+                                                    
+                            
+            </div>
+                                
+            
+            
+            <div id="content_discussion" class="ty-wysiwyg-content content-discussion">
+                                                                                
+            </div>
+                                
+            
+                                        
+            <div id="content_product_reviews" class="ty-wysiwyg-content content-product_reviews" data-ca-accordion-is-active-scroll-to-elm=1>
+                                                    <div class="ty-product-reviews-view" id="content_product_reviews_block">
+    
+    
+    <section class="ty-product-reviews-view__main">
+        <div class="ty-product-reviews-view__main-content" id="product_reviews_list_227">
+
+            
+    <div class="ty-pagination-container cm-pagination-container" id="pagination_contents_comments_227">
+
+    
+    
+
+    
+            
+                            <p class="ty-no-items">No reviews found</p>
+            
+            
+
+
+    <!--pagination_contents_comments_227--></div>
+            <!--product_reviews_list_227--></div>
+
+        <aside class="ty-product-review-reviews-sidebar
+        ">
+
+    
+    <section class="ty-product-review-write-review">
+
+    <h4 class="ty-product-review-write-review__title">
+        Review this product
+    </h4>
+
+    <div class="ty-product-review-write-review__description">
+        <p>Share your thoughts with other customers</p>
+    </div>
+
+        
+    
+
+
+    
+ 
+    <a href="http://localhost/cs-cart/index.php?dispatch=product_reviews.get_new_post_form&amp;product_id=227&amp;post_redirect_url=index.php%3Fdispatch%3Dproducts.view%26product_id%3D227%26selected_section%3Dproduct_reviews"  class="ty-btn cm-dialog-opener cm-dialog-auto-size cm-dialog-destroy-on-close ty-product-review-write-product-review-button ty-btn__secondary "  rel="nofollow" data-ca-target-id="new_post_dialog_227" title="Write a review">Write a review</a>
+
+</section>
+
+</aside>
+    </section>
+
+                </div>
+
+<!-- Inline script moved to the bottom of the page -->
+<!-- Inline script moved to the bottom of the page -->
+                            
+            </div>
+                                
+            
+            
+            <div id="content_required_products" class="ty-wysiwyg-content content-required_products">
+                                                                                
+            </div>
+            
+</div>
+
+
+                                                                    
+                                            </div>
+            </div>
+        </div>
+</section>
+
+
+
+<div class="product-details">
+</div>
+
+
+
+            ";}s:6:"expiry";i:0;}

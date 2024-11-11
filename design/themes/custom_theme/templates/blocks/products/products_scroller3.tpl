@@ -51,16 +51,29 @@
                                 <ul class="featured__item__pic__hover">
                                    
                                    
-                                    <li><a href="{"wishlist.add?product_id=`$product.product_id`"|fn_url}"><i class="fa fa-heart"></i></a></li>
+                                   <!-- Add to Wishlist -->
+                                    <li>
+                                        <a href="{"wishlist.add?product_id=`$product.product_id`"|fn_url}" class="cm-ajax cm-ajax-full-render" data-ca-target-id="wishlist_count,content_wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                        
+                                    </li>
+
                                     <!-- Add to Compare -->
-                                    <li><a href="{"product_features.add_product?product_id=`$product.product_id`"|fn_url}"><i class="fa fa-retweet"></i></a></li>
+                                    <li>
+                                        <a href="{"product_features.add_product?product_id=`$product.product_id`"|fn_url}" class="cm-ajax cm-ajax-full-render" data-ca-target-id="comparison_list,content_compare">
+                                            <i class="fa fa-retweet"></i>
+                                        </a>
+                                    </li>
+
                                     <!-- Add to Cart -->
                                     <li>
-                                        <form action="{"checkout.add"|fn_url}" method="post">
+                                        <form action="{"checkout.add"|fn_url}" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
                                             <input type="hidden" name="product_data[{$product.product_id}][amount]" value="1" />
                                             <button type="submit"><i class="fa fa-shopping-cart"></i></button>
                                         </form>
                                     </li>
+
                                 </ul>
                             </div>
                            {/if}

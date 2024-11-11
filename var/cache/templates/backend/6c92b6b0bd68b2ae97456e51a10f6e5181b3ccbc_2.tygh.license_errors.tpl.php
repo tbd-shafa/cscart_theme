@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 04:15:23
+/* Smarty version 4.3.0, created on 2024-11-11 04:42:31
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/settings/license_errors.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731f55b0fc8c2_64292824',
+  'unifunc' => 'content_6731fbb7817ec3_08191714',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6731f55b0fc8c2_64292824 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731fbb7817ec3_08191714 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('licensing.license_error_license_is_','licensing.license_error_license_is_','please_enter_license_here','activate'));
 if ($_smarty_tpl->tpl_vars['show']->value) {?>
