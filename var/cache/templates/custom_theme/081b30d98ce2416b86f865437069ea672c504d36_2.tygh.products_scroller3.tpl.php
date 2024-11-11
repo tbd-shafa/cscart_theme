@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 04:51:00
+/* Smarty version 4.3.0, created on 2024-11-11 04:53:58
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/products/products_scroller3.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731fdb428fca7_34182919',
+  'unifunc' => 'content_6731fe66bfb0f9_42444206',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '081b30d98ce2416b86f865437069ea672c504d36' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/products/products_scroller3.tpl',
-      1 => 1731329451,
+      1 => 1731329482,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6731fdb428fca7_34182919 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731fe66bfb0f9_42444206 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.number_format.php','function'=>'smarty_modifier_number_format',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><style>
@@ -115,22 +115,17 @@ $_smarty_tpl->tpl_vars['all_product']->do_else = false;
                             <div class="featured__item__pic set-bg" data-setbg="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['all_product']->value['image_path'], ENT_QUOTES, 'UTF-8');?>
 " height="270px;" width="270px;">
                                 <ul class="featured__item__pic__hover">
-                                   <li>
-    <a href="<?php echo htmlspecialchars((string) fn_url("wishlist.add?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
-" 
-       class="cm-submit cm-ajax cm-ajax-full-render" 
-       id="button_wishlist_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
-"
-       data-ca-dispatch="dispatch[wishlist.add..<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
-]"
-       data-ca-target-id="wishlist_count,content_wishlist"
-       title="Add to wish list">
-       <i class="fa fa-heart"></i>
-    </a>
-</li>
+                                   
  
                                    <!-- Add to Wishlist -->
-                                    
+                                    <li>
+                                        <a href="<?php echo htmlspecialchars((string) fn_url("wishlist.add?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
+" class="cm-ajax cm-ajax-full-render" data-ca-target-id="wishlist_count,content_wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                        
+                                        
+                                    </li>
 
                                     <!-- Add to Compare -->
                                     <li>
@@ -272,22 +267,17 @@ $_smarty_tpl->tpl_vars['all_product']->do_else = false;
                             <div class="featured__item__pic set-bg" data-setbg="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['all_product']->value['image_path'], ENT_QUOTES, 'UTF-8');?>
 " height="270px;" width="270px;">
                                 <ul class="featured__item__pic__hover">
-                                   <li>
-    <a href="<?php echo htmlspecialchars((string) fn_url("wishlist.add?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
-" 
-       class="cm-submit cm-ajax cm-ajax-full-render" 
-       id="button_wishlist_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
-"
-       data-ca-dispatch="dispatch[wishlist.add..<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
-]"
-       data-ca-target-id="wishlist_count,content_wishlist"
-       title="Add to wish list">
-       <i class="fa fa-heart"></i>
-    </a>
-</li>
+                                   
  
                                    <!-- Add to Wishlist -->
-                                    
+                                    <li>
+                                        <a href="<?php echo htmlspecialchars((string) fn_url("wishlist.add?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
+" class="cm-ajax cm-ajax-full-render" data-ca-target-id="wishlist_count,content_wishlist">
+                                            <i class="fa fa-heart"></i>
+                                        </a>
+                                        
+                                        
+                                    </li>
 
                                     <!-- Add to Compare -->
                                     <li>
