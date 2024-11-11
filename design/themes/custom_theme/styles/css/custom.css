@@ -947,6 +947,7 @@ ol {
 	text-align: center;
 	border: 1px solid #ebebeb;
 	background: #ffffff;
+	padding: 0px;
 	display: block;
 	border-radius: 50%;
 	-webkit-transition: all, 0.5s;
@@ -954,6 +955,7 @@ ol {
 	-ms-transition: all, 0.5s;
 	-o-transition: all, 0.5s;
 	transition: all, 0.5s;
+	padding: 0px;
 }
 
 .featured__item__pic__hover li button i {

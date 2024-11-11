@@ -49,16 +49,18 @@
                           {if $product.product_id == $all_product.product_id}
                             <div class="featured__item__pic set-bg" data-setbg="{$all_product.image_path}" height="270px;" width="270px;">
                                 <ul class="featured__item__pic__hover">
-                                   
- 
-                                   <!-- Add to Wishlist -->
+                                    <!-- Add to Wishlist -->
                                     <li>
-                                        <a href="{"wishlist.add?product_id=`$product.product_id`"|fn_url}" class="cm-ajax cm-ajax-full-render" data-ca-target-id="wishlist_count,content_wishlist">
-                                            <i class="fa fa-heart"></i>
-                                        </a>
-                                        
-                                        
+                                        <form action="{"wishlist.add"|fn_url}" method="post" class="cm-ajax cm-ajax-full-render">
+                                            <input type="hidden" name="product_data[{$product.product_id}][product_id]" value="{$product.product_id}">
+                                            <input type="hidden" name="product_data[{$product.product_id}][amount]" value="1">
+                                            <input type="hidden" name="dispatch" value="wishlist.add">
+                                            <button type="submit" class="ty-btn ty-btn__tertiary ty-btn-icon">
+                                                <i class="fa fa-heart"></i>
+                                            </button>
+                                        </form>
                                     </li>
+
 
                                     <!-- Add to Compare -->
                                     <li>
