@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 03:08:20
+/* Smarty version 4.3.0, created on 2024-11-11 03:24:04
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/fileuploader.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6731e5a4ccf882_25453494',
+  'unifunc' => 'content_6731e9549dd387_66020299',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6731e5a4ccf882_25453494 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6731e9549dd387_66020299 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),4=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),5=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 \Tygh\Languages\Helper::preloadLangVars(array('file_is_too_large','files_are_too_large','remove_this_item','remove_this_item','text_select_file','upload_another_file','local','server','url','text_allowed_to_upload_file_extension'));
 $_smarty_tpl->_assignInScope('post_max_size', $_smarty_tpl->tpl_vars['server_env']->value->getIniVar("post_max_size"));
@@ -77,8 +77,8 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
 
 <?php ob_start();
 echo htmlspecialchars((string) md5($_smarty_tpl->tpl_vars['var_name']->value), ENT_QUOTES, 'UTF-8');
-$_prefixVariable26=ob_get_clean();
-$_smarty_tpl->_assignInScope('id_var_name', ((string)$_smarty_tpl->tpl_vars['prefix']->value).$_prefixVariable26);?>
+$_prefixVariable5=ob_get_clean();
+$_smarty_tpl->_assignInScope('id_var_name', ((string)$_smarty_tpl->tpl_vars['prefix']->value).$_prefixVariable5);?>
 
 <div class="fileuploader cm-fileuploader cm-field-container" <?php if ($_smarty_tpl->tpl_vars['disabled_param']->value) {?>hidden disabled<?php }?>>
 <input type="hidden" id="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['label_id']->value, ENT_QUOTES, 'UTF-8');?>
@@ -129,8 +129,8 @@ echo "Tygh.fileuploader.toggle_links('";
 echo (string)$_smarty_tpl->tpl_vars['id_var_name']->value;
 echo "', 'show');";
 }
-$_prefixVariable27=ob_get_clean();
-echo smarty_function_include_ext(array('file'=>"common/icon.tpl",'source'=>"remove_sign",'class'=>"cm-tooltip hand flex-inline top",'id'=>"clean_selection_".((string)$_smarty_tpl->tpl_vars['id_var_name']->value)."_".((string)$_smarty_tpl->tpl_vars['image']->value['file']),'title'=>$_smarty_tpl->__("remove_this_item"),'data'=>array("onclick"=>"Tygh.fileuploader.clean_selection(this.id); ".$_prefixVariable27." Tygh.fileuploader.check_required_field('".((string)$_smarty_tpl->tpl_vars['id_var_name']->value)."', '".((string)$_smarty_tpl->tpl_vars['label_id']->value)."');"),'icon_text'=>''),$_smarty_tpl);?>
+$_prefixVariable6=ob_get_clean();
+echo smarty_function_include_ext(array('file'=>"common/icon.tpl",'source'=>"remove_sign",'class'=>"cm-tooltip hand flex-inline top",'id'=>"clean_selection_".((string)$_smarty_tpl->tpl_vars['id_var_name']->value)."_".((string)$_smarty_tpl->tpl_vars['image']->value['file']),'title'=>$_smarty_tpl->__("remove_this_item"),'data'=>array("onclick"=>"Tygh.fileuploader.clean_selection(this.id); ".$_prefixVariable6." Tygh.fileuploader.check_required_field('".((string)$_smarty_tpl->tpl_vars['id_var_name']->value)."', '".((string)$_smarty_tpl->tpl_vars['label_id']->value)."');"),'icon_text'=>''),$_smarty_tpl);?>
 &nbsp;<?php }
 if ($_smarty_tpl->tpl_vars['delete_link']->value) {?></a><?php }?><span class="upload-filename"><?php if ($_smarty_tpl->tpl_vars['download_link']->value) {?><a href="<?php echo htmlspecialchars((string) fn_url($_smarty_tpl->tpl_vars['download_link']->value), ENT_QUOTES, 'UTF-8');?>
 "><?php }
@@ -159,8 +159,8 @@ ob_start();?>
 if ($_smarty_tpl->tpl_vars['multiupload']->value !== 'Y') {
 echo "Tygh.fileuploader.toggle_links(this.id, 'show');";
 }
-$_prefixVariable28=ob_get_clean();
-echo smarty_function_include_ext(array('file'=>"common/icon.tpl",'source'=>"remove_sign",'class'=>"cm-tooltip hand flex-inline top",'id'=>"clean_selection_".((string)$_smarty_tpl->tpl_vars['id_var_name']->value),'title'=>$_smarty_tpl->__("remove_this_item"),'data'=>array("onclick"=>"Tygh.fileuploader.clean_selection(this.id); ".$_prefixVariable28." Tygh.fileuploader.check_required_field('".((string)$_smarty_tpl->tpl_vars['id_var_name']->value)."', '".((string)$_smarty_tpl->tpl_vars['label_id']->value)."');"),'icon_text'=>''),$_smarty_tpl);?>
+$_prefixVariable7=ob_get_clean();
+echo smarty_function_include_ext(array('file'=>"common/icon.tpl",'source'=>"remove_sign",'class'=>"cm-tooltip hand flex-inline top",'id'=>"clean_selection_".((string)$_smarty_tpl->tpl_vars['id_var_name']->value),'title'=>$_smarty_tpl->__("remove_this_item"),'data'=>array("onclick"=>"Tygh.fileuploader.clean_selection(this.id); ".$_prefixVariable7." Tygh.fileuploader.check_required_field('".((string)$_smarty_tpl->tpl_vars['id_var_name']->value)."', '".((string)$_smarty_tpl->tpl_vars['label_id']->value)."');"),'icon_text'=>''),$_smarty_tpl);?>
 &nbsp;<span class="upload-filename"></span></p>
         <?php if ($_smarty_tpl->tpl_vars['multiupload']->value !== "Y") {?><p class="cm-fu-no-file <?php if ($_smarty_tpl->tpl_vars['images']->value) {?>hidden<?php }?>"><?php echo $_smarty_tpl->__("text_select_file");?>
 </p><?php }?>
