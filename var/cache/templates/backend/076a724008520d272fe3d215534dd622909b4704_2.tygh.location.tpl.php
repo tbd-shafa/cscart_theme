@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 21:09:13
+/* Smarty version 4.3.0, created on 2024-11-11 21:31:29
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/block_manager/render/location.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6732e2f93f6673_17415408',
+  'unifunc' => 'content_6732e8316c6968_35114417',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6732e2f93f6673_17415408 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6732e8316c6968_35114417 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- start location-->
 	<?php echo $_smarty_tpl->tpl_vars['containers']->value['top_panel'];?>
 
