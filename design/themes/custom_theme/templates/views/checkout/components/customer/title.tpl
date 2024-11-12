@@ -1,8 +1,4 @@
 <div class="litecheckout__group">
-    <div class="litecheckout__item litecheckout__item--fill">
-        <h2 class="litecheckout__step-title">{$block_title|default:__("lite_checkout.customer_information")}</h2>
-    </div>
-
     {* login popup button *}
     {if !$auth.user_id}
         <div class="litecheckout__item">

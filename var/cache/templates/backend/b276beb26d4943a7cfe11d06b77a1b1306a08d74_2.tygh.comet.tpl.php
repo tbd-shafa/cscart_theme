@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 21:31:29
+/* Smarty version 4.3.0, created on 2024-11-12 04:47:58
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/comet.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6732e831b6e1b6_91742719',
+  'unifunc' => 'content_67334e7ef41cb1_59289693',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6732e831b6e1b6_91742719 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67334e7ef41cb1_59289693 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('processing'));
 ?>
 <a id="comet_container_controller" data-backdrop="static" data-keyboard="false" href="#comet_control" data-toggle="modal" class="hide"></a>

@@ -1,4 +1,10 @@
+
 <div id="checkout_info_products_{$block.snapping_id}">
+<div class="checkout__order">
+                                <h4 class="text-center">Your Order</h4>
+                                <div class="checkout__order__products">Products <span>Total</span></div>
+                                
+                            </div>
     <ul class="ty-order-products__list order-product-list">
     {hook name="block_checkout:cart_items"}
         {foreach from=$cart_products key="key" item="product" name="cart_products"}

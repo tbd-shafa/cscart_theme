@@ -1,6 +1,12 @@
-{$show_label = $show_label|default:true}
+
+<div class="col-md-12">
+   {$show_label = $show_label|default:true}
+    {if $show_label}
+        <label class="litecheckout__label {$label_meta}" for="{$field_id}" style="font-size: 16px;">{$field.description}</label>
+    {/if}
 <div class="litecheckout__field cm-field-container {$wrapper_class} {$field_type_class_postfix}"
     data-ca-error-message-target-method="append" {$wrapper_attributes|render_tag_attrs nofilter}>
+     
     {if $field.field_type == "ProfileFieldTypes::STATE"|enum}
         {$_country = $settings.Checkout.default_country}
         {$_state = $field_value|default:$settings.Checkout.default_state}
@@ -192,7 +198,6 @@
                {$field.attributes|render_tag_attrs nofilter}
         />
     {/if}
-    {if $show_label}
-        <label class="litecheckout__label {$label_meta}" for="{$field_id}">{$field.description}</label>
-    {/if}
+  
+</div> 
 </div>

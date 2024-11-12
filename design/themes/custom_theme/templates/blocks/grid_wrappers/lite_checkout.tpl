@@ -17,7 +17,6 @@
 {/if}
 
 <div class="litecheckout litecheckout__form" id="litecheckout_form">
-    <h1 class="litecheckout__page-title">{__("checkout")}</h1>
     <div data-ca-lite-checkout-element="form">
         <form name="litecheckout_payments_form"
             id="litecheckout_payments_form"

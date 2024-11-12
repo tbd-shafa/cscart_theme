@@ -1,5 +1,9 @@
+
+                               
+ <div class="col-lg-12 col-md-12">
 {hook name="checkout:location_country"}
 <div class="litecheckout__field litecheckout__field--auto">
+<p style="font-size: 16px;">Country<span style="color:red;">*</span></p>   
     <select data-ca-lite-checkout-field="user_data.s_country"
             class="cm-country cm-location-shipping litecheckout__input litecheckout__input--selectable litecheckout__input--selectable--select"
             data-ca-lite-checkout-element="country"
@@ -18,3 +22,4 @@
     <label class="litecheckout__label cm-required" for="litecheckout_country">{__("country")}: </label>
 </div>
 {/hook}
+ </div>

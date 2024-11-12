@@ -2154,6 +2154,7 @@ ol {
 	border-bottom: 1px solid #e1e1e1;
 	padding-bottom: 20px;
 	margin-bottom: 25px;
+	font-size: 25px;
 }
 
 .checkout__form p {
@@ -2243,11 +2244,11 @@ ol {
 	opacity: 0;
 }
 
-.checkout__order {
+/* .checkout__order {
 	background: #f5f5f5;
 	padding: 40px;
 	padding-top: 30px;
-}
+} */
 
 .checkout__order h4 {
 	color: #1c1c1c;
@@ -3523,4 +3524,42 @@ ol {
 	.blog__details__hero__text h2 {
 		font-size: 24px;
 	}
+}
+
+.span4.side-grid.litecheckout__cart.checkout.spad {
+   
+    margin-top: -57px;
+}
+
+.litecheckout__form {
+    margin-top: -69px;
+}
+
+.litecheckout__field.cm-field-container.litecheckout__field--xlarge.litecheckout__field--input {
+    padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+.litecheckout__field.cm-field-container.litecheckout__field--xsmall.litecheckout__field--input {
+    padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+.litecheckout__field.cm-field-container.litecheckout__field--small.litecheckout__field--input {
+    padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+.litecheckout__field.cm-field-container.litecheckout__field--small.litecheckout__field--state {
+    padding-top:30px;
+	padding-bottom: 15px;
+}
+
+.litecheckout__field.cm-field-container.litecheckout__field--small.litecheckout__field--country {
+    padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+.order-products {
+    margin-top: -56px;
 }

@@ -1,4 +1,4 @@
-<button class="litecheckout__submit-btn {$but_meta}"
+<button class="site-btn litecheckout__submit-btn {$but_meta}"
         type="submit"
         name="{$but_name}"
         {if $but_onclick}onclick="{$but_onclick nofilter}"{/if}

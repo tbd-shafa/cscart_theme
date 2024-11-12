@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 21:31:34
+/* Smarty version 4.3.0, created on 2024-11-12 04:48:01
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/grid_wrappers/lite_checkout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6732e836e62073_53311920',
+  'unifunc' => 'content_67334e8184fb04_04150142',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2656e201d160aab0db328cfd79beba2b3d5c03e3' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/grid_wrappers/lite_checkout.tpl',
-      1 => 1729847847,
+      1 => 1731412904,
       2 => 'tygh',
     ),
   ),
@@ -23,9 +23,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/checkout/components/final_section.tpl' => 2,
   ),
 ),false)) {
-function content_6732e836e62073_53311920 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67334e8184fb04_04150142 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
-\Tygh\Languages\Helper::preloadLangVars(array('sign_in','checkout','sign_in','checkout'));
+\Tygh\Languages\Helper::preloadLangVars(array('sign_in','sign_in'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
 echo smarty_function_script(array('src'=>"js/tygh/checkout.js"),$_smarty_tpl);?>
@@ -48,8 +48,6 @@ echo smarty_function_script(array('src'=>"js/tygh/checkout.js"),$_smarty_tpl);?>
 <?php }?>
 
 <div class="litecheckout litecheckout__form" id="litecheckout_form">
-    <h1 class="litecheckout__page-title"><?php echo $_smarty_tpl->__("checkout");?>
-</h1>
     <div data-ca-lite-checkout-element="form">
         <form name="litecheckout_payments_form"
             id="litecheckout_payments_form"
@@ -125,8 +123,6 @@ echo smarty_function_script(array('src'=>"js/tygh/checkout.js"),$_smarty_tpl);?>
 <?php }?>
 
 <div class="litecheckout litecheckout__form" id="litecheckout_form">
-    <h1 class="litecheckout__page-title"><?php echo $_smarty_tpl->__("checkout");?>
-</h1>
     <div data-ca-lite-checkout-element="form">
         <form name="litecheckout_payments_form"
             id="litecheckout_payments_form"

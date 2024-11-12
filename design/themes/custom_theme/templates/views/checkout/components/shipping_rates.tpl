@@ -1,4 +1,8 @@
-<label for="shipping_rates_list" class="cm-required cm-multiple-radios cm-shipping-available-label hidden"></label>
+<div class="checkout__form">
+                <h4>Shipping Methods</h4>
+                    
+                        <div class="col-lg-12 col-md-12">
+                            <label for="shipping_rates_list" class="cm-required cm-multiple-radios cm-shipping-available-label hidden"></label>
 <div class="litecheckout__group litecheckout__shippings"
      data-ca-lite-checkout-overlay-message="{__("lite_checkout.click_here_to_update_shipping")}"
      data-ca-lite-checkout-overlay-class="litecheckout__overlay--active"
@@ -170,3 +174,11 @@
     {/foreach}
 {/hook}
 <!--shipping_rates_list--></div>
+                    </div>
+            </div>
+
+
+
+
+
+

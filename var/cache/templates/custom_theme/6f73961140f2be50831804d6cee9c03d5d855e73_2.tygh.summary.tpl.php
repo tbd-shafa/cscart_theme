@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 21:31:34
+/* Smarty version 4.3.0, created on 2024-11-12 04:48:01
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/checkout/summary.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6732e836d8fa63_46949066',
+  'unifunc' => 'content_67334e8176a600_88210464',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6f73961140f2be50831804d6cee9c03d5d855e73' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/checkout/summary.tpl',
-      1 => 1729847847,
+      1 => 1731415673,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/checkout/components/promotion_coupon.tpl' => 2,
   ),
 ),false)) {
-function content_6732e836d8fa63_46949066 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67334e8176a600_88210464 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/function.math.php','function'=>'smarty_function_math',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('items','shipping','including_discount','order_discount','payment_surcharge','taxes','included','order_total','items','shipping','including_discount','order_discount','payment_surcharge','taxes','included','order_total'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

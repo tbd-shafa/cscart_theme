@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 21:31:34
+/* Smarty version 4.3.0, created on 2024-11-12 04:48:01
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/checkout/components/customer/title.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6732e836853799_59453452',
+  'unifunc' => 'content_67334e8115d438_32519391',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29ccbdd85899ced1845d6cbbc90063e173ae11e9' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/checkout/components/customer/title.tpl',
-      1 => 1729847847,
+      1 => 1731402926,
       2 => 'tygh',
     ),
   ),
@@ -20,16 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6732e836853799_59453452 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67334e8115d438_32519391 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
-\Tygh\Languages\Helper::preloadLangVars(array('lite_checkout.customer_information','sign_in','create_profile','create_profile','lite_checkout.customer_information','sign_in','create_profile','create_profile'));
+\Tygh\Languages\Helper::preloadLangVars(array('sign_in','create_profile','create_profile','sign_in','create_profile','create_profile'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><div class="litecheckout__group">
-    <div class="litecheckout__item litecheckout__item--fill">
-        <h2 class="litecheckout__step-title"><?php echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['block_title']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->__("lite_checkout.customer_information") ?? null : $tmp), ENT_QUOTES, 'UTF-8');?>
-</h2>
-    </div>
-
         <?php if (!$_smarty_tpl->tpl_vars['auth']->value['user_id']) {?>
         <div class="litecheckout__item">
             <?php $_smarty_tpl->_assignInScope('return_current_url', rawurlencode((string)$_smarty_tpl->tpl_vars['config']->value['current_url']));?>
@@ -70,11 +65,6 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
 }
 }
 } else { ?><div class="litecheckout__group">
-    <div class="litecheckout__item litecheckout__item--fill">
-        <h2 class="litecheckout__step-title"><?php echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['block_title']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->__("lite_checkout.customer_information") ?? null : $tmp), ENT_QUOTES, 'UTF-8');?>
-</h2>
-    </div>
-
         <?php if (!$_smarty_tpl->tpl_vars['auth']->value['user_id']) {?>
         <div class="litecheckout__item">
             <?php $_smarty_tpl->_assignInScope('return_current_url', rawurlencode((string)$_smarty_tpl->tpl_vars['config']->value['current_url']));?>

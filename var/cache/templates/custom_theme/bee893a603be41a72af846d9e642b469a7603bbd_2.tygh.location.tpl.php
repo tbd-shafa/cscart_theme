@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 21:31:34
+/* Smarty version 4.3.0, created on 2024-11-12 04:48:01
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/checkout/components/customer/location.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6732e8366cd2a0_55215757',
+  'unifunc' => 'content_67334e81002517_78909038',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bee893a603be41a72af846d9e642b469a7603bbd' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/checkout/components/customer/location.tpl',
-      1 => 1729847847,
+      1 => 1731413656,
       2 => 'tygh',
     ),
   ),
@@ -22,9 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/checkout/components/profile_fields.tpl' => 2,
   ),
 ),false)) {
-function content_6732e8366cd2a0_55215757 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67334e81002517_78909038 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
-\Tygh\Languages\Helper::preloadLangVars(array('lite_checkout.deliver_to','lite_checkout.deliver_to'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
 if (!$_smarty_tpl->tpl_vars['show_profiles_on_checkout']->value) {?>
@@ -85,27 +84,30 @@ settype($_tmp_array, 'array');
 $_tmp_array[] = "s_state";
 $_smarty_tpl->_assignInScope('exclude_fields', $_tmp_array);?>
     <?php }?>
-
-    <div class="litecheckout__container">
-        <div class="litecheckout__group" id="litecheckout_step_location">
-            <div class="litecheckout__group">
-                <div class="litecheckout__item">
-                    <h2 class="litecheckout__step-title"><?php echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['block_title']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->__("lite_checkout.deliver_to") ?? null : $tmp), ENT_QUOTES, 'UTF-8');?>
-</h2>
-                </div>
-
-                <?php if ((($tmp = $_smarty_tpl->tpl_vars['show_city']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp) || (($tmp = $_smarty_tpl->tpl_vars['show_state']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp)) {?>
-                    <?php $_smarty_tpl->_subTemplateRender("tygh:views/profiles/components/profiles_scripts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+  <div class="checkout__form">
+                <h4>Deliver to</h4>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                             <div class="litecheckout__container">
+                                    <div class="litecheckout__group" id="litecheckout_step_location">
+                                        <div class="litecheckout__group">
+                                        
+                                            <?php if ((($tmp = $_smarty_tpl->tpl_vars['show_city']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp) || (($tmp = $_smarty_tpl->tpl_vars['show_state']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp)) {?>
+                                                <?php $_smarty_tpl->_subTemplateRender("tygh:views/profiles/components/profiles_scripts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-                <?php }?>
+                                            <?php }?>
 
-                <?php $_smarty_tpl->_subTemplateRender("tygh:views/checkout/components/profile_fields.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('profile_fields'=>$_smarty_tpl->tpl_vars['profile_fields']->value,'section'=>smarty_modifier_enum("ProfileFieldSections::SHIPPING_ADDRESS"),'exclude'=>$_smarty_tpl->tpl_vars['exclude_fields']->value), 0, false);
+                                            <?php $_smarty_tpl->_subTemplateRender("tygh:views/checkout/components/profile_fields.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('profile_fields'=>$_smarty_tpl->tpl_vars['profile_fields']->value,'section'=>smarty_modifier_enum("ProfileFieldSections::SHIPPING_ADDRESS"),'exclude'=>$_smarty_tpl->tpl_vars['exclude_fields']->value), 0, false);
 ?>
+                                        </div>
+
+                                        <div id="litecheckout_autocomplete_dropdown" class="litecheckout__autocomplete-dropdown"></div>
+                                    <!--litecheckout_step_location--></div>
+                                </div>
+                            </div>
+                    </div>
             </div>
-
-            <div id="litecheckout_autocomplete_dropdown" class="litecheckout__autocomplete-dropdown"></div>
-        <!--litecheckout_step_location--></div>
-    </div>
+   
 <?php }
 $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 if (smarty_modifier_trim($_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content'))) {
@@ -174,27 +176,30 @@ settype($_tmp_array, 'array');
 $_tmp_array[] = "s_state";
 $_smarty_tpl->_assignInScope('exclude_fields', $_tmp_array);?>
     <?php }?>
-
-    <div class="litecheckout__container">
-        <div class="litecheckout__group" id="litecheckout_step_location">
-            <div class="litecheckout__group">
-                <div class="litecheckout__item">
-                    <h2 class="litecheckout__step-title"><?php echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['block_title']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->__("lite_checkout.deliver_to") ?? null : $tmp), ENT_QUOTES, 'UTF-8');?>
-</h2>
-                </div>
-
-                <?php if ((($tmp = $_smarty_tpl->tpl_vars['show_city']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp) || (($tmp = $_smarty_tpl->tpl_vars['show_state']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp)) {?>
-                    <?php $_smarty_tpl->_subTemplateRender("tygh:views/profiles/components/profiles_scripts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+  <div class="checkout__form">
+                <h4>Deliver to</h4>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                             <div class="litecheckout__container">
+                                    <div class="litecheckout__group" id="litecheckout_step_location">
+                                        <div class="litecheckout__group">
+                                        
+                                            <?php if ((($tmp = $_smarty_tpl->tpl_vars['show_city']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp) || (($tmp = $_smarty_tpl->tpl_vars['show_state']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp)) {?>
+                                                <?php $_smarty_tpl->_subTemplateRender("tygh:views/profiles/components/profiles_scripts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
-                <?php }?>
+                                            <?php }?>
 
-                <?php $_smarty_tpl->_subTemplateRender("tygh:views/checkout/components/profile_fields.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('profile_fields'=>$_smarty_tpl->tpl_vars['profile_fields']->value,'section'=>smarty_modifier_enum("ProfileFieldSections::SHIPPING_ADDRESS"),'exclude'=>$_smarty_tpl->tpl_vars['exclude_fields']->value), 0, true);
+                                            <?php $_smarty_tpl->_subTemplateRender("tygh:views/checkout/components/profile_fields.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('profile_fields'=>$_smarty_tpl->tpl_vars['profile_fields']->value,'section'=>smarty_modifier_enum("ProfileFieldSections::SHIPPING_ADDRESS"),'exclude'=>$_smarty_tpl->tpl_vars['exclude_fields']->value), 0, true);
 ?>
+                                        </div>
+
+                                        <div id="litecheckout_autocomplete_dropdown" class="litecheckout__autocomplete-dropdown"></div>
+                                    <!--litecheckout_step_location--></div>
+                                </div>
+                            </div>
+                    </div>
             </div>
-
-            <div id="litecheckout_autocomplete_dropdown" class="litecheckout__autocomplete-dropdown"></div>
-        <!--litecheckout_step_location--></div>
-    </div>
+   
 <?php }
 }
 }

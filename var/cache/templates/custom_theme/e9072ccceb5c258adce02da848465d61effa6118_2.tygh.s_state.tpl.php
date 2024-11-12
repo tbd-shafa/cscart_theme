@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 21:31:34
+/* Smarty version 4.3.0, created on 2024-11-12 04:48:01
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/checkout/components/profile_fields/s_state.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6732e836785eb1_15990292',
+  'unifunc' => 'content_67334e810a04a1_72457166',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9072ccceb5c258adce02da848465d61effa6118' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/checkout/components/profile_fields/s_state.tpl',
-      1 => 1729847847,
+      1 => 1731408631,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6732e836785eb1_15990292 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67334e810a04a1_72457166 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('select_state','state','select_state','state'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -28,7 +28,7 @@ $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null
 $_smarty_tpl->_assignInScope('state_descr', $_smarty_tpl->tpl_vars['user_data']->value['s_state_descr']);
 $_smarty_tpl->_assignInScope('state', $_smarty_tpl->tpl_vars['user_data']->value['s_state']);
 $_smarty_tpl->_assignInScope('country', $_smarty_tpl->tpl_vars['user_data']->value['s_country']);?>
-
+<div class="col-lg-12 col-md-12">
 <?php $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"checkout:location_state"));
 $_block_repeat=true;
 echo smarty_block_hook(array('name'=>"checkout:location_state"), null, $_smarty_tpl, $_block_repeat);
@@ -36,6 +36,7 @@ while ($_block_repeat) {
 ob_start();?>
 <div class="litecheckout__field litecheckout__field--xsmall cm-field-container"
     data-ca-error-message-target-method="append">
+    <p style="font-size: 16px;">State<span style="color:red;">*</span></p>   
     <select data-ca-lite-checkout-field="user_data.s_state"
             class="cm-state cm-location-shipping litecheckout__input litecheckout__input--selectable litecheckout__input--selectable--select"
             data-ca-lite-checkout-element="state"
@@ -82,8 +83,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <?php $_block_repeat=false;
 echo smarty_block_hook(array('name'=>"checkout:location_state"), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }
-array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);
-$_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
+array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
+</div><?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 if (smarty_modifier_trim($_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content'))) {
 if ($_smarty_tpl->tpl_vars['auth']->value['area'] == "A") {?><span class="cm-template-box template-box" data-ca-te-template="views/checkout/components/profile_fields/s_state.tpl" id="<?php echo smarty_function_set_id(array('name'=>"views/checkout/components/profile_fields/s_state.tpl"),$_smarty_tpl);?>
 "><div class="cm-template-icon icon-edit ty-icon-edit hidden"></div><?php echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content');?>
@@ -95,7 +96,7 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
 $_smarty_tpl->_assignInScope('state_descr', $_smarty_tpl->tpl_vars['user_data']->value['s_state_descr']);
 $_smarty_tpl->_assignInScope('state', $_smarty_tpl->tpl_vars['user_data']->value['s_state']);
 $_smarty_tpl->_assignInScope('country', $_smarty_tpl->tpl_vars['user_data']->value['s_country']);?>
-
+<div class="col-lg-12 col-md-12">
 <?php $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"checkout:location_state"));
 $_block_repeat=true;
 echo smarty_block_hook(array('name'=>"checkout:location_state"), null, $_smarty_tpl, $_block_repeat);
@@ -103,6 +104,7 @@ while ($_block_repeat) {
 ob_start();?>
 <div class="litecheckout__field litecheckout__field--xsmall cm-field-container"
     data-ca-error-message-target-method="append">
+    <p style="font-size: 16px;">State<span style="color:red;">*</span></p>   
     <select data-ca-lite-checkout-field="user_data.s_state"
             class="cm-state cm-location-shipping litecheckout__input litecheckout__input--selectable litecheckout__input--selectable--select"
             data-ca-lite-checkout-element="state"
@@ -149,7 +151,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <?php $_block_repeat=false;
 echo smarty_block_hook(array('name'=>"checkout:location_state"), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }
-array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);
-}
+array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
+</div><?php }
 }
 }
