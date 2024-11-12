@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 05:17:17
+/* Smarty version 4.3.0, created on 2024-11-11 21:09:12
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/hybrid_auth/hooks/index/styles.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673203dd21c558_37258684',
+  'unifunc' => 'content_6732e2f8a310e5_26582025',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673203dd21c558_37258684 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6732e2f8a310e5_26582025 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.style.php','function'=>'smarty_function_style',),));
 echo smarty_function_style(array('src'=>"addons/hybrid_auth/styles.css"),$_smarty_tpl);
 }

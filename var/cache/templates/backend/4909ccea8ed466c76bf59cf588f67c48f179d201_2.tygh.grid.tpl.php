@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-11 05:17:17
+/* Smarty version 4.3.0, created on 2024-11-11 21:09:13
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/block_manager/render/grid.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673203dd872a32_97079104',
+  'unifunc' => 'content_6732e2f91d52a2_40972432',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/block_manager/components/device_icons.tpl' => 1,
   ),
 ),false)) {
-function content_673203dd872a32_97079104 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6732e2f91d52a2_40972432 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 \Tygh\Languages\Helper::preloadLangVars(array('grid','add_grid_block','insert_grid','insert_block','grid_options','enable_or_disable_grid','delete_grid','editing_grid','insert_grid','insert_block','grid_options','delete_grid','on_off'));
 ?>
