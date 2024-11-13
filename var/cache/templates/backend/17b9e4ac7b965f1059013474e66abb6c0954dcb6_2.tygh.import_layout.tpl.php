@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-12 05:06:18
+/* Smarty version 4.3.0, created on 2024-11-12 20:16:32
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/block_manager/components/import_layout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673352ca5be809_10669035',
+  'unifunc' => 'content_6734282032df48_75531210',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/save_cancel.tpl' => 1,
   ),
 ),false)) {
-function content_673352ca5be809_10669035 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6734282032df48_75531210 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('create_new_layout','update_current_layout','clean_up_all_locations_on_import','override_by_dispatch','import'));
 ?>
 <div class="install-addon">
