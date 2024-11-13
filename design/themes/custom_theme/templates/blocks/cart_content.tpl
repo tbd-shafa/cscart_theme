@@ -1,8 +1,8 @@
+
 {assign var="dropdown_id" value=$block.snapping_id}
 {assign var="r_url" value=$config.current_url|escape:url}
 {hook name="checkout:cart_content"}
-    <div class="ty-dropdown-box top-cart-contents" id="cart_status_{$dropdown_id}" style="padding-top: 24px !important;">
-     
+    <div class="ty-dropdown-box" id="cart_status_{$dropdown_id}">
          <div id="sw_dropdown_{$dropdown_id}" class="ty-dropdown-box__title cm-combination">
         <a href="{"checkout.cart"|fn_url}">
             {hook name="checkout:dropdown_title"}
@@ -82,10 +82,9 @@
             {/hook}
         </div>
     <!--cart_status_{$dropdown_id}--></div>
-     <a href="{fn_url('wishlist.view')}"  style="color:black !important;">
+      <a href="{fn_url('wishlist.view')}"  style="color:black !important;">
     <i class="fa fa-heart" style="color:black !important;"></i>
    {assign var="wishlist_count" value=$smarty.session.wishlist.products|count}
 {$wishlist_count|default:0}
 </a>
-
 {/hook}

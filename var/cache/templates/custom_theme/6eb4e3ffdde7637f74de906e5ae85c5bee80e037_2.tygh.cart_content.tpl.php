@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-12 20:17:39
+/* Smarty version 4.3.0, created on 2024-11-12 22:22:40
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/cart_content.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6734286347e506_42739127',
+  'unifunc' => 'content_673445b0791a64_44245415',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6eb4e3ffdde7637f74de906e5ae85c5bee80e037' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/cart_content.tpl',
-      1 => 1731416770,
+      1 => 1731472813,
       2 => 'tygh',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/proceed_to_checkout.tpl' => 2,
   ),
 ),false)) {
-function content_6734286347e506_42739127 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673445b0791a64_44245415 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),4=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('items','for','cart_is_empty','cart_is_empty','view_cart','checkout','items','for','cart_is_empty','cart_is_empty','view_cart','checkout'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -36,9 +36,8 @@ $_block_repeat=true;
 echo smarty_block_hook(array('name'=>"checkout:cart_content"), null, $_smarty_tpl, $_block_repeat);
 while ($_block_repeat) {
 ob_start();?>
-    <div class="ty-dropdown-box top-cart-contents" id="cart_status_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['dropdown_id']->value, ENT_QUOTES, 'UTF-8');?>
-" style="padding-top: 24px !important;">
-     
+    <div class="ty-dropdown-box" id="cart_status_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['dropdown_id']->value, ENT_QUOTES, 'UTF-8');?>
+">
          <div id="sw_dropdown_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['dropdown_id']->value, ENT_QUOTES, 'UTF-8');?>
 " class="ty-dropdown-box__title cm-combination">
         <a href="<?php echo htmlspecialchars((string) fn_url("checkout.cart"), ENT_QUOTES, 'UTF-8');?>
@@ -181,14 +180,13 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
         </div>
     <!--cart_status_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['dropdown_id']->value, ENT_QUOTES, 'UTF-8');?>
 --></div>
-     <a href="<?php echo htmlspecialchars((string) fn_url('wishlist.view'), ENT_QUOTES, 'UTF-8');?>
+      <a href="<?php echo htmlspecialchars((string) fn_url('wishlist.view'), ENT_QUOTES, 'UTF-8');?>
 "  style="color:black !important;">
     <i class="fa fa-heart" style="color:black !important;"></i>
    <?php $_smarty_tpl->_assignInScope('wishlist_count', smarty_modifier_count($_SESSION['wishlist']['products']));
 echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['wishlist_count']->value ?? null)===null||$tmp==='' ? 0 ?? null : $tmp), ENT_QUOTES, 'UTF-8');?>
 
 </a>
-
 <?php $_block_repeat=false;
 echo smarty_block_hook(array('name'=>"checkout:cart_content"), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }
@@ -209,9 +207,8 @@ $_block_repeat=true;
 echo smarty_block_hook(array('name'=>"checkout:cart_content"), null, $_smarty_tpl, $_block_repeat);
 while ($_block_repeat) {
 ob_start();?>
-    <div class="ty-dropdown-box top-cart-contents" id="cart_status_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['dropdown_id']->value, ENT_QUOTES, 'UTF-8');?>
-" style="padding-top: 24px !important;">
-     
+    <div class="ty-dropdown-box" id="cart_status_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['dropdown_id']->value, ENT_QUOTES, 'UTF-8');?>
+">
          <div id="sw_dropdown_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['dropdown_id']->value, ENT_QUOTES, 'UTF-8');?>
 " class="ty-dropdown-box__title cm-combination">
         <a href="<?php echo htmlspecialchars((string) fn_url("checkout.cart"), ENT_QUOTES, 'UTF-8');?>
@@ -354,14 +351,13 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
         </div>
     <!--cart_status_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['dropdown_id']->value, ENT_QUOTES, 'UTF-8');?>
 --></div>
-     <a href="<?php echo htmlspecialchars((string) fn_url('wishlist.view'), ENT_QUOTES, 'UTF-8');?>
+      <a href="<?php echo htmlspecialchars((string) fn_url('wishlist.view'), ENT_QUOTES, 'UTF-8');?>
 "  style="color:black !important;">
     <i class="fa fa-heart" style="color:black !important;"></i>
    <?php $_smarty_tpl->_assignInScope('wishlist_count', smarty_modifier_count($_SESSION['wishlist']['products']));
 echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['wishlist_count']->value ?? null)===null||$tmp==='' ? 0 ?? null : $tmp), ENT_QUOTES, 'UTF-8');?>
 
 </a>
-
 <?php $_block_repeat=false;
 echo smarty_block_hook(array('name'=>"checkout:cart_content"), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }

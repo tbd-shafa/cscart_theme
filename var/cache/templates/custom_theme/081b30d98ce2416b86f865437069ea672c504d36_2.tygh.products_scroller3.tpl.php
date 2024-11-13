@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-12 20:17:39
+/* Smarty version 4.3.0, created on 2024-11-12 22:22:52
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/products/products_scroller3.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6734286379f5a9_33116993',
+  'unifunc' => 'content_673445bc513062_42155808',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '081b30d98ce2416b86f865437069ea672c504d36' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/products/products_scroller3.tpl',
-      1 => 1731416757,
+      1 => 1731478681,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6734286379f5a9_33116993 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673445bc513062_42155808 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.number_format.php','function'=>'smarty_modifier_number_format',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><style>
@@ -141,14 +141,23 @@ $_smarty_tpl->tpl_vars['all_product']->do_else = false;
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="<?php echo htmlspecialchars((string) fn_url("checkout.add"), ENT_QUOTES, 'UTF-8');?>
-" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="<?php echo htmlspecialchars((string) fn_url('checkout.add'), ENT_QUOTES, 'UTF-8');?>
+" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         </form>
                                     </li>
+
 
                                 </ul>
                             </div>
@@ -298,14 +307,23 @@ $_smarty_tpl->tpl_vars['all_product']->do_else = false;
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="<?php echo htmlspecialchars((string) fn_url("checkout.add"), ENT_QUOTES, 'UTF-8');?>
-" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="<?php echo htmlspecialchars((string) fn_url('checkout.add'), ENT_QUOTES, 'UTF-8');?>
+" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         </form>
                                     </li>
+
 
                                 </ul>
                             </div>

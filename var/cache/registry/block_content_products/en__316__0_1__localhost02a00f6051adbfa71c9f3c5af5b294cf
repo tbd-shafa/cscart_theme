@@ -1,4 +1,4 @@
-a:2:{s:4:"data";a:1:{s:7:"content";s:217194:"                    <style>
+a:2:{s:4:"data";a:1:{s:7:"content";s:222042:"                    <style>
 .featured__item__pic.set-bg {
     width: 270px !important;
     height: 270px !important;
@@ -55,12 +55,21 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:217194:"                    <style>
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[227][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         <input type="hidden" name="security_hash" class="cm-no-hide-input" value="2ef8ddf55b28ddefa430b7c3f27a74ca" /></form>
                                     </li>
+
 
                                 </ul>
                             </div>
@@ -96,12 +105,21 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:217194:"                    <style>
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[68][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         <input type="hidden" name="security_hash" class="cm-no-hide-input" value="2ef8ddf55b28ddefa430b7c3f27a74ca" /></form>
                                     </li>
+
 
                                 </ul>
                             </div>
@@ -137,12 +155,21 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:217194:"                    <style>
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[69][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         <input type="hidden" name="security_hash" class="cm-no-hide-input" value="2ef8ddf55b28ddefa430b7c3f27a74ca" /></form>
                                     </li>
+
 
                                 </ul>
                             </div>
@@ -178,12 +205,21 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:217194:"                    <style>
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[10][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         <input type="hidden" name="security_hash" class="cm-no-hide-input" value="2ef8ddf55b28ddefa430b7c3f27a74ca" /></form>
                                     </li>
+
 
                                 </ul>
                             </div>
@@ -219,12 +255,21 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:217194:"                    <style>
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[248][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         <input type="hidden" name="security_hash" class="cm-no-hide-input" value="2ef8ddf55b28ddefa430b7c3f27a74ca" /></form>
                                     </li>
+
 
                                 </ul>
                             </div>
@@ -260,12 +305,21 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:217194:"                    <style>
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[221][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         <input type="hidden" name="security_hash" class="cm-no-hide-input" value="2ef8ddf55b28ddefa430b7c3f27a74ca" /></form>
                                     </li>
+
 
                                 </ul>
                             </div>
@@ -301,12 +355,21 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:217194:"                    <style>
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[222][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         <input type="hidden" name="security_hash" class="cm-no-hide-input" value="2ef8ddf55b28ddefa430b7c3f27a74ca" /></form>
                                     </li>
+
 
                                 </ul>
                             </div>
@@ -342,12 +405,21 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:217194:"                    <style>
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                    
+                                     <li>
+                                        <form action="http://localhost/cs-cart/index.php?dispatch=checkout.add" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
                                             <input type="hidden" name="product_data[286][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
                                         <input type="hidden" name="security_hash" class="cm-no-hide-input" value="2ef8ddf55b28ddefa430b7c3f27a74ca" /></form>
                                     </li>
+
 
                                 </ul>
                             </div>

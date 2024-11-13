@@ -1,6 +1,5 @@
-a:2:{s:4:"data";a:1:{s:7:"content";s:2092:"                        <div class="top-cart-content ">
-                    <div class="ty-dropdown-box top-cart-contents" id="cart_status_109" style="padding-top: 24px !important;">
-     
+a:2:{s:4:"data";a:1:{s:7:"content";s:2030:"                        <div class="top-cart-content ">
+                    <div class="ty-dropdown-box" id="cart_status_109">
          <div id="sw_dropdown_109" class="ty-dropdown-box__title cm-combination">
         <a href="http://localhost/cs-cart/cart/">
                                                 <span class="ty-icon ty-icon-cart ty-minicart__icon empty" ></span>
@@ -30,11 +29,10 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:2092:"                        <div class="t
             
         </div>
     <!--cart_status_109--></div>
-     <a href="http://localhost/cs-cart/wishlist/"  style="color:black !important;">
+      <a href="http://localhost/cs-cart/wishlist/"  style="color:black !important;">
     <i class="fa fa-heart" style="color:black !important;"></i>
    0
 </a>
-
 
 
                     </div>

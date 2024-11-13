@@ -70,12 +70,28 @@
                                     </li>
 
                                     <!-- Add to Cart -->
-                                    <li>
-                                        <form action="{"checkout.add"|fn_url}" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
+                                   {* 
+                                   <li>
+                                        <form action="{"checkout.add"|fn_url}" method="post" class="cm-ajax cm-ajax-full-render">
                                             <input type="hidden" name="product_data[{$product.product_id}][amount]" value="1" />
                                             <button type="submit"><i class="fa fa-shopping-cart"></i></button>
                                         </form>
                                     </li>
+                                   *} 
+                                     <li>
+                                        <form action="{fn_url('checkout.add')}" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
+                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
+                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
+                                            <input type="hidden" name="redirect_url" value="index.php" />
+                                            
+                                            <input type="hidden" name="product_data[{$product.product_id}][amount]" value="1" />
+                                            
+                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
+                                        </form>
+                                    </li>
+
 
                                 </ul>
                             </div>
