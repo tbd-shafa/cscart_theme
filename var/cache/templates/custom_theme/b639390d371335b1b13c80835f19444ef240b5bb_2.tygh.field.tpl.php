@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-13 02:52:46
+/* Smarty version 4.3.0, created on 2024-11-13 04:59:01
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/checkout/components/profile_fields/field.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673484febdd2d1_43927311',
+  'unifunc' => 'content_6734a295f0f661_88030997',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:components/phone.tpl' => 2,
   ),
 ),false)) {
-function content_673484febdd2d1_43927311 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6734a295f0f661_88030997 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.render_tag_attrs.php','function'=>'smarty_modifier_render_tag_attrs',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),4=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('select_state','select_country','address_residential','address_commercial','select_state','select_country','address_residential','address_commercial'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -211,15 +211,15 @@ echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['input_meta']->value, ENT_
     <?php } elseif ($_smarty_tpl->tpl_vars['field']->value['field_type'] == smarty_modifier_enum("ProfileFieldTypes::DATE")) {?>
         <?php ob_start();
 echo smarty_modifier_render_tag_attrs($_smarty_tpl->tpl_vars['field']->value['attributes']);
-$_prefixVariable4=ob_get_clean();
-$_smarty_tpl->_assignInScope('extra', "data-ca-lite-checkout-field=".((string)$_smarty_tpl->tpl_vars['field_name_helper']->value)." data-ca-lite-checkout-auto-save=true data-ca-lite-checkout-auto-save-on-change=true ".$_prefixVariable4);?>
+$_prefixVariable1=ob_get_clean();
+$_smarty_tpl->_assignInScope('extra', "data-ca-lite-checkout-field=".((string)$_smarty_tpl->tpl_vars['field_name_helper']->value)." data-ca-lite-checkout-auto-save=true data-ca-lite-checkout-auto-save-on-change=true ".$_prefixVariable1);?>
         <?php ob_start();
 if ($_smarty_tpl->tpl_vars['field']->value['class']) {
 echo " ";
 echo (string)$_smarty_tpl->tpl_vars['field']->value['class'];
 }
-$_prefixVariable5=ob_get_clean();
-$_smarty_tpl->_assignInScope('date_meta', "litecheckout__input".$_prefixVariable5.((string)$_smarty_tpl->tpl_vars['input_meta']->value));?>
+$_prefixVariable2=ob_get_clean();
+$_smarty_tpl->_assignInScope('date_meta', "litecheckout__input".$_prefixVariable2.((string)$_smarty_tpl->tpl_vars['input_meta']->value));?>
         <?php $_smarty_tpl->_subTemplateRender("tygh:common/calendar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('date_id'=>((string)$_smarty_tpl->tpl_vars['field_id']->value),'date_name'=>$_smarty_tpl->tpl_vars['field_name']->value,'date_val'=>$_smarty_tpl->tpl_vars['field_value']->value,'date_meta'=>$_smarty_tpl->tpl_vars['date_meta']->value,'extra'=>$_smarty_tpl->tpl_vars['extra']->value), 0, false);
 ?>
     <?php } elseif ($_smarty_tpl->tpl_vars['field']->value['field_type'] == smarty_modifier_enum("ProfileFieldTypes::RADIO")) {?>
@@ -231,7 +231,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value =
 $_smarty_tpl->tpl_vars['name']->do_else = false;
 $_smarty_tpl->tpl_vars['name']->index++;
 $_smarty_tpl->tpl_vars['name']->first = !$_smarty_tpl->tpl_vars['name']->index;
-$__foreach_name_46_saved = $_smarty_tpl->tpl_vars['name'];
+$__foreach_name_20_saved = $_smarty_tpl->tpl_vars['name'];
 ?>
             <label for="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['field_id']->value, ENT_QUOTES, 'UTF-8');?>
 _<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['value']->value, ENT_QUOTES, 'UTF-8');?>
@@ -259,7 +259,7 @@ _<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['value']->value, EN
 
             </label>
         <?php
-$_smarty_tpl->tpl_vars['name'] = $__foreach_name_46_saved;
+$_smarty_tpl->tpl_vars['name'] = $__foreach_name_20_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php } elseif ($_smarty_tpl->tpl_vars['field']->value['field_type'] == smarty_modifier_enum("ProfileFieldTypes::SELECT_BOX")) {?>
@@ -294,13 +294,13 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value =
 $_smarty_tpl->tpl_vars['name']->do_else = false;
 $_smarty_tpl->tpl_vars['name']->index++;
 $_smarty_tpl->tpl_vars['name']->first = !$_smarty_tpl->tpl_vars['name']->index;
-$__foreach_name_47_saved = $_smarty_tpl->tpl_vars['name'];
+$__foreach_name_21_saved = $_smarty_tpl->tpl_vars['name'];
 ?>
                 <option <?php if ($_smarty_tpl->tpl_vars['field_value']->value == $_smarty_tpl->tpl_vars['value']->value) {?>selected<?php }?> value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['value']->value, ENT_QUOTES, 'UTF-8');?>
 "><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['name']->value, ENT_QUOTES, 'UTF-8');?>
 </option>
             <?php
-$_smarty_tpl->tpl_vars['name'] = $__foreach_name_47_saved;
+$_smarty_tpl->tpl_vars['name'] = $__foreach_name_21_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </select>
@@ -574,15 +574,15 @@ echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['input_meta']->value, ENT_
     <?php } elseif ($_smarty_tpl->tpl_vars['field']->value['field_type'] == smarty_modifier_enum("ProfileFieldTypes::DATE")) {?>
         <?php ob_start();
 echo smarty_modifier_render_tag_attrs($_smarty_tpl->tpl_vars['field']->value['attributes']);
-$_prefixVariable6=ob_get_clean();
-$_smarty_tpl->_assignInScope('extra', "data-ca-lite-checkout-field=".((string)$_smarty_tpl->tpl_vars['field_name_helper']->value)." data-ca-lite-checkout-auto-save=true data-ca-lite-checkout-auto-save-on-change=true ".$_prefixVariable6);?>
+$_prefixVariable3=ob_get_clean();
+$_smarty_tpl->_assignInScope('extra', "data-ca-lite-checkout-field=".((string)$_smarty_tpl->tpl_vars['field_name_helper']->value)." data-ca-lite-checkout-auto-save=true data-ca-lite-checkout-auto-save-on-change=true ".$_prefixVariable3);?>
         <?php ob_start();
 if ($_smarty_tpl->tpl_vars['field']->value['class']) {
 echo " ";
 echo (string)$_smarty_tpl->tpl_vars['field']->value['class'];
 }
-$_prefixVariable7=ob_get_clean();
-$_smarty_tpl->_assignInScope('date_meta', "litecheckout__input".$_prefixVariable7.((string)$_smarty_tpl->tpl_vars['input_meta']->value));?>
+$_prefixVariable4=ob_get_clean();
+$_smarty_tpl->_assignInScope('date_meta', "litecheckout__input".$_prefixVariable4.((string)$_smarty_tpl->tpl_vars['input_meta']->value));?>
         <?php $_smarty_tpl->_subTemplateRender("tygh:common/calendar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('date_id'=>((string)$_smarty_tpl->tpl_vars['field_id']->value),'date_name'=>$_smarty_tpl->tpl_vars['field_name']->value,'date_val'=>$_smarty_tpl->tpl_vars['field_value']->value,'date_meta'=>$_smarty_tpl->tpl_vars['date_meta']->value,'extra'=>$_smarty_tpl->tpl_vars['extra']->value), 0, true);
 ?>
     <?php } elseif ($_smarty_tpl->tpl_vars['field']->value['field_type'] == smarty_modifier_enum("ProfileFieldTypes::RADIO")) {?>
@@ -594,7 +594,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value =
 $_smarty_tpl->tpl_vars['name']->do_else = false;
 $_smarty_tpl->tpl_vars['name']->index++;
 $_smarty_tpl->tpl_vars['name']->first = !$_smarty_tpl->tpl_vars['name']->index;
-$__foreach_name_50_saved = $_smarty_tpl->tpl_vars['name'];
+$__foreach_name_24_saved = $_smarty_tpl->tpl_vars['name'];
 ?>
             <label for="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['field_id']->value, ENT_QUOTES, 'UTF-8');?>
 _<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['value']->value, ENT_QUOTES, 'UTF-8');?>
@@ -622,7 +622,7 @@ _<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['value']->value, EN
 
             </label>
         <?php
-$_smarty_tpl->tpl_vars['name'] = $__foreach_name_50_saved;
+$_smarty_tpl->tpl_vars['name'] = $__foreach_name_24_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php } elseif ($_smarty_tpl->tpl_vars['field']->value['field_type'] == smarty_modifier_enum("ProfileFieldTypes::SELECT_BOX")) {?>
@@ -657,13 +657,13 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value =
 $_smarty_tpl->tpl_vars['name']->do_else = false;
 $_smarty_tpl->tpl_vars['name']->index++;
 $_smarty_tpl->tpl_vars['name']->first = !$_smarty_tpl->tpl_vars['name']->index;
-$__foreach_name_51_saved = $_smarty_tpl->tpl_vars['name'];
+$__foreach_name_25_saved = $_smarty_tpl->tpl_vars['name'];
 ?>
                 <option <?php if ($_smarty_tpl->tpl_vars['field_value']->value == $_smarty_tpl->tpl_vars['value']->value) {?>selected<?php }?> value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['value']->value, ENT_QUOTES, 'UTF-8');?>
 "><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['name']->value, ENT_QUOTES, 'UTF-8');?>
 </option>
             <?php
-$_smarty_tpl->tpl_vars['name'] = $__foreach_name_51_saved;
+$_smarty_tpl->tpl_vars['name'] = $__foreach_name_25_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </select>
