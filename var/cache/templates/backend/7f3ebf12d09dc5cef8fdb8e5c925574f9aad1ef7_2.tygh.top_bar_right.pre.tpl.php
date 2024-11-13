@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-12 04:47:58
+/* Smarty version 4.3.0, created on 2024-11-12 05:06:18
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/help_center/hooks/menu/top_bar_right.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67334e7ed1fce0_44660677',
+  'unifunc' => 'content_673352ca7a74e4_78720222',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/help_center/component/help_center_popup.tpl' => 1,
   ),
 ),false)) {
-function content_67334e7ed1fce0_44660677 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673352ca7a74e4_78720222 (Smarty_Internal_Template $_smarty_tpl) {
 if ((defined('ACCOUNT_TYPE') ? constant('ACCOUNT_TYPE') : null) === "admin") {?>
     <div class="top-bar__btn-wrapper dropdown dropdown-top-menu-item cm-dropdown-skip-processing help-center-menu">
         <?php $_smarty_tpl->_subTemplateRender("tygh:addons/help_center/component/help_center_popup.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

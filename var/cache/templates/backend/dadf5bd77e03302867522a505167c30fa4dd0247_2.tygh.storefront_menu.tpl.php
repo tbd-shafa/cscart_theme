@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-12 04:47:58
+/* Smarty version 4.3.0, created on 2024-11-12 05:06:18
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/menu/storefront_menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67334e7ed05f76_78524441',
+  'unifunc' => 'content_673352ca78f615_91584490',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67334e7ed05f76_78524441 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673352ca78f615_91584490 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 $_smarty_tpl->_assignInScope('storefront_status_icon', '');
 $_smarty_tpl->_assignInScope('storefront_url', '');
