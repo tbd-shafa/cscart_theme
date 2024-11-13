@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-13 01:35:37
+/* Smarty version 4.3.0, created on 2024-11-13 02:52:40
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/pickers/storefronts/js.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673472e9b57d54_13604559',
+  'unifunc' => 'content_673484f8dfab58_13626768',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673472e9b57d54_13604559 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673484f8dfab58_13626768 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('remove'));
 $_smarty_tpl->_assignInScope('storefront', fn_get_storefront($_smarty_tpl->tpl_vars['storefront_id']->value));
 $_smarty_tpl->_assignInScope('storefront_name', (($tmp = $_smarty_tpl->tpl_vars['storefront']->value->name ?? null)===null||$tmp==='' ? ((string)$_smarty_tpl->tpl_vars['ldelim']->value)."storefront".((string)$_smarty_tpl->tpl_vars['rdelim']->value) ?? null : $tmp));

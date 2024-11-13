@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-13 01:35:37
+/* Smarty version 4.3.0, created on 2024-11-13 02:52:40
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/payments/update.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673472e9a42729_10394678',
+  'unifunc' => 'content_673484f8c99125_43708465',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -27,7 +27,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/save_cancel.tpl' => 1,
   ),
 ),false)) {
-function content_673472e9a42729_10394678 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673484f8c99125_43708465 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('general','configure','storefronts','processor','offline','tools_addons_additional_payment_methods','template','none','tt_views_payments_update_template','name','icon','description','payment_instructions','usergroups','taxes','tt_views_payments_update_taxes','surcharge','surcharge_title','tt_views_payments_update_surcharge_title','add_storefronts','all_storefronts'));
 echo smarty_function_script(array('src'=>"js/tygh/backend/payment.js"),$_smarty_tpl);?>

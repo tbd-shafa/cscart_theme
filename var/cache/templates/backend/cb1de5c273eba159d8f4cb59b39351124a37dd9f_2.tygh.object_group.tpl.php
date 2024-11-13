@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-13 01:35:37
+/* Smarty version 4.3.0, created on 2024-11-13 02:52:40
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/object_group.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673472e9966e51_61554143',
+  'unifunc' => 'content_673484f8b7f056_19792017',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/select_popup.tpl' => 1,
   ),
 ),false)) {
-function content_673472e9966e51_61554143 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673484f8b7f056_19792017 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('view','edit','delete'));
 $_smarty_tpl->_assignInScope('is_responsive_table_without_title', (($tmp = $_smarty_tpl->tpl_vars['is_responsive_table_without_title']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp));?>
 
