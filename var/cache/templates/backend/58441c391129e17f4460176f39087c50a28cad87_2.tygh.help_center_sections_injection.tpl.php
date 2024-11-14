@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 02:28:48
+/* Smarty version 4.3.0, created on 2024-11-14 05:26:59
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/help_center/component/help_center_sections_injection.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6735d0e02ca618_40765680',
+  'unifunc' => 'content_6735faa370b605_00882275',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6735d0e02ca618_40765680 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6735faa370b605_00882275 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),));
 \Tygh\Languages\Helper::preloadLangVars(array('help_center.ask','help_center.customer_care.submit_ticket','help_center.customer_care.view_all_tickets','help_center.customer_care.status.resolved','help_center.customer_care.status.open','help_center.customer_care','help_center.customer_care.no_support_tickets','help_center.customer_care.submit_ticket','help_center.customer_care.view_all_tickets','help_center.customer_care.service_unavailable','help_center.customer_care.service_unavailable_description','help_center.customer_care.prolong_subscription','help_center.customer_care','help_center.customer_care.sign_in_text','helpdesk_account.sign_in'));
 $_smarty_tpl->_assignInScope('sections_injection', array());

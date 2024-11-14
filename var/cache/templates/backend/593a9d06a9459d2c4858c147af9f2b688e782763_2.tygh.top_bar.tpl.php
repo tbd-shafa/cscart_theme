@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 02:28:48
+/* Smarty version 4.3.0, created on 2024-11-14 05:26:59
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/top_bar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6735d0e01b54c9_79752764',
+  'unifunc' => 'content_6735faa3612937_23009894',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:components/menu/user_menu.tpl' => 1,
   ),
 ),false)) {
-function content_6735d0e01b54c9_79752764 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6735faa3612937_23009894 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 $_smarty_tpl->_assignInScope('scroll_header', (($tmp = $_smarty_tpl->tpl_vars['config']->value['scroll_header'] ?? null)===null||$tmp==='' ? false ?? null : $tmp));?>
 <div class="top-bar <?php if ($_smarty_tpl->tpl_vars['scroll_header']->value) {?>top-bar--scroll-header<?php }?>" id="top_bar">

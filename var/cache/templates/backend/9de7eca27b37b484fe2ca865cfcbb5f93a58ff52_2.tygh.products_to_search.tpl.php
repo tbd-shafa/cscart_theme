@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 02:31:26
+/* Smarty version 4.3.0, created on 2024-11-14 05:28:28
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/products_to_search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6735d17e5af502_23771796',
+  'unifunc' => 'content_6735fafc2e0a21_89570273',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:pickers/products/picker.tpl' => 1,
   ),
 ),false)) {
-function content_6735d17e5af502_23771796 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6735fafc2e0a21_89570273 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.explode.php','function'=>'smarty_modifier_explode',),));
 \Tygh\Languages\Helper::preloadLangVars(array('add','or_saved_search'));
 if ($_smarty_tpl->tpl_vars['search']->value['p_ids']) {?>

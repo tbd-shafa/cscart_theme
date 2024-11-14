@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 02:31:26
+/* Smarty version 4.3.0, created on 2024-11-14 05:28:28
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/context_menu/items/divider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6735d17e842962_64182539',
+  'unifunc' => 'content_6735fafc578e11_51934957',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6735d17e842962_64182539 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6735fafc578e11_51934957 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <li class="divider"></li>
 <?php }

@@ -12,7 +12,7 @@
  * PLEASE READ THE FULL TEXT  OF THE SOFTWARE  LICENSE   AGREEMENT  IN  THE *
  * "copyright.txt" FILE PROVIDED WITH THIS DISTRIBUTION PACKAGE.            *
  ****************************************************************************/
-
+use Tygh\Tygh;
 use Tygh\Registry;
 use Tygh\Addons\Sslcommerz\Enum\PaymentStatus;
 

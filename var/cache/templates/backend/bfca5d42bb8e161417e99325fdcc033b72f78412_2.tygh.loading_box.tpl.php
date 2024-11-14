@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 02:28:47
+/* Smarty version 4.3.0, created on 2024-11-14 05:26:59
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/loading_box.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6735d0dfe7ed67_76586086',
+  'unifunc' => 'content_6735faa33f41f1_86087879',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6735d0dfe7ed67_76586086 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6735faa33f41f1_86087879 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="ajax_overlay" class="ajax-overlay"></div>
 <div id="ajax_loading_box" class="hidden ajax-loading-box"></div>
 <?php }

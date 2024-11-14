@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 02:28:51
+/* Smarty version 4.3.0, created on 2024-11-14 05:27:02
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/steps/vendor_plan_commissions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6735d0e33bd100_67166137',
+  'unifunc' => 'content_6735faa6792555_22006766',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6735d0e33bd100_67166137 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6735faa6792555_22006766 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('onboarding_guide.set_up_seller_plans_description','onboarding_guide.set_up_seller_plans','onboarding_guide.view_seller_plans_description','onboarding_guide.view_seller_plans'));
 ?>
 <div class="onboarding_content_margin--bottom">

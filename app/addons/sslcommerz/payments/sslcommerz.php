@@ -12,7 +12,7 @@
  * PLEASE READ THE FULL TEXT  OF THE SOFTWARE  LICENSE   AGREEMENT  IN  THE *
  * "copyright.txt" FILE PROVIDED WITH THIS DISTRIBUTION PACKAGE.            *
  ****************************************************************************/
-
+use Tygh\Tygh;
 use Tygh\Registry;
 use Tygh\Addons\Sslcommerz\Enum\PaymentStatus;
 
@@ -81,6 +81,7 @@ if (!defined('PAYMENT_NOTIFICATION')) {
             $debug = " \r\n\r\n Payment processor82: \r\n" . TIME . "\r\n" . ' ORDER ID: ' . $order_info['order_id'] . ' POST DATA: EXIT';
             $test = fwrite($fp, $debug);
             fclose($fp);
+            $sslcz['GatewayPageURL'] .= '&session_id=' . Tygh::$app['session']->getID();
             echo "<meta http-equiv='refresh' content='0; url=" . $sslcz['GatewayPageURL'] . "'>";
             exit;
         } else {
