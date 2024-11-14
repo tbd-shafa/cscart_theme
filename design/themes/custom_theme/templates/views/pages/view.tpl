@@ -61,7 +61,7 @@
                                     {/if}
                                     
                                 </ul>
-                                <h5> <a href="http://localhost/cs-cart2/blog/{$related.seo_name|escape}/">{$related.title|escape}</a></h5>
+                                <h5> <a href="http://localhost/cs-cart/blog/{$related.seo_name|escape}/">{$related.title|escape}</a></h5>
                                 <p>{$related.description|strip_tags|truncate:150:"..."}  </p>
                             </div>
                         </div>

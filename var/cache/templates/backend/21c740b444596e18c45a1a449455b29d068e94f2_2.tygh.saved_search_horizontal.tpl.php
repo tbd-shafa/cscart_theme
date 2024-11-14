@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-13 04:58:24
+/* Smarty version 4.3.0, created on 2024-11-13 21:33:09
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/saved_search_horizontal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6734a2700ca5f1_65028560',
+  'unifunc' => 'content_67358b955e2aa2_07333454',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6734a2700ca5f1_65028560 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67358b955e2aa2_07333454 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.render_tag_attrs.php','function'=>'smarty_modifier_render_tag_attrs',),4=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 \Tygh\Languages\Helper::preloadLangVars(array('all','saved_search.set_as_non_default_confirm','saved_search.set_as_non_default','saved_search.set_as_default_confirm','saved_search.set_as_default','delete','custom_search','saved_search.more_short'));
 if ($_smarty_tpl->tpl_vars['saved_search']->value && $_smarty_tpl->tpl_vars['saved_search']->value['dispatch'] && $_smarty_tpl->tpl_vars['view_type']->value) {?>
@@ -65,7 +65,7 @@ $_smarty_tpl->tpl_vars['view_prepare']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['view_prepare_key']->value => $_smarty_tpl->tpl_vars['view_prepare']->value) {
 $_smarty_tpl->tpl_vars['view_prepare']->do_else = false;
 $_smarty_tpl->tpl_vars['view_prepare']->index++;
-$__foreach_view_prepare_7_saved = $_smarty_tpl->tpl_vars['view_prepare'];
+$__foreach_view_prepare_52_saved = $_smarty_tpl->tpl_vars['view_prepare'];
 ?>
         <?php $_tmp_array = isset($_smarty_tpl->tpl_vars['views_prepare']) ? $_smarty_tpl->tpl_vars['views_prepare']->value : array();
 if (!(is_array($_tmp_array) || $_tmp_array instanceof ArrayAccess)) {
@@ -74,7 +74,7 @@ settype($_tmp_array, 'array');
 $_tmp_array[$_smarty_tpl->tpl_vars['view_prepare_key']->value]['index'] = $_smarty_tpl->tpl_vars['view_prepare']->index;
 $_smarty_tpl->_assignInScope('views_prepare', $_tmp_array);?>
     <?php
-$_smarty_tpl->tpl_vars['view_prepare'] = $__foreach_view_prepare_7_saved;
+$_smarty_tpl->tpl_vars['view_prepare'] = $__foreach_view_prepare_52_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php $_smarty_tpl->_assignInScope('search_iteration', ($_smarty_tpl->tpl_vars['views_prepare']->value[$_smarty_tpl->tpl_vars['search']->value['view_id']]['index']+1));?>
@@ -96,7 +96,7 @@ $_smarty_tpl->tpl_vars['view']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['view']->value) {
 $_smarty_tpl->tpl_vars['view']->do_else = false;
 $_smarty_tpl->tpl_vars['view']->iteration++;
-$__foreach_view_8_saved = $_smarty_tpl->tpl_vars['view'];
+$__foreach_view_53_saved = $_smarty_tpl->tpl_vars['view'];
 ?>
                     <?php $_smarty_tpl->_assignInScope('saved_search_item_class', '');?>
 
@@ -211,7 +211,7 @@ $__foreach_view_8_saved = $_smarty_tpl->tpl_vars['view'];
                     </li>
                     <?php }?>
                 <?php
-$_smarty_tpl->tpl_vars['view'] = $__foreach_view_8_saved;
+$_smarty_tpl->tpl_vars['view'] = $__foreach_view_53_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php }?>
@@ -241,7 +241,7 @@ $_smarty_tpl->tpl_vars['view']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['view']->value) {
 $_smarty_tpl->tpl_vars['view']->do_else = false;
 $_smarty_tpl->tpl_vars['view']->iteration++;
-$__foreach_view_9_saved = $_smarty_tpl->tpl_vars['view'];
+$__foreach_view_54_saved = $_smarty_tpl->tpl_vars['view'];
 ?>
                             <?php $_smarty_tpl->_assignInScope('view_class', '');?>
                             <?php if ($_smarty_tpl->tpl_vars['view']->iteration === $_smarty_tpl->tpl_vars['search_iteration']->value) {?>
@@ -266,7 +266,7 @@ echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['view']->value['wrapper_cl
 
                             </li>
                         <?php
-$_smarty_tpl->tpl_vars['view'] = $__foreach_view_9_saved;
+$_smarty_tpl->tpl_vars['view'] = $__foreach_view_54_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </ul>

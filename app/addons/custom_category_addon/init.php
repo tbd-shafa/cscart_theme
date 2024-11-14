@@ -22,7 +22,7 @@ function fn_custom_category_addon_dispatch_before_display()
             if (isset($category['parent_id']) && $category['parent_id'] == '0' && !empty($category['category_id']) && !empty($category['category'])) {
                 $category_id = $category['category_id'];
                 $category_name = $category['seo_name'];
-                $category_link = 'http://localhost/cs-cart2/' . urlencode($category_name);
+                $category_link = 'http://localhost/cs-cart/' . urlencode($category_name);
 
                 $top_level_categories[$category_id] = [
                     'category_id' => $category_id,
@@ -137,7 +137,7 @@ function fn_get_all_blogs_with_descriptions()
             'title' => $blog['page'],
             'description' => $blog['description'],
             'seo_name' => $blog['seo_name'],
-            'link' => 'http://localhost/cs-cart2/' . urlencode($blog['seo_name']),
+            'link' => 'http://localhost/cs-cart/' . urlencode($blog['seo_name']),
             'comment_count' => $comment_count // Add comment count here
         ];
     }
