@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-13 21:33:05
+/* Smarty version 4.3.0, created on 2024-11-14 02:28:47
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/call_requests/hooks/index/styles.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67358b91f008b2_11483442',
+  'unifunc' => 'content_6735d0df7643a0_77518207',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67358b91f008b2_11483442 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6735d0df7643a0_77518207 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.style.php','function'=>'smarty_function_style',),));
 echo smarty_function_style(array('src'=>"addons/call_requests/styles.less"),$_smarty_tpl);?>
 

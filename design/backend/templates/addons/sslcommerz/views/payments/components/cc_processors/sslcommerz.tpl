@@ -30,7 +30,9 @@
     <label class="control-label" for="currency">{__("currency")}:</label>
     <div class="controls">
         <select name="payment_data[processor_params][currency]" id="currency">
-            <option value="USD" {if $processor_params.currency == "USD"}selected="selected"{/if}>USD</option>
+         
+             <option value="BDT" {if $processor_params.currency == "BDT"}selected="selected"{/if}>BDT</option>
+                <option value="USD" {if $processor_params.currency == "USD"}selected="selected"{/if}>USD</option>
         </select>
     </div>
 </div>

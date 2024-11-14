@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-13 21:33:13
+/* Smarty version 4.3.0, created on 2024-11-14 02:28:52
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/block_manager/render/block.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67358b99dfeb84_21574087',
+  'unifunc' => 'content_6735d0e433fc36_34617661',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'backend:views/block_manager/frontend_render/block.tpl' => 1,
   ),
 ),false)) {
-function content_67358b99dfeb84_21574087 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6735d0e433fc36_34617661 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),));
 if (smarty_modifier_trim($_smarty_tpl->tpl_vars['content']->value)) {?>
     <?php if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['block_manager'] && $_smarty_tpl->tpl_vars['location_data']->value['is_frontend_editing_allowed']) {?>

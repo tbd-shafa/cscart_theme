@@ -1,0 +1,39 @@
+a:2:{s:4:"data";a:1:{s:7:"content";s:2030:"                        <div class="top-cart-content ">
+                    <div class="ty-dropdown-box" id="cart_status_318">
+         <div id="sw_dropdown_318" class="ty-dropdown-box__title cm-combination">
+        <a href="http://localhost/cs-cart/cart/">
+                                                <span class="ty-icon ty-icon-cart ty-minicart__icon empty" ></span>
+                    <span class="ty-minicart-title empty-cart ty-hand">Cart is empty</span>
+                    <span class="ty-icon ty-icon-down-micro" ></span>
+                            
+        </a>
+        </div>
+        <div id="dropdown_318" class="cm-popup-box ty-dropdown-box__content ty-dropdown-box__content--cart hidden">
+                            <div class="cm-cart-content cm-cart-content-thumb cm-cart-content-delete">
+                        <div class="ty-cart-items">
+                                                            <div class="ty-cart-items__empty ty-center">Cart is empty</div>
+                                                    </div>
+
+                                                <div class="cm-cart-buttons ty-cart-content__buttons buttons-container hidden">
+                            <div class="ty-float-left">
+                                <a href="http://localhost/cs-cart/cart/" rel="nofollow" class="ty-btn ty-btn__secondary">View cart</a>
+                            </div>
+                                                        <div class="ty-float-right">
+                                            
+ 
+    <a href="http://localhost/cs-cart/checkout/"  class="ty-btn primary-btn " >Checkout</a>
+                            </div>
+                                                    </div>
+                        
+                </div>
+            
+        </div>
+    <!--cart_status_318--></div>
+      <a href="http://localhost/cs-cart/wishlist/"  style="color:black !important;">
+    <i class="fa fa-heart" style="color:black !important;"></i>
+   0
+</a>
+
+
+                    </div>
+            ";}s:6:"expiry";i:0;}
