@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-15 03:08:12
+/* Smarty version 4.3.0, created on 2024-11-15 05:12:09
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/block_manager/extract_nested_forms.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67372b9cd0ff84_98662666',
+  'unifunc' => 'content_673748a9af3f25_39767997',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67372b9cd0ff84_98662666 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673748a9af3f25_39767997 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.explode.php','function'=>'smarty_modifier_explode',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
@@ -38,7 +38,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['form']->value) {
 $_smarty_tpl->tpl_vars['form']->do_else = false;
 $_smarty_tpl->tpl_vars['form']->index++;
 $_smarty_tpl->tpl_vars['form']->first = !$_smarty_tpl->tpl_vars['form']->index;
-$__foreach_form_62_saved = $_smarty_tpl->tpl_vars['form'];
+$__foreach_form_56_saved = $_smarty_tpl->tpl_vars['form'];
 ?>
         <?php if ($_smarty_tpl->tpl_vars['form']->first) {?>
             <?php continue 1;?>
@@ -58,7 +58,7 @@ $__foreach_form_62_saved = $_smarty_tpl->tpl_vars['form'];
 
                 <?php $_smarty_tpl->_assignInScope('content', $_smarty_tpl->tpl_vars['content']->value ,false ,2);?>
     <?php
-$_smarty_tpl->tpl_vars['form'] = $__foreach_form_62_saved;
+$_smarty_tpl->tpl_vars['form'] = $__foreach_form_56_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 }
@@ -85,7 +85,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['form']->value) {
 $_smarty_tpl->tpl_vars['form']->do_else = false;
 $_smarty_tpl->tpl_vars['form']->index++;
 $_smarty_tpl->tpl_vars['form']->first = !$_smarty_tpl->tpl_vars['form']->index;
-$__foreach_form_63_saved = $_smarty_tpl->tpl_vars['form'];
+$__foreach_form_57_saved = $_smarty_tpl->tpl_vars['form'];
 ?>
         <?php if ($_smarty_tpl->tpl_vars['form']->first) {?>
             <?php continue 1;?>
@@ -105,7 +105,7 @@ $__foreach_form_63_saved = $_smarty_tpl->tpl_vars['form'];
 
                 <?php $_smarty_tpl->_assignInScope('content', $_smarty_tpl->tpl_vars['content']->value ,false ,2);?>
     <?php
-$_smarty_tpl->tpl_vars['form'] = $__foreach_form_63_saved;
+$_smarty_tpl->tpl_vars['form'] = $__foreach_form_57_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 }

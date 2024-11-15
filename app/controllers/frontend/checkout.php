@@ -911,16 +911,30 @@ if ($mode === 'cart') {
                 }
             }
         }
-        if (empty($auth['user_id']) && empty($auth['order_ids'])) {
+        if (empty($auth['user_id']) && empty($auth['order_ids']) && $order_info['payment_method']['payment'] !== 'SSLCommerz') {
+            
             return [
                 CONTROLLER_STATUS_REDIRECT,
                 'auth.login_form?return_url=' . urlencode(Registry::get('config.current_url')),
             ];
         }
-
-        if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
-            return [CONTROLLER_STATUS_DENIED];
+        
+        $u_id = db_get_field("SELECT user_id FROM ?:orders WHERE order_id = ?i", $_REQUEST['order_id']);
+        
+        if ($order_info['payment_method']['payment'] !== 'SSLCommerz') { 
+            if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
+                        return [CONTROLLER_STATUS_DENIED];
+             }
         }
+        if ($order_info['payment_method']['payment'] == 'SSLCommerz' && $u_id != 0) { 
+            if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
+                        return [CONTROLLER_STATUS_DENIED];
+             }
+        }
+       
+        // if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
+        //     return [CONTROLLER_STATUS_DENIED];
+        // }
 
         $order_info = fn_get_order_info($_REQUEST['order_id']);
         
