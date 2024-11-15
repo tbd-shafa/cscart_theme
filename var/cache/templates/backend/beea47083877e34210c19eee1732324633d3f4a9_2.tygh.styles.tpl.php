@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-15 02:34:47
+/* Smarty version 4.3.0, created on 2024-11-15 03:07:52
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/statuses/components/styles.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673723c77db7a5_90354009',
+  'unifunc' => 'content_67372b88ca6f28_59920287',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673723c77db7a5_90354009 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67372b88ca6f28_59920287 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.style.php','function'=>'smarty_function_style',),));
 $_smarty_tpl->_assignInScope('statuses', fn_get_statuses($_smarty_tpl->tpl_vars['type']->value));
 if ($_smarty_tpl->tpl_vars['statuses']->value) {

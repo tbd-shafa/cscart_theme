@@ -902,10 +902,12 @@ if ($mode === 'cart') {
                 if (!empty($user_id) && $user_id != 0) {
                     // Fetch the entire user data array for the user_id
                     $user_data = fn_get_user_info($user_id);
-        
                     // Pass the complete user data array to fn_fill_auth
                     $auth = fn_fill_auth($user_data, $auth);
-                    
+                    if (!empty($auth['user_id'])) {
+                        fn_clear_cart($cart);
+                        Tygh::$app['session']['cart'] = $cart; // Update the session cart
+                    } 
                 }
             }
         }

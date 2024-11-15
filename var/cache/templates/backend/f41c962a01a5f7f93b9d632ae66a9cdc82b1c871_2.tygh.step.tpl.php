@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-15 02:34:51
+/* Smarty version 4.3.0, created on 2024-11-15 03:07:55
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/components/step.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673723cb0a1af4_10384894',
+  'unifunc' => 'content_67372b8bece7e4_90568287',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673723cb0a1af4_10384894 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67372b8bece7e4_90568287 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 $_smarty_tpl->_assignInScope('is_open', $_smarty_tpl->tpl_vars['step']->value['status'] === smarty_modifier_enum("Addons\OnboardingGuide\StepStatusEnum::OPEN"));
 $_smarty_tpl->_assignInScope('is_completed', $_smarty_tpl->tpl_vars['step']->value['status'] === smarty_modifier_enum("Addons\OnboardingGuide\StepStatusEnum::COMPLETED"));

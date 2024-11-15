@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-15 02:34:47
+/* Smarty version 4.3.0, created on 2024-11-15 03:07:52
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/vendor_panel_configurator/hooks/index/styles.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673723c780f333_34490297',
+  'unifunc' => 'content_67372b88cd7a27_60458242',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/vendor_panel_configurator/config.tpl' => 1,
   ),
 ),false)) {
-function content_673723c780f333_34490297 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67372b88cd7a27_60458242 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.style.php','function'=>'smarty_function_style',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),));
 echo smarty_function_style(array('src'=>"addons/vendor_panel_configurator/styles.less"),$_smarty_tpl);?>
 
