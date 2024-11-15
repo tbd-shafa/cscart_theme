@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 22:40:15
+/* Smarty version 4.3.0, created on 2024-11-15 02:34:51
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/hooks/index/simple_dashboard_content.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6736eccf801671_32361183',
+  'unifunc' => 'content_673723cb072401_40359079',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/onboarding_guide/views/onboarding_guide/onboarding_guide.tpl' => 1,
   ),
 ),false)) {
-function content_6736eccf801671_32361183 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673723cb072401_40359079 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("tygh:addons/onboarding_guide/views/onboarding_guide/onboarding_guide.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }

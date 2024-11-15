@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 22:40:15
+/* Smarty version 4.3.0, created on 2024-11-15 02:34:51
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/steps/personalize_marketplace/tabs/tab_2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6736eccf8d3e44_34059347',
+  'unifunc' => 'content_673723cb118402_11675256',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/profiles/components/profiles_scripts.tpl' => 1,
   ),
 ),false)) {
-function content_6736eccf8d3e44_34059347 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673723cb118402_11675256 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 \Tygh\Languages\Helper::preloadLangVars(array('select_country','select_state','onboarding_guide.back','onboarding_guide.next','onboarding_guide.save'));
 $_smarty_tpl->_assignInScope('company', $_smarty_tpl->tpl_vars['data']->value['company_settings']);?>

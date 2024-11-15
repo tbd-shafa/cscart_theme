@@ -921,6 +921,7 @@ if ($mode === 'cart') {
         }
 
         $order_info = fn_get_order_info($_REQUEST['order_id']);
+        
 
         if (!empty($order_info['is_parent_order']) && $order_info['is_parent_order'] == 'Y') {
             $child_ids = db_get_fields(
