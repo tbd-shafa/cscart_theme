@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 05:28:28
+/* Smarty version 4.3.0, created on 2024-11-14 20:17:35
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/context_menu/status_selector.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6735fafc560709_36479848',
+  'unifunc' => 'content_6736cb5fa93ff8_86220812',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/check_items.tpl' => 1,
   ),
 ),false)) {
-function content_6735fafc560709_36479848 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6736cb5fa93ff8_86220812 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('selected'));
 ?>
 
