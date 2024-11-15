@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 20:17:42
+/* Smarty version 4.3.0, created on 2024-11-14 22:18:29
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/orders/components/orders_search_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6736cb6671a6d8_92879373',
+  'unifunc' => 'content_6736e7b593aa83_94612455',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 2,
   ),
 ),false)) {
-function content_6736cb6671a6d8_92879373 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6736e7b593aa83_94612455 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('order_id','total','order_status','storefront_search_button','order_id','total','order_status','storefront_search_button'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

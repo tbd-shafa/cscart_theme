@@ -1,0 +1,28 @@
+a:2:{s:4:"data";a:1:{s:7:"content";s:1177:"                    <style>
+    .banner__pic img {
+        width: 555px;
+        height: 296px;
+    }
+</style>
+<div class="banner">
+    <div class="container">
+        <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="banner__pic">
+                            <a href="http://localhost/cs-cart/video-games/x-box-one/x-box-one/" >
+                                <img src="http://localhost/cs-cart/images/promo/1/banner-en-xbox360.png" alt="X-Box">
+                            </a>
+                        </div>
+                    </div>
+                                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="banner__pic">
+                            <a href="http://localhost/cs-cart/video-games/x-box-one/x-box-one/" >
+                                <img src="http://localhost/cs-cart/images/promo/8/banner_x-box_mobile.jpg" alt="X-Box Mobile">
+                            </a>
+                        </div>
+                    </div>
+                                    </div>
+    </div>
+</div>
+
+            ";}s:6:"expiry";i:0;}

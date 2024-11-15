@@ -895,13 +895,25 @@ if ($mode === 'cart') {
 } elseif ($mode == 'complete') {
 
     if (!empty($_REQUEST['order_id'])) {
-        if (empty($auth['user_id']) && empty($auth['order_ids'])) {
-            return [
-                CONTROLLER_STATUS_REDIRECT,
-                'auth.login_form?return_url=' . urlencode(Registry::get('config.current_url')),
-            ];
-        }
 
+        $user_id = db_get_field("SELECT user_id FROM ?:orders WHERE order_id = ?i", $_REQUEST['order_id']);
+
+        if (!empty($user_id) && $user_id != 0) {
+            // Fetch the entire user data array for the user_id
+            $user_data = fn_get_user_info($user_id);
+
+            // Pass the complete user data array to fn_fill_auth
+            $auth = fn_fill_auth($user_data, $auth);
+
+        }else{
+            if (empty($auth['user_id']) && empty($auth['order_ids'])) {
+                return [
+                    CONTROLLER_STATUS_REDIRECT,
+                    'auth.login_form?return_url=' . urlencode(Registry::get('config.current_url')),
+                ];
+            }    
+        }
+      
         if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
             return [CONTROLLER_STATUS_DENIED];
         }
