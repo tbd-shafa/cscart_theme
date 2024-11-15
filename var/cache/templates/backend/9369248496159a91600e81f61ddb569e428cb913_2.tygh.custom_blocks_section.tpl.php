@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-14 22:17:45
+/* Smarty version 4.3.0, created on 2024-11-14 22:40:15
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/index/components/custom_blocks_section/custom_blocks_section.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6736e789638763_73242524',
+  'unifunc' => 'content_6736eccf98aed0_91543473',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/popupbox.tpl' => 1,
   ),
 ),false)) {
-function content_6736e789638763_73242524 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6736eccf98aed0_91543473 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),));
 \Tygh\Languages\Helper::preloadLangVars(array('custom_blocks.sections.onboarding_title','custom_blocks.create_block','custom_blocks.use_this_space','custom_blocks.edit_block','custom_blocks.create_block'));
 $_smarty_tpl->_assignInScope('show_custom_blocks_section', (($tmp = $_smarty_tpl->tpl_vars['show_custom_blocks_section']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp));

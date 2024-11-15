@@ -1,0 +1,21 @@
+a:2:{s:4:"data";a:1:{s:7:"content";s:1030:"                    
+<div class="hero__categories">
+    <div class="hero__categories__all">
+        <i class="fa fa-bars"></i>
+        All departments
+    </div>
+    <ul>
+                    <li><a href="http://localhost/cs-cart/office-supplies">office-supplies</a></li>
+                    <li><a href="http://localhost/cs-cart/video-games">video-games</a></li>
+                    <li><a href="http://localhost/cs-cart/movies-and-tv">movies-and-tv</a></li>
+                    <li><a href="http://localhost/cs-cart/music">music</a></li>
+                    <li><a href="http://localhost/cs-cart/apparel">apparel</a></li>
+                    <li><a href="http://localhost/cs-cart/books">books</a></li>
+                    <li><a href="http://localhost/cs-cart/sports-and-outdoors">sports-and-outdoors</a></li>
+                    <li><a href="http://localhost/cs-cart/computers">computers</a></li>
+                    <li><a href="http://localhost/cs-cart/electronics">electronics</a></li>
+            </ul>
+</div>
+
+
+            ";}s:6:"expiry";i:0;}
