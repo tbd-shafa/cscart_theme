@@ -1,4 +1,5 @@
 <?php
+
 /***************************************************************************
  *                                                                          *
  *   (c) 2004 Vladimir V. Kalynyak, Alexey V. Vinokurov, Ilya M. Shalnev    *
@@ -106,9 +107,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $msg = __('products_number_added_to_cart', ['[number]' => $product_cnt]);
                     } else {
                         $msg = __('product_name_added_to_cart', [
-                            '[product]' => implode('',
-                                array_map(function($added_product) {
-                                    return $added_product['product'];},
+                            '[product]' => implode(
+                                '',
+                                array_map(
+                                    function ($added_product) {
+                                        return $added_product['product'];
+                                    },
                                     $added_products
                                 )
                             )
@@ -222,7 +226,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $shipping_calculation_type = 'A';
         }
 
-        list ($cart_products, $product_groups) = fn_calculate_cart_content($cart, $auth, $shipping_calculation_type, true, 'F', true);
+        list($cart_products, $product_groups) = fn_calculate_cart_content($cart, $auth, $shipping_calculation_type, true, 'F', true);
         if (Registry::get('settings.Checkout.display_shipping_step') != 'Y' && fn_allowed_for('ULTIMATE')) {
             $view->assign('show_only_first_shipping', true);
         }
@@ -316,7 +320,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             db_query(
                 "DELETE FROM ?:user_session_products WHERE session_id = ?s AND type = ?s AND user_type = ?s",
                 Tygh::$app['session']->getID(),
-                'C', 'U'
+                'C',
+                'U'
             );
             fn_save_cart_content($cart, $user_id);
 
@@ -558,7 +563,7 @@ if ($mode === 'cart') {
             );
         }
     }
-// All checkout steps
+    // All checkout steps
 } elseif ($mode === 'checkout') {
 
     unset(Tygh::$app['session']['place_order']);
@@ -570,7 +575,8 @@ if ($mode === 'cart') {
 
     $checkout_settings = fn_get_checkout_settings($cart);
 
-    if (Registry::get('settings.General.min_order_amount_type') == 'only_products'
+    if (
+        Registry::get('settings.General.min_order_amount_type') == 'only_products'
         && (!isset($cart['subtotal']) || $checkout_settings['min_order_amount'] > $cart['subtotal'])
     ) {
         /** @var \Tygh\Tools\Formatter $formatter */
@@ -624,7 +630,8 @@ if ($mode === 'cart') {
         list(, $redirect_params) = fn_checkout_update_steps($cart, $auth, []);
     }
 
-    if (!empty($auth['user_id'])
+    if (
+        !empty($auth['user_id'])
         || (empty($user_data) && isset($cart['user_data']))
     ) {
         $user_data = $cart['user_data'];
@@ -690,7 +697,8 @@ if ($mode === 'cart') {
     // If shipping methods changed and shipping step is completed, display notification
     $shipping_hash = fn_get_shipping_hash($cart['product_groups']);
 
-    if (Registry::get('settings.Checkout.display_shipping_step') !== YesNo::NO
+    if (
+        Registry::get('settings.Checkout.display_shipping_step') !== YesNo::NO
         && !empty(Tygh::$app['session']['shipping_hash'])
         && Tygh::$app['session']['shipping_hash'] !== $shipping_hash
         && $cart['shipping_required']
@@ -814,7 +822,7 @@ if ($mode === 'cart') {
         'current_user_data'      => $current_user_data,
         'is_terms_and_conditions_agreement_required' => fn_checkout_is_terms_and_conditions_agreement_required(),
     ]);
-// Delete product from the cart
+    // Delete product from the cart
 } elseif ($mode == 'delete' && isset($_REQUEST['cart_id'])) {
 
     fn_delete_cart_product($cart, $_REQUEST['cart_id']);
@@ -878,14 +886,14 @@ if ($mode === 'cart') {
     }
 
     return [CONTROLLER_STATUS_REDIRECT, 'checkout.' . $_REQUEST['redirect_mode']];
-//Clear cart
+    //Clear cart
 } elseif ($mode == 'clear') {
 
     fn_clear_cart($cart);
     fn_save_cart_content($cart, $auth['user_id']);
 
     return [CONTROLLER_STATUS_REDIRECT, 'checkout.cart'];
-//Purge undeliverable products
+    //Purge undeliverable products
 } elseif ($mode == 'purge_undeliverable') {
 
     fn_purge_undeliverable_products($cart);
@@ -896,8 +904,8 @@ if ($mode === 'cart') {
 
     if (!empty($_REQUEST['order_id'])) {
         $order_info = fn_get_order_info($_REQUEST['order_id']);
-        if($order_info['payment_method']['payment'] == 'SSLCommerz'){
-            if(empty($auth['user_id']) && empty($auth['order_ids'])){
+        if ($order_info['payment_method']['payment'] == 'SSLCommerz') {
+            if (empty($auth['user_id']) && empty($auth['order_ids'])) {
                 $user_id = db_get_field("SELECT user_id FROM ?:orders WHERE order_id = ?i", $_REQUEST['order_id']);
                 if (!empty($user_id) && $user_id != 0) {
                     // Fetch the entire user data array for the user_id
@@ -907,41 +915,53 @@ if ($mode === 'cart') {
                     if (!empty($auth['user_id'])) {
                         fn_clear_cart($cart);
                         Tygh::$app['session']['cart'] = $cart; // Update the session cart
-                    } 
+                    }
                 }
             }
         }
         if (empty($auth['user_id']) && empty($auth['order_ids']) && $order_info['payment_method']['payment'] !== 'SSLCommerz') {
-            
+
             return [
                 CONTROLLER_STATUS_REDIRECT,
                 'auth.login_form?return_url=' . urlencode(Registry::get('config.current_url')),
             ];
         }
-        
+
         $u_id = db_get_field("SELECT user_id FROM ?:orders WHERE order_id = ?i", $_REQUEST['order_id']);
-        
-        if ($order_info['payment_method']['payment'] !== 'SSLCommerz') { 
-            if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
-                        return [CONTROLLER_STATUS_DENIED];
-             }
+        if ($u_id == 0 && $order_info['payment_method']['payment'] == 'SSLCommerz') {
+
+            // Ensure the auth session has an order_ids array
+            if (!isset($auth['order_ids']) || !is_array($auth['order_ids'])) {
+                $auth['order_ids'] = [];
+            }
+            // Add the current order_id to the order_ids array
+            $auth['order_ids'][] = $_REQUEST['order_id'];
+
+            // Ensure the updated auth data is saved back to the session
+            Tygh::$app['session']['auth'] = $auth;
         }
-        if ($order_info['payment_method']['payment'] == 'SSLCommerz' && $u_id != 0) { 
-            if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
-                        return [CONTROLLER_STATUS_DENIED];
-             }
-        }
-       
-        // if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
-        //     return [CONTROLLER_STATUS_DENIED];
+        // if ($order_info['payment_method']['payment'] !== 'SSLCommerz') { 
+        //     if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
+        //                 return [CONTROLLER_STATUS_DENIED];
+        //      }
+        // }
+        // if ($order_info['payment_method']['payment'] == 'SSLCommerz' && $u_id != 0) { 
+        //     if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
+        //                 return [CONTROLLER_STATUS_DENIED];
+        //      }
         // }
 
+        if (!fn_is_order_allowed($_REQUEST['order_id'], $auth)) {
+            return [CONTROLLER_STATUS_DENIED];
+        }
+
         $order_info = fn_get_order_info($_REQUEST['order_id']);
-        
+
 
         if (!empty($order_info['is_parent_order']) && $order_info['is_parent_order'] == 'Y') {
             $child_ids = db_get_fields(
-                "SELECT order_id FROM ?:orders WHERE parent_order_id = ?i", $_REQUEST['order_id']
+                "SELECT order_id FROM ?:orders WHERE parent_order_id = ?i",
+                $_REQUEST['order_id']
             );
             $order_info['child_ids'] = implode(',', $child_ids);
         }

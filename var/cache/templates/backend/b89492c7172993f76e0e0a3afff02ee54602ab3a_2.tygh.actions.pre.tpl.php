@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-15 05:11:42
+/* Smarty version 4.3.0, created on 2024-11-17 22:54:28
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/product_reviews/hooks/index/actions.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6737488ecb9de6_67524352',
+  'unifunc' => 'content_673ae4a4395e67_96769410',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6737488ecb9de6_67524352 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673ae4a4395e67_96769410 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),));
 ?>
 

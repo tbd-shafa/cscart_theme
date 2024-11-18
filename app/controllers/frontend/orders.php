@@ -1,16 +1,17 @@
 <?php
+
 /***************************************************************************
-*                                                                          *
-*   (c) 2004 Vladimir V. Kalynyak, Alexey V. Vinokurov, Ilya M. Shalnev    *
-*                                                                          *
-* This  is  commercial  software,  only  users  who have purchased a valid *
-* license  and  accept  to the terms of the  License Agreement can install *
-* and use this program.                                                    *
-*                                                                          *
-****************************************************************************
-* PLEASE READ THE FULL TEXT  OF THE SOFTWARE  LICENSE   AGREEMENT  IN  THE *
-* "copyright.txt" FILE PROVIDED WITH THIS DISTRIBUTION PACKAGE.            *
-****************************************************************************/
+ *                                                                          *
+ *   (c) 2004 Vladimir V. Kalynyak, Alexey V. Vinokurov, Ilya M. Shalnev    *
+ *                                                                          *
+ * This  is  commercial  software,  only  users  who have purchased a valid *
+ * license  and  accept  to the terms of the  License Agreement can install *
+ * and use this program.                                                    *
+ *                                                                          *
+ ****************************************************************************
+ * PLEASE READ THE FULL TEXT  OF THE SOFTWARE  LICENSE   AGREEMENT  IN  THE *
+ * "copyright.txt" FILE PROVIDED WITH THIS DISTRIBUTION PACKAGE.            *
+ ****************************************************************************/
 
 use Tygh\Enum\NotificationSeverity;
 use Tygh\Enum\SiteArea;
@@ -19,7 +20,9 @@ use Tygh\Registry;
 use Tygh\Storage;
 use Tygh\Enum\ProductZeroPriceActions;
 
-if (!defined('BOOTSTRAP')) { die('Access denied'); }
+if (!defined('BOOTSTRAP')) {
+    die('Access denied');
+}
 
 if (!empty($_REQUEST['order_id']) && $mode != 'search') {
     // If user is not logged in and trying to see the order, redirect him to login form
@@ -49,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (!empty($payment_info['card_number'])) {
                 $payment_info['card_number'] = str_replace(array(' ', '-'), '', $payment_info['card_number']);
             }
-            $_data = array (
+            $_data = array(
                 'order_id' => $_REQUEST['order_id'],
                 'type' => 'P', //payment information
                 'data' => fn_encrypt_text(serialize($payment_info)),
@@ -122,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         fn_order_placement_routines('repay', $order_info['order_id'], array(), true);
 
-    // Request for order tracking
+        // Request for order tracking
     } elseif ($mode == 'track_request') {
         $condition = fn_get_company_condition('?:orders.company_id');
 
@@ -130,8 +133,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $allowed_id = db_get_field(
                 'SELECT user_id '
-                . 'FROM ?:orders '
-                . 'WHERE user_id = ?i AND order_id = ?i AND is_parent_order != ?s ?p',
+                    . 'FROM ?:orders '
+                    . 'WHERE user_id = ?i AND order_id = ?i AND is_parent_order != ?s ?p',
                 $auth['user_id'],
                 $_REQUEST['track_data'],
                 YesNo::YES,
@@ -139,8 +142,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             );
 
             if (!empty($allowed_id)) {
-                Tygh::$app['ajax']->assign('force_redirection',
-                    fn_url('orders.details?order_id=' . $_REQUEST['track_data']));
+                Tygh::$app['ajax']->assign(
+                    'force_redirection',
+                    fn_url('orders.details?order_id=' . $_REQUEST['track_data'])
+                );
                 exit;
             } else {
                 fn_set_notification(NotificationSeverity::ERROR, __('error'), __('warning_track_orders_not_allowed'));
@@ -154,8 +159,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if (strpos($_REQUEST['track_data'], '@') !== false) {
                     $order_info = db_get_row(
                         'SELECT order_id, email, company_id, lang_code, storefront_id'
-                        . ' FROM ?:orders'
-                        . ' WHERE email = ?s ?p ORDER BY timestamp DESC LIMIT 1',
+                            . ' FROM ?:orders'
+                            . ' WHERE email = ?s ?p ORDER BY timestamp DESC LIMIT 1',
                         $_REQUEST['track_data'],
                         $condition
                     );
@@ -163,8 +168,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 } else {
                     $order_info = db_get_row(
                         'SELECT order_id, email, company_id, lang_code, storefront_id'
-                        . ' FROM ?:orders'
-                        . ' WHERE order_id = ?i ?p',
+                            . ' FROM ?:orders'
+                            . ' WHERE order_id = ?i ?p',
                         $_REQUEST['track_data'],
                         $condition
                     );
@@ -231,7 +236,6 @@ if ($mode == 'invoice') {
     fn_add_breadcrumb(__('invoice'));
 
     Tygh::$app['view']->assign('order_info', fn_get_order_info($_REQUEST['order_id']));
-
 } elseif ($mode === 'print_invoice') {
     if (!empty($_REQUEST['order_id'])) {
         $print_params = [];
@@ -239,7 +243,7 @@ if ($mode == 'invoice') {
             $print_params['use_i18n_company_fields'] = true;
         }
         $print_params = array_merge($_REQUEST, $print_params);
-        echo(fn_print_order_invoices($_REQUEST['order_id'], $print_params));
+        echo (fn_print_order_invoices($_REQUEST['order_id'], $print_params));
     }
 
     return [CONTROLLER_STATUS_NO_CONTENT];
@@ -264,9 +268,9 @@ if ($mode == 'invoice') {
 
     exit;
 
-//
-// Show order details
-//
+    //
+    // Show order details
+    //
 } elseif ($mode == 'details') {
 
     fn_add_breadcrumb(__('order_info'));
@@ -335,16 +339,20 @@ if ($mode == 'invoice') {
         Tygh::$app['view']->assign('active_tab', $_REQUEST['active_tab']);
     }
 
-//
-// Search orders
-//
+    //
+    // Search orders
+    //
 } elseif ($mode == 'search') {
 
     $orders = $search = null;
     $params = $_REQUEST;
 
     $params['include_incompleted'] = true;
-
+    //     echo "<pre>";
+    //     // print_r($orders);
+    //     // print_r($params);
+    //    print_r($auth);
+    //     die;
     if (!empty($auth['user_id'])) {
         $params['user_id'] = $auth['user_id'];
     } elseif (isset($params['order_id'])) {
@@ -373,7 +381,7 @@ if ($mode == 'invoice') {
         list($orders, $search) = fn_get_orders($params, Registry::get('settings.Appearance.orders_per_page'));
     }
 
-    array_walk($orders, function(&$order_info) {
+    array_walk($orders, function (&$order_info) {
         if (fn_checkout_is_email_address_fake($order_info['email'])) {
             $order_info['email'] = '';
         }
@@ -382,15 +390,14 @@ if ($mode == 'invoice') {
     Tygh::$app['view']->assign('orders', $orders);
     Tygh::$app['view']->assign('search', $search);
 
-//
-// Reorder order
-//
+    //
+    // Reorder order
+    //
 } elseif ($mode == 'reorder') {
 
     fn_reorder($_REQUEST['order_id'], Tygh::$app['session']['cart'], $auth);
 
     return array(CONTROLLER_STATUS_REDIRECT, 'checkout.cart');
-
 } elseif ($mode == 'downloads') {
 
     if (empty($auth['user_id']) && empty($auth['order_ids'])) {
@@ -407,7 +414,6 @@ if ($mode == 'invoice') {
 
     Tygh::$app['view']->assign('products', $products);
     Tygh::$app['view']->assign('search', $search);
-
 } elseif ($mode == 'order_downloads') {
 
     if (empty($auth['user_id']) && empty($auth['order_ids'])) {
@@ -442,7 +448,6 @@ if ($mode == 'invoice') {
     } else {
         return array(CONTROLLER_STATUS_NO_PAGE);
     }
-
 } elseif ($mode == 'get_file') {
 
     if (empty($_REQUEST['file_id']) || (empty($_REQUEST['ekey']) && empty($_REQUEST['preview']))) {
@@ -455,9 +460,9 @@ if ($mode == 'invoice') {
     }
     exit;
 
-//
-// Display list of files for downloadable product
-//
+    //
+    // Display list of files for downloadable product
+    //
 } elseif ($mode == 'download') {
     if (!empty($_REQUEST['ekey'])) {
 
@@ -474,7 +479,7 @@ if ($mode == 'invoice') {
 
         if (!empty($product['product_id'])) {
             $product['product'] = db_get_field("SELECT product FROM ?:product_descriptions WHERE product_id = ?i AND lang_code = ?s", $product['product_id'], CART_LANGUAGE);
-            $params = array (
+            $params = array(
                 'product_id' => $product['product_id'],
                 'order_id' => $ekey_info['order_id']
             );
@@ -494,7 +499,6 @@ if ($mode == 'invoice') {
     } else {
         return array(CONTROLLER_STATUS_DENIED);
     }
-
 } elseif ($mode == 'get_custom_file') {
     $filename = !empty($_REQUEST['filename']) ? $_REQUEST['filename'] : '';
 
@@ -575,7 +579,8 @@ function fn_reorder($order_id, &$cart, &$auth)
             if (!floatval($price)) {
                 $data['price'] = isset($data['price']) ? fn_parse_price($data['price']) : 0;
 
-                if (AREA == 'C'
+                if (
+                    AREA == 'C'
                     && ($zero_price_action == 'R'
                         ||
                         ($zero_price_action == 'A' && floatval($data['price']) < 0)
