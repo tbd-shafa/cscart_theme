@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-17 23:25:06
+/* Smarty version 4.3.0, created on 2024-11-18 04:28:41
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/discussion/hooks/index/styles.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673aebd21f1167_02122156',
+  'unifunc' => 'content_673b32f92f5d45_72555259',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673aebd21f1167_02122156 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673b32f92f5d45_72555259 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.style.php','function'=>'smarty_function_style',),));
 echo smarty_function_style(array('src'=>"addons/discussion/styles.less"),$_smarty_tpl);
 }
