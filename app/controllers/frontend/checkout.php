@@ -973,7 +973,7 @@ if ($mode === 'cart') {
             // for set new email
             $order_info['email'] = '';
         }
-
+       
         if (!empty($order_info)) {
             $view->assign('order_info', $order_info);
         }

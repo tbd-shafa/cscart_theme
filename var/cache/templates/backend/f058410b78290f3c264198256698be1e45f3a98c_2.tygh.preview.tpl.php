@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-17 22:54:32
+/* Smarty version 4.3.0, created on 2024-11-17 23:25:09
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/email_templates/preview.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673ae4a81a7d95_40336807',
+  'unifunc' => 'content_673aebd5de2eb2_45601934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673ae4a81a7d95_40336807 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673aebd5de2eb2_45601934 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('preview','subject','body'));
 ?>
 <div title="<?php echo $_smarty_tpl->__("preview");?>

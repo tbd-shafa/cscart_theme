@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-17 22:56:57
+/* Smarty version 4.3.0, created on 2024-11-17 23:25:25
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/orders/components/payments/cod.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673ae539051499_93369231',
+  'unifunc' => 'content_673aebe5c505a5_70238456',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,6 +20,6 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673ae539051499_93369231 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673aebe5c505a5_70238456 (Smarty_Internal_Template $_smarty_tpl) {
 }
 }

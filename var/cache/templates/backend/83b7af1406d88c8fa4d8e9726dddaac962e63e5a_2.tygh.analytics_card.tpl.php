@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-17 22:54:32
+/* Smarty version 4.3.0, created on 2024-11-17 23:25:09
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/index/components/analytics_section/analytics_card/analytics_card.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673ae4a826eee9_88329642',
+  'unifunc' => 'content_673aebd5ec3381_38247280',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/index/components/analytics_section/analytics_card/resource_list_tabs.tpl' => 1,
   ),
 ),false)) {
-function content_673ae4a826eee9_88329642 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673aebd5ec3381_38247280 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('dashboard.view'));
 if ($_smarty_tpl->tpl_vars['analytics_card']->value) {?><div class="analytics-card" data-ca-analytics-card="main" data-ca-analytics-card-id="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['analytics_card']->value['id'], ENT_QUOTES, 'UTF-8');?>

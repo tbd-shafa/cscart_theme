@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-17 22:54:28
+/* Smarty version 4.3.0, created on 2024-11-17 23:25:06
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/bottom_panel/icons/bp-close.svg' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673ae4a42b26c8_18465639',
+  'unifunc' => 'content_673aebd2ae7b72_15722713',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673ae4a42b26c8_18465639 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673aebd2ae7b72_15722713 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
     class="bp-close__icon">
     <path
