@@ -7,7 +7,18 @@
     $item_rate_id
     $size
 *}
-
+ <style>
+    .fa-star {
+      font-size: 2em;
+      color: orange; /* Default yellow */
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .fa-star.highlight {
+      color: darkorange; /* Highlighted yellow */
+    }
+  </style>
+{assign var="product_reviews_ratings" value=$product_reviews_ratings|array_reverse:true}
 <div class="ty-product-review-rate cm-field-container">
 
     <div class="ty-product-review-rate__stars" id="{$rate_id}">
@@ -24,7 +35,7 @@
                 for="{$item_rate_id}"
                 title="{$title}"
             >
-                {$title}
+                 <span class="fa fa-star"></span>
             </label>
         {/foreach}
     </div>

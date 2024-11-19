@@ -268,3 +268,5 @@ function fn_get_all_categories()
     $categories = db_get_array("SELECT DISTINCT category_id, category FROM ?:category_descriptions");
     return $categories;
 }
+
+
