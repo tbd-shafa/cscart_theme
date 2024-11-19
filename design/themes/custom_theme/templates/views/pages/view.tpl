@@ -49,7 +49,7 @@
                         <div class="blog__item">
                         
                                         <div class="blog__item__pic">
-                                                <img src="{$page.main_pair.icon.image_path}" alt="{$related.seo_name}" >
+                                                <img src="{$related.image_path}" alt="{$related.title}" >
                                         </div>
                         
                             <div class="blog__item__text">

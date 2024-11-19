@@ -54,7 +54,7 @@ function fn_custom_category_addon_dispatch_before_display()
     Tygh::$app['view']->assign('latest_three_blogs', $latest_three_blogs);
 
     $related_blogs = fn_get_related_blogs($page['page_id'], 3);
-    
+
     Tygh::$app['view']->assign('related_blogs', $related_blogs);
 
     $tags = fn_get_all_tags_with_counts();
@@ -108,6 +108,7 @@ function fn_get_all_blogs_with_descriptions()
         'status' => 'A',
         'get_descriptions' => true,
         'page_type' => 'B', // Assuming 'B' indicates blog pages, update if different
+        'get_image' => true,
         'items_per_page' => 0
     ];
 
@@ -138,6 +139,7 @@ function fn_get_all_blogs_with_descriptions()
             'description' => $blog['description'],
             'seo_name' => $blog['seo_name'],
             'link' => 'http://localhost/cs-cart/' . urlencode($blog['seo_name']),
+            'image_path' => !empty($blog['main_pair']['icon']['image_path']) ? $blog['main_pair']['icon']['image_path'] : 'path/to/default/image.jpg',
             'comment_count' => $comment_count // Add comment count here
         ];
     }
@@ -154,6 +156,7 @@ function fn_get_latest_three_blogs()
         'page_type' => 'B', // Assuming 'B' indicates blog pages
         'items_per_page' => 3, // Limit to 3 latest blogs
         'sort_by' => 'timestamp',
+        'get_image' => true,
         'sort_order' => 'desc', // Get latest blogs
     ];
 
@@ -184,6 +187,7 @@ function fn_get_latest_three_blogs()
             'description' => $blog['description'],
             'seo_name' => $blog['seo_name'],
             'timestamp' => $blog['timestamp'],
+            'image_path' => !empty($blog['main_pair']['icon']['image_path']) ? $blog['main_pair']['icon']['image_path'] : 'path/to/default/image.jpg',
             'comment_count' => $comment_count, // Add comment count here
         ];
     }
@@ -200,6 +204,7 @@ function fn_get_related_blogs($current_blog_id, $limit = 3)
         'page_type' => 'B', // Assuming 'B' indicates blog pages
         'items_per_page' => $limit,
         'get_descriptions' => true,
+        'get_image' => true,
         'get_main_pair' => true
     ];
 
@@ -263,4 +268,3 @@ function fn_get_all_categories()
     $categories = db_get_array("SELECT DISTINCT category_id, category FROM ?:category_descriptions");
     return $categories;
 }
-

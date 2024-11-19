@@ -27,7 +27,7 @@
                                {foreach from=$latest_three_blogs item=related}
                                 <a href="http://localhost/cs-cart/blog/{$related.seo_name|escape}/" class="blog__sidebar__recent__item">
                                     <div class="blog__sidebar__recent__item__pic">
-                                        <img  src="{$page.main_pair.icon.image_path}" alt="{$related.seo_name}" height="70px;" width="70px;">
+                                        <img  src="{$related.image_path}" alt="{$related.title}" height="70px;" width="70px;">
                                     </div>
                                     <div class="blog__sidebar__recent__item__text">
                                         <h6>{$related.title|escape}</h6>
