@@ -1,3 +1,4 @@
+
 {foreach from=$unique_blocks item="block"}
     {if $block_types[$block.type]}
         <div class="select-block {if $purpose === "wysiwyg"}cm-select-bm-block{else}cm-add-block bm-action-existing-block{/if} {if $manage == "Y"}bm-manage{/if} {if $block.single_for_location}bm-block-single-for-location{/if}"

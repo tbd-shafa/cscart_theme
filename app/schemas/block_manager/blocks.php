@@ -292,6 +292,20 @@ $schema = array(
         'cache' => true,
         'multilanguage' => true,
     ),
+    
+   
+    'category_block' => array(
+        // 'content' => array(
+        //     'content' => array(
+        //         'type' => 'text',
+        //         'required' => false,
+        //     )
+        // ),
+        'templates' => 'addons/category_block/blocks/category_block.tpl',
+        'wrappers' => 'blocks/wrappers',
+        'cache' => true,
+        'multilanguage' => true,
+    ),
     // smarty_block was deprecated since 4.16.1, use safe_smarty_block.tpl instead
     'smarty_block' => [
         'content'       => [

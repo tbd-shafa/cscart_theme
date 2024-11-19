@@ -747,6 +747,7 @@ if ($mode == 'manage' || $mode == 'manage_in_tab') {
     }
 
 } elseif ($mode == 'block_selection') {
+  
     $selected_location = fn_get_selected_location($_REQUEST);
 
     $purpose = isset($_REQUEST['purpose'])
@@ -758,10 +759,32 @@ if ($mode == 'manage' || $mode == 'manage_in_tab') {
     }
 
     $unique_blocks = SchemesManager::filterByLocation(Block::instance()->getAllUnique(DESCR_SL), $selected_location);
+  
     array_walk($unique_blocks, function (&$block) {
         $block['unique_id'] = Block::getUniqueIdByData($block);
     });
+    
+  
     $block_types = SchemesManager::filterByLocation(SchemesManager::getBlockTypes(DESCR_SL), $selected_location);
+    $block_types['category_block'] = [
+        'type' => 'category_block',
+        'name' => __('category_block'), // Use language variable for translation
+       // 'template' => 'addons/category_block/blocks/category_block.tpl',
+        'icon' => 'icon-th-large',
+        'is_manageable' => 1
+    ];
+    // $block_types['category_block'] = [
+    //     'type' => 'category_block',
+    //     'name' => __('category_block'), // Use language variable for translation
+    //     'template' => 'addons/category_block/blocks/category_block.tpl',
+    //     'icon' => 'icon-th-large',
+    //     'is_manageable' => 1,
+    //     'description' => 'Block with few static data',
+    //     'default_properties' => [
+    //         'template' => 'addons/category_block/blocks/category_block.tpl', // Ensure template is set
+    //         'custom_text' => 'This is default static text',
+    //     ],
+    // ];
     unset($block_types['smarty_block']);
 
     if (!empty($_REQUEST['grid_id'])) {
@@ -773,7 +796,9 @@ if ($mode == 'manage' || $mode == 'manage_in_tab') {
     }
 
     $block_types = SchemesManager::getBlockDescriptions($block_types, DESCR_SL);
-
+    // echo "<pre>";
+    // print_r($block_types);
+    // die;
     Tygh::$app['view']->assign([
         'block_types'   => $block_types,
         'unique_blocks' => $unique_blocks,
@@ -783,6 +808,9 @@ if ($mode == 'manage' || $mode == 'manage_in_tab') {
 } elseif ($mode == 'block_type_list') {
 
     $block_types = SchemesManager::getBlockDescriptions(SchemesManager::getBlockTypes(DESCR_SL), DESCR_SL);
+    //  echo "<pre>";
+    // print_r($unique_blocks);
+    // die;
     unset($block_types['smarty_block']);
     array_walk($block_types, function (&$block_type) {
         $block_type['is_manageable'] = SchemesManager::isManageable($block_type['type']);
