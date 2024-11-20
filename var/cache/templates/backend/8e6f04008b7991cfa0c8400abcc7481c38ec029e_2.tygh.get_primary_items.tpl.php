@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-19 21:13:29
+/* Smarty version 4.3.0, created on 2024-11-20 02:32:18
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/menu/get_primary_items.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673d6ff96d5892_39180930',
+  'unifunc' => 'content_673dbab2412592_07318402',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:components/menu/get_block_manager_data.tpl' => 1,
   ),
 ),false)) {
-function content_673d6ff96d5892_39180930 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673dbab2412592_07318402 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('home'));
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "get_items", null, null);?>
     <?php $_smarty_tpl->_assignInScope('additional_items', array());?>

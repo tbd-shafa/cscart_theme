@@ -12,8 +12,6 @@
 <script src="{$config.current_location}/design/themes/custom_theme/js/main.js"></script>
 {hook name="products:layout_content"}
  <style>
- 
- 
 .custom_breadcome {
     width: calc(100vw - 8px);
     margin-left: calc((1170px - 100vw) / 2);
