@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-19 20:52:25
+/* Smarty version 4.3.0, created on 2024-11-19 21:13:37
   from '59850798c0a3889f64980164f5da7051c783276a' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673d6b09ea5324_30764689',
+  'unifunc' => 'content_673d70013369b5_65156132',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -14,7 +14,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673d6b09ea5324_30764689 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673d70013369b5_65156132 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
                             <ul id="customer_service_links">
                             <li class="ty-footer-menu__item"><a href="<?php echo htmlspecialchars((string) fn_url("orders.search"), ENT_QUOTES, 'UTF-8');?>
