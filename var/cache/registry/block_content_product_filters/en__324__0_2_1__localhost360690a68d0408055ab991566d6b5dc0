@@ -1,0 +1,25 @@
+a:2:{s:4:"data";a:1:{s:7:"content";s:1004:"                    
+
+<div class="ty-horizontal-product-filters ty-selected-product-filters cm-product-filters cm-horizontal-filters"
+    data-ca-target-id="product_filters_*,selected_filters_*,products_search_*,category_products_*,currencies_*,languages_*,product_features_*"
+    data-ca-base-url="http://localhost/cs-cart/movies-and-tv/"
+    data-ca-tooltip-class = "ty-product-filters__tooltip"
+    data-ca-tooltip-right-class = "ty-product-filters__tooltip--right"
+    data-ca-tooltip-mobile-class = "ty-tooltip--mobile"
+    data-ca-tooltip-layout-selector = "[data-ca-tooltip-layout='true']"
+    data-ce-tooltip-events-tooltip = "mouseenter"
+    id="selected_filters_81">
+<div class="ty-product-filters__wrapper">
+
+    
+
+    
+</div>
+<!--selected_filters_81--></div>
+
+
+<div data-ca-tooltip-layout="true" class="hidden">
+    <button type="button" data-ca-scroll=".ty-mainbox-title" class="cm-scroll ty-tooltip--link ty-tooltip--filter"><span class="tooltip-arrow"></span></button>
+</div>
+
+            ";}s:6:"expiry";i:0;}
