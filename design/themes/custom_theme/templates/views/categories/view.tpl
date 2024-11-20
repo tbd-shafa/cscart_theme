@@ -191,11 +191,6 @@
 {capture name="mainbox_title"}<span {live_edit name="category:category:{$category_data.category_id}"}>{$category_data.category}</span>{/capture}
 {/hook}
 
-
-
-
-
-
 <script>
   (function ($) {
      /*--------------------------
