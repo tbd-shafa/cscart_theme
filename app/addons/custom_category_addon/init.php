@@ -21,18 +21,20 @@ function fn_custom_category_addon_dispatch_before_display()
             // Filter for top-level categories
             if (isset($category['parent_id']) && $category['parent_id'] == '0' && !empty($category['category_id']) && !empty($category['category'])) {
                 $category_id = $category['category_id'];
-                $category_name = $category['seo_name'];
-                $category_link = 'http://localhost/cs-cart/' . urlencode($category_name);
+                $category_name = $category['category'];
+                $category_seo_name = $category['seo_name'];
+                $category_link = 'http://localhost/cs-cart/' . urlencode($category_seo_name);
 
                 $top_level_categories[$category_id] = [
                     'category_id' => $category_id,
                     'category_name' => $category_name,
+                    'category_seo_name' => $category_seo_name,
                     'category_link' => $category_link
                 ];
             }
         }
     }
-
+   
     // Assign the top-level categories to the template
     Tygh::$app['view']->assign('top_level_categories', $top_level_categories);
 

@@ -1,20 +1,10 @@
-<div class="hero__categories">
-    <div class="hero__categories__all">
-        <i class="fa fa-bars"></i>
-        All department
-    </div>
-    <ul>
-        <li><a href="#">Fresh Meat</a></li>
-        <li><a href="#">Vegetables</a></li>
-        <li><a href="#">Fruit & Nut Gifts</a></li>
-        <li><a href="#">Fresh Berries</a></li>
-        <li><a href="#">Ocean Foods</a></li>
-        <li><a href="#">Butter & Eggs</a></li>
-        <li><a href="#">Fastfood</a></li>
-        <li><a href="#">Fresh Onion</a></li>
-        <li><a href="#">Papayaya & Crisps</a></li>
-        <li><a href="#">Oatmeal</a></li>
-        <li><a href="#">Fresh Bananas</a></li>
-    </ul>
-    
+<div class="sidebar">
+              <div class="sidebar__item">
+                <h4>All Category</h4>
+                <ul>
+                  {foreach from=$top_level_categories item=category}
+                    <li><a href="{$category.category_link}">{$category.category_name}</a></li>
+                  {/foreach}
+                </ul> 
+              </div>       
 </div>

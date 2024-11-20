@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-20 03:08:31
+/* Smarty version 4.3.0, created on 2024-11-20 04:18:32
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/menu/get_secondary_items.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673dc32f8b76f6_91358210',
+  'unifunc' => 'content_673dd3981b3e67_95947878',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673dc32f8b76f6_91358210 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673dd3981b3e67_95947878 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "get_items", null, null);?>
         <?php if ((defined('BLOCK_MANAGER_MODE') ? constant('BLOCK_MANAGER_MODE') : null)) {?>
         <?php $_smarty_tpl->_assignInScope('items', array());?>

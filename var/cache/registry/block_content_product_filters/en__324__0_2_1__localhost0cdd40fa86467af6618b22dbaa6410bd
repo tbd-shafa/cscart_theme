@@ -1,4 +1,9 @@
-a:2:{s:4:"data";a:2:{s:10:"javascript";s:205:"<script src="http://localhost/cs-cart/js/tygh/product_filters.js?ver=1732100909" ></script><script src="http://localhost/cs-cart/js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js?ver=1732100909" ></script>";s:7:"content";s:16812:"                    <!-- Inline script moved to the bottom of the page -->
+a:2:{s:4:"data";a:2:{s:10:"javascript";s:205:"<script src="http://localhost/cs-cart/js/tygh/product_filters.js?ver=1732105110" ></script><script src="http://localhost/cs-cart/js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js?ver=1732105110" ></script>";s:7:"content";s:17021:"        <div class="latest-product__text ty-sidebox-important">
+        <h4 class="">
+                                                <span>Product filters</span>
+                        
+        </h4>
+        <div class=""><!-- Inline script moved to the bottom of the page -->
 
         
 
@@ -318,5 +323,6 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:205:"<script src="http://localhost/cs-c
 <div data-ca-tooltip-layout="true" class="hidden">
     <button type="button" data-ca-scroll=".ty-mainbox-title" class="cm-scroll ty-tooltip--link ty-tooltip--filter"><span class="tooltip-arrow"></span></button>
 </div>
-
-            ";}s:6:"expiry";i:0;}
+</div>
+    </div>
+";}s:6:"expiry";i:0;}
