@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-20 02:32:21
+/* Smarty version 4.3.0, created on 2024-11-20 03:08:34
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/categories/view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673dbab5e4f5f0_12173048',
+  'unifunc' => 'content_673dc332e148a8_85829943',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1a7f322cea20d8d7ee445155ce84901a612702c2' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/categories/view.tpl',
-      1 => 1732098342,
+      1 => 1732100906,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/no_items.tpl' => 4,
   ),
 ),false)) {
-function content_673dbab5e4f5f0_12173048 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673dc332e148a8_85829943 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.live_edit.php','function'=>'smarty_function_live_edit',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('text_no_products_found','text_no_products','text_no_products_found','text_no_products'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -191,84 +191,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   </div>
 </div>
 
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery-3.3.1.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery.nice-select.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery-ui.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery.slicknav.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/mixitup.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/owl.carousel.min.js"><?php echo '</script'; ?>
->
 
-<?php echo '<script'; ?>
->
-  (function ($) {
-     /*--------------------------
-        Latest Product Slider
-    ----------------------------*/
-    $(".latest-product__slider").owlCarousel({
-        loop: true,
-        margin: 0,
-        items: 1,
-        dots: false,
-        nav: true,
-        navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true
-    });
-    /*-----------------------------
-Product Discount Slider
--------------------------------*/
-    $(".product__discount__slider").owlCarousel({
-      loop: true,
-      margin: 0,
-      items: 3,
-      dots: true,
-      smartSpeed: 1200,
-      autoHeight: false,
-      autoplay: true,
-      responsive: {
-        320: {
-          items: 1,
-        },
-
-        480: {
-          items: 2,
-        },
-
-        768: {
-          items: 2,
-        },
-
-        992: {
-          items: 3,
-        },
-      },
-    });
-  })(jQuery);
-<?php echo '</script'; ?>
->
 <?php }?>
 
 
@@ -327,8 +250,62 @@ $_smarty_tpl->_assignInScope('is_selected_filters', $_REQUEST['features_hash']);
 $_block_repeat=false;
 echo smarty_block_hook(array('name'=>"categories:view"), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }
-array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);
-$_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
+array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
+
+
+
+
+
+
+<?php echo '<script'; ?>
+>
+  (function ($) {
+     /*--------------------------
+        Latest Product Slider
+    ----------------------------*/
+    $(".latest-product__slider").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 1,
+        dots: false,
+        nav: true,
+        navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true
+    });
+    /*-----------------------------
+Product Discount Slider
+-------------------------------*/
+    $(".product__discount__slider").owlCarousel({
+      loop: true,
+      margin: 0,
+      items: 3,
+      dots: true,
+      smartSpeed: 1200,
+      autoHeight: false,
+      autoplay: true,
+      responsive: {
+        320: {
+          items: 1,
+        },
+
+        480: {
+          items: 2,
+        },
+
+        768: {
+          items: 2,
+        },
+
+        992: {
+          items: 3,
+        },
+      },
+    });
+  })(jQuery);
+<?php echo '</script'; ?>
+><?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 if (smarty_modifier_trim($_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content'))) {
 if ($_smarty_tpl->tpl_vars['auth']->value['area'] == "A") {?><span class="cm-template-box template-box" data-ca-te-template="views/categories/view.tpl" id="<?php echo smarty_function_set_id(array('name'=>"views/categories/view.tpl"),$_smarty_tpl);?>
 "><div class="cm-template-icon icon-edit ty-icon-edit hidden"></div><?php echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content');?>
@@ -500,84 +477,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   </div>
 </div>
 
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery-3.3.1.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery.nice-select.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery-ui.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery.slicknav.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/mixitup.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/owl.carousel.min.js"><?php echo '</script'; ?>
->
 
-<?php echo '<script'; ?>
->
-  (function ($) {
-     /*--------------------------
-        Latest Product Slider
-    ----------------------------*/
-    $(".latest-product__slider").owlCarousel({
-        loop: true,
-        margin: 0,
-        items: 1,
-        dots: false,
-        nav: true,
-        navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true
-    });
-    /*-----------------------------
-Product Discount Slider
--------------------------------*/
-    $(".product__discount__slider").owlCarousel({
-      loop: true,
-      margin: 0,
-      items: 3,
-      dots: true,
-      smartSpeed: 1200,
-      autoHeight: false,
-      autoplay: true,
-      responsive: {
-        320: {
-          items: 1,
-        },
-
-        480: {
-          items: 2,
-        },
-
-        768: {
-          items: 2,
-        },
-
-        992: {
-          items: 3,
-        },
-      },
-    });
-  })(jQuery);
-<?php echo '</script'; ?>
->
 <?php }?>
 
 
@@ -636,7 +536,61 @@ $_smarty_tpl->_assignInScope('is_selected_filters', $_REQUEST['features_hash']);
 $_block_repeat=false;
 echo smarty_block_hook(array('name'=>"categories:view"), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }
-array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);
-}
+array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
+
+
+
+
+
+
+<?php echo '<script'; ?>
+>
+  (function ($) {
+     /*--------------------------
+        Latest Product Slider
+    ----------------------------*/
+    $(".latest-product__slider").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 1,
+        dots: false,
+        nav: true,
+        navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true
+    });
+    /*-----------------------------
+Product Discount Slider
+-------------------------------*/
+    $(".product__discount__slider").owlCarousel({
+      loop: true,
+      margin: 0,
+      items: 3,
+      dots: true,
+      smartSpeed: 1200,
+      autoHeight: false,
+      autoplay: true,
+      responsive: {
+        320: {
+          items: 1,
+        },
+
+        480: {
+          items: 2,
+        },
+
+        768: {
+          items: 2,
+        },
+
+        992: {
+          items: 3,
+        },
+      },
+    });
+  })(jQuery);
+<?php echo '</script'; ?>
+><?php }
 }
 }
