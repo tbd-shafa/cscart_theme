@@ -1,6 +1,7 @@
 {if $subcategories}
     {math equation="ceil(n/c)" assign="rows" n=$subcategories|count c=$columns|default:"2"}
     {split data=$subcategories size=$rows assign="splitted_subcategories"}
+     <h4>Subcategories</h4>
     <ul class="subcategories clearfix">
         {hook name="categories:view_subcategories"}
         {foreach from=$splitted_subcategories item="ssubcateg"}
@@ -26,5 +27,5 @@
             {/foreach}
         {/foreach}
         {/hook}
-    </ul>
+    </ul>       
 {/if}
