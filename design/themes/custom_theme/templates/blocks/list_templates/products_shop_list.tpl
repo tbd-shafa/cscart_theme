@@ -53,7 +53,10 @@
                         {assign var="min_qty" value="min_qty_`$obj_id`"}
                         {assign var="product_edp" value="product_edp_`$obj_id`"}
                         <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{$product.main_pair.detailed.image_path}">
+                                <div class="product__item__pic set-bg">
+                                   
+                                  <img src="{$product.main_pair.detailed.image_path}"  alt="{$product.product}">
+                        
                                     <ul class="product__item__pic__hover">
                                     
                                     <li>

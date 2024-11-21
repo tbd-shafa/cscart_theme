@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 01:09:27
+/* Smarty version 4.3.0, created on 2024-11-21 02:31:09
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/categories/view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673ef8c7012a66_80628148',
+  'unifunc' => 'content_673f0bedf416d1_64060910',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1a7f322cea20d8d7ee445155ce84901a612702c2' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/categories/view.tpl',
-      1 => 1732179889,
+      1 => 1732181882,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/no_items.tpl' => 4,
   ),
 ),false)) {
-function content_673ef8c7012a66_80628148 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673f0bedf416d1_64060910 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.live_edit.php','function'=>'smarty_function_live_edit',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('text_no_products_found','text_no_products','text_no_products_found','text_no_products'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -52,14 +52,14 @@ $_smarty_tpl->tpl_vars['product']->do_else = false;
             <div class="product__discount__percent">
             -<?php ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['list_price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable1 = ob_get_clean();
+$_prefixVariable18 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable2 = ob_get_clean();
+$_prefixVariable19 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['list_price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable3 = ob_get_clean();
-echo htmlspecialchars((string) round((($_prefixVariable1-$_prefixVariable2)/$_prefixVariable3)*100), ENT_QUOTES, 'UTF-8');?>
+$_prefixVariable20 = ob_get_clean();
+echo htmlspecialchars((string) round((($_prefixVariable18-$_prefixVariable19)/$_prefixVariable20)*100), ENT_QUOTES, 'UTF-8');?>
 %
             </div>
             <ul class="product__item__pic__hover">
@@ -293,14 +293,14 @@ $_smarty_tpl->tpl_vars['product']->do_else = false;
             <div class="product__discount__percent">
             -<?php ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['list_price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable4 = ob_get_clean();
+$_prefixVariable21 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable5 = ob_get_clean();
+$_prefixVariable22 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['list_price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable6 = ob_get_clean();
-echo htmlspecialchars((string) round((($_prefixVariable4-$_prefixVariable5)/$_prefixVariable6)*100), ENT_QUOTES, 'UTF-8');?>
+$_prefixVariable23 = ob_get_clean();
+echo htmlspecialchars((string) round((($_prefixVariable21-$_prefixVariable22)/$_prefixVariable23)*100), ENT_QUOTES, 'UTF-8');?>
 %
             </div>
             <ul class="product__item__pic__hover">
