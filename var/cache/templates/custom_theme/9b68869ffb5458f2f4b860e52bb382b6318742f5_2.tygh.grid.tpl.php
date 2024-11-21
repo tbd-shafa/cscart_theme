@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 00:19:23
+/* Smarty version 4.3.0, created on 2024-11-21 00:55:21
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/block_manager/render/grid.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673eed0b3d8697_48950714',
+  'unifunc' => 'content_673ef5794f6248_73075133',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/block_manager/extract_nested_forms.tpl' => 1,
   ),
 ),false)) {
-function content_673eed0b3d8697_48950714 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673ef5794f6248_73075133 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['block_manager'] && $_smarty_tpl->tpl_vars['location_data']->value['is_frontend_editing_allowed']) {?>
     <?php $_smarty_tpl->_subTemplateRender("backend:views/block_manager/frontend_render/grid.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 } else { ?>

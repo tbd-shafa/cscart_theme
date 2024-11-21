@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 00:19:24
+/* Smarty version 4.3.0, created on 2024-11-21 00:55:20
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/steps/payment_options.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673eed0c4b1c58_21650210',
+  'unifunc' => 'content_673ef5783ef9d6_32179318',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673eed0c4b1c58_21650210 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673ef5783ef9d6_32179318 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('onboarding_guide.select_payment_options','onboarding_guide.configure_payment_methods_description','onboarding_guide.configure_payment_methods','onboarding_guide.view_checkout_page_description','onboarding_guide.view_checkout_page'));
 if ((empty($_smarty_tpl->tpl_vars['onboarding_guide_is_store_builder']->value))) {?>
     <div class="onboarding_content_margin--bottom_x2">

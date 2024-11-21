@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 00:19:21
+/* Smarty version 4.3.0, created on 2024-11-21 00:55:17
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/paypal_checkout/hooks/index/scripts.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673eed096d0288_25924018',
+  'unifunc' => 'content_673ef5755e12b0_82339473',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673eed096d0288_25924018 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673ef5755e12b0_82339473 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 echo smarty_function_script(array('src'=>"js/addons/paypal_checkout/configure.js"),$_smarty_tpl);?>
 

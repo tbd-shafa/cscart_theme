@@ -18,110 +18,53 @@
             -{round((({$product.list_price} - {$product.price}) / {$product.list_price}) * 100)}%
             </div>
             <ul class="product__item__pic__hover">
-             
                {assign var="obj_id" value=$product.product_id}
                                 {assign var="obj_id_prefix" value="`$obj_prefix``$product.product_id`"}
                                 {include file="common/product_data.tpl" product=$product min_qty=true}
 
                                 <div class="">
-
                                     {assign var="form_open" value="form_open_`$obj_id`"}
                                     {$smarty.capture.$form_open nofilter}
-                                
-
                                     <div class="">
-                                
                                         <div class="">
-                                            {assign var="add_to_cart" value="add_to_cart_`$obj_id`"}
-                                                <li>
-                                                        <form
-                                                        action="{fn_url('checkout.add')}"
-                                                        method="post"
-                                                        name="product_form_{$product.product_id}"
-                                                        enctype="multipart/form-data"
-                                                        class="cm-disable-empty-files cm-ajax cm-ajax-full-render cm-ajax-status-middle cm-processed-form"
-                                                        >
-                                                        <input
-                                                            type="hidden"
-                                                            name="result_ids"
-                                                            value="cart_status*,wish_list*,checkout*,account_info*"
-                                                        />
-                                                        <input type="hidden" name="redirect_url" value="index.php" />
-                                                        <input type="hidden" name="product_data[{$product.product_id}][amount]" value="1" />
-                                                    
-                                                        <div class="">
-                                                            <div class="">
-                                                            <div class="cm-reload-{$product.product_id}" id="add_to_cart_update_{$product.product_id}">
-                                                                <input type="hidden" name="appearance[show_add_to_cart]" value="1" />
-                                                                <input type="hidden" name="appearance[show_list_buttons]" value="1" />
-                                                                <input type="hidden" name="appearance[but_role]" value="action" />
-                                                                <input type="hidden" name="appearance[quick_view]" value="" />
-                                                    
-                                                            
-                                                    <button 
-                                                        id="button_cart_{$product.product_id}"
-                                                        class="ty-btn ty-btn__add-to-cart ty-btn__primary cm-form-dialog-closer ty-btn"
-                                                    type="submit"
-                                                        name="dispatch[checkout.add..{$product.product_id}]"
-                                                    >
-                                                                                                    <i class="fa fa-shopping-cart"></i>
-                                                                                                </button>
-                                                                
-                                                    
-                                                            
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                            </li>
+                                         <!-- Add to Cart -->
+                                          <li>
+                                              <div class="cm-reload-{$product.product_id}" id="add_to_cart_update_{$product.product_id}">
+                                                  <input type="hidden" name="appearance[show_add_to_cart]" value="1" />
+                                                  <input type="hidden" name="appearance[show_list_buttons]" value="1" />
+                                                  <input type="hidden" name="appearance[but_role]" value="action" />
+                                                  <input type="hidden" name="appearance[quick_view]" value="" />
 
-                                    <!-- Add to Compare -->
-                                    <li>
-                                        <a href="{"product_features.add_product?product_id=`$product.product_id`"|fn_url}" class="cm-ajax cm-ajax-full-render" data-ca-target-id="comparison_list,content_compare">
-                                            <i class="fa fa-retweet"></i>
-                                        </a>
-                                    </li>
+                                                  <button
+                                                      id="button_cart_{$product.product}"
+                                                      class="primary-btn ty-btn__primary ty-btn__big ty-btn__add-to-cart cm-form-dialog-closer ty-btn"
+                                                      type="submit"
+                                                      name="dispatch[checkout.add..{$product.product_id}]"
+                                                  >
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                  </button>
+                                              </div>
+                                          </li>   
+                                          <!-- Add to Compare -->
+                                          <li>
+                                              <a href="{"product_features.add_product?product_id=`$product.product_id`"|fn_url}" class="cm-ajax cm-ajax-full-render" data-ca-target-id="comparison_list,content_compare">
+                                                  <i class="fa fa-retweet"></i>
+                                              </a>
+                                          </li>
 
-                                                        <!-- Add to Wishlist -->
-                                    <li>
-                                        <form action="{"wishlist.add"|fn_url}" method="post" class="cm-ajax cm-ajax-full-render">
-                                            <input type="hidden" name="product_data[{$product.product_id}][product_id]" value="{$product.product_id}">
-                                            <input type="hidden" name="product_data[{$product.product_id}][amount]" value="1">
-                                            <input type="hidden" name="dispatch" value="wishlist.add">
-                                            <button type="submit" class="ty-btn ty-btn__tertiary ty-btn-icon">
-                                                <i class="fa fa-heart"></i>
-                                            </button>
-                                        </form>
-                                    </li>
-
-
-                                   <!-- Add to Cart -->
-                                   {* 
-                                   <li>
-                                        <form action="{"checkout.add"|fn_url}" method="post" class="cm-ajax cm-ajax-full-render" data-ca-target-id="cart_status,cart_content">
-                                            <input type="hidden" name="product_data[{$product.product_id}][amount]" value="1" />
-                                            <button type="submit"><i class="fa fa-shopping-cart"></i></button>
-                                        </form>
-                                    </li>
-                                     <li>
-                                        <form action="{fn_url('checkout.add')}" method="post" class="cm-disable-empty-files cm-ajax cm-ajax-full-render  cm-processed-form">
-                                            <!-- Add hidden fields to ensure correct AJAX targeting and redirect behavior -->
-                                            <input type="hidden" name="result_ids" value="cart_status,cart_content" />
-                                            <input type="hidden" name="redirect_url" value="index.php" />
-                                            
-                                            <input type="hidden" name="product_data[{$product.product_id}][amount]" value="1" />
-                                            
-                                            <button type="submit" class="ty-btn ty-btn__add-to-cart">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </button>
-                                        </form>
-                                    </li>
-                                   *} 
-                                    
+                                          <!-- Add to Wishlist -->
+                                          <li>
+                                              <form action="{"wishlist.add"|fn_url}" method="post" class="cm-ajax cm-ajax-full-render">
+                                                  <input type="hidden" name="product_data[{$product.product_id}][product_id]" value="{$product.product_id}">
+                                                  <input type="hidden" name="product_data[{$product.product_id}][amount]" value="1">
+                                                  <input type="hidden" name="dispatch" value="wishlist.add">
+                                                  <button type="submit" class="ty-btn ty-btn__tertiary ty-btn-icon">
+                                                      <i class="fa fa-heart"></i>
+                                                  </button>
+                                              </form>
+                                          </li>
                                         </div>
-                                    
                                     </div>
-                                
                                 </div>
             </ul>
           </div>

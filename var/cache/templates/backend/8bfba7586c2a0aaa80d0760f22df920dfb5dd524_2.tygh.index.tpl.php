@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 00:19:21
+/* Smarty version 4.3.0, created on 2024-11-21 00:55:17
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/index/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673eed0918ca21_51870338',
+  'unifunc' => 'content_673ef5750df022_13446521',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/share.tpl' => 1,
   ),
 ),false)) {
-function content_673eed0918ca21_51870338 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673ef5750df022_13446521 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('dashboard','installer_complete_title','welcome_screen.administrator_info','admin_panel','welcome_screen.go_admin_panel','welcome_screen.go_settings_wizard','settings_wizard','welcome_screen.run_settings_wizard','storefront','welcome_screen.go_storefront','welcome_screen.learn_more_configuration','welcome_screen.knowledge_base','welcome_screen.thanks'));
 echo smarty_function_script(array('src'=>"js/tygh/tabs.js"),$_smarty_tpl);?>
@@ -75,8 +75,8 @@ if ($_smarty_tpl->tpl_vars['show_welcome']->value) {?>
         <?php } else { ?>
             <?php ob_start();
 echo htmlspecialchars((string) fn_url($_smarty_tpl->tpl_vars['config']->value['http_location']), ENT_QUOTES, 'UTF-8');
-$_prefixVariable19=ob_get_clean();
-$_smarty_tpl->_assignInScope('link_storefront', $_prefixVariable19);?>
+$_prefixVariable1=ob_get_clean();
+$_smarty_tpl->_assignInScope('link_storefront', $_prefixVariable1);?>
         <?php }?>
         <div class="welcome-screen">
             <p>

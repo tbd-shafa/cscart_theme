@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 00:19:23
+/* Smarty version 4.3.0, created on 2024-11-21 00:55:21
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/categories/view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673eed0b962589_67930765',
+  'unifunc' => 'content_673ef57996f9e4_29636141',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1a7f322cea20d8d7ee445155ce84901a612702c2' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/categories/view.tpl',
-      1 => 1732174120,
+      1 => 1732179311,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/no_items.tpl' => 4,
   ),
 ),false)) {
-function content_673eed0b962589_67930765 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673ef57996f9e4_29636141 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.live_edit.php','function'=>'smarty_function_live_edit',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('text_no_products_found','text_no_products','text_no_products_found','text_no_products'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -52,14 +52,14 @@ $_smarty_tpl->tpl_vars['product']->do_else = false;
             <div class="product__discount__percent">
             -<?php ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['list_price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable4 = ob_get_clean();
+$_prefixVariable18 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable5 = ob_get_clean();
+$_prefixVariable19 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['list_price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable6 = ob_get_clean();
-echo htmlspecialchars((string) round((($_prefixVariable4-$_prefixVariable5)/$_prefixVariable6)*100), ENT_QUOTES, 'UTF-8');?>
+$_prefixVariable20 = ob_get_clean();
+echo htmlspecialchars((string) round((($_prefixVariable18-$_prefixVariable19)/$_prefixVariable20)*100), ENT_QUOTES, 'UTF-8');?>
 %
             </div>
             <ul class="product__item__pic__hover">
@@ -74,89 +74,53 @@ echo htmlspecialchars((string) round((($_prefixVariable4-$_prefixVariable5)/$_pr
                                     <?php $_smarty_tpl->_assignInScope('form_open', "form_open_".((string)$_smarty_tpl->tpl_vars['obj_id']->value));?>
                                     <?php echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, $_smarty_tpl->tpl_vars['form_open']->value);?>
 
-                                
-
                                     <div class="">
-                                
                                         <div class="">
-                                            <?php $_smarty_tpl->_assignInScope('add_to_cart', "add_to_cart_".((string)$_smarty_tpl->tpl_vars['obj_id']->value));?>
-                                                <li>
-                                                        <form
-                                                        action="<?php echo htmlspecialchars((string) fn_url('checkout.add'), ENT_QUOTES, 'UTF-8');?>
-"
-                                                        method="post"
-                                                        name="product_form_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
-"
-                                                        enctype="multipart/form-data"
-                                                        class="cm-disable-empty-files cm-ajax cm-ajax-full-render cm-ajax-status-middle cm-processed-form"
-                                                        >
-                                                        <input
-                                                            type="hidden"
-                                                            name="result_ids"
-                                                            value="cart_status*,wish_list*,checkout*,account_info*"
-                                                        />
-                                                        <input type="hidden" name="redirect_url" value="index.php" />
-                                                        <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
-][amount]" value="1" />
-                                                    
-                                                        <div class="">
-                                                            <div class="">
-                                                            <div class="cm-reload-<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                         <!-- Add to Cart -->
+                                          <li>
+                                              <div class="cm-reload-<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 " id="add_to_cart_update_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ">
-                                                                <input type="hidden" name="appearance[show_add_to_cart]" value="1" />
-                                                                <input type="hidden" name="appearance[show_list_buttons]" value="1" />
-                                                                <input type="hidden" name="appearance[but_role]" value="action" />
-                                                                <input type="hidden" name="appearance[quick_view]" value="" />
-                                                    
-                                                            
-                                                    <button 
-                                                        id="button_cart_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                                  <input type="hidden" name="appearance[show_add_to_cart]" value="1" />
+                                                  <input type="hidden" name="appearance[show_list_buttons]" value="1" />
+                                                  <input type="hidden" name="appearance[but_role]" value="action" />
+                                                  <input type="hidden" name="appearance[quick_view]" value="" />
+
+                                                  <button
+                                                      id="button_cart_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product'], ENT_QUOTES, 'UTF-8');?>
 "
-                                                        class="ty-btn ty-btn__add-to-cart ty-btn__primary cm-form-dialog-closer ty-btn"
-                                                    type="submit"
-                                                        name="dispatch[checkout.add..<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                                      class="primary-btn ty-btn__primary ty-btn__big ty-btn__add-to-cart cm-form-dialog-closer ty-btn"
+                                                      type="submit"
+                                                      name="dispatch[checkout.add..<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ]"
-                                                    >
-                                                                                                    <i class="fa fa-shopping-cart"></i>
-                                                                                                </button>
-                                                                
-                                                    
-                                                            
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                            </li>
-
-                                    <!-- Add to Compare -->
-                                    <li>
-                                        <a href="<?php echo htmlspecialchars((string) fn_url("product_features.add_product?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
+                                                  >
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                  </button>
+                                              </div>
+                                          </li>   
+                                          <!-- Add to Compare -->
+                                          <li>
+                                              <a href="<?php echo htmlspecialchars((string) fn_url("product_features.add_product?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
 " class="cm-ajax cm-ajax-full-render" data-ca-target-id="comparison_list,content_compare">
-                                            <i class="fa fa-retweet"></i>
-                                        </a>
-                                    </li>
+                                                  <i class="fa fa-retweet"></i>
+                                              </a>
+                                          </li>
 
-                                                        <!-- Add to Wishlist -->
-                                    <li>
-                                        <form action="<?php echo htmlspecialchars((string) fn_url("wishlist.add"), ENT_QUOTES, 'UTF-8');?>
+                                          <!-- Add to Wishlist -->
+                                          <li>
+                                              <form action="<?php echo htmlspecialchars((string) fn_url("wishlist.add"), ENT_QUOTES, 'UTF-8');?>
 " method="post" class="cm-ajax cm-ajax-full-render">
-                                            <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                                  <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ][product_id]" value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ">
-                                            <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                                  <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ][amount]" value="1">
-                                            <input type="hidden" name="dispatch" value="wishlist.add">
-                                            <button type="submit" class="ty-btn ty-btn__tertiary ty-btn-icon">
-                                                <i class="fa fa-heart"></i>
-                                            </button>
-                                        </form>
-                                    </li>
-
-
-                                   <!-- Add to Cart -->
-                                    
-                                    
+                                                  <input type="hidden" name="dispatch" value="wishlist.add">
+                                                  <button type="submit" class="ty-btn ty-btn__tertiary ty-btn-icon">
+                                                      <i class="fa fa-heart"></i>
+                                                  </button>
+                                              </form>
+                                          </li>
                                         </div>
                                     
                                     </div>
@@ -333,14 +297,14 @@ $_smarty_tpl->tpl_vars['product']->do_else = false;
             <div class="product__discount__percent">
             -<?php ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['list_price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable7 = ob_get_clean();
+$_prefixVariable21 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable8 = ob_get_clean();
+$_prefixVariable22 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['list_price'], ENT_QUOTES, 'UTF-8');
-$_prefixVariable9 = ob_get_clean();
-echo htmlspecialchars((string) round((($_prefixVariable7-$_prefixVariable8)/$_prefixVariable9)*100), ENT_QUOTES, 'UTF-8');?>
+$_prefixVariable23 = ob_get_clean();
+echo htmlspecialchars((string) round((($_prefixVariable21-$_prefixVariable22)/$_prefixVariable23)*100), ENT_QUOTES, 'UTF-8');?>
 %
             </div>
             <ul class="product__item__pic__hover">
@@ -355,89 +319,53 @@ echo htmlspecialchars((string) round((($_prefixVariable7-$_prefixVariable8)/$_pr
                                     <?php $_smarty_tpl->_assignInScope('form_open', "form_open_".((string)$_smarty_tpl->tpl_vars['obj_id']->value));?>
                                     <?php echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, $_smarty_tpl->tpl_vars['form_open']->value);?>
 
-                                
-
                                     <div class="">
-                                
                                         <div class="">
-                                            <?php $_smarty_tpl->_assignInScope('add_to_cart', "add_to_cart_".((string)$_smarty_tpl->tpl_vars['obj_id']->value));?>
-                                                <li>
-                                                        <form
-                                                        action="<?php echo htmlspecialchars((string) fn_url('checkout.add'), ENT_QUOTES, 'UTF-8');?>
-"
-                                                        method="post"
-                                                        name="product_form_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
-"
-                                                        enctype="multipart/form-data"
-                                                        class="cm-disable-empty-files cm-ajax cm-ajax-full-render cm-ajax-status-middle cm-processed-form"
-                                                        >
-                                                        <input
-                                                            type="hidden"
-                                                            name="result_ids"
-                                                            value="cart_status*,wish_list*,checkout*,account_info*"
-                                                        />
-                                                        <input type="hidden" name="redirect_url" value="index.php" />
-                                                        <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
-][amount]" value="1" />
-                                                    
-                                                        <div class="">
-                                                            <div class="">
-                                                            <div class="cm-reload-<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                         <!-- Add to Cart -->
+                                          <li>
+                                              <div class="cm-reload-<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 " id="add_to_cart_update_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ">
-                                                                <input type="hidden" name="appearance[show_add_to_cart]" value="1" />
-                                                                <input type="hidden" name="appearance[show_list_buttons]" value="1" />
-                                                                <input type="hidden" name="appearance[but_role]" value="action" />
-                                                                <input type="hidden" name="appearance[quick_view]" value="" />
-                                                    
-                                                            
-                                                    <button 
-                                                        id="button_cart_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                                  <input type="hidden" name="appearance[show_add_to_cart]" value="1" />
+                                                  <input type="hidden" name="appearance[show_list_buttons]" value="1" />
+                                                  <input type="hidden" name="appearance[but_role]" value="action" />
+                                                  <input type="hidden" name="appearance[quick_view]" value="" />
+
+                                                  <button
+                                                      id="button_cart_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product'], ENT_QUOTES, 'UTF-8');?>
 "
-                                                        class="ty-btn ty-btn__add-to-cart ty-btn__primary cm-form-dialog-closer ty-btn"
-                                                    type="submit"
-                                                        name="dispatch[checkout.add..<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                                      class="primary-btn ty-btn__primary ty-btn__big ty-btn__add-to-cart cm-form-dialog-closer ty-btn"
+                                                      type="submit"
+                                                      name="dispatch[checkout.add..<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ]"
-                                                    >
-                                                                                                    <i class="fa fa-shopping-cart"></i>
-                                                                                                </button>
-                                                                
-                                                    
-                                                            
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                            </li>
-
-                                    <!-- Add to Compare -->
-                                    <li>
-                                        <a href="<?php echo htmlspecialchars((string) fn_url("product_features.add_product?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
+                                                  >
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                  </button>
+                                              </div>
+                                          </li>   
+                                          <!-- Add to Compare -->
+                                          <li>
+                                              <a href="<?php echo htmlspecialchars((string) fn_url("product_features.add_product?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])), ENT_QUOTES, 'UTF-8');?>
 " class="cm-ajax cm-ajax-full-render" data-ca-target-id="comparison_list,content_compare">
-                                            <i class="fa fa-retweet"></i>
-                                        </a>
-                                    </li>
+                                                  <i class="fa fa-retweet"></i>
+                                              </a>
+                                          </li>
 
-                                                        <!-- Add to Wishlist -->
-                                    <li>
-                                        <form action="<?php echo htmlspecialchars((string) fn_url("wishlist.add"), ENT_QUOTES, 'UTF-8');?>
+                                          <!-- Add to Wishlist -->
+                                          <li>
+                                              <form action="<?php echo htmlspecialchars((string) fn_url("wishlist.add"), ENT_QUOTES, 'UTF-8');?>
 " method="post" class="cm-ajax cm-ajax-full-render">
-                                            <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                                  <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ][product_id]" value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ">
-                                            <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
+                                                  <input type="hidden" name="product_data[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 ][amount]" value="1">
-                                            <input type="hidden" name="dispatch" value="wishlist.add">
-                                            <button type="submit" class="ty-btn ty-btn__tertiary ty-btn-icon">
-                                                <i class="fa fa-heart"></i>
-                                            </button>
-                                        </form>
-                                    </li>
-
-
-                                   <!-- Add to Cart -->
-                                    
-                                    
+                                                  <input type="hidden" name="dispatch" value="wishlist.add">
+                                                  <button type="submit" class="ty-btn ty-btn__tertiary ty-btn-icon">
+                                                      <i class="fa fa-heart"></i>
+                                                  </button>
+                                              </form>
+                                          </li>
                                         </div>
                                     
                                     </div>
