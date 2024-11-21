@@ -1,4 +1,9 @@
-
+<style>
+img.sp-img {
+    height: 270px;
+    width: 270px;
+}
+</style>
 {if $products}
 
     {script src="js/tygh/exceptions.js"}
@@ -55,7 +60,7 @@
                         <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                    
-                                  <img src="{$product.main_pair.detailed.image_path}"  alt="{$product.product}">
+                                  <img class="sp-img" src="{$product.main_pair.detailed.image_path}"  alt="{$product.product}">
                         
                                     <ul class="product__item__pic__hover">
                                     

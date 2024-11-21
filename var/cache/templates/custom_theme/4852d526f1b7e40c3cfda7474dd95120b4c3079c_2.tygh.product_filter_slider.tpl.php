@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 02:31:09
+/* Smarty version 4.3.0, created on 2024-11-21 05:22:43
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/product_filters/components/product_filter_slider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673f0bedea68d6_34506234',
+  'unifunc' => 'content_673f34239e19c8_55876080',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4852d526f1b7e40c3cfda7474dd95120b4c3079c' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/product_filters/components/product_filter_slider.tpl',
-      1 => 1729847847,
+      1 => 1732195356,
       2 => 'tygh',
     ),
   ),
@@ -20,11 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673f0bedea68d6_34506234 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673f34239e19c8_55876080 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.to_json.php','function'=>'smarty_modifier_to_json',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
-$_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
-echo smarty_function_script(array('src'=>"js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js"),$_smarty_tpl);?>
+$_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><style>
+.inpt1{
+    min-width:120px;
+}
+</style>
+<?php echo smarty_function_script(array('src'=>"js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js"),$_smarty_tpl);?>
 
 <?php $_smarty_tpl->_assignInScope('min', $_smarty_tpl->tpl_vars['filter']->value['min']);
 $_smarty_tpl->_assignInScope('max', $_smarty_tpl->tpl_vars['filter']->value['max']);
@@ -40,97 +44,93 @@ $_smarty_tpl->_assignInScope('disable_slider', $_smarty_tpl->tpl_vars['filter']-
     <?php }
 }?>
 
-<div id="content_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+
+     <div class="sidebar__item">
+                          
+                            <div class="price-range-wrap">
+                               <div id="content_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 " class="cm-product-filters-checkbox-container ty-price-slider <?php if ($_smarty_tpl->tpl_vars['collapse']->value) {?>hidden<?php }?> <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['extra_class']->value, ENT_QUOTES, 'UTF-8');?>
 ">
-    <p class="ty-price-slider__inputs">
-        <bdi class="ty-price-slider__bidi-container">
-            <span class="ty-price-slider__filter-prefix"><?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];?>
-</span>
-            <input type="text"
-                class="ty-price-slider__input-text"
-                id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-_left"
-                name="left_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-"
-                value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
-"
-                <?php if ($_smarty_tpl->tpl_vars['disable_slider']->value) {?>
-                    disabled="disabled"
-                <?php }?>
-                data-ca-previous-value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
-"/>
-            <span class="ty-price-slider__filter-suffix"><?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
-</span>
-        </bdi>
-        &nbsp;–&nbsp;
-        <bdi class="ty-price-slider__bidi-container">
-            <span class="ty-price-slider__filter-prefix"><?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];?>
-</span>
-            <input type="text"
-                class="ty-price-slider__input-text"
-                id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-_right"
-                name="right_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-"
-                value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
-"
-                <?php if ($_smarty_tpl->tpl_vars['disable_slider']->value) {?>
-                    disabled="disabled"
-                <?php }?>
-                data-ca-previous-value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
-"/>
-            <span class="ty-price-slider__filter-suffix"><?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
-</span>
-        </bdi>
-    </p>
-        <div id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-" class="ty-range-slider cm-range-slider">
-            <ul class="ty-range-slider__wrapper">
-                <li class="ty-range-slider__item" style="left: 0%;">
-                    <span class="ty-range-slider__num">
-                        <span><bdi><?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];?>
-<span><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['min']->value, ENT_QUOTES, 'UTF-8');?>
-</span><?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
-</bdi></span>
-                    </span>
-                </li>
-                <li class="ty-range-slider__item" style="left: 100%;">
-                    <span class="ty-range-slider__num">
-                        <span><bdi><?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];?>
-<span><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['max']->value, ENT_QUOTES, 'UTF-8');?>
-</span><?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
-</bdi></span>
-                    </span>
-                </li>
-            </ul>
-        </div>
+                                        <div id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+" class="ty-range-slider cm-range-slider price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                            <ul class="ty-range-slider__wrapper">
+                                                <li class="ty-range-slider__item" style="left: 0%;">
+                                                    <span class="ty-range-slider__num">
+                                                    
+                                                    </span>
+                                                </li>
+                                                <li class="ty-range-slider__item" style="left: 100%;">
+                                                    <span class="ty-range-slider__num">
+                                                    
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-        <input id="elm_checkbox_slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+                                        <input id="elm_checkbox_slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 " data-ca-filter-id="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['filter_id'], ENT_QUOTES, 'UTF-8');?>
 " class="cm-product-filters-checkbox hidden" type="checkbox" name="product_filters[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['filter_id'], ENT_QUOTES, 'UTF-8');?>
 ]" value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['value']->value, ENT_QUOTES, 'UTF-8');?>
 " <?php if ($_smarty_tpl->tpl_vars['filter']->value['selected_range']) {?>checked="checked"<?php }?> />
 
-                <input type="hidden" id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+                                                                                <input type="hidden" id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 _json" value='{
-            "disabled": <?php echo htmlspecialchars((string) smarty_modifier_to_json($_smarty_tpl->tpl_vars['disable_slider']->value), ENT_QUOTES, 'UTF-8');?>
+                                            "disabled": <?php echo htmlspecialchars((string) smarty_modifier_to_json($_smarty_tpl->tpl_vars['disable_slider']->value), ENT_QUOTES, 'UTF-8');?>
 ,
-            "min": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['min']->value, ENT_QUOTES, 'UTF-8');?>
+                                            "min": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['min']->value, ENT_QUOTES, 'UTF-8');?>
 ,
-            "max": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['max']->value, ENT_QUOTES, 'UTF-8');?>
+                                            "max": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['max']->value, ENT_QUOTES, 'UTF-8');?>
 ,
-            "left": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
+                                            "left": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
 ,
-            "right": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
+                                            "right": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
 ,
-            "step": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['round_to'], ENT_QUOTES, 'UTF-8');?>
+                                            "step": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['round_to'], ENT_QUOTES, 'UTF-8');?>
 ,
-            "extra": "<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['extra'], ENT_QUOTES, 'UTF-8');?>
+                                            "extra": "<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['extra'], ENT_QUOTES, 'UTF-8');?>
 "
-        }' />
-        </div>
-<?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
+                                        }' />
+                                                                        </div>
+                                <div class="range-slider">
+                                    <div class="price-input"  style="width: 100%; margin-left: 8px;">
+
+                                                <input type="text"
+                                                   class="inpt"
+                                                    id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+_left"
+                                                    name="left_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+"
+                                                    value="<?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];
+echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
+"
+                                                    <?php if ($_smarty_tpl->tpl_vars['disable_slider']->value) {?>
+                                                        disabled="disabled"
+                                                    <?php }?>
+                                                    data-ca-previous-value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
+"/>
+                                               
+                                           
+                                               
+                                                <input type="text"
+                                                    class="inpt1"
+                                                    id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+_right"
+                                                    name="right_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+"
+                                                    value="<?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];
+echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
+"
+                                                    <?php if ($_smarty_tpl->tpl_vars['disable_slider']->value) {?>
+                                                        disabled="disabled"
+                                                    <?php }?>
+                                                    data-ca-previous-value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
+"/>
+                                                <?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 if (smarty_modifier_trim($_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content'))) {
 if ($_smarty_tpl->tpl_vars['auth']->value['area'] == "A") {?><span class="cm-template-box template-box" data-ca-te-template="blocks/product_filters/components/product_filter_slider.tpl" id="<?php echo smarty_function_set_id(array('name'=>"blocks/product_filters/components/product_filter_slider.tpl"),$_smarty_tpl);?>
 "><div class="cm-template-icon icon-edit ty-icon-edit hidden"></div><?php echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content');?>
@@ -138,8 +138,12 @@ if ($_smarty_tpl->tpl_vars['auth']->value['area'] == "A") {?><span class="cm-tem
 echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content');
 }
 }
-} else {
-echo smarty_function_script(array('src'=>"js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js"),$_smarty_tpl);?>
+} else { ?><style>
+.inpt1{
+    min-width:120px;
+}
+</style>
+<?php echo smarty_function_script(array('src'=>"js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js"),$_smarty_tpl);?>
 
 <?php $_smarty_tpl->_assignInScope('min', $_smarty_tpl->tpl_vars['filter']->value['min']);
 $_smarty_tpl->_assignInScope('max', $_smarty_tpl->tpl_vars['filter']->value['max']);
@@ -155,96 +159,92 @@ $_smarty_tpl->_assignInScope('disable_slider', $_smarty_tpl->tpl_vars['filter']-
     <?php }
 }?>
 
-<div id="content_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+
+     <div class="sidebar__item">
+                          
+                            <div class="price-range-wrap">
+                               <div id="content_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 " class="cm-product-filters-checkbox-container ty-price-slider <?php if ($_smarty_tpl->tpl_vars['collapse']->value) {?>hidden<?php }?> <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['extra_class']->value, ENT_QUOTES, 'UTF-8');?>
 ">
-    <p class="ty-price-slider__inputs">
-        <bdi class="ty-price-slider__bidi-container">
-            <span class="ty-price-slider__filter-prefix"><?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];?>
-</span>
-            <input type="text"
-                class="ty-price-slider__input-text"
-                id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-_left"
-                name="left_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-"
-                value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
-"
-                <?php if ($_smarty_tpl->tpl_vars['disable_slider']->value) {?>
-                    disabled="disabled"
-                <?php }?>
-                data-ca-previous-value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
-"/>
-            <span class="ty-price-slider__filter-suffix"><?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
-</span>
-        </bdi>
-        &nbsp;–&nbsp;
-        <bdi class="ty-price-slider__bidi-container">
-            <span class="ty-price-slider__filter-prefix"><?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];?>
-</span>
-            <input type="text"
-                class="ty-price-slider__input-text"
-                id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-_right"
-                name="right_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-"
-                value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
-"
-                <?php if ($_smarty_tpl->tpl_vars['disable_slider']->value) {?>
-                    disabled="disabled"
-                <?php }?>
-                data-ca-previous-value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
-"/>
-            <span class="ty-price-slider__filter-suffix"><?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
-</span>
-        </bdi>
-    </p>
-        <div id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
-" class="ty-range-slider cm-range-slider">
-            <ul class="ty-range-slider__wrapper">
-                <li class="ty-range-slider__item" style="left: 0%;">
-                    <span class="ty-range-slider__num">
-                        <span><bdi><?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];?>
-<span><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['min']->value, ENT_QUOTES, 'UTF-8');?>
-</span><?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
-</bdi></span>
-                    </span>
-                </li>
-                <li class="ty-range-slider__item" style="left: 100%;">
-                    <span class="ty-range-slider__num">
-                        <span><bdi><?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];?>
-<span><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['max']->value, ENT_QUOTES, 'UTF-8');?>
-</span><?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
-</bdi></span>
-                    </span>
-                </li>
-            </ul>
-        </div>
+                                        <div id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+" class="ty-range-slider cm-range-slider price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                            <ul class="ty-range-slider__wrapper">
+                                                <li class="ty-range-slider__item" style="left: 0%;">
+                                                    <span class="ty-range-slider__num">
+                                                    
+                                                    </span>
+                                                </li>
+                                                <li class="ty-range-slider__item" style="left: 100%;">
+                                                    <span class="ty-range-slider__num">
+                                                    
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-        <input id="elm_checkbox_slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+                                        <input id="elm_checkbox_slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 " data-ca-filter-id="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['filter_id'], ENT_QUOTES, 'UTF-8');?>
 " class="cm-product-filters-checkbox hidden" type="checkbox" name="product_filters[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['filter_id'], ENT_QUOTES, 'UTF-8');?>
 ]" value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['value']->value, ENT_QUOTES, 'UTF-8');?>
 " <?php if ($_smarty_tpl->tpl_vars['filter']->value['selected_range']) {?>checked="checked"<?php }?> />
 
-                <input type="hidden" id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+                                                                                <input type="hidden" id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 _json" value='{
-            "disabled": <?php echo htmlspecialchars((string) smarty_modifier_to_json($_smarty_tpl->tpl_vars['disable_slider']->value), ENT_QUOTES, 'UTF-8');?>
+                                            "disabled": <?php echo htmlspecialchars((string) smarty_modifier_to_json($_smarty_tpl->tpl_vars['disable_slider']->value), ENT_QUOTES, 'UTF-8');?>
 ,
-            "min": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['min']->value, ENT_QUOTES, 'UTF-8');?>
+                                            "min": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['min']->value, ENT_QUOTES, 'UTF-8');?>
 ,
-            "max": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['max']->value, ENT_QUOTES, 'UTF-8');?>
+                                            "max": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['max']->value, ENT_QUOTES, 'UTF-8');?>
 ,
-            "left": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
+                                            "left": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
 ,
-            "right": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
+                                            "right": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
 ,
-            "step": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['round_to'], ENT_QUOTES, 'UTF-8');?>
+                                            "step": <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['round_to'], ENT_QUOTES, 'UTF-8');?>
 ,
-            "extra": "<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['extra'], ENT_QUOTES, 'UTF-8');?>
+                                            "extra": "<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['extra'], ENT_QUOTES, 'UTF-8');?>
 "
-        }' />
-        </div>
-<?php }
+                                        }' />
+                                                                        </div>
+                                <div class="range-slider">
+                                    <div class="price-input"  style="width: 100%; margin-left: 8px;">
+
+                                                <input type="text"
+                                                   class="inpt"
+                                                    id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+_left"
+                                                    name="left_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+"
+                                                    value="<?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];
+echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
+"
+                                                    <?php if ($_smarty_tpl->tpl_vars['disable_slider']->value) {?>
+                                                        disabled="disabled"
+                                                    <?php }?>
+                                                    data-ca-previous-value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['left']->value, ENT_QUOTES, 'UTF-8');?>
+"/>
+                                               
+                                           
+                                               
+                                                <input type="text"
+                                                    class="inpt1"
+                                                    id="slider_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+_right"
+                                                    name="right_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+"
+                                                    value="<?php echo $_smarty_tpl->tpl_vars['filter']->value['prefix'];
+echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
+"
+                                                    <?php if ($_smarty_tpl->tpl_vars['disable_slider']->value) {?>
+                                                        disabled="disabled"
+                                                    <?php }?>
+                                                    data-ca-previous-value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['right']->value, ENT_QUOTES, 'UTF-8');?>
+"/>
+                                                <?php echo $_smarty_tpl->tpl_vars['filter']->value['suffix'];?>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><?php }
 }
 }

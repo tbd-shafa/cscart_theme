@@ -1,3 +1,8 @@
+<style>
+.inpt1{
+    min-width:120px;
+}
+</style>
 {script src="js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js"}
 {$min = $filter.min}
 {$max = $filter.max}
@@ -13,62 +18,66 @@
     {/if}
 {/if}
 
-<div id="content_{$filter_uid}" class="cm-product-filters-checkbox-container ty-price-slider {if $collapse}hidden{/if} {$extra_class}">
-    <p class="ty-price-slider__inputs">
-        <bdi class="ty-price-slider__bidi-container">
-            <span class="ty-price-slider__filter-prefix">{$filter.prefix nofilter}</span>
-            <input type="text"
-                class="ty-price-slider__input-text"
-                id="slider_{$filter_uid}_left"
-                name="left_{$filter_uid}"
-                value="{$left}"
-                {if $disable_slider}
-                    disabled="disabled"
-                {/if}
-                data-ca-previous-value="{$left}"/>
-            <span class="ty-price-slider__filter-suffix">{$filter.suffix nofilter}</span>
-        </bdi>
-        &nbsp;–&nbsp;
-        <bdi class="ty-price-slider__bidi-container">
-            <span class="ty-price-slider__filter-prefix">{$filter.prefix nofilter}</span>
-            <input type="text"
-                class="ty-price-slider__input-text"
-                id="slider_{$filter_uid}_right"
-                name="right_{$filter_uid}"
-                value="{$right}"
-                {if $disable_slider}
-                    disabled="disabled"
-                {/if}
-                data-ca-previous-value="{$right}"/>
-            <span class="ty-price-slider__filter-suffix">{$filter.suffix nofilter}</span>
-        </bdi>
-    </p>
-        <div id="slider_{$filter_uid}" class="ty-range-slider cm-range-slider">
-            <ul class="ty-range-slider__wrapper">
-                <li class="ty-range-slider__item" style="left: 0%;">
-                    <span class="ty-range-slider__num">
-                        <span><bdi>{$filter.prefix nofilter}<span>{$min}</span>{$filter.suffix nofilter}</bdi></span>
-                    </span>
-                </li>
-                <li class="ty-range-slider__item" style="left: 100%;">
-                    <span class="ty-range-slider__num">
-                        <span><bdi>{$filter.prefix nofilter}<span>{$max}</span>{$filter.suffix nofilter}</bdi></span>
-                    </span>
-                </li>
-            </ul>
-        </div>
 
-        <input id="elm_checkbox_slider_{$filter_uid}" data-ca-filter-id="{$filter.filter_id}" class="cm-product-filters-checkbox hidden" type="checkbox" name="product_filters[{$filter.filter_id}]" value="{$value}" {if $filter.selected_range}checked="checked"{/if} />
+     <div class="sidebar__item">
+                          
+                            <div class="price-range-wrap">
+                               <div id="content_{$filter_uid}" class="cm-product-filters-checkbox-container ty-price-slider {if $collapse}hidden{/if} {$extra_class}">
+                                        <div id="slider_{$filter_uid}" class="ty-range-slider cm-range-slider price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                            <ul class="ty-range-slider__wrapper">
+                                                <li class="ty-range-slider__item" style="left: 0%;">
+                                                    <span class="ty-range-slider__num">
+                                                    
+                                                    </span>
+                                                </li>
+                                                <li class="ty-range-slider__item" style="left: 100%;">
+                                                    <span class="ty-range-slider__num">
+                                                    
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-        {* Slider params *}
-        <input type="hidden" id="slider_{$filter_uid}_json" value='{ldelim}
-            "disabled": {$disable_slider|to_json},
-            "min": {$min},
-            "max": {$max},
-            "left": {$left},
-            "right": {$right},
-            "step": {$filter.round_to},
-            "extra": "{$filter.extra}"
-        {rdelim}' />
-        {* /Slider params *}
-</div>
+                                        <input id="elm_checkbox_slider_{$filter_uid}" data-ca-filter-id="{$filter.filter_id}" class="cm-product-filters-checkbox hidden" type="checkbox" name="product_filters[{$filter.filter_id}]" value="{$value}" {if $filter.selected_range}checked="checked"{/if} />
+
+                                        {* Slider params *}
+                                        <input type="hidden" id="slider_{$filter_uid}_json" value='{ldelim}
+                                            "disabled": {$disable_slider|to_json},
+                                            "min": {$min},
+                                            "max": {$max},
+                                            "left": {$left},
+                                            "right": {$right},
+                                            "step": {$filter.round_to},
+                                            "extra": "{$filter.extra}"
+                                        {rdelim}' />
+                                        {* /Slider params *}
+                                </div>
+                                <div class="range-slider">
+                                    <div class="price-input"  style="width: 100%; margin-left: 8px;">
+
+                                                <input type="text"
+                                                   class="inpt"
+                                                    id="slider_{$filter_uid}_left"
+                                                    name="left_{$filter_uid}"
+                                                    value="{$filter.prefix nofilter}{$left}"
+                                                    {if $disable_slider}
+                                                        disabled="disabled"
+                                                    {/if}
+                                                    data-ca-previous-value="{$left}"/>
+                                               
+                                           
+                                               
+                                                <input type="text"
+                                                    class="inpt1"
+                                                    id="slider_{$filter_uid}_right"
+                                                    name="right_{$filter_uid}"
+                                                    value="{$filter.prefix nofilter}{$right}"
+                                                    {if $disable_slider}
+                                                        disabled="disabled"
+                                                    {/if}
+                                                    data-ca-previous-value="{$right}"/>
+                                                {$filter.suffix nofilter}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>

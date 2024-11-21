@@ -1,4 +1,9 @@
-
+<style>
+.product__discount__item__pic.set-bg.sp-img {
+    height: 270px;
+    width: 270px;
+}
+</style>
 {if $products}
 <div class="product__discount">
   <div class="section-title product__discount__title">
@@ -11,7 +16,7 @@
       <div class="col-lg-4">
         <div class="product__discount__item">
           <div
-            class="product__discount__item__pic set-bg"
+            class="product__discount__item__pic set-bg sp-img"
             data-setbg="{$product.main_pair.detailed.image_path}"
           >
             <div class="product__discount__percent">

@@ -1,9 +1,9 @@
-a:2:{s:4:"data";a:2:{s:10:"javascript";s:205:"<script src="http://localhost/cs-cart/js/tygh/product_filters.js?ver=1732185064" ></script><script src="http://localhost/cs-cart/js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js?ver=1732185064" ></script>";s:7:"content";s:17021:"        <div class="latest-product__text ty-sidebox-important">
+a:2:{s:4:"data";a:1:{s:7:"content";s:18660:"        <div class="latest-product__text ty-sidebox-important">
         <h4 class="">
                                                 <span>Product filters</span>
                         
         </h4>
-        <div class=""><!-- Inline script moved to the bottom of the page -->
+        <div class=""><script src="http://localhost/cs-cart/js/tygh/product_filters.js?ver=1732195360" ></script>
 
         
 
@@ -188,61 +188,69 @@ a:2:{s:4:"data";a:2:{s:10:"javascript";s:205:"<script src="http://localhost/cs-c
             <span class="ty-icon ty-icon-up-open ty-product-filters__switch-right" ></span>
         </div>
 
-                                                        <!-- Inline script moved to the bottom of the page -->
+                                                        <style>
+.inpt1{
+    min-width:120px;
+}
+</style>
+<script src="http://localhost/cs-cart/js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js?ver=1732195360" ></script>
 
 
-<div id="content_30_1" class="cm-product-filters-checkbox-container ty-price-slider  ">
-    <p class="ty-price-slider__inputs">
-        <bdi class="ty-price-slider__bidi-container">
-            <span class="ty-price-slider__filter-prefix">$</span>
-            <input type="text"
-                class="ty-price-slider__input-text"
-                id="slider_30_1_left"
-                name="left_30_1"
-                value="16"
-                                data-ca-previous-value="16"/>
-            <span class="ty-price-slider__filter-suffix"></span>
-        </bdi>
-        &nbsp;–&nbsp;
-        <bdi class="ty-price-slider__bidi-container">
-            <span class="ty-price-slider__filter-prefix">$</span>
-            <input type="text"
-                class="ty-price-slider__input-text"
-                id="slider_30_1_right"
-                name="right_30_1"
-                value="10700"
-                                data-ca-previous-value="10700"/>
-            <span class="ty-price-slider__filter-suffix"></span>
-        </bdi>
-    </p>
-        <div id="slider_30_1" class="ty-range-slider cm-range-slider">
-            <ul class="ty-range-slider__wrapper">
-                <li class="ty-range-slider__item" style="left: 0%;">
-                    <span class="ty-range-slider__num">
-                        <span><bdi>$<span>16</span></bdi></span>
-                    </span>
-                </li>
-                <li class="ty-range-slider__item" style="left: 100%;">
-                    <span class="ty-range-slider__num">
-                        <span><bdi>$<span>10700</span></bdi></span>
-                    </span>
-                </li>
-            </ul>
-        </div>
 
-        <input id="elm_checkbox_slider_30_1" data-ca-filter-id="1" class="cm-product-filters-checkbox hidden" type="checkbox" name="product_filters[1]" value=""  />
+     <div class="sidebar__item">
+                          
+                            <div class="price-range-wrap">
+                               <div id="content_30_1" class="cm-product-filters-checkbox-container ty-price-slider  ">
+                                        <div id="slider_30_1" class="ty-range-slider cm-range-slider price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                            <ul class="ty-range-slider__wrapper">
+                                                <li class="ty-range-slider__item" style="left: 0%;">
+                                                    <span class="ty-range-slider__num">
+                                                    
+                                                    </span>
+                                                </li>
+                                                <li class="ty-range-slider__item" style="left: 100%;">
+                                                    <span class="ty-range-slider__num">
+                                                    
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-                <input type="hidden" id="slider_30_1_json" value='{
-            "disabled": false,
-            "min": 16,
-            "max": 10700,
-            "left": 16,
-            "right": 10700,
-            "step": 1,
-            "extra": "USD"
-        }' />
-        </div>
-                                    
+                                        <input id="elm_checkbox_slider_30_1" data-ca-filter-id="1" class="cm-product-filters-checkbox hidden" type="checkbox" name="product_filters[1]" value=""  />
+
+                                                                                <input type="hidden" id="slider_30_1_json" value='{
+                                            "disabled": false,
+                                            "min": 16,
+                                            "max": 10700,
+                                            "left": 16,
+                                            "right": 10700,
+                                            "step": 1,
+                                            "extra": "USD"
+                                        }' />
+                                                                        </div>
+                                <div class="range-slider">
+                                    <div class="price-input"  style="width: 100%; margin-left: 8px;">
+
+                                                <input type="text"
+                                                   class="inpt"
+                                                    id="slider_30_1_left"
+                                                    name="left_30_1"
+                                                    value="$16"
+                                                                                                        data-ca-previous-value="16"/>
+                                               
+                                           
+                                               
+                                                <input type="text"
+                                                    class="inpt1"
+                                                    id="slider_30_1_right"
+                                                    name="right_30_1"
+                                                    value="$10700"
+                                                                                                        data-ca-previous-value="10700"/>
+                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                    
     </div>
     
                                     

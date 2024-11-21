@@ -1175,10 +1175,12 @@ ol {
 	right: 0;
 }
 
-.price-range-wrap .range-slider {
+/* .price-range-wrap .range-slider {
 	margin-top: 20px;
+} */
+.price-range-wrap .range-slider {
+    margin-top: -26px;
 }
-
 .price-range-wrap .range-slider .price-input {
 	position: relative;
 }

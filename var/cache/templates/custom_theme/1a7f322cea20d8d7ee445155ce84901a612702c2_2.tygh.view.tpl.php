@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 02:31:09
+/* Smarty version 4.3.0, created on 2024-11-21 05:22:43
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/categories/view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673f0bedf416d1_64060910',
+  'unifunc' => 'content_673f3423b47170_05344670',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1a7f322cea20d8d7ee445155ce84901a612702c2' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/categories/view.tpl',
-      1 => 1732181882,
+      1 => 1732187122,
       2 => 'tygh',
     ),
   ),
@@ -23,12 +23,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/no_items.tpl' => 4,
   ),
 ),false)) {
-function content_673f0bedf416d1_64060910 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673f3423b47170_05344670 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.live_edit.php','function'=>'smarty_function_live_edit',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('text_no_products_found','text_no_products','text_no_products_found','text_no_products'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
-$_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
-if ($_smarty_tpl->tpl_vars['products']->value) {?>
+$_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><style>
+.product__discount__item__pic.set-bg.sp-img {
+    height: 270px;
+    width: 270px;
+}
+</style>
+<?php if ($_smarty_tpl->tpl_vars['products']->value) {?>
 <div class="product__discount">
   <div class="section-title product__discount__title">
     <h2>Sale Off</h2>
@@ -45,7 +50,7 @@ $_smarty_tpl->tpl_vars['product']->do_else = false;
       <div class="col-lg-4">
         <div class="product__discount__item">
           <div
-            class="product__discount__item__pic set-bg"
+            class="product__discount__item__pic set-bg sp-img"
             data-setbg="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['main_pair']['detailed']['image_path'], ENT_QUOTES, 'UTF-8');?>
 "
           >
@@ -268,8 +273,13 @@ if ($_smarty_tpl->tpl_vars['auth']->value['area'] == "A") {?><span class="cm-tem
 echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content');
 }
 }
-} else {
-if ($_smarty_tpl->tpl_vars['products']->value) {?>
+} else { ?><style>
+.product__discount__item__pic.set-bg.sp-img {
+    height: 270px;
+    width: 270px;
+}
+</style>
+<?php if ($_smarty_tpl->tpl_vars['products']->value) {?>
 <div class="product__discount">
   <div class="section-title product__discount__title">
     <h2>Sale Off</h2>
@@ -286,7 +296,7 @@ $_smarty_tpl->tpl_vars['product']->do_else = false;
       <div class="col-lg-4">
         <div class="product__discount__item">
           <div
-            class="product__discount__item__pic set-bg"
+            class="product__discount__item__pic set-bg sp-img"
             data-setbg="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['main_pair']['detailed']['image_path'], ENT_QUOTES, 'UTF-8');?>
 "
           >
