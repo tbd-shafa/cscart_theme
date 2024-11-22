@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 01:44:42
+/* Smarty version 4.3.0, created on 2024-11-22 03:11:18
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/product_reviews/views/product_reviews/components/product_reviews_stars.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6740528a8ae722_64599002',
+  'unifunc' => 'content_674066d64a76a5_18853595',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '85850865cbbdeb58d91310748dd00a59c1ce4ed6' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/product_reviews/views/product_reviews/components/product_reviews_stars.tpl',
-      1 => 1729847847,
+      1 => 1732273870,
       2 => 'tygh',
     ),
   ),
@@ -20,12 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6740528a8ae722_64599002 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674066d64a76a5_18853595 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('product_reviews.product_is_rated_n_out_of_five_stars','product_reviews.show_rating','product_reviews.click_to_see_reviews','product_reviews.product_is_rated_n_out_of_five_stars','product_reviews.show_rating','product_reviews.click_to_see_reviews'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
-$_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
-if ($_smarty_tpl->tpl_vars['rating']->value > 0) {?>
+$_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?>
+  
+<?php if ($_smarty_tpl->tpl_vars['rating']->value > 0) {?>
 
     <?php $_smarty_tpl->_assignInScope('integer_rating', floor($_smarty_tpl->tpl_vars['rating']->value));?>
     <?php $_smarty_tpl->_assignInScope('accurate_rating', round((float) $_smarty_tpl->tpl_vars['rating']->value, (int) 1, (int) 1));?>
@@ -37,29 +38,78 @@ if ($_smarty_tpl->tpl_vars['rating']->value > 0) {?>
     <?php $_smarty_tpl->_assignInScope('title', $_smarty_tpl->__("product_reviews.product_is_rated_n_out_of_five_stars",array("[n]"=>$_smarty_tpl->tpl_vars['accurate_rating']->value)));?>
 
     <?php if ($_smarty_tpl->tpl_vars['link']->value) {?>
+    
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.show_rating");
 $_prefixVariable34=ob_get_clean();
 $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable34.".");?>
+      
     <?php } elseif ($_smarty_tpl->tpl_vars['button']->value) {?>
+     ok2
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.click_to_see_reviews");
 $_prefixVariable35=ob_get_clean();
 $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable35.".");?>
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['link']->value === true) {?>
+    
         <?php $_smarty_tpl->_assignInScope('link', "products.view?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])."&selected_section=product_reviews#product_reviews");?>
+      
     <?php }?>
 
     <?php if ($_smarty_tpl->tpl_vars['link']->value) {?>
+    
+     <style>
+        .checked {
+        color: orange;
+        }
+        .unchecked {
+        color: lightgray;
+    }
+    </style>
         <a class="ty-product-review-reviews-stars__link <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['meta']->value, ENT_QUOTES, 'UTF-8');?>
 "
             href="<?php echo htmlspecialchars((string) fn_url($_smarty_tpl->tpl_vars['link']->value), ENT_QUOTES, 'UTF-8');?>
 "
             title="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['title']->value, ENT_QUOTES, 'UTF-8');?>
 "
-        >
+            >
+            <?php $_smarty_tpl->_assignInScope('full_stars', floor($_smarty_tpl->tpl_vars['rating']->value));?> <!-- Number of full stars -->
+<?php $_smarty_tpl->_assignInScope('empty_stars', 5-$_smarty_tpl->tpl_vars['full_stars']->value);?> <!-- Number of empty stars -->
+
+<!-- Full stars -->
+<?php
+$__section_full_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['full_stars']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_full_2_total = $__section_full_2_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_full'] = new Smarty_Variable(array());
+if ($__section_full_2_total !== 0) {
+for ($__section_full_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index'] = 0; $__section_full_2_iteration <= $__section_full_2_total; $__section_full_2_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index']++){
+?>
+    <span class="fa fa-star checked"></span>
+<?php
+}
+}
+?>
+
+<!-- Empty stars -->
+<?php
+$__section_empty_3_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['empty_stars']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_empty_3_total = $__section_empty_3_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_empty'] = new Smarty_Variable(array());
+if ($__section_empty_3_total !== 0) {
+for ($__section_empty_3_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index'] = 0; $__section_empty_3_iteration <= $__section_empty_3_total; $__section_empty_3_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index']++){
+?>
+    <span class="fa fa-star unchecked"></span>
+<?php
+}
+}
+?>
+            
+          
+
+            
     <?php } elseif ($_smarty_tpl->tpl_vars['button']->value) {?>
+     ok5
         <button type="button"
             class="ty-product-review-reviews-stars__button ty-btn-reset cm-external-click <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['meta']->value, ENT_QUOTES, 'UTF-8');?>
 "
@@ -72,9 +122,12 @@ $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->
         >
     <?php }?>
         <div class="ty-product-review-reviews-stars
+         ok6
             <?php if ($_smarty_tpl->tpl_vars['size']->value === "large") {?>
+                ok7
                 ty-product-review-reviews-stars--large
             <?php } elseif ($_smarty_tpl->tpl_vars['size']->value === "xlarge") {?>
+                ok8
                 ty-product-review-reviews-stars--xlarge
             <?php }?>
             "
@@ -85,6 +138,7 @@ $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->
             data-ca-product-review-reviews-stars-is-half="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['is_half_rating']->value, ENT_QUOTES, 'UTF-8');?>
 "
             <?php if (!$_smarty_tpl->tpl_vars['link']->value && !$_smarty_tpl->tpl_vars['button']->value) {?>
+                ok9
                 title="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['title']->value, ENT_QUOTES, 'UTF-8');?>
 "
             <?php }?>
@@ -104,8 +158,9 @@ if ($_smarty_tpl->tpl_vars['auth']->value['area'] == "A") {?><span class="cm-tem
 echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content');
 }
 }
-} else {
-if ($_smarty_tpl->tpl_vars['rating']->value > 0) {?>
+} else { ?>
+  
+<?php if ($_smarty_tpl->tpl_vars['rating']->value > 0) {?>
 
     <?php $_smarty_tpl->_assignInScope('integer_rating', floor($_smarty_tpl->tpl_vars['rating']->value));?>
     <?php $_smarty_tpl->_assignInScope('accurate_rating', round((float) $_smarty_tpl->tpl_vars['rating']->value, (int) 1, (int) 1));?>
@@ -117,29 +172,78 @@ if ($_smarty_tpl->tpl_vars['rating']->value > 0) {?>
     <?php $_smarty_tpl->_assignInScope('title', $_smarty_tpl->__("product_reviews.product_is_rated_n_out_of_five_stars",array("[n]"=>$_smarty_tpl->tpl_vars['accurate_rating']->value)));?>
 
     <?php if ($_smarty_tpl->tpl_vars['link']->value) {?>
+    
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.show_rating");
 $_prefixVariable36=ob_get_clean();
 $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable36.".");?>
+      
     <?php } elseif ($_smarty_tpl->tpl_vars['button']->value) {?>
+     ok2
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.click_to_see_reviews");
 $_prefixVariable37=ob_get_clean();
 $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable37.".");?>
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['link']->value === true) {?>
+    
         <?php $_smarty_tpl->_assignInScope('link', "products.view?product_id=".((string)$_smarty_tpl->tpl_vars['product']->value['product_id'])."&selected_section=product_reviews#product_reviews");?>
+      
     <?php }?>
 
     <?php if ($_smarty_tpl->tpl_vars['link']->value) {?>
+    
+     <style>
+        .checked {
+        color: orange;
+        }
+        .unchecked {
+        color: lightgray;
+    }
+    </style>
         <a class="ty-product-review-reviews-stars__link <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['meta']->value, ENT_QUOTES, 'UTF-8');?>
 "
             href="<?php echo htmlspecialchars((string) fn_url($_smarty_tpl->tpl_vars['link']->value), ENT_QUOTES, 'UTF-8');?>
 "
             title="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['title']->value, ENT_QUOTES, 'UTF-8');?>
 "
-        >
+            >
+            <?php $_smarty_tpl->_assignInScope('full_stars', floor($_smarty_tpl->tpl_vars['rating']->value));?> <!-- Number of full stars -->
+<?php $_smarty_tpl->_assignInScope('empty_stars', 5-$_smarty_tpl->tpl_vars['full_stars']->value);?> <!-- Number of empty stars -->
+
+<!-- Full stars -->
+<?php
+$__section_full_4_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['full_stars']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_full_4_total = $__section_full_4_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_full'] = new Smarty_Variable(array());
+if ($__section_full_4_total !== 0) {
+for ($__section_full_4_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index'] = 0; $__section_full_4_iteration <= $__section_full_4_total; $__section_full_4_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index']++){
+?>
+    <span class="fa fa-star checked"></span>
+<?php
+}
+}
+?>
+
+<!-- Empty stars -->
+<?php
+$__section_empty_5_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['empty_stars']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_empty_5_total = $__section_empty_5_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_empty'] = new Smarty_Variable(array());
+if ($__section_empty_5_total !== 0) {
+for ($__section_empty_5_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index'] = 0; $__section_empty_5_iteration <= $__section_empty_5_total; $__section_empty_5_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index']++){
+?>
+    <span class="fa fa-star unchecked"></span>
+<?php
+}
+}
+?>
+            
+          
+
+            
     <?php } elseif ($_smarty_tpl->tpl_vars['button']->value) {?>
+     ok5
         <button type="button"
             class="ty-product-review-reviews-stars__button ty-btn-reset cm-external-click <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['meta']->value, ENT_QUOTES, 'UTF-8');?>
 "
@@ -152,9 +256,12 @@ $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->
         >
     <?php }?>
         <div class="ty-product-review-reviews-stars
+         ok6
             <?php if ($_smarty_tpl->tpl_vars['size']->value === "large") {?>
+                ok7
                 ty-product-review-reviews-stars--large
             <?php } elseif ($_smarty_tpl->tpl_vars['size']->value === "xlarge") {?>
+                ok8
                 ty-product-review-reviews-stars--xlarge
             <?php }?>
             "
@@ -165,6 +272,7 @@ $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->
             data-ca-product-review-reviews-stars-is-half="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['is_half_rating']->value, ENT_QUOTES, 'UTF-8');?>
 "
             <?php if (!$_smarty_tpl->tpl_vars['link']->value && !$_smarty_tpl->tpl_vars['button']->value) {?>
+                ok9
                 title="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['title']->value, ENT_QUOTES, 'UTF-8');?>
 "
             <?php }?>

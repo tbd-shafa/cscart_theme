@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 01:44:42
+/* Smarty version 4.3.0, created on 2024-11-22 03:20:04
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/list_templates/products_shop_list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6740528a7f64a7_52991746',
+  'unifunc' => 'content_674068e47c8551_85810550',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e81ec58e21bbd107bd863745e01860badfc8bc7' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/list_templates/products_shop_list.tpl',
-      1 => 1732186279,
+      1 => 1732269232,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/product_data.tpl' => 2,
   ),
 ),false)) {
-function content_6740528a7f64a7_52991746 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674068e47c8551_85810550 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.number_format.php','function'=>'smarty_modifier_number_format',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),4=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><style>
@@ -134,7 +134,8 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
 ">
                         
                                     <ul class="product__item__pic__hover">
-                                    
+
+                                     <!-- Add to Cart -->
                                     <li>
                                         <div class="cm-reload-<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 " id="add_to_cart_update_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
@@ -164,7 +165,7 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
                                         </a>
                                     </li>
 
-                                                        <!-- Add to Wishlist -->
+                                        <!-- Add to Wishlist -->
                                     <li>
                                         <form action="<?php echo htmlspecialchars((string) fn_url("wishlist.add"), ENT_QUOTES, 'UTF-8');?>
 " method="post" class="cm-ajax cm-ajax-full-render">
@@ -373,7 +374,8 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
 ">
                         
                                     <ul class="product__item__pic__hover">
-                                    
+
+                                     <!-- Add to Cart -->
                                     <li>
                                         <div class="cm-reload-<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
 " id="add_to_cart_update_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product_id'], ENT_QUOTES, 'UTF-8');?>
@@ -403,7 +405,7 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
                                         </a>
                                     </li>
 
-                                                        <!-- Add to Wishlist -->
+                                        <!-- Add to Wishlist -->
                                     <li>
                                         <form action="<?php echo htmlspecialchars((string) fn_url("wishlist.add"), ENT_QUOTES, 'UTF-8');?>
 " method="post" class="cm-ajax cm-ajax-full-render">

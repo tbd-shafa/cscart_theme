@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 01:44:38
+/* Smarty version 4.3.0, created on 2024-11-22 03:11:15
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/critical_css.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_674052860b2fb8_56577155',
+  'unifunc' => 'content_674066d3611a96_79097553',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:design/backend/css/tygh/critical.css' => 1,
   ),
 ),false)) {
-function content_674052860b2fb8_56577155 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674066d3611a96_79097553 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.regex_replace.php','function'=>'smarty_modifier_regex_replace',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 $_smarty_tpl->_assignInScope('enable_minify_critical_css', (($tmp = $_smarty_tpl->tpl_vars['enable_minify_critical_css']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp));
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "critical_css", 'critical_css', null);?><style><?php $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"index:critical_css"));
@@ -36,15 +36,15 @@ echo smarty_block_hook(array('name'=>"index:critical_css"), ob_get_clean(), $_sm
 }
 array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?></style><?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 if ($_smarty_tpl->tpl_vars['enable_minify_critical_css']->value) {
+ob_start();?>{<?php $_prefixVariable1=ob_get_clean();
 ob_start();?>{<?php $_prefixVariable2=ob_get_clean();
-ob_start();?>{<?php $_prefixVariable3=ob_get_clean();
+ob_start();?>}<?php $_prefixVariable3=ob_get_clean();
 ob_start();?>}<?php $_prefixVariable4=ob_get_clean();
-ob_start();?>}<?php $_prefixVariable5=ob_get_clean();
+ob_start();?>{<?php $_prefixVariable5=ob_get_clean();
 ob_start();?>{<?php $_prefixVariable6=ob_get_clean();
-ob_start();?>{<?php $_prefixVariable7=ob_get_clean();
+ob_start();?>}<?php $_prefixVariable7=ob_get_clean();
 ob_start();?>}<?php $_prefixVariable8=ob_get_clean();
-ob_start();?>}<?php $_prefixVariable9=ob_get_clean();
-$_smarty_tpl->_assignInScope('critical_css', smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_regex_replace($_smarty_tpl->tpl_vars['critical_css']->value,"/[\r\n\t]/",''),"  "," "),"  "," ")," ".$_prefixVariable2,$_prefixVariable3)," ".$_prefixVariable4,$_prefixVariable5),$_prefixVariable6." ",$_prefixVariable7),$_prefixVariable8." ",$_prefixVariable9),", ",","),": ",":"),"; ",";"));
+$_smarty_tpl->_assignInScope('critical_css', smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_regex_replace($_smarty_tpl->tpl_vars['critical_css']->value,"/[\r\n\t]/",''),"  "," "),"  "," ")," ".$_prefixVariable1,$_prefixVariable2)," ".$_prefixVariable3,$_prefixVariable4),$_prefixVariable5." ",$_prefixVariable6),$_prefixVariable7." ",$_prefixVariable8),", ",","),": ",":"),"; ",";"));
 }
 echo $_smarty_tpl->tpl_vars['critical_css']->value;?>
 

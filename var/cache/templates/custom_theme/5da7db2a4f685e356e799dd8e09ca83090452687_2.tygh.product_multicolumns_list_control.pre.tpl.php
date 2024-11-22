@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 01:45:39
+/* Smarty version 4.3.0, created on 2024-11-22 03:11:18
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/product_variations/hooks/products/product_multicolumns_list_control.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_674052c3255a05_06776243',
+  'unifunc' => 'content_674066d678ea32_69793065',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674052c3255a05_06776243 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674066d678ea32_69793065 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
@@ -64,14 +64,14 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['variant_name']->
 $_smarty_tpl->tpl_vars['variant_name']->do_else = false;
 $_smarty_tpl->tpl_vars['variant_name']->iteration++;
 $_smarty_tpl->tpl_vars['variant_name']->last = $_smarty_tpl->tpl_vars['variant_name']->iteration === $_smarty_tpl->tpl_vars['variant_name']->total;
-$__foreach_variant_name_8_saved = $_smarty_tpl->tpl_vars['variant_name'];
+$__foreach_variant_name_79_saved = $_smarty_tpl->tpl_vars['variant_name'];
 ?>
                     <span class="ty-grid-list__item-features-variant">
                         <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant_name']->value, ENT_QUOTES, 'UTF-8');
 if (!$_smarty_tpl->tpl_vars['variant_name']->last) {?>,<?php }?>
                     </span>
                 <?php
-$_smarty_tpl->tpl_vars['variant_name'] = $__foreach_variant_name_8_saved;
+$_smarty_tpl->tpl_vars['variant_name'] = $__foreach_variant_name_79_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
@@ -136,14 +136,14 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['variant_name']->
 $_smarty_tpl->tpl_vars['variant_name']->do_else = false;
 $_smarty_tpl->tpl_vars['variant_name']->iteration++;
 $_smarty_tpl->tpl_vars['variant_name']->last = $_smarty_tpl->tpl_vars['variant_name']->iteration === $_smarty_tpl->tpl_vars['variant_name']->total;
-$__foreach_variant_name_11_saved = $_smarty_tpl->tpl_vars['variant_name'];
+$__foreach_variant_name_82_saved = $_smarty_tpl->tpl_vars['variant_name'];
 ?>
                     <span class="ty-grid-list__item-features-variant">
                         <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant_name']->value, ENT_QUOTES, 'UTF-8');
 if (!$_smarty_tpl->tpl_vars['variant_name']->last) {?>,<?php }?>
                     </span>
                 <?php
-$_smarty_tpl->tpl_vars['variant_name'] = $__foreach_variant_name_11_saved;
+$_smarty_tpl->tpl_vars['variant_name'] = $__foreach_variant_name_82_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
