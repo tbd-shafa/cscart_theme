@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 21:50:16
+/* Smarty version 4.3.0, created on 2024-11-22 01:29:27
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/common/product_data.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67401b985b7076_39672546',
+  'unifunc' => 'content_67404ef7ec22e3_23380765',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -32,7 +32,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/image.tpl' => 2,
   ),
 ),false)) {
-function content_67401b985b7076_39672546 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67404ef7ec22e3_23380765 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.live_edit.php','function'=>'smarty_function_live_edit',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.truncate.php','function'=>'smarty_modifier_truncate',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),4=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),5=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('text_out_of_stock','sku','select_options','old_price','old_price','list_price','list_price','enter_your_price','contact_us_for_price','sign_in_to_view_price','inc_tax','including_tax','you_save','you_save','save_discount','free_shipping','save_discount','save_discount','availability','items','on_backorder','in_stock','availability','in_stock','on_backorder','availability','quantity','text_cart_min_qty','text_edp_product','text_out_of_stock','sku','select_options','old_price','old_price','list_price','list_price','enter_your_price','contact_us_for_price','sign_in_to_view_price','inc_tax','including_tax','you_save','you_save','save_discount','free_shipping','save_discount','save_discount','availability','items','on_backorder','in_stock','availability','in_stock','on_backorder','availability','quantity','text_cart_min_qty','text_edp_product'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -425,8 +425,8 @@ while ($_block_repeat) {
 ob_start();?>
                 <?php ob_start();
 echo htmlspecialchars((string) smarty_modifier_enum("YesNo::NO"), ENT_QUOTES, 'UTF-8');
-$_prefixVariable18=ob_get_clean();
-if ($_smarty_tpl->tpl_vars['auth']->value['tax_exempt'] === $_prefixVariable18 || !$_smarty_tpl->tpl_vars['product']->value['clean_price']) {?>
+$_prefixVariable24=ob_get_clean();
+if ($_smarty_tpl->tpl_vars['auth']->value['tax_exempt'] === $_prefixVariable24 || !$_smarty_tpl->tpl_vars['product']->value['clean_price']) {?>
                     <?php $_smarty_tpl->_assignInScope('price', $_smarty_tpl->tpl_vars['product']->value['price']);?>
                 <?php } else { ?>
                     <?php $_smarty_tpl->_assignInScope('price', $_smarty_tpl->tpl_vars['product']->value['clean_price']);?>
@@ -606,13 +606,13 @@ ob_start();?>
                 <?php if ($_smarty_tpl->tpl_vars['product']->value['discount']) {?>
                     <?php ob_start();
 echo $_smarty_tpl->__("save_discount");
-$_prefixVariable19=ob_get_clean();
-$_smarty_tpl->_assignInScope('label_text', $_prefixVariable19." ".((string)$_smarty_tpl->tpl_vars['product']->value['discount_prc'])."%");?>
+$_prefixVariable25=ob_get_clean();
+$_smarty_tpl->_assignInScope('label_text', $_prefixVariable25." ".((string)$_smarty_tpl->tpl_vars['product']->value['discount_prc'])."%");?>
                 <?php } else { ?>
                     <?php ob_start();
 echo $_smarty_tpl->__("save_discount");
-$_prefixVariable20=ob_get_clean();
-$_smarty_tpl->_assignInScope('label_text', $_prefixVariable20." ".((string)$_smarty_tpl->tpl_vars['product']->value['list_discount_prc'])."%");?>
+$_prefixVariable26=ob_get_clean();
+$_smarty_tpl->_assignInScope('label_text', $_prefixVariable26." ".((string)$_smarty_tpl->tpl_vars['product']->value['list_discount_prc'])."%");?>
                 <?php }?>
 
                 <?php $_smarty_tpl->_subTemplateRender("tygh:views/products/components/product_label.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('label_meta'=>"ty-product-labels__item--discount",'label_text'=>$_smarty_tpl->tpl_vars['label_text']->value,'label_mini'=>$_smarty_tpl->tpl_vars['product_labels_mini']->value,'label_static'=>$_smarty_tpl->tpl_vars['product_labels_static']->value,'label_rounded'=>$_smarty_tpl->tpl_vars['product_labels_rounded']->value), 0, true);
@@ -1409,8 +1409,8 @@ while ($_block_repeat) {
 ob_start();?>
                 <?php ob_start();
 echo htmlspecialchars((string) smarty_modifier_enum("YesNo::NO"), ENT_QUOTES, 'UTF-8');
-$_prefixVariable21=ob_get_clean();
-if ($_smarty_tpl->tpl_vars['auth']->value['tax_exempt'] === $_prefixVariable21 || !$_smarty_tpl->tpl_vars['product']->value['clean_price']) {?>
+$_prefixVariable27=ob_get_clean();
+if ($_smarty_tpl->tpl_vars['auth']->value['tax_exempt'] === $_prefixVariable27 || !$_smarty_tpl->tpl_vars['product']->value['clean_price']) {?>
                     <?php $_smarty_tpl->_assignInScope('price', $_smarty_tpl->tpl_vars['product']->value['price']);?>
                 <?php } else { ?>
                     <?php $_smarty_tpl->_assignInScope('price', $_smarty_tpl->tpl_vars['product']->value['clean_price']);?>
@@ -1590,13 +1590,13 @@ ob_start();?>
                 <?php if ($_smarty_tpl->tpl_vars['product']->value['discount']) {?>
                     <?php ob_start();
 echo $_smarty_tpl->__("save_discount");
-$_prefixVariable22=ob_get_clean();
-$_smarty_tpl->_assignInScope('label_text', $_prefixVariable22." ".((string)$_smarty_tpl->tpl_vars['product']->value['discount_prc'])."%");?>
+$_prefixVariable28=ob_get_clean();
+$_smarty_tpl->_assignInScope('label_text', $_prefixVariable28." ".((string)$_smarty_tpl->tpl_vars['product']->value['discount_prc'])."%");?>
                 <?php } else { ?>
                     <?php ob_start();
 echo $_smarty_tpl->__("save_discount");
-$_prefixVariable23=ob_get_clean();
-$_smarty_tpl->_assignInScope('label_text', $_prefixVariable23." ".((string)$_smarty_tpl->tpl_vars['product']->value['list_discount_prc'])."%");?>
+$_prefixVariable29=ob_get_clean();
+$_smarty_tpl->_assignInScope('label_text', $_prefixVariable29." ".((string)$_smarty_tpl->tpl_vars['product']->value['list_discount_prc'])."%");?>
                 <?php }?>
 
                 <?php $_smarty_tpl->_subTemplateRender("tygh:views/products/components/product_label.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('label_meta'=>"ty-product-labels__item--discount",'label_text'=>$_smarty_tpl->tpl_vars['label_text']->value,'label_mini'=>$_smarty_tpl->tpl_vars['product_labels_mini']->value,'label_static'=>$_smarty_tpl->tpl_vars['product_labels_static']->value,'label_rounded'=>$_smarty_tpl->tpl_vars['product_labels_rounded']->value), 0, true);

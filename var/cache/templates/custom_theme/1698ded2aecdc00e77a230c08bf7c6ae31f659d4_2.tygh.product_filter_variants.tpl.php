@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 21:50:20
+/* Smarty version 4.3.0, created on 2024-11-22 01:29:27
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/product_filters/components/product_filter_variants.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67401b9c0c1a94_49764440',
+  'unifunc' => 'content_67404ef7ca6543_32925542',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1698ded2aecdc00e77a230c08bf7c6ae31f659d4' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/product_filters/components/product_filter_variants.tpl',
-      1 => 1729847847,
+      1 => 1732267738,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67401b9c0c1a94_49764440 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67404ef7ca6543_32925542 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),3=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),4=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),5=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('storefront_search_field','clear','no_items_found','storefront_search_field','clear','no_items_found'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -111,7 +111,45 @@ em;"<?php }?> class="ty-product-filters__variants cm-filter-table" data-ca-input
 " data-ca-clear-id="elm_search_clear_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 " data-ca-empty-id="elm_search_empty_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 ">
-
+                     <?php if ($_smarty_tpl->tpl_vars['filter']->value['filter'] == 'Color') {?>
+                        <div class="sidebar__item sidebar__item__color--option">
+                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['filter']->value['variants'], 'variant');
+$_smarty_tpl->tpl_vars['variant']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['variant']->value) {
+$_smarty_tpl->tpl_vars['variant']->do_else = false;
+?>
+                                <div class="sidebar__item__color sidebar__item__color--<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant'], ENT_QUOTES, 'UTF-8');?>
+">
+                                <li class="cm-product-filters-checkbox-container ty-product-filters__group">
+                                        <label <?php if ($_smarty_tpl->tpl_vars['variant']->value['disabled']) {?>  for="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant'], ENT_QUOTES, 'UTF-8');?>
+" class="<?php if ($_smarty_tpl->tpl_vars['variant']->value['selected']) {?>ty-product-filters__empty-result<?php } else { ?>disabled<?php }?>"<?php }?>>
+                                            <input class="cm-product-filters-checkbox"
+                                                type="checkbox"
+                                                <?php if ($_smarty_tpl->tpl_vars['variant']->value['selected']) {?>checked="checked"<?php }?>
+                                                name="product_filters[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['filter_id'], ENT_QUOTES, 'UTF-8');?>
+]"
+                                                data-ca-filter-id="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['filter_id'], ENT_QUOTES, 'UTF-8');?>
+"
+                                                value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant_id'], ENT_QUOTES, 'UTF-8');?>
+"
+                                                id="elm_checkbox_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant_id'], ENT_QUOTES, 'UTF-8');?>
+  <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant'], ENT_QUOTES, 'UTF-8');?>
+"
+                                                    <?php if ($_smarty_tpl->tpl_vars['variant']->value['disabled'] && !$_smarty_tpl->tpl_vars['variant']->value['selected']) {?>disabled="disabled"<?php }?>>
+                                            <span><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['prefix'], ENT_QUOTES, 'UTF-8');
+echo htmlspecialchars((string) fn_text_placeholders($_smarty_tpl->tpl_vars['variant']->value['variant']), ENT_QUOTES, 'UTF-8');
+echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['suffix'], ENT_QUOTES, 'UTF-8');?>
+</span>
+                                        </label>
+                                    </li>
+                                </div>
+                            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                         </div>
+                       <?php } else { ?>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['filter']->value['variants'], 'variant');
 $_smarty_tpl->tpl_vars['variant']->do_else = true;
@@ -142,6 +180,7 @@ echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['suffix']
                     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    <?php }?>
                 </ul>
             </li>
         <?php }?>
@@ -247,7 +286,45 @@ em;"<?php }?> class="ty-product-filters__variants cm-filter-table" data-ca-input
 " data-ca-clear-id="elm_search_clear_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 " data-ca-empty-id="elm_search_empty_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
 ">
-
+                     <?php if ($_smarty_tpl->tpl_vars['filter']->value['filter'] == 'Color') {?>
+                        <div class="sidebar__item sidebar__item__color--option">
+                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['filter']->value['variants'], 'variant');
+$_smarty_tpl->tpl_vars['variant']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['variant']->value) {
+$_smarty_tpl->tpl_vars['variant']->do_else = false;
+?>
+                                <div class="sidebar__item__color sidebar__item__color--<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant'], ENT_QUOTES, 'UTF-8');?>
+">
+                                <li class="cm-product-filters-checkbox-container ty-product-filters__group">
+                                        <label <?php if ($_smarty_tpl->tpl_vars['variant']->value['disabled']) {?>  for="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant'], ENT_QUOTES, 'UTF-8');?>
+" class="<?php if ($_smarty_tpl->tpl_vars['variant']->value['selected']) {?>ty-product-filters__empty-result<?php } else { ?>disabled<?php }?>"<?php }?>>
+                                            <input class="cm-product-filters-checkbox"
+                                                type="checkbox"
+                                                <?php if ($_smarty_tpl->tpl_vars['variant']->value['selected']) {?>checked="checked"<?php }?>
+                                                name="product_filters[<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['filter_id'], ENT_QUOTES, 'UTF-8');?>
+]"
+                                                data-ca-filter-id="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['filter_id'], ENT_QUOTES, 'UTF-8');?>
+"
+                                                value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant_id'], ENT_QUOTES, 'UTF-8');?>
+"
+                                                id="elm_checkbox_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter_uid']->value, ENT_QUOTES, 'UTF-8');?>
+_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant_id'], ENT_QUOTES, 'UTF-8');?>
+  <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['variant']->value['variant'], ENT_QUOTES, 'UTF-8');?>
+"
+                                                    <?php if ($_smarty_tpl->tpl_vars['variant']->value['disabled'] && !$_smarty_tpl->tpl_vars['variant']->value['selected']) {?>disabled="disabled"<?php }?>>
+                                            <span><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['prefix'], ENT_QUOTES, 'UTF-8');
+echo htmlspecialchars((string) fn_text_placeholders($_smarty_tpl->tpl_vars['variant']->value['variant']), ENT_QUOTES, 'UTF-8');
+echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['suffix'], ENT_QUOTES, 'UTF-8');?>
+</span>
+                                        </label>
+                                    </li>
+                                </div>
+                            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                         </div>
+                       <?php } else { ?>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['filter']->value['variants'], 'variant');
 $_smarty_tpl->tpl_vars['variant']->do_else = true;
@@ -278,6 +355,7 @@ echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['filter']->value['suffix']
                     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    <?php }?>
                 </ul>
             </li>
         <?php }?>

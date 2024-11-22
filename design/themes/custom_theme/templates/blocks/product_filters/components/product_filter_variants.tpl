@@ -57,7 +57,27 @@
         {else}
             <li class="ty-product-filters__item-more">
                 <ul id="ranges_{$filter_uid}" {if $filter.display_count}style="max-height: {$filter.display_count * 2}em;"{/if} class="ty-product-filters__variants cm-filter-table" data-ca-input-id="elm_search_{$filter_uid}" data-ca-clear-id="elm_search_clear_{$filter_uid}" data-ca-empty-id="elm_search_empty_{$filter_uid}">
-
+                     {if $filter.filter == 'Color'}
+                        <div class="sidebar__item sidebar__item__color--option">
+                            {foreach $filter.variants as $variant}
+                                <div class="sidebar__item__color sidebar__item__color--{$variant.variant}">
+                                <li class="cm-product-filters-checkbox-container ty-product-filters__group">
+                                        <label {if $variant.disabled}  for="{$variant.variant}" class="{if $variant.selected}ty-product-filters__empty-result{else}disabled{/if}"{/if}>
+                                            <input class="cm-product-filters-checkbox"
+                                                type="checkbox"
+                                                {if $variant.selected}checked="checked"{/if}
+                                                name="product_filters[{$filter.filter_id}]"
+                                                data-ca-filter-id="{$filter.filter_id}"
+                                                value="{$variant.variant_id}"
+                                                id="elm_checkbox_{$filter_uid}_{$variant.variant_id}  {$variant.variant}"
+                                                    {if $variant.disabled && !$variant.selected}disabled="disabled"{/if}>
+                                            <span>{$filter.prefix}{$variant.variant|fn_text_placeholders}{$filter.suffix}</span>
+                                        </label>
+                                    </li>
+                                </div>
+                            {/foreach}
+                         </div>
+                       {else}
                     {foreach $filter.variants as $variant}
                         <li class="cm-product-filters-checkbox-container ty-product-filters__group">
                             <label {if $variant.disabled} class="{if $variant.selected}ty-product-filters__empty-result{else}disabled{/if}"{/if}>
@@ -73,6 +93,7 @@
                             </label>
                         </li>
                     {/foreach}
+                    {/if}
                 </ul>
             </li>
         {/if}
