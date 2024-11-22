@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 03:11:16
+/* Smarty version 4.3.0, created on 2024-11-22 04:07:03
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/menu/search_menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_674066d4168eb5_40202199',
+  'unifunc' => 'content_674073e73a7e49_97956723',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674066d4168eb5_40202199 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674073e73a7e49_97956723 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('admin_search_general'));
 ?>

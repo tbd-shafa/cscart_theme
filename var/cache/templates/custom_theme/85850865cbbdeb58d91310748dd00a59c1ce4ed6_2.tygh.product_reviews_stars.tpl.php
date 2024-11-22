@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 03:11:18
+/* Smarty version 4.3.0, created on 2024-11-22 04:07:05
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/product_reviews/views/product_reviews/components/product_reviews_stars.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_674066d64a76a5_18853595',
+  'unifunc' => 'content_674073e9c1fcb2_76458488',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674066d64a76a5_18853595 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674073e9c1fcb2_76458488 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('product_reviews.product_is_rated_n_out_of_five_stars','product_reviews.show_rating','product_reviews.click_to_see_reviews','product_reviews.product_is_rated_n_out_of_five_stars','product_reviews.show_rating','product_reviews.click_to_see_reviews'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -41,15 +41,15 @@ $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null
     
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.show_rating");
-$_prefixVariable34=ob_get_clean();
-$_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable34.".");?>
+$_prefixVariable28=ob_get_clean();
+$_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable28.".");?>
       
     <?php } elseif ($_smarty_tpl->tpl_vars['button']->value) {?>
      ok2
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.click_to_see_reviews");
-$_prefixVariable35=ob_get_clean();
-$_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable35.".");?>
+$_prefixVariable29=ob_get_clean();
+$_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable29.".");?>
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['link']->value === true) {?>
     
@@ -79,11 +79,11 @@ $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->
 
 <!-- Full stars -->
 <?php
-$__section_full_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['full_stars']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_full_2_total = $__section_full_2_loop;
+$__section_full_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['full_stars']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_full_0_total = $__section_full_0_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_full'] = new Smarty_Variable(array());
-if ($__section_full_2_total !== 0) {
-for ($__section_full_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index'] = 0; $__section_full_2_iteration <= $__section_full_2_total; $__section_full_2_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index']++){
+if ($__section_full_0_total !== 0) {
+for ($__section_full_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index'] = 0; $__section_full_0_iteration <= $__section_full_0_total; $__section_full_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index']++){
 ?>
     <span class="fa fa-star checked"></span>
 <?php
@@ -93,11 +93,11 @@ for ($__section_full_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_f
 
 <!-- Empty stars -->
 <?php
-$__section_empty_3_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['empty_stars']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_empty_3_total = $__section_empty_3_loop;
+$__section_empty_1_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['empty_stars']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_empty_1_total = $__section_empty_1_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_empty'] = new Smarty_Variable(array());
-if ($__section_empty_3_total !== 0) {
-for ($__section_empty_3_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index'] = 0; $__section_empty_3_iteration <= $__section_empty_3_total; $__section_empty_3_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index']++){
+if ($__section_empty_1_total !== 0) {
+for ($__section_empty_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index'] = 0; $__section_empty_1_iteration <= $__section_empty_1_total; $__section_empty_1_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index']++){
 ?>
     <span class="fa fa-star unchecked"></span>
 <?php
@@ -175,15 +175,15 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
     
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.show_rating");
-$_prefixVariable36=ob_get_clean();
-$_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable36.".");?>
+$_prefixVariable30=ob_get_clean();
+$_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable30.".");?>
       
     <?php } elseif ($_smarty_tpl->tpl_vars['button']->value) {?>
      ok2
         <?php ob_start();
 echo $_smarty_tpl->__("product_reviews.click_to_see_reviews");
-$_prefixVariable37=ob_get_clean();
-$_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable37.".");?>
+$_prefixVariable31=ob_get_clean();
+$_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->value).". ".$_prefixVariable31.".");?>
     <?php }?>
     <?php if ($_smarty_tpl->tpl_vars['link']->value === true) {?>
     
@@ -213,11 +213,11 @@ $_smarty_tpl->_assignInScope('title', ((string)$_smarty_tpl->tpl_vars['title']->
 
 <!-- Full stars -->
 <?php
-$__section_full_4_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['full_stars']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_full_4_total = $__section_full_4_loop;
+$__section_full_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['full_stars']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_full_2_total = $__section_full_2_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_full'] = new Smarty_Variable(array());
-if ($__section_full_4_total !== 0) {
-for ($__section_full_4_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index'] = 0; $__section_full_4_iteration <= $__section_full_4_total; $__section_full_4_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index']++){
+if ($__section_full_2_total !== 0) {
+for ($__section_full_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index'] = 0; $__section_full_2_iteration <= $__section_full_2_total; $__section_full_2_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_full']->value['index']++){
 ?>
     <span class="fa fa-star checked"></span>
 <?php
@@ -227,11 +227,11 @@ for ($__section_full_4_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_f
 
 <!-- Empty stars -->
 <?php
-$__section_empty_5_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['empty_stars']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_empty_5_total = $__section_empty_5_loop;
+$__section_empty_3_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['empty_stars']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_empty_3_total = $__section_empty_3_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_empty'] = new Smarty_Variable(array());
-if ($__section_empty_5_total !== 0) {
-for ($__section_empty_5_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index'] = 0; $__section_empty_5_iteration <= $__section_empty_5_total; $__section_empty_5_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index']++){
+if ($__section_empty_3_total !== 0) {
+for ($__section_empty_3_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index'] = 0; $__section_empty_3_iteration <= $__section_empty_3_total; $__section_empty_3_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_empty']->value['index']++){
 ?>
     <span class="fa fa-star unchecked"></span>
 <?php

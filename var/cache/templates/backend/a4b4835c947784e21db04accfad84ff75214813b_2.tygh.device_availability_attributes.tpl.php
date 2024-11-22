@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 03:13:38
+/* Smarty version 4.3.0, created on 2024-11-22 04:07:02
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/block_manager/components/device_availability_attributes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67406762db0020_16914194',
+  'unifunc' => 'content_674073e6eec327_66653372',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67406762db0020_16914194 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674073e6eec327_66653372 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('devices', (($tmp = $_smarty_tpl->tpl_vars['item']->value['availability'] ?? null)===null||$tmp==='' ? array() ?? null : $tmp));
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['devices']->value, 'is_available', false, 'device');
 $_smarty_tpl->tpl_vars['is_available']->do_else = true;

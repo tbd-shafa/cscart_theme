@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 03:13:18
+/* Smarty version 4.3.0, created on 2024-11-22 04:07:03
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/check_items.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6740674e106dc0_37554300',
+  'unifunc' => 'content_674073e7189cb4_33524330',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6740674e106dc0_37554300 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674073e7189cb4_33524330 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('select_all','unselect_all','check_uncheck_all','check_all','check_none'));
 $_smarty_tpl->_assignInScope('check_data', '');
 $_smarty_tpl->_assignInScope('container', $_smarty_tpl->tpl_vars['elms_container']->value ? "data-ca-container=".((string)$_smarty_tpl->tpl_vars['elms_container']->value) : '');
