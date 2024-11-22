@@ -63,7 +63,8 @@ img.sp-img {
                                   <img class="sp-img" src="{$product.main_pair.detailed.image_path}"  alt="{$product.product}">
                         
                                     <ul class="product__item__pic__hover">
-                                    
+
+                                     <!-- Add to Cart -->
                                     <li>
                                         <div class="cm-reload-{$product.product_id}" id="add_to_cart_update_{$product.product_id}">
                                             <input type="hidden" name="appearance[show_add_to_cart]" value="1" />
@@ -88,7 +89,7 @@ img.sp-img {
                                         </a>
                                     </li>
 
-                                                        <!-- Add to Wishlist -->
+                                        <!-- Add to Wishlist -->
                                     <li>
                                         <form action="{"wishlist.add"|fn_url}" method="post" class="cm-ajax cm-ajax-full-render">
                                             <input type="hidden" name="product_data[{$product.product_id}][product_id]" value="{$product.product_id}">
