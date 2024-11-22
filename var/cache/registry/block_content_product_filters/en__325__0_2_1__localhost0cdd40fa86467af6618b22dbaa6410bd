@@ -1,9 +1,9 @@
-a:2:{s:4:"data";a:1:{s:7:"content";s:18660:"        <div class="latest-product__text ty-sidebox-important">
+a:2:{s:4:"data";a:2:{s:10:"javascript";s:205:"<script src="http://localhost/cs-cart/js/tygh/product_filters.js?ver=1732254607" ></script><script src="http://localhost/cs-cart/js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js?ver=1732254607" ></script>";s:7:"content";s:21512:"        <div class="latest-product__text ty-sidebox-important">
         <h4 class="">
                                                 <span>Product filters</span>
                         
         </h4>
-        <div class=""><script src="http://localhost/cs-cart/js/tygh/product_filters.js?ver=1732195360" ></script>
+        <div class=""><!-- Inline script moved to the bottom of the page -->
 
         
 
@@ -151,6 +151,18 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:18660:"        <div class="latest-product__
                                        type="checkbox"
                                                                               name="product_filters[313]"
                                        data-ca-filter-id="313"
+                                       value="1198"
+                                       id="elm_checkbox_30_313_1198"
+                                        >
+                                <span>Green</span>
+                            </label>
+                        </li>
+                                            <li class="cm-product-filters-checkbox-container ty-product-filters__group">
+                            <label >
+                                <input class="cm-product-filters-checkbox"
+                                       type="checkbox"
+                                                                              name="product_filters[313]"
+                                       data-ca-filter-id="313"
                                        value="1199"
                                        id="elm_checkbox_30_313_1199"
                                         >
@@ -167,6 +179,42 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:18660:"        <div class="latest-product__
                                        id="elm_checkbox_30_313_1200"
                                         >
                                 <span>Black</span>
+                            </label>
+                        </li>
+                                            <li class="cm-product-filters-checkbox-container ty-product-filters__group">
+                            <label >
+                                <input class="cm-product-filters-checkbox"
+                                       type="checkbox"
+                                                                              name="product_filters[313]"
+                                       data-ca-filter-id="313"
+                                       value="1201"
+                                       id="elm_checkbox_30_313_1201"
+                                        >
+                                <span>White</span>
+                            </label>
+                        </li>
+                                            <li class="cm-product-filters-checkbox-container ty-product-filters__group">
+                            <label >
+                                <input class="cm-product-filters-checkbox"
+                                       type="checkbox"
+                                                                              name="product_filters[313]"
+                                       data-ca-filter-id="313"
+                                       value="1202"
+                                       id="elm_checkbox_30_313_1202"
+                                        >
+                                <span>Gray</span>
+                            </label>
+                        </li>
+                                            <li class="cm-product-filters-checkbox-container ty-product-filters__group">
+                            <label >
+                                <input class="cm-product-filters-checkbox"
+                                       type="checkbox"
+                                                                              name="product_filters[313]"
+                                       data-ca-filter-id="313"
+                                       value="1203"
+                                       id="elm_checkbox_30_313_1203"
+                                        >
+                                <span>Red</span>
                             </label>
                         </li>
                                     </ul>
@@ -193,7 +241,7 @@ a:2:{s:4:"data";a:1:{s:7:"content";s:18660:"        <div class="latest-product__
     min-width:120px;
 }
 </style>
-<script src="http://localhost/cs-cart/js/lib/jqueryuitouch/jquery.ui.touch-punch.min.js?ver=1732195360" ></script>
+<!-- Inline script moved to the bottom of the page -->
 
 
 

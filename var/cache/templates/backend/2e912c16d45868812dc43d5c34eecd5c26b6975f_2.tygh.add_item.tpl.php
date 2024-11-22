@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-21 05:22:42
+/* Smarty version 4.3.0, created on 2024-11-21 21:50:08
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/menu/add_item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_673f34224a37e6_93118848',
+  'unifunc' => 'content_67401b90ab8a52_03341025',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/popupbox.tpl' => 1,
   ),
 ),false)) {
-function content_673f34224a37e6_93118848 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67401b90ab8a52_03341025 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('admin_menu.add_item_for_menu_title','admin_menu.add_item_title','admin_menu.add_item'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['block_manager'] && $_smarty_tpl->tpl_vars['location_data']->value['is_frontend_editing_allowed']) {
 $_smarty_tpl->_assignInScope('has_subitems', (($tmp = $_smarty_tpl->tpl_vars['has_subitems']->value ?? null)===null||$tmp==='' ? false ?? null : $tmp));
@@ -40,15 +40,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?><div class="acco
 __item bm-block-manager__block-add" data-ca-sortable-is-active="0"><div><?php if ($_smarty_tpl->tpl_vars['is_subitem']->value) {
 ob_start();
 echo $_smarty_tpl->__("admin_menu.add_item_for_menu_title");
-$_prefixVariable18=ob_get_clean();
-$_smarty_tpl->_assignInScope('popup_title', $_prefixVariable18.": ".((string)$_smarty_tpl->tpl_vars['menu_name']->value));
+$_prefixVariable27=ob_get_clean();
+$_smarty_tpl->_assignInScope('popup_title', $_prefixVariable27.": ".((string)$_smarty_tpl->tpl_vars['menu_name']->value));
 } else {
 $_smarty_tpl->_assignInScope('popup_title', $_smarty_tpl->__("admin_menu.add_item_title"));
 }
 ob_start();
 echo $_smarty_tpl->__("admin_menu.add_item");
-$_prefixVariable19=ob_get_clean();
-$_smarty_tpl->_subTemplateRender("tygh:common/popupbox.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('act'=>"edit",'text'=>$_smarty_tpl->tpl_vars['popup_title']->value,'link_text'=>$_prefixVariable19."...",'href'=>"block_manager.update_custom_block?object_type=menu_item&block_id=0&return_url=".((string)$_smarty_tpl->tpl_vars['current_dispatch']->value).((string)$_smarty_tpl->tpl_vars['extra_params_query']->value),'content'=>'','id'=>((string)$_smarty_tpl->tpl_vars['id']->value)."_second_level_add",'link_class'=>"main-menu-".((string)$_smarty_tpl->tpl_vars['level']->value)."__link",'icon'=>"icon-plus",'no_icon_link'=>true), 0, false);
+$_prefixVariable28=ob_get_clean();
+$_smarty_tpl->_subTemplateRender("tygh:common/popupbox.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('act'=>"edit",'text'=>$_smarty_tpl->tpl_vars['popup_title']->value,'link_text'=>$_prefixVariable28."...",'href'=>"block_manager.update_custom_block?object_type=menu_item&block_id=0&return_url=".((string)$_smarty_tpl->tpl_vars['current_dispatch']->value).((string)$_smarty_tpl->tpl_vars['extra_params_query']->value),'content'=>'','id'=>((string)$_smarty_tpl->tpl_vars['id']->value)."_second_level_add",'link_class'=>"main-menu-".((string)$_smarty_tpl->tpl_vars['level']->value)."__link",'icon'=>"icon-plus",'no_icon_link'=>true), 0, false);
 ?></div></div><?php }
 }
 }
