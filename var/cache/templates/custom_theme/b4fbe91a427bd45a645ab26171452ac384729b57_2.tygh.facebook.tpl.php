@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 04:07:04
+/* Smarty version 4.3.0, created on 2024-11-22 04:09:08
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/social_buttons/meta_templates/facebook.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_674073e8e0e8f0_76942067',
+  'unifunc' => 'content_674074646316d9_33084117',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,6 +20,6 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674073e8e0e8f0_76942067 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674074646316d9_33084117 (Smarty_Internal_Template $_smarty_tpl) {
 }
 }

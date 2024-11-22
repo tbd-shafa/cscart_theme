@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-22 04:07:03
+/* Smarty version 4.3.0, created on 2024-11-22 04:09:05
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/menu/logo_menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_674073e7377960_33028755',
+  'unifunc' => 'content_67407461f1d730_35919385',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674073e7377960_33028755 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67407461f1d730_35919385 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),));
 \Tygh\Languages\Helper::preloadLangVars(array('admin.go_to_the_homepage'));
 $_smarty_tpl->_assignInScope('logo_path_light', "cart_logo.svg");
