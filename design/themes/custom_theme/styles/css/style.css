@@ -182,6 +182,10 @@ ol {
 	border: none;
 }
 
+.top-cart-content {
+	padding-top: 22px;
+}
+
 
 /* Preloder */
 
@@ -627,7 +631,13 @@ ol {
 
 .hero__categories ul li {
 	list-style: none;
+	padding-left: 37px;
 }
+
+.home-page li {
+    padding-left: 0px !important; /* Removes left padding */
+}
+
 
 .hero__categories ul li a {
 	font-size: 16px;

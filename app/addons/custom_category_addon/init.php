@@ -38,6 +38,54 @@ function fn_custom_category_addon_dispatch_before_display()
     // Assign the top-level categories to the template
     Tygh::$app['view']->assign('top_level_categories', $top_level_categories);
 
+    $all_categories2 = fn_get_categories(['simple' => false, 'group_by_level' => false]);
+   
+    $full_categories = [];
+
+    if (isset($all_categories2[0]) && is_array($all_categories2[0])) {
+        foreach ($all_categories2[0] as $category) {
+            if (!empty($category['category_id']) && !empty($category['category'])) {
+                // Gather required category details
+                $parent_id = $category['parent_id'];
+                $category_id = $category['category_id'];
+                $category_name = $category['category'];
+                $category_seo_name = $category['seo_name'];
+                
+                // Build the category link
+                if($parent_id > 0){
+                  $parent_seo_name='';
+                  foreach ($all_categories2[0] as $category) {
+                    if (!empty($category['category_id']) && !empty($category['category'])) {
+                        if($category['category_id'] == $parent_id){
+                            $parent_seo_name = $category['seo_name'];
+                            $category_link = 'http://localhost/cs-cart/' . urlencode($parent_seo_name) . '/' . urlencode($category_seo_name);
+                        }
+                        
+                    }
+                
+                  }
+
+                }else{
+                    $category_link = 'http://localhost/cs-cart/' . htmlspecialchars($category_seo_name);
+                }
+               
+    
+                // Add to full categories array
+                $full_categories[$category_id] = [
+                    'parent_id' => $parent_id,
+                    'category_id' => $category_id,
+                    'category_name' => $category_name,
+                    'category_seo_name' => $category_seo_name,
+                    'category_link' => $category_link
+                ];
+            }
+        }
+    }
+    // echo "<pre>";
+    // print_r($full_categories);
+    // die;
+    Tygh::$app['view']->assign('full_categories', $full_categories);
+    
     // Fetch all products with their image paths
     $all_products_with_images = fn_get_all_products_with_images();
 
@@ -45,9 +93,7 @@ function fn_custom_category_addon_dispatch_before_display()
     Tygh::$app['view']->assign('all_products_with_images', $all_products_with_images);
 
     $all_blogs_with_descriptions = fn_get_all_blogs_with_descriptions();
-    // echo "<pre>";
-    // print_r($all_blogs_with_descriptions);
-    // die;
+   
 
     Tygh::$app['view']->assign('all_blogs_with_descriptions', $all_blogs_with_descriptions);
 

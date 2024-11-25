@@ -624,6 +624,7 @@ ol {
 
 .hero__categories ul li {
 	list-style: none;
+	padding-left: 37px;
 }
 
 .hero__categories ul li a {

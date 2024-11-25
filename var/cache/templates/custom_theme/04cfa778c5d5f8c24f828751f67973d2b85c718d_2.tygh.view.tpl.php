@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-24 21:30:44
+/* Smarty version 4.3.0, created on 2024-11-25 04:04:58
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/products/view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67440b84af30d3_71479416',
+  'unifunc' => 'content_674467eadef0e9_51110770',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '04cfa778c5d5f8c24f828751f67973d2b85c718d' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/products/view.tpl',
-      1 => 1732275800,
+      1 => 1732528221,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67440b84af30d3_71479416 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674467eadef0e9_51110770 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
@@ -31,35 +31,8 @@ $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "val_capture_buttons", null, null);
 $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "val_no_ajax", null, null);
-$_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
-echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery-3.3.1.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery.nice-select.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery-ui.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery.slicknav.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/mixitup.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/owl.carousel.min.js"><?php echo '</script'; ?>
->
+$_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);?>
+
 <?php echo '<script'; ?>
  src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
 /design/themes/custom_theme/js/main.js"><?php echo '</script'; ?>
@@ -74,6 +47,7 @@ ob_start();?>
     width: calc(100vw - 8px);
     margin-left: calc((1170px - 100vw) / 2);
 } 
+
 </style>
  <div class="custom_breadcome">
  <section class="breadcrumb-section set-bg" data-setbg="<?php echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['product']->value['main_pair']['detailed']['image_path'] ?? null)===null||$tmp==='' ? ((string)$_smarty_tpl->tpl_vars['config']->value['current_location'])."/design/themes/custom_theme/img/breadcrumb.jpg" ?? null : $tmp), ENT_QUOTES, 'UTF-8');?>
@@ -92,11 +66,34 @@ ob_start();?>
                         <a href="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
 " style="color:Black !important;">Home</a>
                         
-                        <?php if ($_smarty_tpl->tpl_vars['product']->value['main_category']) {?>
-                            <a href="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/categories/<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['main_category'], ENT_QUOTES, 'UTF-8');?>
-/" style="color:Black !important;"><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['main_category_name'], ENT_QUOTES, 'UTF-8');?>
+						  <?php if ($_smarty_tpl->tpl_vars['product']->value['category_ids']) {?>
+							   <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['product']->value['category_ids'], 'category_ids');
+$_smarty_tpl->tpl_vars['category_ids']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['category_ids']->value) {
+$_smarty_tpl->tpl_vars['category_ids']->do_else = false;
+?>
+							  
+							   <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['full_categories']->value, 'category');
+$_smarty_tpl->tpl_vars['category']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['category']->value) {
+$_smarty_tpl->tpl_vars['category']->do_else = false;
+?>
+							    
+								 <?php if ($_smarty_tpl->tpl_vars['category_ids']->value == $_smarty_tpl->tpl_vars['category']->value['category_id']) {?>
+								 
+								  <a href="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['category']->value['category_link'], ENT_QUOTES, 'UTF-8');?>
+" style="color:Black !important;"><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['category']->value['category_name'], ENT_QUOTES, 'UTF-8');?>
 </a>
+								  <?php }?>
+								<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+							<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                           
                         <?php }?>
                         
                         <span><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product'], ENT_QUOTES, 'UTF-8');?>
@@ -131,35 +128,8 @@ $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "val_capture_buttons", null, null);
 $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "val_no_ajax", null, null);
-$_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);
-echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery-3.3.1.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery.nice-select.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery-ui.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/jquery.slicknav.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/mixitup.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/design/themes/custom_theme/js/owl.carousel.min.js"><?php echo '</script'; ?>
->
+$_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);?>
+
 <?php echo '<script'; ?>
  src="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
 /design/themes/custom_theme/js/main.js"><?php echo '</script'; ?>
@@ -174,6 +144,7 @@ ob_start();?>
     width: calc(100vw - 8px);
     margin-left: calc((1170px - 100vw) / 2);
 } 
+
 </style>
  <div class="custom_breadcome">
  <section class="breadcrumb-section set-bg" data-setbg="<?php echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['product']->value['main_pair']['detailed']['image_path'] ?? null)===null||$tmp==='' ? ((string)$_smarty_tpl->tpl_vars['config']->value['current_location'])."/design/themes/custom_theme/img/breadcrumb.jpg" ?? null : $tmp), ENT_QUOTES, 'UTF-8');?>
@@ -192,11 +163,34 @@ ob_start();?>
                         <a href="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
 " style="color:Black !important;">Home</a>
                         
-                        <?php if ($_smarty_tpl->tpl_vars['product']->value['main_category']) {?>
-                            <a href="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['config']->value['current_location'], ENT_QUOTES, 'UTF-8');?>
-/categories/<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['main_category'], ENT_QUOTES, 'UTF-8');?>
-/" style="color:Black !important;"><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['main_category_name'], ENT_QUOTES, 'UTF-8');?>
+						  <?php if ($_smarty_tpl->tpl_vars['product']->value['category_ids']) {?>
+							   <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['product']->value['category_ids'], 'category_ids');
+$_smarty_tpl->tpl_vars['category_ids']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['category_ids']->value) {
+$_smarty_tpl->tpl_vars['category_ids']->do_else = false;
+?>
+							  
+							   <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['full_categories']->value, 'category');
+$_smarty_tpl->tpl_vars['category']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['category']->value) {
+$_smarty_tpl->tpl_vars['category']->do_else = false;
+?>
+							    
+								 <?php if ($_smarty_tpl->tpl_vars['category_ids']->value == $_smarty_tpl->tpl_vars['category']->value['category_id']) {?>
+								 
+								  <a href="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['category']->value['category_link'], ENT_QUOTES, 'UTF-8');?>
+" style="color:Black !important;"><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['category']->value['category_name'], ENT_QUOTES, 'UTF-8');?>
 </a>
+								  <?php }?>
+								<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+							<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                           
                         <?php }?>
                         
                         <span><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product'], ENT_QUOTES, 'UTF-8');?>

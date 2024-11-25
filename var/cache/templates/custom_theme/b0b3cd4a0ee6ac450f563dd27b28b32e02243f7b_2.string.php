@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-24 21:30:45
+/* Smarty version 4.3.0, created on 2024-11-25 03:59:10
   from 'b0b3cd4a0ee6ac450f563dd27b28b32e02243f7b' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67440b855c11e4_28306832',
+  'unifunc' => 'content_6744668e85c6b8_69381828',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -14,7 +14,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67440b855c11e4_28306832 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6744668e85c6b8_69381828 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <ul id="demo_store_links">
 <li class="ty-footer-menu__item"><a href="<?php echo htmlspecialchars((string) fn_url("companies.apply_for_vendor"), ENT_QUOTES, 'UTF-8');?>

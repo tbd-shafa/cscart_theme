@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-24 21:30:43
+/* Smarty version 4.3.0, created on 2024-11-25 03:59:10
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/steps/personalize_marketplace/personalize_marketplace.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67440b83d9bc53_10338860',
+  'unifunc' => 'content_6744668ece4232_53129061',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/onboarding_guide/steps/personalize_marketplace/tabs/tab_3.tpl' => 1,
   ),
 ),false)) {
-function content_67440b83d9bc53_10338860 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6744668ece4232_53129061 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('onboarding_guide.sb_make_changes_on_the_fly_description','onboarding_guide.make_changes_on_the_fly_description','onboarding_guide.theme_and_logo','onboarding_guide.business_details','onboarding_guide.languages_and_currency','onboarding_guide.logos_updated'));
 echo smarty_function_script(array('src'=>"js/addons/onboarding_guide/steps/personalize_marketplace.js"),$_smarty_tpl);?>

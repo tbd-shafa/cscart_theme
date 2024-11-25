@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-24 21:30:45
+/* Smarty version 4.3.0, created on 2024-11-25 04:04:59
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/product_reviews/views/product_reviews/components/product_reviews_navigation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67440b854309f6_41317174',
+  'unifunc' => 'content_674467eb624803_11328923',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/sorting.tpl' => 2,
   ),
 ),false)) {
-function content_67440b854309f6_41317174 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674467eb624803_11328923 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('product_reviews.with_photo','product_reviews.with_photo'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -56,8 +56,8 @@ echo "0";
 } else {
 echo "1";
 }
-$_prefixVariable40=ob_get_clean();
-echo htmlspecialchars((string) fn_url(fn_link_attach($_smarty_tpl->tpl_vars['curl']->value,"with_images=".$_prefixVariable40."&selected_section=product_reviews")), ENT_QUOTES, 'UTF-8');?>
+$_prefixVariable13=ob_get_clean();
+echo htmlspecialchars((string) fn_url(fn_link_attach($_smarty_tpl->tpl_vars['curl']->value,"with_images=".$_prefixVariable13."&selected_section=product_reviews")), ENT_QUOTES, 'UTF-8');?>
 "
                 class="ty-product-review-reviews-navigation__filter-link cm-ajax"
                 data-ca-target-id="pagination_contents_comments_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product_id']->value, ENT_QUOTES, 'UTF-8');?>
@@ -110,8 +110,8 @@ echo "0";
 } else {
 echo "1";
 }
-$_prefixVariable41=ob_get_clean();
-echo htmlspecialchars((string) fn_url(fn_link_attach($_smarty_tpl->tpl_vars['curl']->value,"with_images=".$_prefixVariable41."&selected_section=product_reviews")), ENT_QUOTES, 'UTF-8');?>
+$_prefixVariable14=ob_get_clean();
+echo htmlspecialchars((string) fn_url(fn_link_attach($_smarty_tpl->tpl_vars['curl']->value,"with_images=".$_prefixVariable14."&selected_section=product_reviews")), ENT_QUOTES, 'UTF-8');?>
 "
                 class="ty-product-review-reviews-navigation__filter-link cm-ajax"
                 data-ca-target-id="pagination_contents_comments_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product_id']->value, ENT_QUOTES, 'UTF-8');?>

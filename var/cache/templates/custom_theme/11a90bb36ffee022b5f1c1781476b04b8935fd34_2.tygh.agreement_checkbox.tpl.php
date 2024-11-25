@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-24 21:30:45
+/* Smarty version 4.3.0, created on 2024-11-25 03:59:10
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/gdpr/componentes/agreement_checkbox.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67440b85656a57_70903724',
+  'unifunc' => 'content_6744668e946208_07709085',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/popupbox.tpl' => 2,
   ),
 ),false)) {
-function content_67440b85656a57_70903724 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6744668e946208_07709085 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('gdpr.full_agreement','gdpr.full_agreement'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -35,15 +35,15 @@ if ($_smarty_tpl->tpl_vars['const_suffix']->value) {
 echo "_";
 echo (string)$_smarty_tpl->tpl_vars['const_suffix']->value;
 }
-$_prefixVariable42=ob_get_clean();
-$_smarty_tpl->_assignInScope('const_input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable42 ?? null : $tmp));?>
+$_prefixVariable18=ob_get_clean();
+$_smarty_tpl->_assignInScope('const_input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable18 ?? null : $tmp));?>
         <?php ob_start();
 if ($_smarty_tpl->tpl_vars['suffix']->value) {
 echo "_";
 echo (string)$_smarty_tpl->tpl_vars['suffix']->value;
 }
-$_prefixVariable43=ob_get_clean();
-$_smarty_tpl->_assignInScope('input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable43 ?? null : $tmp));?>
+$_prefixVariable19=ob_get_clean();
+$_smarty_tpl->_assignInScope('input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable19 ?? null : $tmp));?>
         <?php $_smarty_tpl->_assignInScope('gdpr_target_elem', ((string)$_smarty_tpl->tpl_vars['input_id']->value)."_label");?>
         <?php $_smarty_tpl->_assignInScope('is_accept_gdpr_agreements_checked', ($_smarty_tpl->tpl_vars['user_data']->value[$_smarty_tpl->tpl_vars['const_input_id']->value] === "Y"));?>
 
@@ -155,15 +155,15 @@ if ($_smarty_tpl->tpl_vars['const_suffix']->value) {
 echo "_";
 echo (string)$_smarty_tpl->tpl_vars['const_suffix']->value;
 }
-$_prefixVariable44=ob_get_clean();
-$_smarty_tpl->_assignInScope('const_input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable44 ?? null : $tmp));?>
+$_prefixVariable20=ob_get_clean();
+$_smarty_tpl->_assignInScope('const_input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable20 ?? null : $tmp));?>
         <?php ob_start();
 if ($_smarty_tpl->tpl_vars['suffix']->value) {
 echo "_";
 echo (string)$_smarty_tpl->tpl_vars['suffix']->value;
 }
-$_prefixVariable45=ob_get_clean();
-$_smarty_tpl->_assignInScope('input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable45 ?? null : $tmp));?>
+$_prefixVariable21=ob_get_clean();
+$_smarty_tpl->_assignInScope('input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable21 ?? null : $tmp));?>
         <?php $_smarty_tpl->_assignInScope('gdpr_target_elem', ((string)$_smarty_tpl->tpl_vars['input_id']->value)."_label");?>
         <?php $_smarty_tpl->_assignInScope('is_accept_gdpr_agreements_checked', ($_smarty_tpl->tpl_vars['user_data']->value[$_smarty_tpl->tpl_vars['const_input_id']->value] === "Y"));?>
 

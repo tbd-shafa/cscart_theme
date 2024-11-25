@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-24 21:30:44
+/* Smarty version 4.3.0, created on 2024-11-25 03:59:10
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/categories/categories_custom.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67440b84a6df53_63424250',
+  'unifunc' => 'content_6744668e5a9630_98834489',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd175e22fa5d12b5a25d028a377bb3711334d42e6' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/categories/categories_custom.tpl',
-      1 => 1730293774,
+      1 => 1732535937,
       2 => 'tygh',
     ),
   ),
@@ -20,18 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67440b84a6df53_63424250 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6744668e5a9630_98834489 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
-$_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
-if ($_smarty_tpl->tpl_vars['items']->value) {?>
+$_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><style>
+.cat{
+    padding-top:5px;
+}
+</style>
+<?php if ($_smarty_tpl->tpl_vars['items']->value) {?>
 
 <div class="hero__categories">
-    <div class="hero__categories__all">
+    <div class="hero__categories__all" style="height:45px;">
+        <div class="cat" style="paddding-top:1px;">
         <i class="fa fa-bars"></i>
-        All departments
+            All departments
+        </div>
+       
     </div>
-    <ul>
+    <ul style="padding-top:1px;">
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['top_level_categories']->value, 'category');
 $_smarty_tpl->tpl_vars['category']->do_else = true;
@@ -56,15 +63,22 @@ if ($_smarty_tpl->tpl_vars['auth']->value['area'] == "A") {?><span class="cm-tem
 echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_content');
 }
 }
-} else {
-if ($_smarty_tpl->tpl_vars['items']->value) {?>
+} else { ?><style>
+.cat{
+    padding-top:5px;
+}
+</style>
+<?php if ($_smarty_tpl->tpl_vars['items']->value) {?>
 
 <div class="hero__categories">
-    <div class="hero__categories__all">
+    <div class="hero__categories__all" style="height:45px;">
+        <div class="cat" style="paddding-top:1px;">
         <i class="fa fa-bars"></i>
-        All departments
+            All departments
+        </div>
+       
     </div>
-    <ul>
+    <ul style="padding-top:1px;">
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['top_level_categories']->value, 'category');
 $_smarty_tpl->tpl_vars['category']->do_else = true;

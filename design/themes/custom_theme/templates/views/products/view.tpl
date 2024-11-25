@@ -2,13 +2,7 @@
 {capture name="val_capture_options_vs_qty"}{/capture}
 {capture name="val_capture_buttons"}{/capture}
 {capture name="val_no_ajax"}{/capture}
-<script src="{$config.current_location}/design/themes/custom_theme/js/jquery-3.3.1.min.js"></script>
-<script src="{$config.current_location}/design/themes/custom_theme/js/bootstrap.min.js"></script>
-<script src="{$config.current_location}/design/themes/custom_theme/js/jquery.nice-select.min.js"></script>
-<script src="{$config.current_location}/design/themes/custom_theme/js/jquery-ui.min.js"></script>
-<script src="{$config.current_location}/design/themes/custom_theme/js/jquery.slicknav.js"></script>
-<script src="{$config.current_location}/design/themes/custom_theme/js/mixitup.min.js"></script>
-<script src="{$config.current_location}/design/themes/custom_theme/js/owl.carousel.min.js"></script>
+
 <script src="{$config.current_location}/design/themes/custom_theme/js/main.js"></script>
 {hook name="products:layout_content"}
  <style>
@@ -16,6 +10,7 @@
     width: calc(100vw - 8px);
     margin-left: calc((1170px - 100vw) / 2);
 } 
+
 </style>
  <div class="custom_breadcome">
  <section class="breadcrumb-section set-bg" data-setbg="{$product.main_pair.detailed.image_path|default:"{$config.current_location}/design/themes/custom_theme/img/breadcrumb.jpg"}">
@@ -31,8 +26,18 @@
                     <div class="breadcrumb__option" style="color:Black !important;">
                         <a href="{$config.current_location}" style="color:Black !important;">Home</a>
                         
-                        {if $product.main_category}
-                            <a href="{$config.current_location}/categories/{$product.main_category}/" style="color:Black !important;">{$product.main_category_name}</a>
+						  {if $product.category_ids}
+							   {foreach from=$product.category_ids item=category_ids}
+							  
+							   {foreach from=$full_categories item=category}
+							    
+								 {if $category_ids == $category.category_id}
+								 
+								  <a href="{$category.category_link}" style="color:Black !important;">{$category.category_name}</a>
+								  {/if}
+								{/foreach}
+							{/foreach}
+                           
                         {/if}
                         
                         <span>{$product.product}</span>
