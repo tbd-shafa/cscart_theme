@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-25 03:59:10
+/* Smarty version 4.3.0, created on 2024-11-26 01:06:43
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/bottom_panel/icons/bp-modes__item--preview.svg' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6744668e1bec10_37862166',
+  'unifunc' => 'content_67458fa3b43ab3_03461711',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6744668e1bec10_37862166 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67458fa3b43ab3_03461711 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
     class="bp-modes__item-icon">
     <path

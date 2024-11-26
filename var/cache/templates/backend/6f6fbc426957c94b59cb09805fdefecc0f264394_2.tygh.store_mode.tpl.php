@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-25 03:59:08
+/* Smarty version 4.3.0, created on 2024-11-26 01:06:39
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/settings/store_mode.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6744668c137ef8_11198673',
+  'unifunc' => 'content_67458f9f5add75_47102288',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/product_release_info.tpl' => 1,
   ),
 ),false)) {
-function content_6744668c137ef8_11198673 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67458f9f5add75_47102288 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('store_mode','choose_your_store_mode','full','product_state_description.','license_number','please_enter_license_here','licensed_product','trial','trial_mode_ult_disabled','trial_mode_mve_disabled','text_store_mode_trial','select'));
 if ($_smarty_tpl->tpl_vars['show']->value) {?>

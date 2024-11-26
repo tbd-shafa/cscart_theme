@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-25 03:59:17
+/* Smarty version 4.3.0, created on 2024-11-26 01:06:44
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/products/products_scroller_vertical.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67446695230734_05939048',
+  'unifunc' => 'content_67458fa44992d7_89314676',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '621570158bb9d34a3de8fd3ac943ed1318aebe93' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/blocks/products/products_scroller_vertical.tpl',
-      1 => 1732250586,
+      1 => 1732610271,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67446695230734_05939048 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67458fa44992d7_89314676 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.number_format.php','function'=>'smarty_modifier_number_format',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><style>
@@ -72,7 +72,8 @@ $_smarty_tpl->tpl_vars['all_product']->do_else = false;
                         <div class="latest-product__item__text">
                             <h6><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product'], ENT_QUOTES, 'UTF-8');?>
 </h6>
-                            <span>$<?php echo htmlspecialchars((string) smarty_modifier_number_format($_smarty_tpl->tpl_vars['product']->value['price'],2), ENT_QUOTES, 'UTF-8');?>
+                            <span> <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['currencies']->value[$_smarty_tpl->tpl_vars['primary_currency']->value]['symbol'], ENT_QUOTES, 'UTF-8');
+echo htmlspecialchars((string) smarty_modifier_number_format($_smarty_tpl->tpl_vars['product']->value['price'],2), ENT_QUOTES, 'UTF-8');?>
 </span>
                         </div>
                     </a>
@@ -145,7 +146,8 @@ $_smarty_tpl->tpl_vars['all_product']->do_else = false;
                         <div class="latest-product__item__text">
                             <h6><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['product']->value['product'], ENT_QUOTES, 'UTF-8');?>
 </h6>
-                            <span>$<?php echo htmlspecialchars((string) smarty_modifier_number_format($_smarty_tpl->tpl_vars['product']->value['price'],2), ENT_QUOTES, 'UTF-8');?>
+                            <span> <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['currencies']->value[$_smarty_tpl->tpl_vars['primary_currency']->value]['symbol'], ENT_QUOTES, 'UTF-8');
+echo htmlspecialchars((string) smarty_modifier_number_format($_smarty_tpl->tpl_vars['product']->value['price'],2), ENT_QUOTES, 'UTF-8');?>
 </span>
                         </div>
                     </a>

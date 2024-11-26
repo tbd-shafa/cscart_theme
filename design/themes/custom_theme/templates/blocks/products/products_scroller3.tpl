@@ -159,7 +159,7 @@
                            {/foreach}
                             <div class="featured__item__text">
                                 <h6><a href="{"products.view?product_id=`$product.product_id`"|fn_url}">{$product.product}</a></h6>
-                                <h5>${$product.price|number_format:2}</h5>
+                                <h5>{$currencies.$primary_currency.symbol}{$product.price|number_format:2}</h5>
                             </div>
                         </div>
                     </div>

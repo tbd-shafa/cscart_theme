@@ -82,7 +82,8 @@
             </h5>
         
             <div class="product__item__price">
-                ${number_format($product.price, 2)} <span>${number_format($product.list_price, 2)}</span>
+              {$currencies.$primary_currency.symbol}{number_format($product.price, 2)} 
+              <span>{$currencies.$primary_currency.symbol}{number_format($product.list_price, 2)}</span>
             </div>
           </div>
         </div>

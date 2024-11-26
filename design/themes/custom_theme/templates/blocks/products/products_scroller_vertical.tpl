@@ -24,7 +24,7 @@
                         </div>
                         <div class="latest-product__item__text">
                             <h6>{$product.product}</h6>
-                            <span>${$product.price|number_format:2}</span>
+                            <span> {$currencies.$primary_currency.symbol}{$product.price|number_format:2}</span>
                         </div>
                     </a>
                 {/if}

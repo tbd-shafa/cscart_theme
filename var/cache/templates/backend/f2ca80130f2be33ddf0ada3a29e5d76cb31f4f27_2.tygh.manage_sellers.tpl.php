@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-25 03:59:10
+/* Smarty version 4.3.0, created on 2024-11-26 01:06:43
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/steps/manage_sellers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6744668ed789f4_37286973',
+  'unifunc' => 'content_67458fa31896f4_35278626',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6744668ed789f4_37286973 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67458fa31896f4_35278626 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('onboarding_guide.create_vendor_description','onboarding_guide.create_one_vendor','onboarding_guide.view_storefront'));
 ?>
 <div class="onboarding_content_margin--bottom">

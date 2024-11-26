@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-25 03:59:10
+/* Smarty version 4.3.0, created on 2024-11-26 01:06:43
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/index/components/analytics_section/analytics_card/graph.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6744668ee43ae9_01673047',
+  'unifunc' => 'content_67458fa3253ed6_83203669',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6744668ee43ae9_01673047 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67458fa3253ed6_83203669 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('previous_period','current_period','current_previous_period'));
 if ($_smarty_tpl->tpl_vars['graph']->value && $_smarty_tpl->tpl_vars['graph']->value['content']) {
