@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-26 01:06:39
+/* Smarty version 4.3.0, created on 2024-11-26 01:30:49
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/icon_deprecated.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67458f9f153892_77629118',
+  'unifunc' => 'content_67459549597001_11921648',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67458f9f153892_77629118 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67459549597001_11921648 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['class']->value) {?><span class="cs-icon <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['class']->value, ENT_QUOTES, 'UTF-8');?>
 " <?php echo htmlspecialchars((string) '', ENT_QUOTES, 'UTF-8');
 if ($_smarty_tpl->tpl_vars['id']->value) {?>id="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['id']->value, ENT_QUOTES, 'UTF-8');?>
