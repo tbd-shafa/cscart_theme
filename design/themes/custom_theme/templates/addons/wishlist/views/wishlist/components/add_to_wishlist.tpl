@@ -1,3 +1,4 @@
+
 {$wishlist_button_type              = $wishlist_button_type|default:            "icon"}
 {$but_id                            = $wishlist_but_id|default:                 $but_id}
 {$but_name                          = $wishlist_but_name|default:               $but_name}
@@ -10,11 +11,11 @@
 {if $wishlist_button_type == "icon"}
     {$but_icon                      = $wishlist_but_icon|default:               ""}
     {$but_text                      = $wishlist_but_text|default:               false}
-    {$but_meta                      = $wishlist_but_meta|default:               "ty-btn__tertiary ty-btn-icon ty-add-to-wish heart-icon icon_heart_alt"}
+    {$but_meta                      = $wishlist_but_meta|default:               "ty-btn__tertiary ty-btn-icon ty-add-to-wish heart-icon icon_heart_alt custom-margin"}
 {else}
     {$but_icon                      = ($wishlist_but_icon === true) ?           "" : $wishlist_but_icon}
     {$but_text                      = $wishlist_but_text|default:               __("add_to_wishlist")}
-    {$but_meta                      = $wishlist_but_meta|default:                "ty-btn__text ty-add-to-wish heart-icon icon_heart_alt"}
+    {$but_meta                      = $wishlist_but_meta|default:                "ty-btn__text ty-add-to-wish heart-icon icon_heart_alt custom-margin"}
 {/if}
 
 {if $enable_grouping_buttons_product

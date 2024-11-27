@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-26 02:41:26
+/* Smarty version 4.3.0, created on 2024-11-26 21:32:30
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/dynamic_navigation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6745a5d6cd78b8_55486808',
+  'unifunc' => 'content_6746aeee23d9c4_36239682',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6745a5d6cd78b8_55486808 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746aeee23d9c4_36239682 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 if ($_smarty_tpl->tpl_vars['navigation']->value && $_smarty_tpl->tpl_vars['navigation']->value['dynamic'] && $_smarty_tpl->tpl_vars['navigation']->value['dynamic']['sections']) {?>
     <div class="sidebar-row">
@@ -47,8 +47,8 @@ ob_start();?>
                     <?php } else {
 ob_start();
 echo htmlspecialchars((string) (($tmp = $_smarty_tpl->tpl_vars['method']->value ?? null)===null||$tmp==='' ? "GET" ?? null : $tmp), ENT_QUOTES, 'UTF-8');
-$_prefixVariable4 = ob_get_clean();
-if (fn_check_view_permissions($_smarty_tpl->tpl_vars['m']->value['href'],$_prefixVariable4)) {?>
+$_prefixVariable29 = ob_get_clean();
+if (fn_check_view_permissions($_smarty_tpl->tpl_vars['m']->value['href'],$_prefixVariable29)) {?>
                         <li class="<?php if ($_smarty_tpl->tpl_vars['m']->value['js'] == true) {?>cm-js<?php }
 if ((isset($_smarty_tpl->tpl_vars['__smarty_foreach_first_level']->value['last']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_first_level']->value['last'] : null)) {?> last-item<?php }
 if ($_smarty_tpl->tpl_vars['navigation']->value['dynamic']['active_section'] == $_smarty_tpl->tpl_vars['s_id']->value) {?> active<?php }?>" id="elm_sidebar_nav_item_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['s_id']->value, ENT_QUOTES, 'UTF-8');?>

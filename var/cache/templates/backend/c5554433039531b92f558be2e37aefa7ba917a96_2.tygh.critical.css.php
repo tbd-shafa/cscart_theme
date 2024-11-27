@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-26 02:41:11
+/* Smarty version 4.3.0, created on 2024-11-26 21:32:29
   from '/opt/lampp/htdocs/cs-cart/design/backend/css/tygh/critical.css' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6745a5c7460a03_52394023',
+  'unifunc' => 'content_6746aeed88d956_89506999',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6745a5c7460a03_52394023 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746aeed88d956_89506999 (Smarty_Internal_Template $_smarty_tpl) {
 ?>body {
     font-size: 13px;
 }

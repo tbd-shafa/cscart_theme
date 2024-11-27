@@ -8,8 +8,13 @@
     {assign var="layouts" value=""|fn_get_products_views:false:0}
 
     {if $layouts.$selected_layout.template}
+        {if $layouts.$selected_layout.template == "blocks/product_list_templates/products_multicolumns.tpl"}
+         {include file="blocks/product_list_templates/products_multicolumns2.tpl" columns=$settings.Appearance.columns_in_products_list show_qty=true}
+         {else}
         {include file="`$layouts.$selected_layout.template`" columns=$settings.Appearance.columns_in_products_list show_qty=true}
+         {/if}
     {/if}
+    
 {else}
     {hook name="products:search_results_no_matching_found"}
         {if !$show_not_found_notification && $is_selected_filters}

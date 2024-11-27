@@ -6,6 +6,10 @@
    
     height: 576px;
 }
+.custom-margin {
+    margin-left: 10px !important;
+}
+
 </style>
 
 
