@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-27 01:57:16
+/* Smarty version 4.3.0, created on 2024-11-27 01:59:49
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/geo_maps/hooks/index/styles.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746ecfc73a4a7_87467807',
+  'unifunc' => 'content_6746ed956770d9_23510626',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6746ecfc73a4a7_87467807 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746ed956770d9_23510626 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.style.php','function'=>'smarty_function_style',),));
 echo smarty_function_style(array('src'=>"addons/geo_maps/styles.less"),$_smarty_tpl);?>
 

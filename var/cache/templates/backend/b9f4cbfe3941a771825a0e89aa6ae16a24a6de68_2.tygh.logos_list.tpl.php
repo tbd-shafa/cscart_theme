@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-27 01:57:16
+/* Smarty version 4.3.0, created on 2024-11-27 01:59:49
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/themes/components/logos_list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746ecfcd5af70_94815111',
+  'unifunc' => 'content_6746ed95b63144_72051779',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 2,
   ),
 ),false)) {
-function content_6746ecfcd5af70_94815111 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746ed95b63144_72051779 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('logos','show_extra_logos','theme_editor.favicon_size','hide_extra_logos'));
 ?>
 <div class="logos-section">

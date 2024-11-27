@@ -8,12 +8,43 @@
             <div class="row">
                 <div class="col-lg-4 col-md-5">
                     <div class="blog__sidebar">
-                         <div class="blog__sidebar__search">
-                            <form action="#">
-                                <input type="text" placeholder="Search...">
-                                <button type="submit"><span class="icon_search"></span></button>
-                            </form>
-                        </div> 
+                          <div class="blog__sidebar__search">
+                        <form id="blog-search-form" action="#" method="get">
+                            <input type="text" id="search-input" name="q" placeholder="Search By Tittle..." required>
+                            <button type="submit"><span class="icon_search"></span></button>
+                        </form>
+                    </div>
+
+                    <script type="text/javascript">
+                        // Wait until the document is fully loaded
+                        document.addEventListener("DOMContentLoaded", function() {
+                            console.log(11);
+                            var form = document.getElementById('blog-search-form');
+                            console.log(form);
+                            var input = document.getElementById('search-input');
+                            console.log(input);
+                            // Handle form submission
+                            form.addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent default form submission
+
+                            
+                                var query = input.value.trim(); // Get the input value
+                                // Convert to lowercase and replace spaces with hyphens
+                                var transformedQuery = query
+                                .toLowerCase()
+                                .replace(/[’‘'"]/g, '')   // Remove special quotes
+                                .replace(/[^a-z0-9\s-]/g, '') // Remove other special characters
+                                .replace(/\s+/g, '-'); 
+                                console.log('Transformed Query:', transformedQuery);
+                                if (query) {
+                                     var targetUrl = 'http://localhost/cs-cart/blog/' + transformedQuery;
+                                     // Redirect to the desired URL
+                                      window.location.href = targetUrl;
+                                }
+                            });
+                        });
+                    </script>
+                    
                         <div class="blog__sidebar__item">
                             <h4>Tags</h4>
                             <ul>

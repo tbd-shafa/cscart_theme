@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-27 01:57:17
+/* Smarty version 4.3.0, created on 2024-11-27 01:59:49
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/menu/notification_menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746ecfd0aa9f1_80908291',
+  'unifunc' => 'content_6746ed95e07823_32301726',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:components/notifications_center/opener.tpl' => 1,
   ),
 ),false)) {
-function content_6746ecfd0aa9f1_80908291 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746ed95e07823_32301726 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Notification Center -->
     <?php $_smarty_tpl->_subTemplateRender("tygh:components/notifications_center/opener.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

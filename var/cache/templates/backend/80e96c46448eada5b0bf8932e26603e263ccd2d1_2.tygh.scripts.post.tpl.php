@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-27 01:57:17
+/* Smarty version 4.3.0, created on 2024-11-27 01:59:50
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/vendor_plans/hooks/index/scripts.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746ecfd36b0a6_56404676',
+  'unifunc' => 'content_6746ed962153b0_48759581',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6746ecfd36b0a6_56404676 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746ed962153b0_48759581 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 if ($_smarty_tpl->tpl_vars['vendor_plans_payments']->value) {
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('inline_script', array());
