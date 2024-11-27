@@ -11,7 +11,7 @@
                             <button type="submit"><span class="icon_search"></span></button>
                         </form>
                     </div>
-
+                    
                     <script type="text/javascript">
                         // Wait until the document is fully loaded
                         document.addEventListener("DOMContentLoaded", function() {
@@ -41,16 +41,21 @@
                             });
                         });
                     </script>
-
-
+                   {if $page.tags}
                     <div class="blog__sidebar__item">
                         <h4>Tags</h4>
                         <ul>
                             {foreach from=$tags item="tag"}
-                                <li><a href="{"tags.view?tag=`$tag.tag`"|fn_url}">{$tag.tag}</a></li>
+                              {foreach from=$page.tags item=tags}
+                                    {if $tags.tag_id == $tag.tag_id}
+                                       <li><a href="{"tags.view?tag=`$tag.tag`"|fn_url}">{$tag.tag}</a></li>
+                                    {/if}
+                                {/foreach}
+                               
                             {/foreach}
                         </ul>
                     </div>
+                    {/if}
 
                     <div class="blog__sidebar__item">
                         <h4>Recent Blogs</h4>

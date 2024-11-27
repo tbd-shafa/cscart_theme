@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-27 02:00:01
+/* Smarty version 4.3.0, created on 2024-11-27 02:25:40
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/views/auth/login_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746eda1d2a995_25437460',
+  'unifunc' => 'content_6746f3a47a0eb3_02490878',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/login.tpl' => 2,
   ),
 ),false)) {
-function content_6746eda1d2a995_25437460 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746f3a47a0eb3_02490878 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('returning_customer','email','password','forgot_password_question','error_incorrect_login','register_new_account','remember_me','sign_in','returning_customer','email','password','forgot_password_question','error_incorrect_login','register_new_account','remember_me','sign_in'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

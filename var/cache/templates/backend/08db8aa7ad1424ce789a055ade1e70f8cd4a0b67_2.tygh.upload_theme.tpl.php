@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-27 01:59:49
+/* Smarty version 4.3.0, created on 2024-11-27 02:25:37
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/themes/components/upload_theme.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746ed95a547e5_94157128',
+  'unifunc' => 'content_6746f3a1c70411_22509339',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/save_cancel.tpl' => 1,
   ),
 ),false)) {
-function content_6746ed95a547e5_94157128 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746f3a1c70411_22509339 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('install_theme_text','marketplace_find_more','upload'));
 ?>
 <div class="install-addon" id="theme_upload_container">

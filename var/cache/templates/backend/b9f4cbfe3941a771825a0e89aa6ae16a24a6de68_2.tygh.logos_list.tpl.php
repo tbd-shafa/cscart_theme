@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-27 01:59:49
+/* Smarty version 4.3.0, created on 2024-11-27 02:25:37
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/themes/components/logos_list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746ed95b63144_72051779',
+  'unifunc' => 'content_6746f3a1d80e03_47111542',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 2,
   ),
 ),false)) {
-function content_6746ed95b63144_72051779 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746f3a1d80e03_47111542 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('logos','show_extra_logos','theme_editor.favicon_size','hide_extra_logos'));
 ?>
 <div class="logos-section">
@@ -45,8 +45,8 @@ echo $_smarty_tpl->__("logos");?>
 if ($_smarty_tpl->tpl_vars['show_all_logos']->value) {
 echo " hidden";
 }
-$_prefixVariable22=ob_get_clean();
-$_smarty_tpl->_subTemplateRender("tygh:buttons/button.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('but_text'=>$_smarty_tpl->__("show_extra_logos"),'but_role'=>"action",'but_id'=>"on_attach_additional_logos",'but_meta'=>"cm-combination ".$_prefixVariable22), 0, false);
+$_prefixVariable8=ob_get_clean();
+$_smarty_tpl->_subTemplateRender("tygh:buttons/button.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('but_text'=>$_smarty_tpl->__("show_extra_logos"),'but_role'=>"action",'but_id'=>"on_attach_additional_logos",'but_meta'=>"cm-combination ".$_prefixVariable8), 0, false);
 ?>
             </div>
         </div>

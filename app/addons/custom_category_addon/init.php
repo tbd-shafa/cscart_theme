@@ -106,7 +106,7 @@ function fn_custom_category_addon_dispatch_before_display()
     Tygh::$app['view']->assign('related_blogs', $related_blogs);
 
     $tags = fn_get_all_tags_with_counts();
-
+  
     Tygh::$app['view']->assign('tags', $tags);
 
     $categories = fn_get_all_categories();

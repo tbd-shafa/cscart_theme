@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-27 02:00:02
+/* Smarty version 4.3.0, created on 2024-11-27 02:25:40
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/blog/hooks/pages/page_content.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746eda20bb975_12701565',
+  'unifunc' => 'content_6746f3a4a99dd7_91523206',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cebc86d7cf8c90066e62f2fd20b7dc2538de0bee' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/blog/hooks/pages/page_content.pre.tpl',
-      1 => 1732701428,
+      1 => 1732703128,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6746eda20bb975_12701565 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746f3a4a99dd7_91523206 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
@@ -36,7 +36,7 @@ if ($_smarty_tpl->tpl_vars['page']->value['description'] && $_smarty_tpl->tpl_va
                             <button type="submit"><span class="icon_search"></span></button>
                         </form>
                     </div>
-
+                    
                     <?php echo '<script'; ?>
  type="text/javascript">
                         // Wait until the document is fully loaded
@@ -68,8 +68,7 @@ if ($_smarty_tpl->tpl_vars['page']->value['description'] && $_smarty_tpl->tpl_va
                         });
                     <?php echo '</script'; ?>
 >
-
-
+                   <?php if ($_smarty_tpl->tpl_vars['page']->value['tags']) {?>
                     <div class="blog__sidebar__item">
                         <h4>Tags</h4>
                         <ul>
@@ -79,14 +78,27 @@ $_smarty_tpl->tpl_vars['tag']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['tag']->value) {
 $_smarty_tpl->tpl_vars['tag']->do_else = false;
 ?>
-                                <li><a href="<?php echo htmlspecialchars((string) fn_url("tags.view?tag=".((string)$_smarty_tpl->tpl_vars['tag']->value['tag'])), ENT_QUOTES, 'UTF-8');?>
+                              <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['page']->value['tags'], 'tags');
+$_smarty_tpl->tpl_vars['tags']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['tags']->value) {
+$_smarty_tpl->tpl_vars['tags']->do_else = false;
+?>
+                                    <?php if ($_smarty_tpl->tpl_vars['tags']->value['tag_id'] == $_smarty_tpl->tpl_vars['tag']->value['tag_id']) {?>
+                                       <li><a href="<?php echo htmlspecialchars((string) fn_url("tags.view?tag=".((string)$_smarty_tpl->tpl_vars['tag']->value['tag'])), ENT_QUOTES, 'UTF-8');?>
 "><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['tag']->value['tag'], ENT_QUOTES, 'UTF-8');?>
 </a></li>
+                                    <?php }?>
+                                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                               
                             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </ul>
                     </div>
+                    <?php }?>
 
                     <div class="blog__sidebar__item">
                         <h4>Recent Blogs</h4>
@@ -245,7 +257,7 @@ if ($_smarty_tpl->tpl_vars['page']->value['description'] && $_smarty_tpl->tpl_va
                             <button type="submit"><span class="icon_search"></span></button>
                         </form>
                     </div>
-
+                    
                     <?php echo '<script'; ?>
  type="text/javascript">
                         // Wait until the document is fully loaded
@@ -277,8 +289,7 @@ if ($_smarty_tpl->tpl_vars['page']->value['description'] && $_smarty_tpl->tpl_va
                         });
                     <?php echo '</script'; ?>
 >
-
-
+                   <?php if ($_smarty_tpl->tpl_vars['page']->value['tags']) {?>
                     <div class="blog__sidebar__item">
                         <h4>Tags</h4>
                         <ul>
@@ -288,14 +299,27 @@ $_smarty_tpl->tpl_vars['tag']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['tag']->value) {
 $_smarty_tpl->tpl_vars['tag']->do_else = false;
 ?>
-                                <li><a href="<?php echo htmlspecialchars((string) fn_url("tags.view?tag=".((string)$_smarty_tpl->tpl_vars['tag']->value['tag'])), ENT_QUOTES, 'UTF-8');?>
+                              <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['page']->value['tags'], 'tags');
+$_smarty_tpl->tpl_vars['tags']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['tags']->value) {
+$_smarty_tpl->tpl_vars['tags']->do_else = false;
+?>
+                                    <?php if ($_smarty_tpl->tpl_vars['tags']->value['tag_id'] == $_smarty_tpl->tpl_vars['tag']->value['tag_id']) {?>
+                                       <li><a href="<?php echo htmlspecialchars((string) fn_url("tags.view?tag=".((string)$_smarty_tpl->tpl_vars['tag']->value['tag'])), ENT_QUOTES, 'UTF-8');?>
 "><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['tag']->value['tag'], ENT_QUOTES, 'UTF-8');?>
 </a></li>
+                                    <?php }?>
+                                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                               
                             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </ul>
                     </div>
+                    <?php }?>
 
                     <div class="blog__sidebar__item">
                         <h4>Recent Blogs</h4>
