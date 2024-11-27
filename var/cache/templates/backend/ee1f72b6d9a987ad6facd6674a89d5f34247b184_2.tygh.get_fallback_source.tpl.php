@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-26 21:32:29
+/* Smarty version 4.3.0, created on 2024-11-26 21:41:23
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/components/icons/get_fallback_source.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746aeede1c2a3_61479069',
+  'unifunc' => 'content_6746b103d2ea49_00223478',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6746aeede1c2a3_61479069 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746b103d2ea49_00223478 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.explode.php','function'=>'smarty_modifier_explode',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/lib/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.unset_key.php','function'=>'smarty_modifier_unset_key',),));
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "get_fallback_source", null, null);
 $_smarty_tpl->_assignInScope('icon_prefix', "icon-");

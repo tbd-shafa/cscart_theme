@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-26 21:32:30
+/* Smarty version 4.3.0, created on 2024-11-26 21:41:23
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/buttons/button.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746aeee0ca0a2_47751604',
+  'unifunc' => 'content_6746b103efca05_67465765',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6746aeee0ca0a2_47751604 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746b103efca05_67465765 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 if ($_smarty_tpl->tpl_vars['but_role']->value == "text") {?>
     <?php $_smarty_tpl->_assignInScope('class', '');?>
