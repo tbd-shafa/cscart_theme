@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-26 23:59:01
+/* Smarty version 4.3.0, created on 2024-11-27 01:57:23
   from '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/blog/hooks/pages/page_content.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746d145265ff2_62687061',
+  'unifunc' => 'content_6746ed03d51053_77256918',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cebc86d7cf8c90066e62f2fd20b7dc2538de0bee' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/themes/custom_theme/templates/addons/blog/hooks/pages/page_content.pre.tpl',
-      1 => 1732694331,
+      1 => 1732701428,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6746d145265ff2_62687061 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746ed03d51053_77256918 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.trim.php','function'=>'smarty_modifier_trim',),2=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
@@ -31,36 +31,42 @@ if ($_smarty_tpl->tpl_vars['page']->value['description'] && $_smarty_tpl->tpl_va
             <div class="col-lg-4 col-md-5 order-md-1 order-2">
                 <div class="blog__sidebar">
                     <div class="blog__sidebar__search">
-    <form id="blog-search-form" action="#" method="get">
-        <input type="text" id="search-input" name="q" placeholder="Search By Tittle..." required>
-        <button type="submit"><span class="icon_search"></span></button>
-    </form>
-</div>
+                        <form id="blog-search-form" action="#" method="get">
+                            <input type="text" id="search-input" name="q" placeholder="Search By Tittle..." required>
+                            <button type="submit"><span class="icon_search"></span></button>
+                        </form>
+                    </div>
 
-<?php echo '<script'; ?>
+                    <?php echo '<script'; ?>
  type="text/javascript">
-    // Wait until the document is fully loaded
-    document.addEventListener("DOMContentLoaded", function() {
-        console.log(11);
-        var form = document.getElementById('blog-search-form');
-        console.log(form);
-        var input = document.getElementById('search-input');
-         console.log(input);
-        // Handle form submission
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+                        // Wait until the document is fully loaded
+                        document.addEventListener("DOMContentLoaded", function() {
+                            console.log(11);
+                            var form = document.getElementById('blog-search-form');
+                            console.log(form);
+                            var input = document.getElementById('search-input');
+                            console.log(input);
+                            // Handle form submission
+                            form.addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent default form submission
 
-            var query = input.value.trim(); // Get the input value
-            if (query) {
-                // Set the form action to the desired URL
-                form.action = 'http://localhost/cs-cart/blog/'+query;
-
-                // Submit the form to the dynamically generated URL
-                form.submit();
-            }
-        });
-    });
-<?php echo '</script'; ?>
+                            
+                                var query = input.value.trim(); // Get the input value
+                                // Convert to lowercase and replace spaces with hyphens
+                                var transformedQuery = query
+                                .toLowerCase()
+                                .replace(/[’‘'"]/g, '')   // Remove special quotes
+                                .replace(/[^a-z0-9\s-]/g, '') // Remove other special characters
+                                .replace(/\s+/g, '-'); 
+                                console.log('Transformed Query:', transformedQuery);
+                                if (query) {
+                                     var targetUrl = 'http://localhost/cs-cart/blog/' + transformedQuery;
+                                     // Redirect to the desired URL
+                                      window.location.href = targetUrl;
+                                }
+                            });
+                        });
+                    <?php echo '</script'; ?>
 >
 
 
@@ -234,36 +240,42 @@ if ($_smarty_tpl->tpl_vars['page']->value['description'] && $_smarty_tpl->tpl_va
             <div class="col-lg-4 col-md-5 order-md-1 order-2">
                 <div class="blog__sidebar">
                     <div class="blog__sidebar__search">
-    <form id="blog-search-form" action="#" method="get">
-        <input type="text" id="search-input" name="q" placeholder="Search By Tittle..." required>
-        <button type="submit"><span class="icon_search"></span></button>
-    </form>
-</div>
+                        <form id="blog-search-form" action="#" method="get">
+                            <input type="text" id="search-input" name="q" placeholder="Search By Tittle..." required>
+                            <button type="submit"><span class="icon_search"></span></button>
+                        </form>
+                    </div>
 
-<?php echo '<script'; ?>
+                    <?php echo '<script'; ?>
  type="text/javascript">
-    // Wait until the document is fully loaded
-    document.addEventListener("DOMContentLoaded", function() {
-        console.log(11);
-        var form = document.getElementById('blog-search-form');
-        console.log(form);
-        var input = document.getElementById('search-input');
-         console.log(input);
-        // Handle form submission
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+                        // Wait until the document is fully loaded
+                        document.addEventListener("DOMContentLoaded", function() {
+                            console.log(11);
+                            var form = document.getElementById('blog-search-form');
+                            console.log(form);
+                            var input = document.getElementById('search-input');
+                            console.log(input);
+                            // Handle form submission
+                            form.addEventListener('submit', function(event) {
+                                event.preventDefault(); // Prevent default form submission
 
-            var query = input.value.trim(); // Get the input value
-            if (query) {
-                // Set the form action to the desired URL
-                form.action = 'http://localhost/cs-cart/blog/'+query;
-
-                // Submit the form to the dynamically generated URL
-                form.submit();
-            }
-        });
-    });
-<?php echo '</script'; ?>
+                            
+                                var query = input.value.trim(); // Get the input value
+                                // Convert to lowercase and replace spaces with hyphens
+                                var transformedQuery = query
+                                .toLowerCase()
+                                .replace(/[’‘'"]/g, '')   // Remove special quotes
+                                .replace(/[^a-z0-9\s-]/g, '') // Remove other special characters
+                                .replace(/\s+/g, '-'); 
+                                console.log('Transformed Query:', transformedQuery);
+                                if (query) {
+                                     var targetUrl = 'http://localhost/cs-cart/blog/' + transformedQuery;
+                                     // Redirect to the desired URL
+                                      window.location.href = targetUrl;
+                                }
+                            });
+                        });
+                    <?php echo '</script'; ?>
 >
 
 

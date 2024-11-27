@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-26 23:58:55
+/* Smarty version 4.3.0, created on 2024-11-27 01:57:16
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/tools.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6746d13fa2c132_60302972',
+  'unifunc' => 'content_6746ecfcf2e778_00632888',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6746d13fa2c132_60302972 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6746ecfcf2e778_00632888 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 if ($_smarty_tpl->tpl_vars['skip_check_permissions']->value || fn_check_html_view_permissions($_smarty_tpl->tpl_vars['tools_list']->value)) {
 $_smarty_tpl->_assignInScope('icon_first_tools', (($tmp = $_smarty_tpl->tpl_vars['icon_first_tools']->value ?? null)===null||$tmp==='' ? false ?? null : $tmp));

@@ -24,13 +24,19 @@
                             form.addEventListener('submit', function(event) {
                                 event.preventDefault(); // Prevent default form submission
 
+                            
                                 var query = input.value.trim(); // Get the input value
+                                // Convert to lowercase and replace spaces with hyphens
+                                var transformedQuery = query
+                                .toLowerCase()
+                                .replace(/[’‘'"]/g, '')   // Remove special quotes
+                                .replace(/[^a-z0-9\s-]/g, '') // Remove other special characters
+                                .replace(/\s+/g, '-'); 
+                                console.log('Transformed Query:', transformedQuery);
                                 if (query) {
-                                    // Set the form action to the desired URL
-                                    form.action = 'http://localhost/cs-cart/blog/'+query;
-
-                                    // Submit the form to the dynamically generated URL
-                                    form.submit();
+                                     var targetUrl = 'http://localhost/cs-cart/blog/' + transformedQuery;
+                                     // Redirect to the desired URL
+                                      window.location.href = targetUrl;
                                 }
                             });
                         });
