@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-11-27 03:45:05
+/* Smarty version 4.3.0, created on 2024-12-02 21:51:18
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/buttons/helpers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6747064132bfe5_32205729',
+  'unifunc' => 'content_674e9c566b9d05_49329100',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,19 +20,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6747064132bfe5_32205729 (Smarty_Internal_Template $_smarty_tpl) {
+function content_674e9c566b9d05_49329100 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'btn' => 
   array (
     'compiled_filepath' => '/opt/lampp/htdocs/cs-cart/var/cache/templates/backend/ca95ba52eeac72e1a0efde0d03a39a700877caaa_2.tygh.helpers.tpl.php',
     'uid' => 'ca95ba52eeac72e1a0efde0d03a39a700877caaa',
-    'call_name' => 'smarty_template_function_btn_758748172674706412fd502_43923788',
+    'call_name' => 'smarty_template_function_btn_1882049049674e9c5666fe77_24488107',
   ),
   'dropdown' => 
   array (
     'compiled_filepath' => '/opt/lampp/htdocs/cs-cart/var/cache/templates/backend/ca95ba52eeac72e1a0efde0d03a39a700877caaa_2.tygh.helpers.tpl.php',
     'uid' => 'ca95ba52eeac72e1a0efde0d03a39a700877caaa',
-    'call_name' => 'smarty_template_function_dropdown_758748172674706412fd502_43923788',
+    'call_name' => 'smarty_template_function_dropdown_1882049049674e9c5666fe77_24488107',
   ),
 ));
 ?>
@@ -40,9 +40,9 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
 <?php }
 \Tygh\Languages\Helper::preloadLangVars(array('delete_selected','delete','tools'));
-/* smarty_template_function_btn_758748172674706412fd502_43923788 */
-if (!function_exists('smarty_template_function_btn_758748172674706412fd502_43923788')) {
-function smarty_template_function_btn_758748172674706412fd502_43923788(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_btn_1882049049674e9c5666fe77_24488107 */
+if (!function_exists('smarty_template_function_btn_1882049049674e9c5666fe77_24488107')) {
+function smarty_template_function_btn_1882049049674e9c5666fe77_24488107(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('text'=>'','href'=>'','title'=>'','onclick'=>'','target'=>'','class'=>'','data'=>array(),'form'=>'','method'=>'','raw'=>false), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -217,10 +217,10 @@ if (!$_smarty_tpl->tpl_vars['hide_clone']->value) {?><li><?php $_smarty_tpl->sma
 
     <?php }
 }}
-/*/ smarty_template_function_btn_758748172674706412fd502_43923788 */
-/* smarty_template_function_dropdown_758748172674706412fd502_43923788 */
-if (!function_exists('smarty_template_function_dropdown_758748172674706412fd502_43923788')) {
-function smarty_template_function_dropdown_758748172674706412fd502_43923788(Smarty_Internal_Template $_smarty_tpl,$params) {
+/*/ smarty_template_function_btn_1882049049674e9c5666fe77_24488107 */
+/* smarty_template_function_dropdown_1882049049674e9c5666fe77_24488107 */
+if (!function_exists('smarty_template_function_dropdown_1882049049674e9c5666fe77_24488107')) {
+function smarty_template_function_dropdown_1882049049674e9c5666fe77_24488107(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('text'=>'','title'=>'','class'=>'','content'=>'','icon'=>'','no_caret'=>false,'placement'=>"left"), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -255,5 +255,5 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/ap
         </div>
     <?php }
 }}
-/*/ smarty_template_function_dropdown_758748172674706412fd502_43923788 */
+/*/ smarty_template_function_dropdown_1882049049674e9c5666fe77_24488107 */
 }
