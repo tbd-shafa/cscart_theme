@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-02 21:51:18
+/* Smarty version 4.3.0, created on 2024-12-09 03:42:17
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/vendor_rating/hooks/index/scripts.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_674e9c56d98090_93405452',
+  'unifunc' => 'content_6756d799b0cdd4_05202739',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674e9c56d98090_93405452 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6756d799b0cdd4_05202739 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 echo smarty_function_script(array('src'=>"js/addons/vendor_rating/formula.js"),$_smarty_tpl);?>
 

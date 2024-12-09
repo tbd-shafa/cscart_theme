@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-02 21:51:18
+/* Smarty version 4.3.0, created on 2024-12-09 03:42:17
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/settings/trial_expired.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_674e9c56d18c78_79034277',
+  'unifunc' => 'content_6756d799a922b2_71968252',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674e9c56d18c78_79034277 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6756d799a922b2_71968252 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('trial_expired','text_input_license_code','please_enter_license_here','activate','text_buy_new_license','buy_license','text_money_back_guarantee'));
 if ($_smarty_tpl->tpl_vars['show']->value) {?>

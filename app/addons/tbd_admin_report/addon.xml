@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<addon scheme='2.0'>
+    <id>tbd_admin_report</id>
+    <version>1.0</version>
+    <name>TBD admin report</name>
+    <description>TBD admin report</description>
+	<status>active</status>
+	<default_language>en</default_language>
+    <priority>10000</priority>
+</addon>
