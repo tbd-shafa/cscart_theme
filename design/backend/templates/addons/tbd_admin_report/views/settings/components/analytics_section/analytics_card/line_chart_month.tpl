@@ -83,9 +83,13 @@
 
             // Clear any previous content and create a new canvas element for the chart
             $view.html('<canvas></canvas>');
+            const $canvas = $('canvas', $view);
+            $canvas.renderLineChart(lineChartData);
 
-            // Render the line chart
-            $('canvas', $view).renderLineChart(lineChartData);
+            // Hide or remove the spinner
+            $view.removeClass('spinner'); // If the spinner class adds a visual effect
+            $view.find('.spinner').remove();
+            
         });
     }
 

@@ -10,7 +10,7 @@
 </div>
 
     {literal}
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
        (function ($) {
             // Function to render the pie chart

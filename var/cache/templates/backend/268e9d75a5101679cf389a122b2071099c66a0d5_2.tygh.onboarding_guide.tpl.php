@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-09 20:40:22
+/* Smarty version 4.3.0, created on 2024-12-10 02:39:34
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/views/onboarding_guide/onboarding_guide.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6757c63666c3b0_30056690',
+  'unifunc' => 'content_67581a66c344a5_40103546',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/onboarding_guide/components/step.tpl' => 1,
   ),
 ),false)) {
-function content_6757c63666c3b0_30056690 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67581a66c344a5_40103546 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('onboarding_guide.demo_guide_title','onboarding_guide.demo_guide_description','onboarding_guide.sb_guide_title','onboarding_guide.guide_title','onboarding_guide.completed_steps_progress','onboarding_guide.step_complete','onboarding_guide.step_close'));
 if ($_smarty_tpl->tpl_vars['onboarding_guide_steps']->value) {?>
