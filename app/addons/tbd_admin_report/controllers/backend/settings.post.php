@@ -15,7 +15,7 @@ $storefront_id = empty($_REQUEST['storefront_id'])
     ? 0
     : (int) $_REQUEST['storefront_id'];
 
-// Function to fetch sales graph data dynamically
+// Function to fetch Sales Units vs value graph data dynamically
 function getSalesGraphData($timestamp_from, $timestamp_to)
 {
     // Fetch sales data from the database
@@ -56,7 +56,7 @@ function getSalesGraphData($timestamp_from, $timestamp_to)
 
     return $graph_content;
 }
-// Function to fetch sales pie chart data dynamically
+// Function to fetch Sales Units vs value pie chart data dynamically
 function getSalesPieChartData($timestamp_from, $timestamp_to)
 {
     // Fetch sales data for the pie chart
@@ -87,7 +87,7 @@ function getSalesPieChartData($timestamp_from, $timestamp_to)
     return $pie_chart_content;
 }
 
-// Function to fetch sales line chart data dynamically
+// Function to fetch Sales Units vs value line chart data dynamically
 function getSalesLineChartDataMonthWise($timestamp_from, $timestamp_to)
 {
     // Prepare the SQL query to fetch month-wise data
@@ -136,6 +136,54 @@ function getSalesLineChartDataMonthWise($timestamp_from, $timestamp_to)
     return $line_chart_content;
 }
 
+// Function to fetch Sales Units vs value Bar Chart data dynamically
+function getSalesBarChartData($timestamp_from, $timestamp_to)
+{
+    // Query to fetch the sales data grouped by date
+    $sql = "SELECT DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '%Y-%m-%d') AS day, 
+                   SUM(o.total) AS sales_value, 
+                   COUNT(od.product_id) AS sales_units 
+            FROM ?:orders AS o 
+            JOIN ?:order_details AS od ON o.order_id = od.order_id 
+            WHERE o.status IN ('A', 'P') AND 
+                  o.timestamp >= $timestamp_from AND o.timestamp <= $timestamp_to
+            GROUP BY day";
+
+    // Fetch data from the database
+    $sales_data = Tygh::$app['db']->getArray($sql);
+
+
+    // Prepare the bar chart content
+    $bar_chart_content = [
+        "labels" => [],
+        "datasets" => [
+            [
+                "label" => "Sales Value",
+                "data" => [],
+                "backgroundColor" => "rgba(76, 175, 80, 0.6)",
+                "borderColor" => "#4CAF50",
+                "borderWidth" => 1,
+            ],
+            [
+                "label" => "Units Sold",
+                "data" => [],
+                "backgroundColor" => "rgba(33, 150, 243, 0.6)",
+                "borderColor" => "#2196F3",
+                "borderWidth" => 1,
+            ]
+        ]
+    ];
+
+    // Populate the labels and datasets
+    foreach ($sales_data as $data_point) {
+        $bar_chart_content["labels"][] = $data_point['day'];
+        $bar_chart_content["datasets"][0]["data"][] = $data_point['sales_value'];
+        $bar_chart_content["datasets"][1]["data"][] = $data_point['sales_units'];
+    }
+
+    return $bar_chart_content;
+}
+
 // Function to fetch sales data from the database
 function fetchSalesDataFromDatabase($timestamp_from, $timestamp_to)
 {
@@ -156,7 +204,7 @@ function fetchSalesDataFromDatabase($timestamp_from, $timestamp_to)
     return Tygh::$app['db']->getArray($sql);
 }
 
-// Function to fetch sales graph data dynamically
+// Function to fetch online vs offline  graph data dynamically
 function getOrderGraphData($timestamp_from, $timestamp_to)
 {
     // Fetch sales data from the database
@@ -200,7 +248,7 @@ function getOrderGraphData($timestamp_from, $timestamp_to)
 
     return $graph_content;
 }
-// Function to fetch sales pie chart data dynamically
+// Function to fetch online vs offline pie chart data dynamically
 function getOrderPieChartData($timestamp_from, $timestamp_to)
 {
     // Fetch sales data for online and offline orders
@@ -228,7 +276,7 @@ function getOrderPieChartData($timestamp_from, $timestamp_to)
         ]
     ];
 }
-//line chart data
+//line chart data Function to fetch online vs offline
 function getOrderLineChartDataMonthWise($timestamp_from, $timestamp_to)
 {
     // Fetch sales data for online and offline orders
@@ -276,6 +324,51 @@ function getOrderLineChartDataMonthWise($timestamp_from, $timestamp_to)
     ];
 }
 
+// Function to fetch online vs offline orders Bar Chart data dynamically
+function getOrderBarChartData($timestamp_from, $timestamp_to)
+{
+    // Fetch the order data from the database
+    $sales_data = fetchOrderDataFromDatabase($timestamp_from, $timestamp_to);
+
+    // Initialize arrays for the labels, online orders, and offline orders
+    $bar_chart_content = [
+        'labels' => [],
+        'datasets' => [
+            [
+                'label' => 'Online Orders',
+                'data' => [],
+                'backgroundColor' => 'rgba(76, 175, 80, 0.6)', // Green for online
+                'borderColor' => '#4CAF50',
+                'borderWidth' => 1,
+            ],
+            [
+                'label' => 'Offline Orders',
+                'data' => [],
+                'backgroundColor' => 'rgba(33, 150, 243, 0.6)', // Blue for offline
+                'borderColor' => '#2196F3',
+                'borderWidth' => 1,
+            ]
+        ]
+    ];
+
+    // Iterate through the sales data and populate the bar chart content
+    foreach ($sales_data as $data_point) {
+        $date = $data_point['date'];
+
+        // Add date to labels if not already present
+        if (!in_array($date, $bar_chart_content['labels'])) {
+            $bar_chart_content['labels'][] = $date;
+        }
+
+        // Add the sales data to the respective dataset
+        $bar_chart_content['datasets'][0]['data'][] = $data_point['total_sales']; // Online orders data
+        $bar_chart_content['datasets'][1]['data'][] = $data_point['pos_sales'];    // Offline orders data
+    }
+
+    // Return the formatted data for the bar chart
+    return $bar_chart_content;
+}
+
 
 // Function to fetch sales data from the database
 function fetchOrderDataFromDatabase($timestamp_from, $timestamp_to)
@@ -296,7 +389,7 @@ function fetchOrderDataFromDatabase($timestamp_from, $timestamp_to)
     return Tygh::$app['db']->getArray($sql, $timestamp_from, $timestamp_to);
 }
 
-// normal resource_list data
+// normal resource_list SalesMetrics data
 function getSalesMetrics($timestamp_from, $timestamp_to)
 {
     // Fetch total transactions, units sold, and total sales within the given date range
@@ -395,7 +488,92 @@ function getMonthlyLineChartSalesMetrics($timestamp_from, $timestamp_to)
     return $line_chart_data;
 }
 
-// normal resource_list  info
+// Bar Chart SalesMetrics
+
+function getBarChartSalesMetrics($timestamp_from, $timestamp_to)
+{
+    // Determine if the range spans more than one month
+    $is_monthly = date('Y-m', $timestamp_from) !== date('Y-m', $timestamp_to);
+
+    if ($is_monthly) {
+        // Fetch sales data grouped by month
+        $sales_data = Tygh::$app['db']->getArray(
+            "SELECT DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '%Y-%m') AS period,
+                    COUNT(DISTINCT o.order_id) AS transactions,
+                    SUM(od.amount) AS total_units_sold,
+                    SUM(o.total) AS total_sales
+             FROM ?:orders AS o
+             JOIN ?:order_details AS od ON o.order_id = od.order_id
+             WHERE o.status IN ('A', 'P') 
+               AND o.timestamp BETWEEN ?i AND ?i
+             GROUP BY period
+             ORDER BY period",
+            $timestamp_from,
+            $timestamp_to
+        );
+    } else {
+        // Fetch sales data grouped by day
+        $sales_data = Tygh::$app['db']->getArray(
+            "SELECT DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '%Y-%m-%d') AS period,
+                    COUNT(DISTINCT o.order_id) AS transactions,
+                    SUM(od.amount) AS total_units_sold,
+                    SUM(o.total) AS total_sales
+             FROM ?:orders AS o
+             JOIN ?:order_details AS od ON o.order_id = od.order_id
+             WHERE o.status IN ('A', 'P') 
+               AND o.timestamp BETWEEN ?i AND ?i
+             GROUP BY period
+             ORDER BY period",
+            $timestamp_from,
+            $timestamp_to
+        );
+    }
+
+    // Initialize the bar chart content
+    $bar_chart_content = [
+        'labels' => [], // Dates or months will go here
+        'datasets' => [
+            [
+                'label' => 'Number of Transactions',
+                'data' => [],
+                'backgroundColor' => 'rgba(255, 99, 132, 0.6)', // Red
+                'borderColor' => 'rgba(255, 99, 132, 1)',
+                'borderWidth' => 1,
+            ],
+            [
+                'label' => 'Units Sold Per Transaction (UPT)',
+                'data' => [],
+                'backgroundColor' => 'rgba(54, 162, 235, 0.6)', // Blue
+                'borderColor' => 'rgba(54, 162, 235, 1)',
+                'borderWidth' => 1,
+            ],
+            [
+                'label' => 'Average Retail Price Per Transaction (ARP)',
+                'data' => [],
+                'backgroundColor' => 'rgba(75, 192, 192, 0.6)', // Green
+                'borderColor' => 'rgba(75, 192, 192, 1)',
+                'borderWidth' => 1,
+            ],
+        ],
+    ];
+
+    // Populate the bar chart data
+    foreach ($sales_data as $data_point) {
+        $period = $data_point['period'];
+        $transactions = $data_point['transactions'];
+        $total_units_sold = $data_point['total_units_sold'];
+        $total_sales = $data_point['total_sales'];
+
+        $bar_chart_content['labels'][] = $period;
+        $bar_chart_content['datasets'][0]['data'][] = $transactions;
+        $bar_chart_content['datasets'][1]['data'][] = $transactions > 0 ? $total_units_sold / $transactions : 0; // UPT
+        $bar_chart_content['datasets'][2]['data'][] = $transactions > 0 ? $total_sales / $transactions : 0; // ARP
+    }
+
+    return $bar_chart_content;
+}
+
+// normal resource_list  info Top vendors
 function getTopVendors($timestamp_from, $timestamp_to)
 {
     // Fetch the total sales amount for calculating percentage mix
@@ -437,7 +615,7 @@ function getTopVendors($timestamp_from, $timestamp_to)
     ];
 }
 
-// for pie chart
+// for pie chart Top vendors
 function getTopVendorsPieChart($timestamp_from, $timestamp_to)
 {
     // Fetch the total sales amount for calculating percentage mix
@@ -487,7 +665,7 @@ function getTopVendorsPieChart($timestamp_from, $timestamp_to)
     ];
 }
 
-// for line chart
+// for line chart Top vendors
 function getTopVendorsMonthWiseLineChartData($timestamp_from, $timestamp_to, $limit = 5)
 {
     // Get the top vendors
@@ -583,7 +761,95 @@ function getTopVendorsMonthWiseLineChartData($timestamp_from, $timestamp_to, $li
     return $line_chart_data;
 }
 
-// normal resource_list  info
+// for Bar Chart Top vendors
+function getTopVendorsBarChartData($timestamp_from, $timestamp_to, $limit = 5)
+{
+    // Force grouping by day if the range is within the same month, else group by month
+    $group_format = (date('Y-m', $timestamp_from) === date('Y-m', $timestamp_to)) ? '%Y-%m-%d' : '%Y-%m';
+
+    // Fetch the total sales amount for calculating percentage mix
+    $total_sales = Tygh::$app['db']->getField(
+        "SELECT SUM(o.total) 
+         FROM ?:orders AS o
+         WHERE o.status IN ('A', 'P') 
+           AND o.timestamp BETWEEN ?i AND ?i",
+        $timestamp_from,
+        $timestamp_to
+    );
+
+    // Get the top vendors with total sales and units sold
+    $top_vendors = Tygh::$app['db']->getArray(
+        "SELECT o.company_id, v.company AS vendor_name, 
+                DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '$group_format') AS period,
+                SUM(o.total) AS total_sales, 
+                SUM(od.amount) AS units_sold 
+         FROM ?:orders AS o
+         JOIN ?:order_details AS od ON o.order_id = od.order_id
+         JOIN ?:companies AS v ON o.company_id = v.company_id
+         WHERE o.status IN ('A', 'P') 
+           AND o.timestamp BETWEEN ?i AND ?i
+         GROUP BY o.company_id, period
+         ORDER BY total_sales DESC
+         LIMIT ?i",
+        $timestamp_from,
+        $timestamp_to,
+        $limit
+    );
+
+    // Prepare data for the bar chart
+    $bar_chart_data = [
+        'labels' => [],  // Array of date/month labels for the x-axis
+        'datasets' => []
+    ];
+
+    // Set random colors for each vendor's bar
+    $colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#FF9F33'];
+
+    // Track sales data by vendor and period
+    $vendor_sales = [];
+
+    foreach ($top_vendors as $vendor) {
+        $period = $vendor['period'];
+        $vendor_name = $vendor['vendor_name'];
+        $total_sales = $vendor['total_sales'];
+
+        // Add period (date/month) to labels if it's not already added
+        if (!in_array($period, $bar_chart_data['labels'])) {
+            $bar_chart_data['labels'][] = $period;
+        }
+
+        // Organize sales by vendor and period
+        if (!isset($vendor_sales[$vendor_name])) {
+            $vendor_sales[$vendor_name] = [];
+        }
+        $vendor_sales[$vendor_name][$period] = $total_sales;
+    }
+
+    // Sort the labels (dates/months) from earliest to latest
+    usort($bar_chart_data['labels'], function ($a, $b) {
+        return strtotime($a) - strtotime($b);
+    });
+
+    // Prepare datasets for each vendor
+    foreach ($vendor_sales as $vendor_name => $sales_data) {
+        $sales = [];
+        foreach ($bar_chart_data['labels'] as $period) {
+            $sales[] = isset($sales_data[$period]) ? $sales_data[$period] : 0;
+        }
+
+        $bar_chart_data['datasets'][] = [
+            'label' => $vendor_name,
+            'data' => $sales,
+            'backgroundColor' => $colors[count($bar_chart_data['datasets']) % count($colors)],
+            'borderColor' => $colors[count($bar_chart_data['datasets']) % count($colors)],
+            'borderWidth' => 1
+        ];
+    }
+
+    return $bar_chart_data;
+}
+
+// normal resource_list  info Top categories
 function getTopCategories($timestamp_from, $timestamp_to, $limit = 5)
 {
     // Fetch the total sales amount for calculating the percentage mix
@@ -629,7 +895,7 @@ function getTopCategories($timestamp_from, $timestamp_to, $limit = 5)
     ];
 }
 
-// for pie chart
+// for pie chart Top categories
 
 function getTopCategoriesPieChart($timestamp_from, $timestamp_to, $limit = 5)
 {
@@ -683,7 +949,7 @@ function getTopCategoriesPieChart($timestamp_from, $timestamp_to, $limit = 5)
     ];
 }
 
-// for line chart
+// for line chart Top categories
 function getTopCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to, $limit = 5)
 {
     // Fetch the total sales amount for calculating the percentage mix
@@ -761,8 +1027,101 @@ function getTopCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to, $lim
 
     return $line_chart_data;
 }
+// for bar chart Top categories
+function getTopCategoriesBarChartData($timestamp_from, $timestamp_to, $limit = 7)
+{
+    // Force grouping by day if the range is within the same month, else group by month
+    $group_format = (date('Y-m', $timestamp_from) === date('Y-m', $timestamp_to)) ? '%Y-%m-%d' : '%Y-%m';
 
-// normal resource_list  info
+    // Fetch the total sales amount for calculating percentage mix
+    $total_sales = Tygh::$app['db']->getField(
+        "SELECT SUM(o.total) 
+         FROM ?:orders AS o
+         WHERE o.status IN ('A', 'P') 
+           AND o.timestamp BETWEEN ?i AND ?i",
+        $timestamp_from,
+        $timestamp_to
+    );
+
+    // Get the top categories with total sales and units sold
+    // First, limit the top categories based on total sales, then group by period
+    $top_categories = Tygh::$app['db']->getArray(
+        "SELECT c.category_id, cd.category AS category_name, 
+                DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '$group_format') AS period,
+                SUM(od.price * od.amount) AS total_sales, 
+                SUM(od.amount) AS units_sold 
+         FROM ?:orders AS o
+         JOIN ?:order_details AS od ON o.order_id = od.order_id
+         JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
+         JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
+         JOIN ?:categories AS c ON c.category_id = pc.category_id
+         WHERE o.status IN ('A', 'P') 
+           AND o.timestamp BETWEEN ?i AND ?i
+           AND c.parent_id = 0
+         GROUP BY c.category_id, period
+         ORDER BY total_sales DESC",
+        $timestamp_from,
+        $timestamp_to
+    );
+
+    // Limit to top $limit categories
+    $top_categories = array_slice($top_categories, 0, $limit);
+
+    // Prepare data for the bar chart
+    $bar_chart_data = [
+        'labels' => [],  // Array of date/month labels for the x-axis
+        'datasets' => []
+    ];
+
+    // Set random colors for each category's bar
+    $colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#FF9F33'];
+
+    // Track sales data by category and period
+    $category_sales = [];
+
+    foreach ($top_categories as $category) {
+        $period = $category['period'];
+        $category_name = $category['category_name'];
+        $total_sales = $category['total_sales'];
+
+        // Add period (date/month) to labels if it's not already added
+        if (!in_array($period, $bar_chart_data['labels'])) {
+            $bar_chart_data['labels'][] = $period;
+        }
+
+        // Organize sales by category and period
+        if (!isset($category_sales[$category_name])) {
+            $category_sales[$category_name] = [];
+        }
+        $category_sales[$category_name][$period] = $total_sales;
+    }
+
+    // Sort the labels (dates/months) from earliest to latest
+    usort($bar_chart_data['labels'], function ($a, $b) {
+        return strtotime($a) - strtotime($b);
+    });
+
+    // Prepare datasets for each category
+    foreach ($category_sales as $category_name => $sales_data) {
+        $sales = [];
+        foreach ($bar_chart_data['labels'] as $period) {
+            $sales[] = isset($sales_data[$period]) ? $sales_data[$period] : 0;
+        }
+
+        $bar_chart_data['datasets'][] = [
+            'label' => $category_name,
+            'data' => $sales,
+            'backgroundColor' => $colors[count($bar_chart_data['datasets']) % count($colors)],
+            'borderColor' => $colors[count($bar_chart_data['datasets']) % count($colors)],
+            'borderWidth' => 1
+        ];
+    }
+
+    return $bar_chart_data;
+}
+
+
+// normal resource_list  info Top Sub categories
 function getTopSubCategories($timestamp_from, $timestamp_to, $limit = 5)
 {
     // Fetch the total sales amount for calculating the percentage mix
@@ -807,7 +1166,7 @@ function getTopSubCategories($timestamp_from, $timestamp_to, $limit = 5)
         'total_sales' => $total_sales
     ];
 }
-// for pie chart
+// for pie chart Top Sub categories
 function getTopSubCategoriesPieChart($timestamp_from, $timestamp_to, $limit = 5)
 {
     // Fetch the total sales amount for calculating the percentage mix
@@ -862,7 +1221,8 @@ function getTopSubCategoriesPieChart($timestamp_from, $timestamp_to, $limit = 5)
     ];
 }
 
-//for line chart
+//for line chart Top Sub categories
+
 function getTopSubCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to, $limit = 5)
 {
     // Fetch the total sales amount for calculating the percentage mix
@@ -875,12 +1235,10 @@ function getTopSubCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to, $
         $timestamp_to
     );
 
-    // Fetch top subcategories by total sales for each month in the given range
-    $sales_data = Tygh::$app['db']->getArray(
-        "SELECT DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '%Y-%m') AS month,
-                cd.category AS category_name,
-                SUM(od.price * od.amount) AS total_sales,
-                SUM(od.amount) AS units_sold
+    // Fetch the top subcategories by total sales for the entire range
+    $top_subcategories = Tygh::$app['db']->getArray(
+        "SELECT cd.category AS category_name,
+                SUM(od.price * od.amount) AS total_sales
          FROM ?:orders AS o
          JOIN ?:order_details AS od ON o.order_id = od.order_id
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
@@ -888,14 +1246,40 @@ function getTopSubCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to, $
          JOIN ?:categories AS c ON c.category_id = pc.category_id
          WHERE o.status IN ('A', 'P')
            AND o.timestamp BETWEEN ?i AND ?i
-           AND c.parent_id != 0  -- Only subcategories
-         GROUP BY month, category_name
-         ORDER BY month, total_sales DESC",
+           AND c.parent_id != 0
+         GROUP BY cd.category
+         ORDER BY total_sales DESC
+         LIMIT ?i",
         $timestamp_from,
-        $timestamp_to
+        $timestamp_to,
+        $limit
     );
 
-    // Organize data for the line chart
+    // Extract the names of the top subcategories
+    $subcategory_names = array_column($top_subcategories, 'category_name');
+
+    // Fetch monthly sales data only for the top subcategories
+    $sales_data = Tygh::$app['db']->getArray(
+        "SELECT DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '%Y-%m') AS month,
+                cd.category AS category_name,
+                SUM(od.price * od.amount) AS total_sales
+         FROM ?:orders AS o
+         JOIN ?:order_details AS od ON o.order_id = od.order_id
+         JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
+         JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
+         JOIN ?:categories AS c ON c.category_id = pc.category_id
+         WHERE o.status IN ('A', 'P')
+           AND o.timestamp BETWEEN ?i AND ?i
+           AND c.parent_id != 0
+           AND cd.category IN (?a) -- Only include top subcategories
+         GROUP BY month, cd.category
+         ORDER BY month, total_sales DESC",
+        $timestamp_from,
+        $timestamp_to,
+        $subcategory_names
+    );
+
+    // Prepare data for the line chart
     $line_chart_data = [
         'labels' => [],
         'datasets' => []
@@ -904,37 +1288,30 @@ function getTopSubCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to, $
     // Array to store sales data by subcategory and month
     $monthly_sales = [];
 
-    // Populate the monthly sales data by subcategory
     foreach ($sales_data as $data_point) {
         $month = $data_point['month'];
         $subcategory = $data_point['category_name'];
         $total_sales = $data_point['total_sales'];
 
-        // Track unique months
         if (!in_array($month, $line_chart_data['labels'])) {
             $line_chart_data['labels'][] = $month;
         }
 
-        // Organize sales by subcategory and month
         $monthly_sales[$subcategory][$month] = $total_sales;
     }
 
-    // Prepare datasets for each top subcategory (limit by $limit)
-    $subcategories = array_keys($monthly_sales);
-    $subcategories = array_slice($subcategories, 0, $limit); // Get top N subcategories
-
-    foreach ($subcategories as $subcategory) {
+    // Prepare datasets for each top subcategory
+    foreach ($subcategory_names as $subcategory) {
         $sales = [];
         foreach ($line_chart_data['labels'] as $month) {
-            // If there's no sales data for a particular subcategory in a month, set it to 0
             $sales[] = $monthly_sales[$subcategory][$month] ?? 0;
         }
 
         $line_chart_data['datasets'][] = [
             'label' => $subcategory,
             'data' => $sales,
-            'borderColor' => '#' . substr(md5(rand()), 0, 6), // Random border color for each subcategory
-            'backgroundColor' => 'rgba(0, 0, 0, 0)', // Transparent background for line chart
+            'borderColor' => '#' . substr(md5(rand()), 0, 6),
+            'backgroundColor' => 'rgba(0, 0, 0, 0)',
             'borderWidth' => 2
         ];
     }
@@ -942,7 +1319,108 @@ function getTopSubCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to, $
     return $line_chart_data;
 }
 
-// normal resource_list  info
+// for Bar Chart Top Subcategories
+function getTopSubCategoriesBarChartData($timestamp_from, $timestamp_to, $limit = 5)
+{
+    // Force grouping by month for the given range
+    $group_format = (date('Y-m', $timestamp_from) === date('Y-m', $timestamp_to)) ? '%Y-%m-%d' : '%Y-%m';
+
+    // Fetch top unique subcategories by total sales for the entire range
+    $top_subcategory_ids = Tygh::$app['db']->getArray(
+        "SELECT c.category_id, cd.category AS category_name, 
+                SUM(od.price * od.amount) AS total_sales
+         FROM ?:orders AS o
+         JOIN ?:order_details AS od ON o.order_id = od.order_id
+         JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
+         JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
+         JOIN ?:categories AS c ON c.category_id = pc.category_id
+         WHERE o.status IN ('A', 'P') 
+           AND o.timestamp BETWEEN ?i AND ?i
+           AND c.parent_id != 0  -- Only subcategories
+         GROUP BY c.category_id
+         ORDER BY total_sales DESC
+         LIMIT ?i",
+        $timestamp_from,
+        $timestamp_to,
+        $limit
+    );
+
+    // Extract category IDs for filtering
+    $subcategory_ids = array_column($top_subcategory_ids, 'category_id');
+
+    // Fetch sales data for the selected top subcategories, grouped by period
+    $sales_data = Tygh::$app['db']->getArray(
+        "SELECT c.category_id, cd.category AS category_name, 
+                DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '$group_format') AS period,
+                SUM(od.price * od.amount) AS total_sales
+         FROM ?:orders AS o
+         JOIN ?:order_details AS od ON o.order_id = od.order_id
+         JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
+         JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
+         JOIN ?:categories AS c ON c.category_id = pc.category_id
+         WHERE o.status IN ('A', 'P') 
+           AND o.timestamp BETWEEN ?i AND ?i
+           AND c.category_id IN (?a)
+         GROUP BY c.category_id, period
+         ORDER BY period ASC",
+        $timestamp_from,
+        $timestamp_to,
+        $subcategory_ids
+    );
+
+    // Prepare data for the bar chart
+    $bar_chart_data = [
+        'labels' => [],  // Array of date/month labels for the x-axis
+        'datasets' => []
+    ];
+
+    // Set random colors for each subcategory's bar
+    $colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#FF9F33'];
+
+    // Organize sales by subcategory and period
+    $subcategory_sales = [];
+    foreach ($sales_data as $data_point) {
+        $period = $data_point['period'];
+        $subcategory_name = $data_point['category_name'];
+        $total_sales = $data_point['total_sales'];
+
+        // Add period (date/month) to labels if it's not already added
+        if (!in_array($period, $bar_chart_data['labels'])) {
+            $bar_chart_data['labels'][] = $period;
+        }
+
+        // Organize sales by subcategory and period
+        if (!isset($subcategory_sales[$subcategory_name])) {
+            $subcategory_sales[$subcategory_name] = [];
+        }
+        $subcategory_sales[$subcategory_name][$period] = $total_sales;
+    }
+
+    // Sort the labels (dates/months) from earliest to latest
+    usort($bar_chart_data['labels'], function ($a, $b) {
+        return strtotime($a) - strtotime($b);
+    });
+
+    // Prepare datasets for each subcategory
+    foreach ($subcategory_sales as $subcategory_name => $sales_data) {
+        $sales = [];
+        foreach ($bar_chart_data['labels'] as $period) {
+            $sales[] = $sales_data[$period] ?? 0; // Set to 0 if no sales data
+        }
+
+        $bar_chart_data['datasets'][] = [
+            'label' => $subcategory_name,
+            'data' => $sales,
+            'backgroundColor' => $colors[count($bar_chart_data['datasets']) % count($colors)],
+            'borderColor' => $colors[count($bar_chart_data['datasets']) % count($colors)],
+            'borderWidth' => 1
+        ];
+    }
+
+    return $bar_chart_data;
+}
+
+// normal resource_list  info Order by gender
 function getGenderCategories($timestamp_from, $timestamp_to, $limit = 5)
 {
     // Fetch the total sales amount for calculating the percentage mix
@@ -988,7 +1466,7 @@ function getGenderCategories($timestamp_from, $timestamp_to, $limit = 5)
         'total_sales' => $total_sales
     ];
 }
-// for pie chart
+// for pie chart Order by gender
 function getGenderCategoriespiechart($timestamp_from, $timestamp_to, $limit = 5)
 {
     // Fetch the total sales amount for calculating the percentage mix
@@ -1043,7 +1521,7 @@ function getGenderCategoriespiechart($timestamp_from, $timestamp_to, $limit = 5)
     ];
 }
 
-//line chart
+//line chart Order by gender
 function getGenderCategoriesMonthWiseLineChartData($timestamp_from, $timestamp_to, $limit = 5)
 {
     $sales_data = Tygh::$app['db']->getArray(
@@ -1106,7 +1584,73 @@ function getGenderCategoriesMonthWiseLineChartData($timestamp_from, $timestamp_t
 
     return $line_chart_data;
 }
+// for bar chart Order by gender
+function getGenderCategoriesBarChartData($timestamp_from, $timestamp_to, $limit = 5)
+{
+    // Force grouping by day if the range is within the same month
+    $group_format = (date('Y-m', $timestamp_from) === date('Y-m', $timestamp_to)) ? '%Y-%m-%d' : '%Y-%m';
 
+    $sales_data = Tygh::$app['db']->getArray(
+        "SELECT DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '$group_format') AS period,
+                cd.category AS category_name,
+                SUM(od.price * od.amount) AS total_sales
+         FROM ?:orders AS o
+         JOIN ?:order_details AS od ON o.order_id = od.order_id
+         JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
+         JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
+         JOIN ?:categories AS c ON c.category_id = pc.category_id
+         WHERE o.status IN ('A', 'P')
+           AND o.timestamp BETWEEN ?i AND ?i
+           AND c.parent_id = 0
+           AND cd.category IN ('Women', 'Men', 'Kids')
+         GROUP BY period, category_name
+         ORDER BY period, category_name",
+        $timestamp_from,
+        $timestamp_to
+    );
+
+    // Organize data for the bar chart
+    $bar_chart_data = [
+        'labels' => [],
+        'datasets' => []
+    ];
+
+    $categories = ['Women', 'Men', 'Kids'];
+    $period_sales = [];
+
+    foreach ($sales_data as $data_point) {
+        $period = $data_point['period'];
+        $category = $data_point['category_name'];
+        $total_sales = $data_point['total_sales'];
+
+        // Track unique periods (dates or months)
+        if (!in_array($period, $bar_chart_data['labels'])) {
+            $bar_chart_data['labels'][] = $period;
+        }
+
+        // Organize sales by category and period
+        $period_sales[$category][$period] = $total_sales;
+    }
+
+    // Prepare datasets for each category
+    foreach ($categories as $category) {
+        $sales = [];
+        foreach ($bar_chart_data['labels'] as $period) {
+            $sales[] = $period_sales[$category][$period] ?? 0;
+        }
+
+        $bar_chart_data['datasets'][] = [
+            'label' => $category,
+            'data' => $sales,
+            'backgroundColor' => ($category === 'Women') ? '#E91E63' : (($category === 'Men') ? '#2196F3' : '#FFC107'),
+            'borderColor' => ($category === 'Women') ? '#E91E63' : (($category === 'Men') ? '#2196F3' : '#FFC107'),
+            'borderWidth' => 1
+        ];
+    }
+
+
+    return $bar_chart_data;
+}
 
 
 if ($mode == 'reports') {
@@ -1176,7 +1720,7 @@ if ($mode == 'reports') {
 
         $sales_matrics = getSalesMetrics($timestamp_from, $timestamp_to);
         // line chart sales matrix
-        
+
 
         $top_brands_result = getTopVendors($timestamp_from, $timestamp_to);
         $top_brands = $top_brands_result['top_vendors'];
@@ -1316,8 +1860,11 @@ if ($mode == 'reports') {
                     // "pie_chart" => [
                     //     "content" => getSalesPieChartData($timestamp_from, $timestamp_to),
                     // ],
-                    "line_chart_month" => [
-                        "content" => getSalesLineChartDataMonthWise($timestamp_from, $timestamp_to),
+                    // "line_chart_month" => [
+                    //     "content" => getSalesLineChartDataMonthWise($timestamp_from, $timestamp_to),
+                    // ],
+                    "bar_chart2" => [
+                        "content" => getSalesBarChartData($timestamp_from, $timestamp_to),
                     ]
                 ],
                 "order" => [
@@ -1339,8 +1886,11 @@ if ($mode == 'reports') {
                     // "pie_chart" => [
                     //     "content" => getOrderPieChartData($timestamp_from, $timestamp_to),
                     // ],
-                    "line_chart_month" => [
-                        "content" => getOrderLineChartDataMonthWise($timestamp_from, $timestamp_to),
+                    // "line_chart_month" => [
+                    //     "content" => getOrderLineChartDataMonthWise($timestamp_from, $timestamp_to),
+                    // ],
+                    "bar_chart2" => [
+                        "content" => getOrderBarChartData($timestamp_from, $timestamp_to),
                     ]
                 ]
             ),
@@ -1388,9 +1938,13 @@ if ($mode == 'reports') {
                     //         ]
                     //     ]
                     // ],
-                    'line_chart_month' => [
-                        "content" => getMonthlyLineChartSalesMetrics($timestamp_from, $timestamp_to),
-                    ]
+                    // 'line_chart_month' => [
+                    //     "content" => getMonthlyLineChartSalesMetrics($timestamp_from, $timestamp_to),
+                    // ],
+                    'bar_chart2' => [
+                        "content" => getBarChartSalesMetrics($timestamp_from, $timestamp_to),
+                    ],
+
                 ],
 
                 'gender' => [
@@ -1406,9 +1960,12 @@ if ($mode == 'reports') {
                     // "pie_chart" => [
                     //     "content" => $gender_category_pie_chart_data // Pass pie chart data here
                     // ],
-                    "line_chart_month" => [
-                        "content" => getGenderCategoriesMonthWiseLineChartData($timestamp_from, $timestamp_to), // Use the new function
-                    ]
+                    // "line_chart_month" => [
+                    //     "content" => getGenderCategoriesMonthWiseLineChartData($timestamp_from, $timestamp_to), // Use the new function
+                    // ],
+                    'bar_chart2' => [
+                        "content" => getGenderCategoriesBarChartData($timestamp_from, $timestamp_to),
+                    ],
 
                 ],
             ),
@@ -1427,9 +1984,12 @@ if ($mode == 'reports') {
                     // "pie_chart" => [
                     //     "content" => $pie_chart_data // Pass pie chart data here
                     // ],
-                    "line_chart_month" => [
-                        "content" => getTopVendorsMonthWiseLineChartData($timestamp_from, $timestamp_to), // Use the new function for line chart data
-                    ]
+                    // "line_chart_month" => [
+                    //     "content" => getTopVendorsMonthWiseLineChartData($timestamp_from, $timestamp_to), // Use the new function for line chart data
+                    // ],
+                    'bar_chart2' => [
+                        "content" => getTopVendorsBarChartData($timestamp_from, $timestamp_to),
+                    ],
 
                 ],
                 'categories' => [
@@ -1444,9 +2004,12 @@ if ($mode == 'reports') {
                     // "pie_chart" => [
                     //     "content" => $category_pie_chart_data // Pass pie chart data here
                     // ],
-                    "line_chart_month" => [
-                        "content" => getTopCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to), // Use the new function for line chart data
-                    ]
+                    // "line_chart_month" => [
+                    //     "content" => getTopCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to), // Use the new function for line chart data
+                    // ],
+                    'bar_chart2' => [
+                        "content" => getTopCategoriesBarChartData($timestamp_from, $timestamp_to),
+                    ],
                 ],
                 'sub_categories' => [
                     "id" => "analytics_card_categories",
@@ -1460,10 +2023,13 @@ if ($mode == 'reports') {
                     // "pie_chart" => [
                     //     "content" => $sub_category_pie_chart_data // Pass pie chart data here
                     // ],
-                    "line_chart_month" => [
-                        "content" => getTopSubCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to), // Line chart for subcategories
+                    // "line_chart_month" => [
+                    //     "content" => getTopSubCategoriesMonthWiseLineChart($timestamp_from, $timestamp_to), // Line chart for subcategories
+                    // ],
+                    'bar_chart2' => [
+                        "content" => getTopSubCategoriesBarChartData($timestamp_from, $timestamp_to),
                     ],
-                    
+
                 ],
             )
         );

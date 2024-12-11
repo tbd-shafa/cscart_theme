@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-10 02:39:25
+/* Smarty version 4.3.0, created on 2024-12-11 00:08:01
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/tags/hooks/index/scripts.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67581a5d9308e0_77923407',
+  'unifunc' => 'content_675948610cc216_41088455',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67581a5d9308e0_77923407 (Smarty_Internal_Template $_smarty_tpl) {
+function content_675948610cc216_41088455 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('addons.tags.add_a_tag'));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('inline_script', array());

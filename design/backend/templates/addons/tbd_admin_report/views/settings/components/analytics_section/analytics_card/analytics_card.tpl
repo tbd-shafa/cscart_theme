@@ -91,6 +91,10 @@
                 line_chart_month=$analytics_card.line_chart_month
             }
 
+            {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/bar_chart2.tpl"
+                bar_chart2=$analytics_card.bar_chart2
+            }
+
             {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/bar_chart.tpl"
                 bar_chart=$analytics_card.bar_chart
             }
