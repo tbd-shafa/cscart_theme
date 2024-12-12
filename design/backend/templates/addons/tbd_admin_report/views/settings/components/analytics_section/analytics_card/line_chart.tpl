@@ -1,9 +1,9 @@
-{if $line_chart_month && $line_chart_month.content}{strip}
+{if $line_chart && $line_chart.content}{strip}
 
 <div class="analytics-card-line-chart"
-    data-ca-analytics-card="line_chart_month"
-    data-ca-analytics-card-id="{$analytics_card.id}_{$line_chart_month.id}"
-    data-ca-analytics-card-line-chart-content="{$line_chart_month.content|@json_encode}"
+    data-ca-analytics-card="line_chart"
+    data-ca-analytics-card-id="{$analytics_card.id}_{$line_chart.id}"
+    data-ca-analytics-card-line-chart-content="{$line_chart.content|@json_encode}"
 >
     <div class="analytics-card-line-chart__view spinner" data-ca-analytics-card="lineChartMonthView"></div>
 </div>
@@ -56,7 +56,7 @@
 
     // Function to render the line chart after data is loaded
     function renderLineCharts() {
-        $('[data-ca-analytics-card="line_chart_month"]').each(function () {
+        $('[data-ca-analytics-card="line_chart"]').each(function () {
             const content = $(this).data('ca-analytics-card-line-chart-content');
             console.log(content); // Debugging: Check the content in the browser console
             

@@ -87,8 +87,8 @@
                 pie_chart=$analytics_card.pie_chart
             }
 
-            {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/line_chart_month.tpl"
-                line_chart_month=$analytics_card.line_chart_month
+            {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/line_chart.tpl"
+                line_chart=$analytics_card.line_chart
             }
 
             {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/bar_chart2.tpl"
