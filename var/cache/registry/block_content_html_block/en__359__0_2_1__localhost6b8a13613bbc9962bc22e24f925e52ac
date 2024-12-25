@@ -1,0 +1,45 @@
+a:2:{s:4:"data";a:2:{s:10:"javascript";s:377:"<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentUrl = window.location.href;
+    const menuLinks = document.querySelectorAll(".header__menu ul li a");
+
+    menuLinks.forEach(link => {
+      if (currentUrl.includes(link.getAttribute("href"))) {
+        link.parentElement.classList.add("active");
+      }
+    });
+  });
+</script>";s:7:"content";s:1193:"                    <div class="ty-wysiwyg-content"  data-ca-live-editor-object-id="0" data-ca-live-editor-object-type=""><div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="header__logo">
+        <a href=""><img src="{$config.current_location}/design/themes/custom_theme/img/logo.png"></a>
+      </div>
+    </div>
+    <div class="col-lg-9">
+      <nav class="header__menu">
+        <ul>
+          <li>
+            <a href="http://localhost/cs-cart/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="http://localhost/cs-cart/gift-certificates/">Gift</a>
+          </li>
+          <li>
+            <a href="http://localhost/cs-cart/index.php?dispatch=product_features.view_all&filter_id=10">Brands</a>
+          </li>
+          <li>
+            <a href="http://localhost/cs-cart/index.php?dispatch=companies.apply_for_vendor">Seller</a>
+          </li>
+          <li>
+            <a href="http://localhost/cs-cart/index.php?dispatch=companies.catalog">Vendor</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- Inline script moved to the bottom of the page -->
+</div>
+            ";}s:6:"expiry";i:0;}
