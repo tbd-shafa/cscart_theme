@@ -829,8 +829,6 @@ function getTopVendors($timestamp_from, $timestamp_to)
 }
 
 // top 5 best seller
-
-
 function getTopBestsellers($timestamp_from, $timestamp_to)
 {
     // Get the total sales value (already correct)
@@ -857,21 +855,7 @@ $total_units_sold_all = Tygh::$app['db']->getField(
     $timestamp_to
 );
 
-// $top_products = Tygh::$app['db']->getArray(
-//     "SELECT SUM(od.amount) AS total_units_sold, od.product_id
-//      FROM ?:order_details AS od
-//      JOIN ?:orders AS o ON od.order_id = o.order_id
-//      WHERE o.status = 'C'
-//        AND o.timestamp BETWEEN ?i AND ?i
-//        GROUP BY od.product_id
-//        ORDER BY total_units_sold DESC
-//        LIMIT 5
-//        ",
-//     $timestamp_from,
-//     $timestamp_to
-// );
-// echo "<pre>";
-// var_dump($top_products);
+
 
 
 $top_products = Tygh::$app['db']->getArray(
