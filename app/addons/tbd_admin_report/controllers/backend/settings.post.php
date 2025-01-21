@@ -829,59 +829,7 @@ function getTopVendors($timestamp_from, $timestamp_to)
 }
 
 // top 5 best seller
-// function getTopBestsellers($timestamp_from, $timestamp_to)
-// {
-//     $total_sales = Tygh::$app['db']->getField(
-//         "SELECT SUM(od.amount * od.price) 
-//          FROM ?:order_details AS od
-//          JOIN ?:orders AS o ON od.order_id = o.order_id
-//          WHERE o.status = 'C' 
-//            AND o.timestamp BETWEEN ?i AND ?i",
-//         $timestamp_from,
-//         $timestamp_to
-//     );
 
-//     $top_products = Tygh::$app['db']->getArray(
-//         "SELECT p.product_id, pd.product AS product_name, 
-//                 il.image_id AS image_id,
-//                 SUM(od.amount * od.price) AS total_sales, 
-//                 SUM(od.amount) AS total_units_sold
-//          FROM ?:order_details AS od
-//          JOIN ?:orders AS o ON od.order_id = o.order_id
-//          JOIN ?:products AS p ON od.product_id = p.product_id
-//          JOIN ?:product_descriptions AS pd ON p.product_id = pd.product_id AND pd.lang_code = ?s
-//          LEFT JOIN ?:images_links AS il ON p.product_id = il.object_id AND il.object_type = 'product'
-//          WHERE o.status = 'C' 
-//            AND o.timestamp BETWEEN ?i AND ?i
-//          GROUP BY p.product_id
-//          ORDER BY total_sales DESC
-//          LIMIT 5",
-//         CART_LANGUAGE,
-//         $timestamp_from,
-//         $timestamp_to
-//     );
-   
-//     foreach ($top_products as &$product) {
-//         $product['percentage_mix'] = $total_sales > 0 
-//             ? round(($product['total_units_sold'] / $total_sales) * 100, 1) 
-//             : 0;
-//         $product['total_sales'] = round($product['total_sales'], 2);
-//                 $image_pairs = fn_get_image_pairs($product['product_id'], 'product', 'M');
-//                         if (!empty($image_pairs)) {
-//                             $image_data = fn_image_to_display($image_pairs, 'product', 'M');
-//                             $product['image_url'] = $image_data['image_path']; // Use HTTP/HTTPS image URL as needed
-//                         } else {
-//                         $product['image_url'] = 'path_to_default_image.png'; // Default image path
-//                     }
-//     }
-//     echo "<pre>";
-//     print_r($top_products);
-//     die;
-//     return [
-//         'top_products' => $top_products,
-//         'total_sales' => $total_sales,
-//     ];
-// }
 
 function getTopBestsellers($timestamp_from, $timestamp_to)
 {
@@ -990,62 +938,7 @@ return [
 
 }
 
-// function getTopBestsellers($timestamp_from, $timestamp_to)
-// {
-//     $total_sales = Tygh::$app['db']->getField(
-//         "SELECT SUM(od.amount * od.price) 
-//          FROM ?:order_details AS od
-//          JOIN ?:orders AS o ON od.order_id = o.order_id
-//          WHERE o.status = 'C' 
-//            AND o.timestamp BETWEEN ?i AND ?i",
-//         $timestamp_from,
-//         $timestamp_to
-//     );
-  
-//     $top_products = Tygh::$app['db']->getArray(
-//         "SELECT p.product_id, pd.product AS product_name, 
-//                 SUM(od.amount * od.price) AS total_sales, 
-//                 SUM(od.amount) AS total_units_sold
-//          FROM ?:order_details AS od
-//          JOIN ?:orders AS o ON od.order_id = o.order_id
-//          JOIN ?:products AS p ON od.product_id = p.product_id
-//          JOIN ?:product_descriptions AS pd ON p.product_id = pd.product_id AND pd.lang_code = ?s
-//         WHERE o.status = 'C' 
-//            AND o.timestamp BETWEEN ?i AND ?i
-//          GROUP BY p.product_id
-//          ORDER BY total_sales DESC
-//          LIMIT 5",
-//         CART_LANGUAGE,
-//         $timestamp_from,
-//         $timestamp_to
-//     );
-//     // echo "<pre>";
-//     // print_r($top_products);
-//     // die;
-//     foreach ($top_products as &$product) {
-//         // Calculate percentage mix
-//         $product['percentage_mix'] = $total_sales > 0 
-//             ? round(($product['total_units_sold'] / $total_sales) * 100, 1) 
-//             : 0;
 
-//         // Round total sales
-//         $product['total_sales'] = round($product['total_sales'], 2);
-
-//         // Get product image URL
-//         $image_pairs = fn_get_image_pairs($product['product_id'], 'product', 'M');
-//         if (!empty($image_pairs)) {
-//             $image_data = fn_image_to_display($image_pairs, 'product', 'M');
-//             $product['image_url'] = $image_data['image_path']; // Use HTTP/HTTPS image URL as needed
-//         } else {
-//             $product['image_url'] = 'path_to_default_image.png'; // Default image path
-//         }
-//     }
-
-//     return [
-//         'top_products' => $top_products,
-//         'total_sales' => $total_sales,
-//     ];
-// }
 
 
 
