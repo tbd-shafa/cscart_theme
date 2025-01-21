@@ -188,7 +188,7 @@ function getSalesWithoutEmptyDateBarOrLineChartDataMonthWise($timestamp_from, $t
             $data_point = array_filter($daily_data, function ($data) use ($current_day) {
                 return $data['day'] === $current_day;
             });
-            
+
             // if (!empty($data_point)) {
             //     $data_point = array_shift($data_point);
             //     $line_chart_content["datasets"][0]["data"][] = $data_point['sales_value'];
@@ -374,8 +374,8 @@ function getOrderPieChartData($timestamp_from, $timestamp_to)
         ],
         [
             "label" => "Offline Orders",
-           // "value" => $offline_sales
-           "value" => round($offline_sales, 1), // Round to one decimal place
+            // "value" => $offline_sales
+            "value" => round($offline_sales, 1), // Round to one decimal place
         ]
     ];
 }
@@ -405,7 +405,7 @@ function getOrderWithEmptyDateBarOrLineChartData($timestamp_from, $timestamp_to)
                 'pos_sales' => 0,
             ];
         }
-        $grouped_sales_data[$group_key]['total_sales'] += ($data_point['total_sales']-$data_point['pos_sales']);
+        $grouped_sales_data[$group_key]['total_sales'] += ($data_point['total_sales'] - $data_point['pos_sales']);
         $grouped_sales_data[$group_key]['pos_sales'] += $data_point['pos_sales'];
     }
 
@@ -814,14 +814,14 @@ function getTopVendors($timestamp_from, $timestamp_to)
     foreach ($top_vendors as &$vendor) {
         $total_sales1 += $vendor['total_sales'];
         $vendor['percentage_mix'] = $total_sales > 0 ? ($vendor['total_sales'] / $total_sales) * 100 : 0;
-        
+
         // Round total_sales to 1 decimal place
         $vendor['total_sales'] = round($vendor['total_sales'], 1);
-        
+
         // Round percentage_mix to 1 decimal place
         $vendor['percentage_mix'] = round($vendor['percentage_mix'], 1);
     }
-    
+
     return [
         'top_vendors' => $top_vendors,
         'total_sales' => $total_sales
@@ -832,34 +832,34 @@ function getTopVendors($timestamp_from, $timestamp_to)
 function getTopBestsellers($timestamp_from, $timestamp_to)
 {
     // Get the total sales value (already correct)
-$total_sales = Tygh::$app['db']->getField(
-    "SELECT SUM(od.amount * od.price) 
+    $total_sales = Tygh::$app['db']->getField(
+        "SELECT SUM(od.amount * od.price) 
      FROM ?:order_details AS od
      JOIN ?:orders AS o ON od.order_id = o.order_id
      WHERE o.status = 'C' 
        AND o.timestamp BETWEEN ?i AND ?i",
-    $timestamp_from,
-    $timestamp_to
-);
+        $timestamp_from,
+        $timestamp_to
+    );
 
 
-// Get the total quantity of products sold in completed orders
+    // Get the total quantity of products sold in completed orders
 
-$total_units_sold_all = Tygh::$app['db']->getField(
-    "SELECT SUM(od.amount) AS total_units_sold
+    $total_units_sold_all = Tygh::$app['db']->getField(
+        "SELECT SUM(od.amount) AS total_units_sold
      FROM ?:order_details AS od
      JOIN ?:orders AS o ON od.order_id = o.order_id
      WHERE o.status = 'C'
        AND o.timestamp BETWEEN ?i AND ?i",
-    $timestamp_from,
-    $timestamp_to
-);
+        $timestamp_from,
+        $timestamp_to
+    );
 
 
 
 
-$top_products = Tygh::$app['db']->getArray(
-    "SELECT product_id, 
+    $top_products = Tygh::$app['db']->getArray(
+        "SELECT product_id, 
        product_name, 
        image_id, 
        SUM(total_units_sold) AS total_units_sold, 
@@ -883,43 +883,42 @@ GROUP BY product_id
 ORDER BY total_units_sold DESC
 LIMIT 5
 ",
-    CART_LANGUAGE,
-    $timestamp_from,
-    $timestamp_to
-);
+        CART_LANGUAGE,
+        $timestamp_from,
+        $timestamp_to
+    );
 
 
 
 
 
-// Add the percentage mix and image URL
-foreach ($top_products as &$product) {
-    // Calculate percentage mix based on total units sold
-    $product['percentage_mix'] = $total_units_sold_all > 0
-        ? round(($product['total_units_sold'] / $total_units_sold_all) * 100, 1)
-        : 0;
+    // Add the percentage mix and image URL
+    foreach ($top_products as &$product) {
+        // Calculate percentage mix based on total units sold
+        $product['percentage_mix'] = $total_units_sold_all > 0
+            ? round(($product['total_units_sold'] / $total_units_sold_all) * 100, 1)
+            : 0;
 
-    // Format total sales
-    $product['total_sales'] = round($product['total_sales'], 1);
+        // Format total sales
+        $product['total_sales'] = round($product['total_sales'], 1);
 
-    // Fetch the product image
-    $image_pairs = fn_get_image_pairs($product['product_id'], 'product', 'M');
-    if (!empty($image_pairs)) {
-        $image_data = fn_image_to_display($image_pairs, 'product', 'M');
-        $product['image_url'] = $image_data['image_path']; // Use HTTP/HTTPS image URL as needed
-    } else {
-        $product['image_url'] = 'path_to_default_image.png'; // Default image path
+        // Fetch the product image
+        $image_pairs = fn_get_image_pairs($product['product_id'], 'product', 'M');
+        if (!empty($image_pairs)) {
+            $image_data = fn_image_to_display($image_pairs, 'product', 'M');
+            $product['image_url'] = $image_data['image_path']; // Use HTTP/HTTPS image URL as needed
+        } else {
+            $product['image_url'] = 'path_to_default_image.png'; // Default image path
+        }
     }
-}
 
-// Debug output for verification
+    // Debug output for verification
 
 
-return [
-    'top_products' => $top_products,
-    'total_sales' => $total_sales,
-];
-
+    return [
+        'top_products' => $top_products,
+        'total_sales' => $total_sales,
+    ];
 }
 
 
@@ -1788,7 +1787,7 @@ function getTopSubCategoriesWithoutEmptyDateLineOrBarChartData($timestamp_from, 
     foreach ($sales_data as $data_point) {
         $period = $data_point['period'];
         $subcategory_name = $data_point['category_name'];
-      //  $total_sales = $data_point['total_sales'];
+        //  $total_sales = $data_point['total_sales'];
         $total_sales = round($data_point['total_sales'], 1); // Round to one decimal place
 
         // Add period (date/month) to labels if it's not already added
@@ -1876,7 +1875,7 @@ function getGenderCategories($timestamp_from, $timestamp_to, $limit = 5)
 // for pie chart Order by gender
 function getGenderCategoriespiechart($timestamp_from, $timestamp_to, $limit = 5)
 {
-  
+
     // Fetch the total sales amount for calculating the percentage mix
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
@@ -1930,7 +1929,7 @@ function getGenderCategoriespiechart($timestamp_from, $timestamp_to, $limit = 5)
         $timestamp_to,
         $limit
     );
-    
+
     // Calculate the percentage mix for each category and prepare pie chart data
     $pie_chart_data = [];
     foreach ($top_categories as &$category) {
@@ -1940,7 +1939,7 @@ function getGenderCategoriespiechart($timestamp_from, $timestamp_to, $limit = 5)
         // Add the pie chart data
         $pie_chart_data[] = [
             'label' => $category['parent_category_name'],
-            'total_sales' => round($category['total_sales'] ,1),
+            'total_sales' => round($category['total_sales'], 1),
             'units_sold' => $category['units_sold'],
         ];
     }
@@ -2234,24 +2233,24 @@ if ($mode == 'reports') {
         }
 
         //top 5 best seller
-            $top_bestsellers_result = getTopBestsellers($timestamp_from, $timestamp_to);
-            
-            $top_bestsellers = $top_bestsellers_result['top_products'];
-            $total_units_sold = $top_bestsellers_result['total_units_sold'];
+        $top_bestsellers_result = getTopBestsellers($timestamp_from, $timestamp_to);
 
-            // Prepare the output
-            $top_bestsellers_content = [];
-            foreach ($top_bestsellers as $product) {
-                $product_edit_url = fn_url("admin.php?dispatch=products.update&product_id=" . $product['product_id']);
-               
-                $top_bestsellers_content[] = [
-                    'name' => '<div style="display: flex; align-items: center;"><a href="' . $product_edit_url . '" target="_blank"><span style="margin-right: 10px;">' . $product['product_name'] . '</span></a><img src="' . $product['image_url'] . '" style="max-width: 50px; max-height: 50px;"></div>',
-                    'image_url' => $product['image_url'],
-                    'value' => 'Dhs' . $product['total_sales'] . " (" . $product['total_units_sold'] . ")/" . $product['percentage_mix'] . '%',
-                   // 'value' => 'Price:' . $product['total_sales'] . " (" . $product['total_units_sold'] . ")/" . $product['percentage_mix'] . "%"
-                ];
-            }
-       Tygh::$app['view']->assign('top_bestsellers_content', $top_bestsellers_content);
+        $top_bestsellers = $top_bestsellers_result['top_products'];
+        $total_units_sold = $top_bestsellers_result['total_units_sold'];
+
+        // Prepare the output
+        $top_bestsellers_content = [];
+        foreach ($top_bestsellers as $product) {
+            $product_edit_url = fn_url("admin.php?dispatch=products.update&product_id=" . $product['product_id']);
+
+            $top_bestsellers_content[] = [
+                'name' => '<div style="display: flex; align-items: center;"><a href="' . $product_edit_url . '" target="_blank"><span style="margin-right: 10px;">' . $product['product_name'] . '</span></a><img src="' . $product['image_url'] . '" style="max-width: 50px; max-height: 50px;"></div>',
+                'image_url' => $product['image_url'],
+                'value' => 'Dhs' . $product['total_sales'] . " (" . $product['total_units_sold'] . ")/" . $product['percentage_mix'] . '%',
+                // 'value' => 'Price:' . $product['total_sales'] . " (" . $product['total_units_sold'] . ")/" . $product['percentage_mix'] . "%"
+            ];
+        }
+        Tygh::$app['view']->assign('top_bestsellers_content', $top_bestsellers_content);
 
         // for pie chart
         $top_brands_result1 = getTopVendorsPieChart($timestamp_from, $timestamp_to);
@@ -2264,7 +2263,7 @@ if ($mode == 'reports') {
                 "id" => "analytics_card_products_out_of_stock",
                 "name" => $brand['vendor_name'],
                 "href" => fn_url('companies.update?company_id=' . $brand['company_id']),
-                "value" => 'Dhs'.$brand['total_sales'] . "(" . $brand['units_sold'] . ")/" . $brand['percentage_mix'] . "%",
+                "value" => 'Dhs' . $brand['total_sales'] . "(" . $brand['units_sold'] . ")/" . $brand['percentage_mix'] . "%",
             ];
         }
         $pie_chart_data = $top_brands_result1['pie_chart_data'];
@@ -2351,7 +2350,7 @@ if ($mode == 'reports') {
                 "name" => $category['category_name'],
                 "href" => fn_url('categories.update?category_id=' . $category['category_id']),
                 "value" => $category['total_sales'] . "(" . $category['units_sold'] . ")/" . $category['percentage_mix'] . "%",
-                
+
             ];
         }
         $gender_category_pie_chart_data =  $gender_categories_result1['pie_chart_data'];
@@ -2417,7 +2416,7 @@ if ($mode == 'reports') {
                     "id" => "analytics_card_products",
                     "title" => "Order summary",
                     "position" => 20,
-                    "number" => 'Dhs'.$total_sales,
+                    "number" => 'Dhs' . $total_sales,
                     "dispatch" => "products.manage",
                     "content_data_function" => "getProductsBlockData",
                     // "resource_list" => [
@@ -2488,7 +2487,7 @@ if ($mode == 'reports') {
                 ],
             ),
             "tertiary" => array(
-                'vendors3'=> [
+                'vendors3' => [
                     "id" => "analytics_card_vendors",
                     "title" => 'Top vendors list <span style="font-size: 12px;font-weight: normal;">(Format: Value(Unit)/Percentage)</span>',
                     "position" => 20,
@@ -2551,7 +2550,7 @@ if ($mode == 'reports') {
                     //     "content" => getTopVendorsWithEmptyDateBarOrLineChartData($timestamp_from, $timestamp_to), // Use the new function for line chart data
                     // ],
                     'bar_chart2' => [
-                        "content" => getTopVendorsWithoutEmptyDateLineOrBarChartData($timestamp_from, $timestamp_to,5,'units_sold'),
+                        "content" => getTopVendorsWithoutEmptyDateLineOrBarChartData($timestamp_from, $timestamp_to, 5, 'units_sold'),
                     ],
 
                 ],
