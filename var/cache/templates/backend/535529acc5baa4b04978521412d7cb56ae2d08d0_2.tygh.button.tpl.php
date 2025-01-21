@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-11 00:08:00
+/* Smarty version 4.3.0, created on 2025-01-20 20:52:53
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/buttons/button.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67594860f15345_11030905',
+  'unifunc' => 'content_678f2825873326_14731670',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '535529acc5baa4b04978521412d7cb56ae2d08d0' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/backend/templates/buttons/button.tpl',
-      1 => 1728377995,
+      1 => 1735120883,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67594860f15345_11030905 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678f2825873326_14731670 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 if ($_smarty_tpl->tpl_vars['but_role']->value == "text") {?>
     <?php $_smarty_tpl->_assignInScope('class', '');?>

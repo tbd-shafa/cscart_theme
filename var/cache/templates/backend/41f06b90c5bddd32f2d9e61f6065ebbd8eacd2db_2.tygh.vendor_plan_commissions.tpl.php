@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-11 00:08:04
+/* Smarty version 4.3.0, created on 2025-01-20 20:52:56
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/steps/vendor_plan_commissions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67594864c5a8c7_88727135',
+  'unifunc' => 'content_678f2828f2f665_11211738',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41f06b90c5bddd32f2d9e61f6065ebbd8eacd2db' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/steps/vendor_plan_commissions.tpl',
-      1 => 1728377995,
+      1 => 1735120883,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67594864c5a8c7_88727135 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678f2828f2f665_11211738 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('onboarding_guide.set_up_seller_plans_description','onboarding_guide.set_up_seller_plans','onboarding_guide.view_seller_plans_description','onboarding_guide.view_seller_plans'));
 ?>
 <div class="onboarding_content_margin--bottom">

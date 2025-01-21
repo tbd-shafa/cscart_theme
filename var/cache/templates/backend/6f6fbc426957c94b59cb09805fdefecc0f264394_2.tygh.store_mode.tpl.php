@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-11 00:08:01
+/* Smarty version 4.3.0, created on 2025-01-20 20:52:53
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/settings/store_mode.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6759486103b881_51794154',
+  'unifunc' => 'content_678f28258dbcc3_95022805',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6f6fbc426957c94b59cb09805fdefecc0f264394' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/backend/templates/views/settings/store_mode.tpl',
-      1 => 1728377996,
+      1 => 1735120883,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/product_release_info.tpl' => 1,
   ),
 ),false)) {
-function content_6759486103b881_51794154 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678f28258dbcc3_95022805 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('store_mode','choose_your_store_mode','full','product_state_description.','license_number','please_enter_license_here','licensed_product','trial','trial_mode_ult_disabled','trial_mode_mve_disabled','text_store_mode_trial','select'));
 if ($_smarty_tpl->tpl_vars['show']->value) {?>

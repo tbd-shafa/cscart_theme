@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-11 00:08:00
+/* Smarty version 4.3.0, created on 2025-01-20 20:52:53
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/product_release_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67594860cbbc04_98778589',
+  'unifunc' => 'content_678f28256455a5_95079210',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ea28da0d70139b7ed8bb4560abb8b0ef6eacf9ca' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/backend/templates/common/product_release_info.tpl',
-      1 => 1728377996,
+      1 => 1735120883,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67594860cbbc04_98778589 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678f28256455a5_95079210 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('env_provider', (($tmp = $_smarty_tpl->tpl_vars['env_provider']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->tpl_vars['app']->value["product.env"] ?? null : $tmp));
 $_smarty_tpl->_assignInScope('is_name_shown', (($tmp = $_smarty_tpl->tpl_vars['is_product_shown']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp));
 $_smarty_tpl->_assignInScope('is_version_shown', (($tmp = $_smarty_tpl->tpl_vars['is_version_shown']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp));

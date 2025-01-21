@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-11 00:08:04
+/* Smarty version 4.3.0, created on 2025-01-20 20:52:56
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/steps/customize_vendor_panel_design.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67594864c0bbf4_32354723',
+  'unifunc' => 'content_678f2828efca57_16910285',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d5d5e23ea9df26397899907040dbfb33975d35c' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/onboarding_guide/steps/customize_vendor_panel_design.tpl',
-      1 => 1728377995,
+      1 => 1735120883,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67594864c0bbf4_32354723 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678f2828efca57_16910285 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('onboarding_guide.edit_vendor_panel_style','onboarding_guide.edit_colors','onboarding_guide.edit_structure'));
 ?>
 <div class="onboarding_content_margin--bottom">

@@ -88,6 +88,7 @@ function getSalesPieChartData($timestamp_from, $timestamp_to)
 }
 
 // Function to fetch Without Empty Date Line Or Bar Chart Data For Sales Units vs value dynamically
+// new code which show Sales Units vs value-> value like 23.1
 function getSalesWithoutEmptyDateBarOrLineChartDataMonthWise($timestamp_from, $timestamp_to)
 {
     // Determine if the range spans multiple months
@@ -123,7 +124,7 @@ function getSalesWithoutEmptyDateBarOrLineChartDataMonthWise($timestamp_from, $t
                                COUNT(od.product_id) AS sales_units 
                         FROM ?:orders AS o 
                         JOIN ?:order_details AS od ON o.order_id = od.order_id 
-                        WHERE o.status IN ('A', 'P') AND 
+                        WHERE o.status IN ('A', 'P','C') AND 
                               o.timestamp >= $timestamp_from AND o.timestamp <= $timestamp_to
                         GROUP BY month";
 
@@ -142,10 +143,19 @@ function getSalesWithoutEmptyDateBarOrLineChartDataMonthWise($timestamp_from, $t
                 return $data['month'] === $current_month;
             });
 
+            // if (!empty($data_point)) {
+            //     $data_point = array_shift($data_point);
+            //     $line_chart_content["datasets"][0]["data"][] = $data_point['sales_value'];
+            //     $line_chart_content["datasets"][1]["data"][] = $data_point['sales_units'];
+            // } else {
+            //     $line_chart_content["datasets"][0]["data"][] = 0;
+            //     $line_chart_content["datasets"][1]["data"][] = 0;
+            // }
+
             if (!empty($data_point)) {
                 $data_point = array_shift($data_point);
-                $line_chart_content["datasets"][0]["data"][] = $data_point['sales_value'];
-                $line_chart_content["datasets"][1]["data"][] = $data_point['sales_units'];
+                $line_chart_content["datasets"][0]["data"][] = round($data_point['sales_value'], 1);
+                $line_chart_content["datasets"][1]["data"][] = round($data_point['sales_units'], 1);
             } else {
                 $line_chart_content["datasets"][0]["data"][] = 0;
                 $line_chart_content["datasets"][1]["data"][] = 0;
@@ -160,7 +170,7 @@ function getSalesWithoutEmptyDateBarOrLineChartDataMonthWise($timestamp_from, $t
                              COUNT(od.product_id) AS sales_units 
                       FROM ?:orders AS o 
                       JOIN ?:order_details AS od ON o.order_id = od.order_id 
-                      WHERE o.status IN ('A', 'P') AND 
+                      WHERE o.status IN ('A', 'P','C') AND 
                             o.timestamp >= $timestamp_from AND o.timestamp <= $timestamp_to
                       GROUP BY day";
 
@@ -178,11 +188,19 @@ function getSalesWithoutEmptyDateBarOrLineChartDataMonthWise($timestamp_from, $t
             $data_point = array_filter($daily_data, function ($data) use ($current_day) {
                 return $data['day'] === $current_day;
             });
-
+            
+            // if (!empty($data_point)) {
+            //     $data_point = array_shift($data_point);
+            //     $line_chart_content["datasets"][0]["data"][] = $data_point['sales_value'];
+            //     $line_chart_content["datasets"][1]["data"][] = $data_point['sales_units'];
+            // } else {
+            //     $line_chart_content["datasets"][0]["data"][] = 0;
+            //     $line_chart_content["datasets"][1]["data"][] = 0;
+            // }
             if (!empty($data_point)) {
                 $data_point = array_shift($data_point);
-                $line_chart_content["datasets"][0]["data"][] = $data_point['sales_value'];
-                $line_chart_content["datasets"][1]["data"][] = $data_point['sales_units'];
+                $line_chart_content["datasets"][0]["data"][] = round($data_point['sales_value'], 1);
+                $line_chart_content["datasets"][1]["data"][] = round($data_point['sales_units'], 1);
             } else {
                 $line_chart_content["datasets"][0]["data"][] = 0;
                 $line_chart_content["datasets"][1]["data"][] = 0;
@@ -231,7 +249,7 @@ function getSalesWithoutEmptyDateLineOrBarChartData($timestamp_from, $timestamp_
                                COUNT(od.product_id) AS sales_units 
                         FROM ?:orders AS o 
                         JOIN ?:order_details AS od ON o.order_id = od.order_id 
-                        WHERE o.status IN ('A', 'P') AND 
+                        WHERE o.status IN ('A', 'P','C') AND 
                               o.timestamp >= $timestamp_from AND o.timestamp <= $timestamp_to
                         GROUP BY month";
 
@@ -249,7 +267,7 @@ function getSalesWithoutEmptyDateLineOrBarChartData($timestamp_from, $timestamp_
                              COUNT(od.product_id) AS sales_units 
                       FROM ?:orders AS o 
                       JOIN ?:order_details AS od ON o.order_id = od.order_id 
-                      WHERE o.status IN ('A', 'P') AND 
+                      WHERE o.status IN ('A', 'P','C') AND 
                             o.timestamp >= $timestamp_from AND o.timestamp <= $timestamp_to
                       GROUP BY day";
 
@@ -276,7 +294,7 @@ function fetchSalesDataFromDatabase($timestamp_from, $timestamp_to)
                    COUNT(od.product_id) AS sales_units 
             FROM ?:orders AS o 
             JOIN ?:order_details AS od ON o.order_id = od.order_id 
-            WHERE o.status IN ('A', 'P') AND 
+            WHERE o.status IN ('A', 'P','C') AND 
                   o.timestamp >= $timestamp_from AND o.timestamp <= $timestamp_to
             GROUP BY DATE(FROM_UNIXTIME(o.timestamp))";
 
@@ -331,6 +349,7 @@ function getOrderGraphData($timestamp_from, $timestamp_to)
     return $graph_content;
 }
 // Function to fetch online vs offline pie chart data dynamically
+// new code which show Order online vs offline pie char value like 23.1
 function getOrderPieChartData($timestamp_from, $timestamp_to)
 {
     // Fetch sales data for online and offline orders
@@ -350,16 +369,18 @@ function getOrderPieChartData($timestamp_from, $timestamp_to)
     return [
         [
             "label" => "Online Orders",
-            "value" => $online_sales
+            //"value" => $online_sales
+            "value" => round($online_sales, 1), // Round to one decimal place
         ],
         [
             "label" => "Offline Orders",
-            "value" => $offline_sales
+           // "value" => $offline_sales
+           "value" => round($offline_sales, 1), // Round to one decimal place
         ]
     ];
 }
 //With Empry Date Bar Or Line chart data For online vs offline orders dynamically
-
+// new code which show Order online vs offline like 23.1
 function getOrderWithEmptyDateBarOrLineChartData($timestamp_from, $timestamp_to)
 {
     // Fetch sales data for online and offline orders
@@ -384,7 +405,7 @@ function getOrderWithEmptyDateBarOrLineChartData($timestamp_from, $timestamp_to)
                 'pos_sales' => 0,
             ];
         }
-        $grouped_sales_data[$group_key]['total_sales'] += $data_point['total_sales'];
+        $grouped_sales_data[$group_key]['total_sales'] += ($data_point['total_sales']-$data_point['pos_sales']);
         $grouped_sales_data[$group_key]['pos_sales'] += $data_point['pos_sales'];
     }
 
@@ -397,8 +418,11 @@ function getOrderWithEmptyDateBarOrLineChartData($timestamp_from, $timestamp_to)
         while ($start_month < $end_month) {
             $month_label = $start_month->format('Y-m');
             $labels[] = $month_label;
-            $online_sales[] = $grouped_sales_data[$month_label]['total_sales'] ?? 0;
-            $offline_sales[] = $grouped_sales_data[$month_label]['pos_sales'] ?? 0;
+            // $online_sales[] = $grouped_sales_data[$month_label]['total_sales'] ?? 0;
+            // $offline_sales[] = $grouped_sales_data[$month_label]['pos_sales'] ?? 0;
+            $online_sales[] = round($grouped_sales_data[$month_label]['total_sales'] ?? 0, 1);
+            $offline_sales[] = round($grouped_sales_data[$month_label]['pos_sales'] ?? 0, 1);
+
             $start_month->modify('+1 month');
         }
     } else {
@@ -410,8 +434,10 @@ function getOrderWithEmptyDateBarOrLineChartData($timestamp_from, $timestamp_to)
         while ($start_date < $end_date) {
             $date_label = $start_date->format('Y-m-d');
             $labels[] = $date_label;
-            $online_sales[] = $grouped_sales_data[$date_label]['total_sales'] ?? 0;
-            $offline_sales[] = $grouped_sales_data[$date_label]['pos_sales'] ?? 0;
+            // $online_sales[] = $grouped_sales_data[$date_label]['total_sales'] ?? 0;
+            // $offline_sales[] = $grouped_sales_data[$date_label]['pos_sales'] ?? 0;
+            $online_sales[] = round($grouped_sales_data[$date_label]['total_sales'] ?? 0, 1);
+            $offline_sales[] = round($grouped_sales_data[$date_label]['pos_sales'] ?? 0, 1);
             $start_date->modify('+1 day');
         }
     }
@@ -510,7 +536,7 @@ function fetchOrderDataFromDatabase($timestamp_from, $timestamp_to)
                    SUM(CASE WHEN p.order_id IS NOT NULL THEN o.total ELSE 0 END) AS pos_sales
             FROM ?:orders AS o 
             LEFT JOIN ?:wkpos_orders AS p ON o.order_id = p.order_id
-            WHERE o.status IN ('A', 'P') 
+            WHERE o.status IN ('A', 'P','C') 
               AND o.timestamp >= ?i 
               AND o.timestamp <= ?i
             GROUP BY DATE(FROM_UNIXTIME(o.timestamp))";
@@ -529,7 +555,7 @@ function getSalesMetrics($timestamp_from, $timestamp_to)
                 SUM(o.total) AS total_sales
          FROM ?:orders AS o
          JOIN ?:order_details AS od ON o.order_id = od.order_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -555,7 +581,7 @@ function getSalesMetrics($timestamp_from, $timestamp_to)
 }
 
 // With Empty LIne Or Bar chart Data For getSalesMetrics
-
+// new code to show Order summary data like 23.1
 function getWithEmptyBarOrLineChartSalesMetricsData($timestamp_from, $timestamp_to)
 {
     // Determine the grouping format based on the date range
@@ -591,7 +617,7 @@ function getWithEmptyBarOrLineChartSalesMetricsData($timestamp_from, $timestamp_
                 SUM(o.total) AS total_sales
          FROM ?:orders AS o
          JOIN ?:order_details AS od ON o.order_id = od.order_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
          GROUP BY period
          ORDER BY period",
@@ -641,8 +667,10 @@ function getWithEmptyBarOrLineChartSalesMetricsData($timestamp_from, $timestamp_
             $total_sales = $sales_by_period[$label]['total_sales'];
 
             $line_chart_data['datasets'][0]['data'][] = $transactions;
-            $line_chart_data['datasets'][1]['data'][] = $transactions > 0 ? $total_units_sold / $transactions : 0; // UPT
-            $line_chart_data['datasets'][2]['data'][] = $transactions > 0 ? $total_sales / $transactions : 0; // ARP
+            // $line_chart_data['datasets'][1]['data'][] = $transactions > 0 ? $total_units_sold / $transactions : 0; // UPT
+            // $line_chart_data['datasets'][2]['data'][] = $transactions > 0 ? $total_sales / $transactions : 0; // ARP
+            $line_chart_data['datasets'][1]['data'][] = $transactions > 0 ? round($total_units_sold / $transactions, 1) : 0; // UPT rounded to 1 decimal place
+            $line_chart_data['datasets'][2]['data'][] = $transactions > 0 ? round($total_sales / $transactions, 1) : 0; // ARP rounded to 1 decimal place
         } else {
             // No data for this period
             $line_chart_data['datasets'][0]['data'][] = 0;
@@ -671,7 +699,7 @@ function getWithoutEmptyDateLineOrBarChartSalesMetricsData($timestamp_from, $tim
                     SUM(o.total) AS total_sales
              FROM ?:orders AS o
              JOIN ?:order_details AS od ON o.order_id = od.order_id
-             WHERE o.status IN ('A', 'P') 
+             WHERE o.status IN ('A', 'P','C') 
                AND o.timestamp BETWEEN ?i AND ?i
              GROUP BY period
              ORDER BY period",
@@ -687,7 +715,7 @@ function getWithoutEmptyDateLineOrBarChartSalesMetricsData($timestamp_from, $tim
                     SUM(o.total) AS total_sales
              FROM ?:orders AS o
              JOIN ?:order_details AS od ON o.order_id = od.order_id
-             WHERE o.status IN ('A', 'P') 
+             WHERE o.status IN ('A', 'P','C') 
                AND o.timestamp BETWEEN ?i AND ?i
              GROUP BY period
              ORDER BY period",
@@ -741,13 +769,14 @@ function getWithoutEmptyDateLineOrBarChartSalesMetricsData($timestamp_from, $tim
 }
 
 // normal resource_list  info Top vendors
+// new code to show Top vendors list like 23.1 or 23.1%
 function getTopVendors($timestamp_from, $timestamp_to)
 {
     // Fetch the total sales amount for calculating percentage mix
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P', 'C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -757,11 +786,15 @@ function getTopVendors($timestamp_from, $timestamp_to)
     $top_vendors = Tygh::$app['db']->getArray(
         "SELECT o.company_id, v.company AS vendor_name, 
                 SUM(o.total) AS total_sales, 
-                SUM(od.amount) AS units_sold 
+                SUM(od.units_sold) AS units_sold 
          FROM ?:orders AS o
-         JOIN ?:order_details AS od ON o.order_id = od.order_id
+         JOIN (
+             SELECT order_id, SUM(amount) AS units_sold 
+             FROM ?:order_details 
+             GROUP BY order_id
+         ) AS od ON o.order_id = od.order_id
          JOIN ?:companies AS v ON o.company_id = v.company_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P', 'C') 
            AND o.timestamp BETWEEN ?i AND ?i
          GROUP BY o.company_id
          ORDER BY total_sales DESC
@@ -770,17 +803,253 @@ function getTopVendors($timestamp_from, $timestamp_to)
         $timestamp_to
     );
 
-    // Calculate the percentage mix for each vendor and format the result
-    foreach ($top_vendors as &$vendor) {
-        $vendor['percentage_mix'] = $total_sales > 0 ? ($vendor['total_sales'] / $total_sales) * 100 : 0;
-        $vendor['percentage_mix'] = number_format($vendor['percentage_mix'], 2);
-    }
+    $total_sales1 = 0;
 
+    // Calculate the percentage mix for each vendor and format the result
+    // foreach ($top_vendors as &$vendor) {
+    //     $total_sales1 += $vendor['total_sales'];
+    //     $vendor['percentage_mix'] = $total_sales > 0 ? ($vendor['total_sales'] / $total_sales) * 100 : 0;
+    //     $vendor['percentage_mix'] = number_format($vendor['percentage_mix'], 2);
+    // }
+    foreach ($top_vendors as &$vendor) {
+        $total_sales1 += $vendor['total_sales'];
+        $vendor['percentage_mix'] = $total_sales > 0 ? ($vendor['total_sales'] / $total_sales) * 100 : 0;
+        
+        // Round total_sales to 1 decimal place
+        $vendor['total_sales'] = round($vendor['total_sales'], 1);
+        
+        // Round percentage_mix to 1 decimal place
+        $vendor['percentage_mix'] = round($vendor['percentage_mix'], 1);
+    }
+    
     return [
         'top_vendors' => $top_vendors,
         'total_sales' => $total_sales
     ];
 }
+
+// top 5 best seller
+// function getTopBestsellers($timestamp_from, $timestamp_to)
+// {
+//     $total_sales = Tygh::$app['db']->getField(
+//         "SELECT SUM(od.amount * od.price) 
+//          FROM ?:order_details AS od
+//          JOIN ?:orders AS o ON od.order_id = o.order_id
+//          WHERE o.status = 'C' 
+//            AND o.timestamp BETWEEN ?i AND ?i",
+//         $timestamp_from,
+//         $timestamp_to
+//     );
+
+//     $top_products = Tygh::$app['db']->getArray(
+//         "SELECT p.product_id, pd.product AS product_name, 
+//                 il.image_id AS image_id,
+//                 SUM(od.amount * od.price) AS total_sales, 
+//                 SUM(od.amount) AS total_units_sold
+//          FROM ?:order_details AS od
+//          JOIN ?:orders AS o ON od.order_id = o.order_id
+//          JOIN ?:products AS p ON od.product_id = p.product_id
+//          JOIN ?:product_descriptions AS pd ON p.product_id = pd.product_id AND pd.lang_code = ?s
+//          LEFT JOIN ?:images_links AS il ON p.product_id = il.object_id AND il.object_type = 'product'
+//          WHERE o.status = 'C' 
+//            AND o.timestamp BETWEEN ?i AND ?i
+//          GROUP BY p.product_id
+//          ORDER BY total_sales DESC
+//          LIMIT 5",
+//         CART_LANGUAGE,
+//         $timestamp_from,
+//         $timestamp_to
+//     );
+   
+//     foreach ($top_products as &$product) {
+//         $product['percentage_mix'] = $total_sales > 0 
+//             ? round(($product['total_units_sold'] / $total_sales) * 100, 1) 
+//             : 0;
+//         $product['total_sales'] = round($product['total_sales'], 2);
+//                 $image_pairs = fn_get_image_pairs($product['product_id'], 'product', 'M');
+//                         if (!empty($image_pairs)) {
+//                             $image_data = fn_image_to_display($image_pairs, 'product', 'M');
+//                             $product['image_url'] = $image_data['image_path']; // Use HTTP/HTTPS image URL as needed
+//                         } else {
+//                         $product['image_url'] = 'path_to_default_image.png'; // Default image path
+//                     }
+//     }
+//     echo "<pre>";
+//     print_r($top_products);
+//     die;
+//     return [
+//         'top_products' => $top_products,
+//         'total_sales' => $total_sales,
+//     ];
+// }
+
+function getTopBestsellers($timestamp_from, $timestamp_to)
+{
+    // Get the total sales value (already correct)
+$total_sales = Tygh::$app['db']->getField(
+    "SELECT SUM(od.amount * od.price) 
+     FROM ?:order_details AS od
+     JOIN ?:orders AS o ON od.order_id = o.order_id
+     WHERE o.status = 'C' 
+       AND o.timestamp BETWEEN ?i AND ?i",
+    $timestamp_from,
+    $timestamp_to
+);
+
+
+// Get the total quantity of products sold in completed orders
+
+$total_units_sold_all = Tygh::$app['db']->getField(
+    "SELECT SUM(od.amount) AS total_units_sold
+     FROM ?:order_details AS od
+     JOIN ?:orders AS o ON od.order_id = o.order_id
+     WHERE o.status = 'C'
+       AND o.timestamp BETWEEN ?i AND ?i",
+    $timestamp_from,
+    $timestamp_to
+);
+
+// $top_products = Tygh::$app['db']->getArray(
+//     "SELECT SUM(od.amount) AS total_units_sold, od.product_id
+//      FROM ?:order_details AS od
+//      JOIN ?:orders AS o ON od.order_id = o.order_id
+//      WHERE o.status = 'C'
+//        AND o.timestamp BETWEEN ?i AND ?i
+//        GROUP BY od.product_id
+//        ORDER BY total_units_sold DESC
+//        LIMIT 5
+//        ",
+//     $timestamp_from,
+//     $timestamp_to
+// );
+// echo "<pre>";
+// var_dump($top_products);
+
+
+$top_products = Tygh::$app['db']->getArray(
+    "SELECT product_id, 
+       product_name, 
+       image_id, 
+       SUM(total_units_sold) AS total_units_sold, 
+       SUM(total_sales) AS total_sales
+FROM (
+    SELECT p.product_id, 
+           pd.product AS product_name, 
+           il.image_id, 
+           od.amount AS total_units_sold, 
+           (od.amount * od.price) AS total_sales
+    FROM ?:order_details AS od
+    JOIN ?:orders AS o ON od.order_id = o.order_id
+    JOIN ?:products AS p ON od.product_id = p.product_id
+    JOIN ?:product_descriptions AS pd ON p.product_id = pd.product_id AND pd.lang_code = ?s
+    LEFT JOIN ?:images_links AS il ON p.product_id = il.object_id AND il.object_type = 'product'
+    WHERE o.status = 'C' 
+      AND o.timestamp BETWEEN ?i AND ?i
+    GROUP BY od.order_id, od.product_id
+) AS subquery
+GROUP BY product_id
+ORDER BY total_units_sold DESC
+LIMIT 5
+",
+    CART_LANGUAGE,
+    $timestamp_from,
+    $timestamp_to
+);
+
+
+
+
+
+// Add the percentage mix and image URL
+foreach ($top_products as &$product) {
+    // Calculate percentage mix based on total units sold
+    $product['percentage_mix'] = $total_units_sold_all > 0
+        ? round(($product['total_units_sold'] / $total_units_sold_all) * 100, 1)
+        : 0;
+
+    // Format total sales
+    $product['total_sales'] = round($product['total_sales'], 1);
+
+    // Fetch the product image
+    $image_pairs = fn_get_image_pairs($product['product_id'], 'product', 'M');
+    if (!empty($image_pairs)) {
+        $image_data = fn_image_to_display($image_pairs, 'product', 'M');
+        $product['image_url'] = $image_data['image_path']; // Use HTTP/HTTPS image URL as needed
+    } else {
+        $product['image_url'] = 'path_to_default_image.png'; // Default image path
+    }
+}
+
+// Debug output for verification
+
+
+return [
+    'top_products' => $top_products,
+    'total_sales' => $total_sales,
+];
+
+}
+
+// function getTopBestsellers($timestamp_from, $timestamp_to)
+// {
+//     $total_sales = Tygh::$app['db']->getField(
+//         "SELECT SUM(od.amount * od.price) 
+//          FROM ?:order_details AS od
+//          JOIN ?:orders AS o ON od.order_id = o.order_id
+//          WHERE o.status = 'C' 
+//            AND o.timestamp BETWEEN ?i AND ?i",
+//         $timestamp_from,
+//         $timestamp_to
+//     );
+  
+//     $top_products = Tygh::$app['db']->getArray(
+//         "SELECT p.product_id, pd.product AS product_name, 
+//                 SUM(od.amount * od.price) AS total_sales, 
+//                 SUM(od.amount) AS total_units_sold
+//          FROM ?:order_details AS od
+//          JOIN ?:orders AS o ON od.order_id = o.order_id
+//          JOIN ?:products AS p ON od.product_id = p.product_id
+//          JOIN ?:product_descriptions AS pd ON p.product_id = pd.product_id AND pd.lang_code = ?s
+//         WHERE o.status = 'C' 
+//            AND o.timestamp BETWEEN ?i AND ?i
+//          GROUP BY p.product_id
+//          ORDER BY total_sales DESC
+//          LIMIT 5",
+//         CART_LANGUAGE,
+//         $timestamp_from,
+//         $timestamp_to
+//     );
+//     // echo "<pre>";
+//     // print_r($top_products);
+//     // die;
+//     foreach ($top_products as &$product) {
+//         // Calculate percentage mix
+//         $product['percentage_mix'] = $total_sales > 0 
+//             ? round(($product['total_units_sold'] / $total_sales) * 100, 1) 
+//             : 0;
+
+//         // Round total sales
+//         $product['total_sales'] = round($product['total_sales'], 2);
+
+//         // Get product image URL
+//         $image_pairs = fn_get_image_pairs($product['product_id'], 'product', 'M');
+//         if (!empty($image_pairs)) {
+//             $image_data = fn_image_to_display($image_pairs, 'product', 'M');
+//             $product['image_url'] = $image_data['image_path']; // Use HTTP/HTTPS image URL as needed
+//         } else {
+//             $product['image_url'] = 'path_to_default_image.png'; // Default image path
+//         }
+//     }
+
+//     return [
+//         'top_products' => $top_products,
+//         'total_sales' => $total_sales,
+//     ];
+// }
+
+
+
+
 
 // for pie chart Top vendors
 function getTopVendorsPieChart($timestamp_from, $timestamp_to)
@@ -789,7 +1058,7 @@ function getTopVendorsPieChart($timestamp_from, $timestamp_to)
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -803,7 +1072,7 @@ function getTopVendorsPieChart($timestamp_from, $timestamp_to)
          FROM ?:orders AS o
          JOIN ?:order_details AS od ON o.order_id = od.order_id
          JOIN ?:companies AS v ON o.company_id = v.company_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
          GROUP BY o.company_id
          ORDER BY total_sales DESC
@@ -865,7 +1134,7 @@ function getTopVendorsWithEmptyDateBarOrLineChartData($timestamp_from, $timestam
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -880,7 +1149,7 @@ function getTopVendorsWithEmptyDateBarOrLineChartData($timestamp_from, $timestam
          FROM ?:orders AS o
          JOIN ?:order_details AS od ON o.order_id = od.order_id
          JOIN ?:companies AS v ON o.company_id = v.company_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
          GROUP BY o.company_id, period
          ORDER BY total_sales DESC
@@ -936,23 +1205,42 @@ function getTopVendorsWithEmptyDateBarOrLineChartData($timestamp_from, $timestam
 
 
 // for Without Empty Date Line Or Bar Chart Top vendors
-function getTopVendorsWithoutEmptyDateLineOrBarChartData($timestamp_from, $timestamp_to, $limit = 5)
+// new code for show Top vendors by sels value like 23.1
+function getTopVendorsWithoutEmptyDateLineOrBarChartData($timestamp_from, $timestamp_to, $limit = 5, $order_by = 'total_sales')
 {
     // Force grouping by day if the range is within the same month, else group by month
     $group_format = (date('Y-m', $timestamp_from) === date('Y-m', $timestamp_to)) ? '%Y-%m-%d' : '%Y-%m';
 
-    // Fetch the total sales amount for calculating percentage mix
+    // Fetch the total sales amount for calculating percentage mix (optional, for reference)
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
     );
 
-    // Get the top vendors with total sales and units sold
-    $top_vendors = Tygh::$app['db']->getArray(
+    // Get all vendors with total sales and units sold aggregated
+    $vendors = Tygh::$app['db']->getArray(
+        "SELECT o.company_id, v.company AS vendor_name,
+                SUM(o.total) AS total_sales
+         FROM ?:orders AS o
+         JOIN ?:companies AS v ON o.company_id = v.company_id
+         WHERE o.status IN ('A', 'P','C') 
+           AND o.timestamp BETWEEN ?i AND ?i
+         GROUP BY o.company_id
+         ORDER BY total_sales DESC",
+        $timestamp_from,
+        $timestamp_to
+    );
+
+    // Limit to top $limit vendors based on total_sales
+    $top_vendors = array_slice($vendors, 0, $limit);
+
+    // Get detailed sales data for the top vendors by period
+    $top_vendor_ids = array_column($top_vendors, 'company_id');
+    $detailed_sales = Tygh::$app['db']->getArray(
         "SELECT o.company_id, v.company AS vendor_name, 
                 DATE_FORMAT(FROM_UNIXTIME(o.timestamp), '$group_format') AS period,
                 SUM(o.total) AS total_sales, 
@@ -960,14 +1248,14 @@ function getTopVendorsWithoutEmptyDateLineOrBarChartData($timestamp_from, $times
          FROM ?:orders AS o
          JOIN ?:order_details AS od ON o.order_id = od.order_id
          JOIN ?:companies AS v ON o.company_id = v.company_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
+           AND o.company_id IN (?n)
          GROUP BY o.company_id, period
-         ORDER BY total_sales DESC
-         LIMIT ?i",
+         ORDER BY $order_by DESC",
         $timestamp_from,
         $timestamp_to,
-        $limit
+        $top_vendor_ids
     );
 
     // Prepare data for the bar chart
@@ -982,10 +1270,12 @@ function getTopVendorsWithoutEmptyDateLineOrBarChartData($timestamp_from, $times
     // Track sales data by vendor and period
     $vendor_sales = [];
 
-    foreach ($top_vendors as $vendor) {
+    foreach ($detailed_sales as $vendor) {
         $period = $vendor['period'];
         $vendor_name = $vendor['vendor_name'];
-        $total_sales = $vendor['total_sales'];
+        //$total_sales = $vendor[$order_by];
+        $total_sales = round($vendor[$order_by], 1); // Round the total_sales to 1 decimal place
+        $units_sold = round($vendor['units_sold'], 1); // Round the units_sold to 1 decimal place if needed
 
         // Add period (date/month) to labels if it's not already added
         if (!in_array($period, $bar_chart_data['labels'])) {
@@ -1023,6 +1313,7 @@ function getTopVendorsWithoutEmptyDateLineOrBarChartData($timestamp_from, $times
     return $bar_chart_data;
 }
 
+
 // normal resource_list  info Top categories
 function getTopCategories($timestamp_from, $timestamp_to, $limit = 5)
 {
@@ -1030,7 +1321,7 @@ function getTopCategories($timestamp_from, $timestamp_to, $limit = 5)
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -1046,7 +1337,7 @@ function getTopCategories($timestamp_from, $timestamp_to, $limit = 5)
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P')
+         WHERE o.status IN ('A', 'P','C')
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id = 0
          GROUP BY c.category_id
@@ -1077,7 +1368,7 @@ function getTopCategoriesPieChart($timestamp_from, $timestamp_to, $limit = 5)
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -1093,7 +1384,7 @@ function getTopCategoriesPieChart($timestamp_from, $timestamp_to, $limit = 5)
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P')
+         WHERE o.status IN ('A', 'P','C')
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id = 0
          GROUP BY c.category_id
@@ -1162,7 +1453,7 @@ function getTopCategoriesWithEmptyDateBarOrLineChartData($timestamp_from, $times
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id = 0  -- Only top-level categories
          GROUP BY c.category_id
@@ -1190,7 +1481,7 @@ function getTopCategoriesWithEmptyDateBarOrLineChartData($timestamp_from, $times
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.category_id IN (?a)
          GROUP BY c.category_id, period
@@ -1252,7 +1543,7 @@ function getTopCategoriesWithoutEmptyDateLineOrBarChartData($timestamp_from, $ti
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -1270,7 +1561,7 @@ function getTopCategoriesWithoutEmptyDateLineOrBarChartData($timestamp_from, $ti
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id = 0
          GROUP BY c.category_id, period
@@ -1297,7 +1588,8 @@ function getTopCategoriesWithoutEmptyDateLineOrBarChartData($timestamp_from, $ti
     foreach ($top_categories as $category) {
         $period = $category['period'];
         $category_name = $category['category_name'];
-        $total_sales = $category['total_sales'];
+        //$total_sales = $category['total_sales'];
+        $total_sales = round($category['total_sales'], 1); // Round to one decimal place
 
         // Add period (date/month) to labels if it's not already added
         if (!in_array($period, $bar_chart_data['labels'])) {
@@ -1343,7 +1635,7 @@ function getTopSubCategories($timestamp_from, $timestamp_to, $limit = 5)
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -1359,7 +1651,7 @@ function getTopSubCategories($timestamp_from, $timestamp_to, $limit = 5)
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P')
+         WHERE o.status IN ('A', 'P','C')
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id != 0
          GROUP BY c.category_id
@@ -1388,7 +1680,7 @@ function getTopSubCategoriesPieChart($timestamp_from, $timestamp_to, $limit = 5)
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -1404,7 +1696,7 @@ function getTopSubCategoriesPieChart($timestamp_from, $timestamp_to, $limit = 5)
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P')
+         WHERE o.status IN ('A', 'P','C')
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id != 0
          GROUP BY c.category_id
@@ -1475,7 +1767,7 @@ function getTopSubCategoriesWithEmptyDateLineOrBarChartData($timestamp_from, $ti
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id != 0  -- Only subcategories
          GROUP BY c.category_id
@@ -1503,7 +1795,7 @@ function getTopSubCategoriesWithEmptyDateLineOrBarChartData($timestamp_from, $ti
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.category_id IN (?a)
          GROUP BY c.category_id, period
@@ -1556,6 +1848,7 @@ function getTopSubCategoriesWithEmptyDateLineOrBarChartData($timestamp_from, $ti
 }
 
 //line chart and bar chart without empty date for Top Sub categories
+// new code to  show Top Sub categories like 23.1
 function getTopSubCategoriesWithoutEmptyDateLineOrBarChartData($timestamp_from, $timestamp_to, $limit = 5)
 {
     // Force grouping by month for the given range
@@ -1570,7 +1863,7 @@ function getTopSubCategoriesWithoutEmptyDateLineOrBarChartData($timestamp_from, 
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id != 0  -- Only subcategories
          GROUP BY c.category_id
@@ -1594,7 +1887,7 @@ function getTopSubCategoriesWithoutEmptyDateLineOrBarChartData($timestamp_from, 
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.category_id IN (?a)
          GROUP BY c.category_id, period
@@ -1618,7 +1911,8 @@ function getTopSubCategoriesWithoutEmptyDateLineOrBarChartData($timestamp_from, 
     foreach ($sales_data as $data_point) {
         $period = $data_point['period'];
         $subcategory_name = $data_point['category_name'];
-        $total_sales = $data_point['total_sales'];
+      //  $total_sales = $data_point['total_sales'];
+        $total_sales = round($data_point['total_sales'], 1); // Round to one decimal place
 
         // Add period (date/month) to labels if it's not already added
         if (!in_array($period, $bar_chart_data['labels'])) {
@@ -1663,7 +1957,7 @@ function getGenderCategories($timestamp_from, $timestamp_to, $limit = 5)
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -1679,7 +1973,7 @@ function getGenderCategories($timestamp_from, $timestamp_to, $limit = 5)
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P')
+         WHERE o.status IN ('A', 'P','C')
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id = 0
            and cd.category in ('Women', 'Men','Kids')
@@ -1705,11 +1999,12 @@ function getGenderCategories($timestamp_from, $timestamp_to, $limit = 5)
 // for pie chart Order by gender
 function getGenderCategoriespiechart($timestamp_from, $timestamp_to, $limit = 5)
 {
+  
     // Fetch the total sales amount for calculating the percentage mix
     $total_sales = Tygh::$app['db']->getField(
         "SELECT SUM(o.total) 
          FROM ?:orders AS o
-         WHERE o.status IN ('A', 'P') 
+         WHERE o.status IN ('A', 'P','C') 
            AND o.timestamp BETWEEN ?i AND ?i",
         $timestamp_from,
         $timestamp_to
@@ -1717,36 +2012,59 @@ function getGenderCategoriespiechart($timestamp_from, $timestamp_to, $limit = 5)
 
     // Fetch top categories by total sales, units sold, and percentage mix
     $top_categories = Tygh::$app['db']->getArray(
-        "SELECT c.category_id, cd.category AS category_name,
-                SUM(od.price * od.amount) AS total_sales, 
-                SUM(od.amount) AS units_sold
-         FROM ?:orders AS o
-         JOIN ?:order_details AS od ON o.order_id = od.order_id
-         JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
-         JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
-         JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P')
-           AND o.timestamp BETWEEN ?i AND ?i
-           AND c.parent_id = 0
-           and cd.category in ('Women', 'Men','Kids')
-         GROUP BY c.category_id
-         ORDER BY total_sales DESC
-         LIMIT ?i",
+        "WITH RECURSIVE category_tree AS (
+            SELECT 
+                c.category_id, 
+                c.parent_id,
+                c.category_id AS top_category_id,
+                cd.category AS category_name
+            FROM ?:categories AS c
+            JOIN ?:category_descriptions AS cd ON c.category_id = cd.category_id
+            -- WHERE cd.category_id IN (281, 282, 283) -- Start with main categories
+            WHERE cd.category_id IN (265, 266, 267) -- Start with main categories
+    
+            UNION ALL
+    
+            SELECT 
+                c.category_id,
+                c.parent_id,
+                ct.top_category_id, -- Retain the top-level category for aggregation
+                cd.category AS category_name
+            FROM ?:categories AS c
+            JOIN ?:category_descriptions AS cd ON c.category_id = cd.category_id
+            JOIN category_tree AS ct ON c.parent_id = ct.category_id -- Fetch subcategories
+        )
+        SELECT 
+            ct.top_category_id AS category_id, 
+            MAX(tc.category) AS parent_category_name, -- Use the name of the parent category
+            SUM(od.price * od.amount) AS total_sales,
+            SUM(od.amount) AS units_sold
+        FROM ?:orders AS o
+        JOIN ?:order_details AS od ON o.order_id = od.order_id
+        JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
+        JOIN category_tree AS ct ON pc.category_id = ct.category_id -- Match all categories
+        JOIN ?:category_descriptions AS tc ON ct.top_category_id = tc.category_id -- Fetch top-level category names
+        WHERE o.status IN ('A', 'P','C')
+          AND o.timestamp BETWEEN ?i AND ?i
+        GROUP BY ct.top_category_id
+        ORDER BY total_sales DESC
+        LIMIT ?i",
         $timestamp_from,
         $timestamp_to,
         $limit
     );
-
+    
     // Calculate the percentage mix for each category and prepare pie chart data
     $pie_chart_data = [];
     foreach ($top_categories as &$category) {
         $category['percentage_mix'] = $total_sales > 0 ? ($category['total_sales'] / $total_sales) * 100 : 0;
-        $category['percentage_mix'] = number_format($category['percentage_mix'], 2);
+        $category['percentage_mix'] = round($category['percentage_mix'], 1);
 
         // Add the pie chart data
         $pie_chart_data[] = [
-            'label' => $category['category_name'],
-            'value' => $category['total_sales']
+            'label' => $category['parent_category_name'],
+            'total_sales' => round($category['total_sales'] ,1),
+            'units_sold' => $category['units_sold'],
         ];
     }
 
@@ -1771,7 +2089,7 @@ function getGenderCategoriesWithEmptyDateBarOrLineChartData($timestamp_from, $ti
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P')
+         WHERE o.status IN ('A', 'P','C')
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id = 0
            AND cd.category IN ('Women', 'Men', 'Kids')
@@ -1901,7 +2219,7 @@ function getGenderCategoriesWithoutEmptyDateLineOrBarChartData($timestamp_from, 
          JOIN ?:products_categories AS pc ON od.product_id = pc.product_id
          JOIN ?:category_descriptions AS cd ON pc.category_id = cd.category_id
          JOIN ?:categories AS c ON c.category_id = pc.category_id
-         WHERE o.status IN ('A', 'P')
+         WHERE o.status IN ('A', 'P','C')
            AND o.timestamp BETWEEN ?i AND ?i
            AND c.parent_id = 0
            AND cd.category IN ('Women', 'Men', 'Kids')
@@ -2034,9 +2352,29 @@ if ($mode == 'reports') {
                 "id" => "analytics_card_products_out_of_stock",
                 "name" => $brand['vendor_name'],
                 "href" => fn_url('companies.update?company_id=' . $brand['company_id']),
-                "value" => $brand['total_sales'] . "(" . $brand['units_sold'] . ")/" . $brand['percentage_mix'] . "%",
+                "value" => 'Dhs' . $brand['total_sales'] . "(" . $brand['units_sold'] . ")/" . $brand['percentage_mix'] . "%",
             ];
         }
+
+        //top 5 best seller
+            $top_bestsellers_result = getTopBestsellers($timestamp_from, $timestamp_to);
+            
+            $top_bestsellers = $top_bestsellers_result['top_products'];
+            $total_units_sold = $top_bestsellers_result['total_units_sold'];
+
+            // Prepare the output
+            $top_bestsellers_content = [];
+            foreach ($top_bestsellers as $product) {
+                $product_edit_url = fn_url("admin.php?dispatch=products.update&product_id=" . $product['product_id']);
+               
+                $top_bestsellers_content[] = [
+                    'name' => '<div style="display: flex; align-items: center;"><a href="' . $product_edit_url . '" target="_blank"><span style="margin-right: 10px;">' . $product['product_name'] . '</span></a><img src="' . $product['image_url'] . '" style="max-width: 50px; max-height: 50px;"></div>',
+                    'image_url' => $product['image_url'],
+                    'value' => 'Dhs' . $product['total_sales'] . " (" . $product['total_units_sold'] . ")/" . $product['percentage_mix'] . '%',
+                   // 'value' => 'Price:' . $product['total_sales'] . " (" . $product['total_units_sold'] . ")/" . $product['percentage_mix'] . "%"
+                ];
+            }
+       Tygh::$app['view']->assign('top_bestsellers_content', $top_bestsellers_content);
 
         // for pie chart
         $top_brands_result1 = getTopVendorsPieChart($timestamp_from, $timestamp_to);
@@ -2049,7 +2387,7 @@ if ($mode == 'reports') {
                 "id" => "analytics_card_products_out_of_stock",
                 "name" => $brand['vendor_name'],
                 "href" => fn_url('companies.update?company_id=' . $brand['company_id']),
-                "value" => $brand['total_sales'] . "(" . $brand['units_sold'] . ")/" . $brand['percentage_mix'] . "%",
+                "value" => 'Dhs'.$brand['total_sales'] . "(" . $brand['units_sold'] . ")/" . $brand['percentage_mix'] . "%",
             ];
         }
         $pie_chart_data = $top_brands_result1['pie_chart_data'];
@@ -2136,6 +2474,7 @@ if ($mode == 'reports') {
                 "name" => $category['category_name'],
                 "href" => fn_url('categories.update?category_id=' . $category['category_id']),
                 "value" => $category['total_sales'] . "(" . $category['units_sold'] . ")/" . $category['percentage_mix'] . "%",
+                
             ];
         }
         $gender_category_pie_chart_data =  $gender_categories_result1['pie_chart_data'];
@@ -2162,7 +2501,7 @@ if ($mode == 'reports') {
                     // "pie_chart" => [
                     //     "content" => getSalesPieChartData($timestamp_from, $timestamp_to),
                     // ],
-                    "line_chart" => [
+                    "line_chart2" => [
                         "content" => getSalesWithoutEmptyDateBarOrLineChartDataMonthWise($timestamp_from, $timestamp_to),
                     ],
                     // "bar_chart2" => [
@@ -2185,9 +2524,9 @@ if ($mode == 'reports') {
                     // "graph" => [
                     //     "content" => getOrderGraphData($timestamp_from, $timestamp_to)
                     // ],
-                    // "pie_chart" => [
-                    //     "content" => getOrderPieChartData($timestamp_from, $timestamp_to),
-                    // ],
+                    "pie_chart" => [
+                        "content" => getOrderPieChartData($timestamp_from, $timestamp_to),
+                    ],
                     "line_chart" => [
                         "content" => getOrderWithEmptyDateBarOrLineChartData($timestamp_from, $timestamp_to),
                     ],
@@ -2201,7 +2540,7 @@ if ($mode == 'reports') {
                     "id" => "analytics_card_products",
                     "title" => "Order summary",
                     "position" => 20,
-                    "number" => $total_sales,
+                    "number" => 'Dhs'.$total_sales,
                     "dispatch" => "products.manage",
                     "content_data_function" => "getProductsBlockData",
                     // "resource_list" => [
@@ -2240,7 +2579,7 @@ if ($mode == 'reports') {
                     //         ]
                     //     ]
                     // ],
-                    'line_chart' => [
+                    'line_chart2' => [
                         "content" => getWithEmptyBarOrLineChartSalesMetricsData($timestamp_from, $timestamp_to),
                     ],
                     // 'bar_chart2' => [
@@ -2272,10 +2611,34 @@ if ($mode == 'reports') {
                 ],
             ),
             "tertiary" => array(
+                'vendors3'=> [
+                    "id" => "analytics_card_vendors",
+                    "title" => 'Top vendors list <span style="font-size: 12px;font-weight: normal;">(Format: Value(Unit)/Percentage)</span>',
+                    "position" => 20,
+                    "dispatch" => "products.manage",
+                    "content_data_function" => "getProductsBlockData",
+                    "resource_list" => [
+                        "id" => "analytics_card_products_resource_list",
+                        "content" => $top_brand_content
+                    ]
+                ],
+
+                'best_sellers' => [
+                    "id" => "analytics_card_best_sellers",
+                    "title" => 'Top 5 Bestsellers <span style="font-size: 12px;font-weight: normal;">(Format: Price(quantity)/Percentage)</span>',
+                    "position" => 30, // Adjust the position to place it correctly relative to other menus
+                    "dispatch" => "products.manage",
+                    "content_data_function" => "getTopBestsellersBlockData",
+                    "resource_list" => [
+                        "id" => "analytics_card_best_sellers_resource_list",
+                        "content" => $top_bestsellers_content, // This will contain the bestseller data
+                    ]
+                ],
+
 
                 'vendors' => [
                     "id" => "analytics_card_vendors",
-                    "title" => "Top vendors",
+                    "title" => "Top vendors by sels value",
                     "position" => 20,
                     "dispatch" => "products.manage",
                     "content_data_function" => "getProductsBlockData",
@@ -2291,6 +2654,27 @@ if ($mode == 'reports') {
                     // ],
                     'bar_chart2' => [
                         "content" => getTopVendorsWithoutEmptyDateLineOrBarChartData($timestamp_from, $timestamp_to),
+                    ],
+
+                ],
+                'vendors2' => [
+                    "id" => "analytics_card_vendors2",
+                    "title" => "Top vendors by sels unit",
+                    "position" => 20,
+                    "dispatch" => "products.manage",
+                    "content_data_function" => "getProductsBlockData",
+                    // "resource_list" => [
+                    //     "id" => "analytics_card_products_resource_list",
+                    //     "content" => $top_brand_content
+                    // ],
+                    // "pie_chart" => [
+                    //     "content" => $pie_chart_data // Pass pie chart data here
+                    // ],
+                    // "line_chart" => [
+                    //     "content" => getTopVendorsWithEmptyDateBarOrLineChartData($timestamp_from, $timestamp_to), // Use the new function for line chart data
+                    // ],
+                    'bar_chart2' => [
+                        "content" => getTopVendorsWithoutEmptyDateLineOrBarChartData($timestamp_from, $timestamp_to,5,'units_sold'),
                     ],
 
                 ],

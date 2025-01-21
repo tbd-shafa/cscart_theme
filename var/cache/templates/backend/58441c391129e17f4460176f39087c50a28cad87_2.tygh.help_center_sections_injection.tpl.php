@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-11 00:08:00
+/* Smarty version 4.3.0, created on 2025-01-20 20:52:53
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/help_center/component/help_center_sections_injection.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67594860ceb4c3_53076799',
+  'unifunc' => 'content_678f282566dc85_03913117',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58441c391129e17f4460176f39087c50a28cad87' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/help_center/component/help_center_sections_injection.tpl',
-      1 => 1728377996,
+      1 => 1735120883,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67594860ceb4c3_53076799 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678f282566dc85_03913117 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),));
 \Tygh\Languages\Helper::preloadLangVars(array('help_center.ask','help_center.customer_care.submit_ticket','help_center.customer_care.view_all_tickets','help_center.customer_care.status.resolved','help_center.customer_care.status.open','help_center.customer_care','help_center.customer_care.no_support_tickets','help_center.customer_care.submit_ticket','help_center.customer_care.view_all_tickets','help_center.customer_care.service_unavailable','help_center.customer_care.service_unavailable_description','help_center.customer_care.prolong_subscription','help_center.customer_care','help_center.customer_care.sign_in_text','helpdesk_account.sign_in'));
 $_smarty_tpl->_assignInScope('sections_injection', array());

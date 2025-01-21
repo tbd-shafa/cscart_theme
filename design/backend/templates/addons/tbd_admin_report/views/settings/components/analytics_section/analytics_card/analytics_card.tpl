@@ -90,6 +90,9 @@
             {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/line_chart.tpl"
                 line_chart=$analytics_card.line_chart
             }
+            {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/line_chart2.tpl"
+                line_chart2=$analytics_card.line_chart2
+            }
 
             {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/bar_chart2.tpl"
                 bar_chart2=$analytics_card.bar_chart2
@@ -101,7 +104,9 @@
             {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/resource_list.tpl"
                 resource_list=$analytics_card.resource_list
             }
-
+            
+           
+           
            
 
             {include file="addons/tbd_admin_report/views/settings/components/analytics_section/analytics_card/resource_list_tabs.tpl"

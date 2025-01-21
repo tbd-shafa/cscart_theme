@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-11 00:08:00
+/* Smarty version 4.3.0, created on 2025-01-20 20:52:53
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/help_center/templates/help_center_block.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67594860cc6784_22453538',
+  'unifunc' => 'content_678f282564f703_83961647',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '35762d7dc774e9f525dc0ffc914f848fc62d6f80' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/help_center/templates/help_center_block.tpl',
-      1 => 1728377996,
+      1 => 1735120883,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67594860cc6784_22453538 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678f282564f703_83961647 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <?php echo '<script'; ?>
  type="text/template" data-ca-help-center="block" data-no-defer="true" data-no-execute="§"

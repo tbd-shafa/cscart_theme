@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2024-12-11 00:08:00
+/* Smarty version 4.3.0, created on 2025-01-20 20:52:53
   from '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/help_center/component/help_center_popup.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_67594860c96941_65374781',
+  'unifunc' => 'content_678f2825624fa8_44413886',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c92d23d0d2c162f3796edc15ce36df3b47b62b52' => 
     array (
       0 => '/opt/lampp/htdocs/cs-cart/design/backend/templates/addons/help_center/component/help_center_popup.tpl',
-      1 => 1728377996,
+      1 => 1735120883,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/help_center/views/help_center/manage.tpl' => 1,
   ),
 ),false)) {
-function content_67594860c96941_65374781 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678f2825624fa8_44413886 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/cs-cart/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 \Tygh\Languages\Helper::preloadLangVars(array('help_center.growth_center','help_center.growth_center'));
 $_smarty_tpl->_assignInScope('help_center_counter', (($tmp = $_smarty_tpl->tpl_vars['help_center_counter']->value ?? null)===null||$tmp==='' ? '' ?? null : $tmp));?>
